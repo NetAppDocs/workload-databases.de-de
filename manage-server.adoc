@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: manage-server.html 
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
+summary: Verwalten Sie Microsoft SQL Server-Instanzen in Workload Factory für Datenbanken. 
+---
+= Managen von Microsoft SQL Server-Instanzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Managen Sie Microsoft SQL Server-Instanzen, um den Instanz- und Datenbankstatus, die Ressourcenauslastung, den Schutz und die Storage-Performance in Workload Factory für Datenbanken zu überwachen.
+
+Datenbanken können Microsoft SQL Server Instanzen nur mit FSX für ONTAP Filesystem-Storage managen.
+
+
+
+== Instanzverwaltung für Microsoft SQL Server
+
+Die Instanzverwaltung von Microsoft SQL Server umfasst die folgenden Aufgaben:
+
+* Managen einer Host-Instanz
+* Zeigen Sie eine verwaltete Instanz an
+* Datenbanken anzeigen
+* Heben Sie die Verwaltung einer Hostinstanz auf
+
+
+Um eine dieser Aufgaben zu erledigen, müssen Sie link:detect-host.html["Erkennen Sie eine oder mehrere Hostinstanzen"^].
+
+
+
+== Managen einer Host-Instanz
+
+Verwalten einer erkannten oder nicht verwalteten Microsoft SQL Server-Instanz für einen Host.
+
+.Bevor Sie beginnen
+Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
+
+* Sie müssen eine erkannte Instanz im Host haben, die für die Verwaltung verfügbar ist.
+* PowerShell7 ist erforderlich, um die Datenbankinstanz zu verwalten. Installieren Sie PowerShell7 manuell unter link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Microsoft PowerShell-Dokumentation für Windows"^].
+* Alle Managementvorgänge werden vom AWS System Manager Agent mit Benutzerrechte ausgeführt `NT Authority\SYSTEM` . Geben Sie die folgenden Berechtigungen für den Benutzer auf dem Datenbankserver an `NT Authority\SYSTEM` :
++
+** `“ALTER SETTINGS”`
+** `“CONTROL SERVER”`
+** `“ALTER ANY DATABASE”`
+** `“VIEW ANY DEFINITION”`
+** `“CONNECT ANY DATABASE”`
+** `“CREATE ANY DATABASE”`
+
+
+
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Klicken Sie in der Zeile des zu verwaltenden Hosts auf *Verwalten*.
+. Wählen Sie eine oder mehrere zu verwaltende Hostinstanzen aus.
+. Klicken Sie Auf *Verwalten*.
+
+
+Der Vorgang schlägt fehl, wenn auf dem Microsoft SQL Server bestimmte PowerShell-Module und Verwaltungsskripte fehlen. Workload Factory löst einen Ressourcenauftrag vorbereiten aus, um fehlende Module und Skripte zu installieren, die Sie auf der Registerkarte Jobüberwachung anzeigen können. Wenn der Job abgeschlossen ist, versuchen Sie erneut, die Hostinstanz zu verwalten.
+
+
+
+== Zeigen Sie eine verwaltete Instanz an
+
+Sie können eine verwaltete Instanz anzeigen, indem Sie die folgenden Schritte ausführen.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.
++
+Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+
+. Klicken Sie auf das Menü mit drei Punkten der Instanz, die angezeigt werden soll, und wählen Sie dann *Instanz anzeigen*.
+
+
+.Ergebnis
+Die Übersicht über die Instanz wird auf der Registerkarte „Inventar“ angezeigt.
+
+
+
+== Datenbanken anzeigen
+
+Sie können die von der verwalteten Instanz verwalteten Datenbanken anzeigen, indem Sie die folgenden Schritte ausführen.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.
++
+Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+
+. Klicken Sie auf das Menü mit den drei Punkten der Instanz, die die anzuzeitigen Datenbanken enthält.
+. Wählen Sie *Datenbanken anzeigen*.
+
+
+.Ergebnis
+Die Liste der Datenbanken in der Instanz wird auf der Registerkarte Inventar angezeigt.
+
+
+
+== Heben Sie die Verwaltung einer Hostinstanz auf
+
+Heben Sie die Verwaltung einer Hostinstanz auf, indem Sie die folgenden Schritte ausführen.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Host-Instanz zu erweitern, deren Verwaltung aufgehoben werden soll.
++
+Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+
+. Klicken Sie auf das Menü mit drei Punkten der Instanz, die Sie aufheben möchten.
+. Wählen Sie *Unmanage*.
+
+
+.Ergebnis
+Die Hostinstanz wird jetzt nicht mehr verwaltet.

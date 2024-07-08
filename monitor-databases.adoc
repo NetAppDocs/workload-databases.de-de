@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: monitor-databases.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb von Workload Factory für Datenbanken. 
+---
+= Überwachen von Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken mit Workload Factory für Datenbanken.
+
+.Über diese Aufgabe
+Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Darüber hinaus helfen Filter nach Typ und Status, die Suchfunktion und die Option zum Herunterladen der Jobtabelle bei der Navigation und Berichterstellung von Datenbankjobs.
+
+Die Jobüberwachung unterstützt je nach Job bis zu drei Überwachungsstufen. Beispielsweise verfolgt die Jobüberwachung bei der Erstellung neuer Datenbanken und Sandbox-Klone übergeordnete Jobs und untergeordnete Jobs.
+
+Ebenen der Jobüberwachung::
++
+--
+* Ebene 1 (übergeordneter Job): Verfolgt den Job für die Hostbereitstellung.
+* Ebene 2 (Unterjob): Verfolgt die untergeordneten Jobs im Zusammenhang mit dem übergeordneten Job der Hostbereitstellung.
+* Stufe 3 (Task): Listet die Reihenfolge der Aktionen auf, die für jede Ressource durchgeführt werden.
+
+
+--
+Aufgabenstatus:: Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _in Bearbeitung_, _abgeschlossen_ und _fehlgeschlagen_ Jobs.
+Speicherung von Jobereignissen:: Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche gespeichert.
+
+
+
+
+== Überwachen von Jobs
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Job Monitoring* aus.
+. Verwenden Sie auf der Registerkarte Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.
+. Klicken Sie auf das drei Punkte-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.
+

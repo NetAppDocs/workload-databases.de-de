@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: revert-clone.html 
+keywords: re-baseline, revert clone, database, Microsoft SQL 
+summary: Zurücksetzen eines Sandbox-Klons in Workload Factory für Datenbanken 
+---
+= Zurücksetzen eines Sandbox-Klons in Workload Factory für Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Zurücksetzen eines Datenbankklons auf die Originalversion zum Zeitpunkt der Erstellung
+
+.Über diese Aufgabe
+Beim Klonen einer Datenbank handelt es sich bei der Erstellung um einen _Baseline_ -Klon. Die Daten in der geklonten Datenbank sind zum Zeitpunkt der Erstellung mit der Quelldatenbank identisch. Wenn sich die Daten in einem Sandbox-Datenbankklon im Laufe der Zeit ändern, sollten Sie die Daten zum Zeitpunkt der ersten Erstellung des Klons wieder in die Basislinie zurücksetzen. Diese Operation wird als Neubaselining eines Klons bezeichnet. Statt einen neuen Klon als Basis zu erstellen, wird jedoch Platz gespart. Alle Änderungen am Sandbox-Klon werden jedoch gelöscht.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
+. Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, den Sie zurücksetzen möchten.
+. Wählen Sie * Neu-Baseline*.
+. Klicken Sie im Dialogfeld „Neu-Baseline“ auf *Neu-Baseline*.
+

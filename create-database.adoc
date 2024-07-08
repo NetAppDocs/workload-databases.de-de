@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: create-database.html 
+keywords: create, database, creation, Microsoft SQL 
+summary: Erstellen Sie eine Microsoft SQL-Datenbank mit Workload Factory-Datenbanken. 
+---
+= Erstellen Sie eine Microsoft SQL-Datenbank in Workload Factory für Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Durch das Erstellen einer neuen Microsoft SQL-Datenbank in der Workload Factory-Konsole können Sie die Ressource in Workload Factory verwalten.
+
+.Über diese Aufgabe
+Bei der Datenbankerstellung werden im Dateisystem FSX für ONTAP zwei neue Volumes erstellt, die aus unabhängigen LUNs bestehen, um Daten und Log-Dateien für die Datenbank zu hosten. Die Datenbankdateien in der neuen Datenbank verfügen über Thin Provisioning und verbrauchen nur wenige MBS der Gesamtgröße, die der neuen Datenbank zugewiesen ist.
+
+Wenn Sie den Speicher für die Datenbank trennen möchten, können Sie dies mit einem _Virtual Mount Point_ tun. Mit dem virtuellen Bereitstellungspunkt können Sie Datenbanken auf ein paar gemeinsame Laufwerke auf dem Host konsolidieren.
+
+Zum Erstellen einer Datenbank in Workload Factory sind Berechtigungen für den Automatisierungsmodus erforderlich. Alternativ können Sie im Basismodus eine teilweise ausgefüllte Codevorlage kopieren oder herunterladen, um den Vorgang außerhalb von Workload Factory abzuschließen. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Informieren Sie sich über die Betriebsmodi in Workload Factory"^] Um zu entscheiden, welchen Modus Sie verwenden möchten.
+
+
+NOTE: Microsoft SQL-Server mit SMB-Protokoll unterstützen nicht die Erstellung einer Datenbank.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie eine neue Datenbank erstellen.
+
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Konto-Anmeldedaten und _read_ oder _Automate_ Modus-Berechtigungen"^] eine neue Datenbank in Workload Factory erstellen.
++
+--
+Alternativ können Sie mit der Codebox eine Vorlage kopieren, sodass Sie eine Datenbank außerhalb von Workload Factory mit REST API bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
+
+--
+Windows Host:: Wenn Sie den _Quick Create_-Modus verwenden, müssen auf dem Microsoft SQL Server genügend Laufwerkbuchstaben verfügbar sein, um neue Laufwerke für die neue Datenbank zu erstellen.
+Microsoft SQL Server:: Sie müssen über einen verwalteten Microsoft SQL Server in Workload Factory für Datenbanken verfügen, um die neue Datenbank hosten zu können.
+AWS System Manager:: Stellen Sie sicher, dass die `NT Authority\SYSTEM user` Berechtigung auf dem Microsoft SQL-Host über AWS System Manager aktiviert ist.
+
+
+
+
+== Erstellen Sie eine Datenbank
+
+Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in Workload Factory mit den Berechtigungen _read_ oder _Automate_ abzuschließen.
+
+[role="tabbed-block"]
+====
+.Schnelle Erstellung
+--
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
+. Klicken Sie auf das drei Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
+. Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:
++
+.. *Datenbankname*: Geben Sie den Namen der Datenbank ein.
+.. *Sortierung*: Wählen Sie eine Sammlung für die Datenbank aus. Die Standardsortierung SQL_Latin1_General_CP1_CI_AS“ auf Microsoft SQL Server ist ausgewählt.
+
+
+. Geben Sie unter Dateieinstellungen Folgendes an:
++
+.. *Modus für Dateieinstellungen*: Wählen Sie *Quick create*.
+.. *Dateinamen und Pfad*:
++
+*** *Datendateiname*: Geben Sie den Namen der Datendatei ein.
+*** *Log-Dateiname*: Geben Sie den Namen der Log-Datei ein.
+
+
+.. *Dateigröße*: Geben Sie die Datengröße und die Protokollgröße für die Datenbank ein.
+
+
+. Klicken Sie Auf *Erstellen*.
++
+Wenn Sie eine dieser Standardeinstellungen jetzt ändern möchten, ändern Sie alternativ den Modus *Dateieinstellungen* in *Advanced create*.
+
+
+
+--
+.Erweiterte Erstellung
+--
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
+. Klicken Sie auf das drei Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
+. Wählen Sie *Benutzerdatenbank erstellen*.
+. Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:
++
+.. *Datenbankname*: Geben Sie den Namen der Datenbank ein.
+.. *Sortierung*: Wählen Sie die Sortierung für die Datenbank aus. Die Standardsortierung SQL_Latin1_General_CP1_CI_AS“ auf Microsoft SQL Server ist ausgewählt.
+
+
+. Geben Sie unter Dateieinstellungen Folgendes an:
++
+.. *Modus für Dateieinstellungen*: Wählen Sie *Advanced create*.
+.. *Dateinamen und Pfad*:
++
+... *Datendatei*: Wählen Sie einen Laufwerksbuchstaben und geben Sie den Dateinamen ein.
++
+Klicken Sie optional auf das Feld für *Virtual Mount Point*.
+
+... *Log-Datei*: Wählen Sie einen Laufwerksbuchstaben und geben Sie den Namen der Protokolldatei ein.
++
+Klicken Sie optional auf das Feld für *Virtual Mount Point*.
+
+
+
+.. *Dateigröße*: Geben Sie die Datengröße und die Protokollgröße für die Datenbank ein.
+
+
+. Klicken Sie Auf *Erstellen*.
+
+
+--
+====
+Wenn Sie den Datenbank-Host erstellt haben, können Sie den Fortschritt des Jobs auf der Registerkarte *Job-Überwachung* überprüfen.

@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: Löschen Sie einen Sandbox-Klon, wenn Sie ihn nicht mehr benötigen. 
+---
+= Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Löschen Sie einen Sandbox-Klon, wenn Sie ihn nicht mehr benötigen und Speicherkapazität freigeben möchten.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Klicken Sie in der Kachel Datenbanken auf *Gehe zu Datenbankbestand*.
+. Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
+. Klicken Sie auf das Menü mit drei Punkten des Sandbox-Klons, den Sie löschen möchten.
+. Wählen Sie *Löschen*.
+. Klicken Sie im Dialogfeld Löschen auf *Löschen*.
+

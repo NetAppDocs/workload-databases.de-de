@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, databases 
+summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
+---
+= Bekannte Einschränkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+
+
+
+== Unterstützung für AMI-Bildversionen
+
+Für jede SQL-Version werden nur bis zu vier aktuelle Versionen oder Revisionen von AMI-Images angezeigt. Wir lassen die Installation von einem AMI-Image, das älter als die letzten vier Versionen ist, nicht zu.
+
+
+
+== Benutzerdefinierte AMI
+
+Die Bereitstellung mit einem benutzerdefinierten AMI setzt voraus, dass Installationsmedien im Image vorhanden sind. Dies ist für die FCI-Konfiguration aus folgenden Gründen erforderlich:
+
+* Deinstallieren und Neukonfigurieren des FCI-Clusters
+* Wenn Sie eine andere Sammlung als die Sammlung im Image für die eigenständige Bereitstellung auswählen
+
+
+Im Rahmen der Bereitstellung installiert Workload Factory kein benutzerdefiniertes AMI mit mehreren Microsoft SQL Server-Instanzen. Nur die Standardinstanz von Microsoft SQL Server ist ausgewählt und als Teil der Bereitstellung konfiguriert.
+
+
+
+== Führen Sie ein Rollback durch und versuchen Sie es erneut, wenn Bereitstellungen fehlgeschlagen sind
+
+Rollback und erneute Versuche für fehlgeschlagene Bereitstellungen werden in Workload Factory nicht unterstützt. Sie können ein Rollback durchführen oder einen fehlgeschlagenen Stack von der CloudFormation-Konsole in AWS erneut versuchen.
+
+
+
+== Rollback von Active Directory- und DNS-Ressourcen
+
+Die folgenden DNS-Ressourcen werden beim Rollback eines Tests oder einer fehlgeschlagenen Bereitstellung von der CloudFormation-Konsole in AWS nicht aus Active Directory und DNS entfernt:
+
+* Jeder Knoten der SQL-Bereitstellung an seine Management-IP-Adresse
+* Windows-Cluster-Name für die reservierten sekundären IP-Adressen von EC2-Instanzen in FCI-Fällen
+* SQL FCI-Name zu den beiden reservierten IP-Adressen von beiden EC2-Instanzen in FCI
+
+
+Sie müssen diese manuell bereinigen oder warten, bis die Domäne veraltete Einträge löscht.
+
+
+
+== Always-On-Konfiguration von Verfügbarkeitsgruppen
+
+Die Verwaltung von Konfigurationen für „Always On“-Verfügbarkeitsgruppen wird in Workload Factory nicht unterstützt.
+
+
+
+== Vom Benutzer gemanagte Active Directory-Sicherheitsgruppen
+
+Wenn Sie während der Bereitstellung von Microsoft SQL Server in Workload Factory „benutzerverwaltetes Active Directory“ auswählen, müssen Sie eine Sicherheitsgruppe bereitstellen, die Datenverkehr zwischen den EC2-Instanzen zum Verzeichnisdienst für die Bereitstellung zulässt. Workload Factory fügt die Sicherheitsgruppe für vom Benutzer verwaltetes Active Directory nicht automatisch an, wie dies für von AWS verwaltetes Microsoft AD der Fall ist.
+
+
+
+== Benutzerdefinierte Verschlüsselung
+
+Benutzerdefinierte Verschlüsselungsschlüssel für FSX for ONTAP werden gemäß der Service-Anwendbarkeit nicht aufgeführt. Sie müssen den entsprechenden Schlüssel auswählen. Managed Keys in AWS werden nach der Anwendbarkeit des Services gefiltert.
+
+
+
+== Microsoft SQL Server-Erkennung
+
+Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
+
+
+
+== CloudFormation-Vorlage
+
+Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-Vorlage (YAML-Datei) hat eine begrenzte Aufbewahrungsfrist von sieben Tagen.
+
+
+
+== Sandbox-Support
+
+* Es können maximal 50 Sandbox-Klone von einem Datenbankserver erstellt werden.
+* Sandbox-Erstellung wird in den folgenden Fällen nicht unterstützt:
++
+** Daten- und Protokolldateien befinden sich auf derselben Festplatte.
+** Die Quelldatenbank enthält mehrere Datendateien.
+
+
+
+
+
+
+== Erkennung und Verwaltung von Microsoft SQL Server
+
+* Das Erkennen und Verwalten von Microsoft SQL-Instanzen wird nicht unterstützt, wenn ein privates Netzwerk ohne externe Konnektivität verwendet wird.
+* Wenn Microsoft SQL-Instanzen die Windows-basierte Authentifizierung blockieren und nur die Microsoft SQL-Benutzerauthentifizierung zulassen, wird die Microsoft SQL Server-Erkennung unterstützt, aber Verwaltungsvorgänge werden nicht unterstützt.
+
+
+
+
+== Einsparungen entdecken
+
+* Auf der Registerkarte Inventar werden die geschätzten Kosten für jede Microsoft SQL-Instanz auf der Ebene des FSX für ONTAP-Dateisystems und nicht für Volumes, die die SQL-Instanz hosten, berechnet.
+* Berechnungen zu den Ersparnissen werden für FSX for Windows File Server nicht unterstützt.
+

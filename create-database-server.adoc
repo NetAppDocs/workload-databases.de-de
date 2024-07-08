@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: create-database-server.html 
+keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
+summary: Erstellen Sie einen neuen Microsoft SQL Server in Workload Factory für Datenbanken. 
+---
+= Erstellen Sie einen Datenbankserver in Workload Factory für Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Erstellung eines neuen Microsoft SQL-Servers oder Datenbank-Hosts in Datenbanken erfordert eine FSX for ONTAP-Bereitstellung des Dateisystems und Ressourcen für Active Directory.
+
+.Über diese Aufgabe
+Sie benötigen die Zugangsdaten für das AWS Konto und die _Automate_ Berechtigungen.
+
+Informieren Sie sich zunächst über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Hostkonfiguration, die Active Directory-Bereitstellung, die Betriebsmodi von Workload Factory und die Anforderungen für diesen Vorgang.
+
+Nach der Bereitstellung müssen Sie <<Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server,Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server>>.
+
+FSX für ONTAP-File-System-Implementierungen:: Die Erstellung eines neuen Microsoft SQL Servers erfordert ein FSX für ONTAP Filesystem als Storage-Backend. Sie können ein bestehendes FSX für ONTAP-Dateisystem verwenden oder ein neues Dateisystem erstellen. Wenn Sie ein vorhandenes FSX für ONTAP-Dateisystem als Ihr Datenbankserver-Storage-Back-End auswählen, erstellen wir eine neue Storage-VM für die Microsoft SQL-Workloads.
++
+--
+FSX for ONTAP-Dateisysteme verfügen über zwei Microsoft SQL Server-Bereitstellungsmodelle: _Failover Cluster Instance (FCI)_ oder _Standalone_. Abhängig vom von dem von Ihnen gewählten FSX for ONTAP-Bereitstellungsmodell werden verschiedene Ressourcen für das FSX for ONTAP-Dateisystem erstellt.
+
+* *Failover Cluster Instance (FCI) Microsoft SQL Deployment*: Ein Dateisystem mit mehreren Verfügbarkeitszonen FSX für NetApp ONTAP wird bereitgestellt, wenn ein neues Dateisystem FSX für ONTAP für die FCI-Bereitstellung ausgewählt wird. Separate Volumes und LUNs werden für Daten-, Protokoll- und tempdb-Dateien für eine FCI-Implementierung erstellt. Ein zusätzliches Volume und eine LUN werden für Quorum oder Witness Disk für Windows Cluster erstellt.
+* *Eigenständige Microsoft SQL-Bereitstellung*: Ein einzelnes Verfügbarkeitszonen-FSX für ONTAP-Dateisystem wird erstellt, wenn ein neuer Microsoft SQL-Server erstellt wird. Darüber hinaus werden separate Volumes und LUNs für Daten-, Protokoll- und tempdb-Dateien erstellt.
+
+
+--
+Active Directory:: Während der Bereitstellung geschieht Folgendes für Active Directory (AD):
++
+--
+* Ein neues Microsoft SQL-Dienstkonto wird in der Domäne erstellt, wenn Sie kein vorhandenes SQL-Dienstkonto angeben.
+* Der Windows-Cluster, die Node-Hostnamen und der Microsoft SQL-FCI-Name werden dem Microsoft SQL-Dienstkonto als verwaltete Computer hinzugefügt.
+* Dem Windows-Clustereintrag sind Berechtigungen zum Hinzufügen von Computern zur Domäne zugewiesen.
+
+
+--
+Ressourcen-Rollbacks:: Wenn Sie ein Rollback Ihrer DNS-Ressourcen (Domain Name System) durchführen möchten, werden die Ressourceneinträge in AD und DNS nicht automatisch entfernt. Sie können die Datensätze wie folgt vom DNS-Server und AD entfernen.
++
+--
+* Für benutzerverwaltetes AD, zuerst link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["Entfernen Sie den AD-Computer"^]. Verbinden Sie sich dann mit dem DNS-Server vom DNS-Manager und link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["Löschen Sie die DNS-Ressourceneinträge"^].
+* Für AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html["Installieren Sie die AD-Verwaltungstools"^] Weiter, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["Entfernen Sie den AD-Computer"^]. Schließlich verbinden Sie sich mit dem DNS-Server von DNS-Manager und link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["Löschen Sie die DNS-Ressourceneinträge"^].
+
+
+--
+Betriebsmodi für Workload Factory:: Workload Factory bietet drei Betriebsmodi, je nachdem, wie bequem Sie sich bei Workload Factory Ihre AWS Ressourcen managen lassen.
++
+--
+*_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb von Workload Factory auszufüllen.
+
+*_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können auch zu CloudFormation von Workload Factory mit den ausgefüllten Formulardetails umleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in Workload Factory zu verwalten.
+
+*_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen in Workload Factory erstellen und managen können.
+
+--
+
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.
+
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus"^] einen neuen Datenbankhost in Workload Factory erstellen.
++
+--
+Alternativ können Sie mit der Codebox eine leere Vorlage kopieren oder eine fertige Vorlage erstellen, sodass Sie mit REST-API, AWS CLI oder AWS CloudFormation eine Datenbank außerhalb von Workload Factory bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
+
+--
+Active Directory:: Wenn Sie eine Verbindung zu Active Directory herstellen, müssen Sie über Administratorzugriff mit Berechtigungen verfügen, um Folgendes tun zu können:
++
+--
+* Treten Sie der Domain bei
+* Erstellen Sie Computerobjekte
+* Objekte in der Standardorganisation (OU) erstellen
+* Lesen Sie alle Eigenschaften
+* Machen Sie den Domänenbenutzer zu einem lokalen Administrator auf den AD-Knoten
+* Erstellen Sie einen Microsoft SQL Server-Dienstbenutzer im AD, falls er nicht bereits vorhanden ist
+
+
+--
+
+
+
+
+== Schritt 1: Erstellen Sie einen Datenbankserver
+
+Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in Workload Factory mit _Automate_-Modus-Berechtigungen abzuschließen.
+
+[role="tabbed-block"]
+====
+.Schnelle Erstellung
+--
+
+NOTE: In _Quick Create_ ist FCI das Standardbereitgabemodell, Windows 2016 die Standardversion von Windows und SQL 2019 Standard Edition die Standardversion von SQL.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus.
+. Wählen Sie *Schnellerstelle*.
+. Geben Sie unter *AWS settings* Folgendes an:
++
+.. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
++
+Mit den AWS-Zugangsdaten mit _Automate_-Berechtigungen kann Workload Factory den neuen Datenbank-Host über Ihr AWS-Konto in Workload Factory implementieren und managen.
+
++
+Mit AWS Zugangsdaten mit _read_ Berechtigungen kann Workload Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation-Konsole verwenden können.
+
++
+Wenn Sie keine AWS-Anmeldeinformationen in Workload Factory haben und den neuen Server in Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+
++
+Wenn Sie das Formular zum Erstellen eines neuen Servers in Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
+
++
+Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb von Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
+
+.. *Region & VPC*: Wählen Sie eine Region und ein VPC-Netzwerk.
++
+Stellen Sie sicher, dass Sicherheitsgruppen für einen vorhandenen Schnittstellenendpunkt den Zugriff auf das HTTPS-Protokoll (443) auf die ausgewählten Subnetze ermöglichen.
+
++
+AWS-Serviceschnittstellen-Endpunkte (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) und der S3-Gateway-Endpunkt werden während der Bereitstellung erstellt, wenn nicht gefunden.
+
++
+VPC-DNS-Attribute `EnableDnsSupport` und `EnableDnsHostnames` werden geändert, um die Auflösung der Endpunktadresse zu aktivieren, wenn sie nicht bereits auf festgelegt sind `true`.
+
+.. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze gemäß dem Failover Cluster Instance (FCI)-Bereitstellungsmodell aus.
++
+
+NOTE: FCI-Implementierungen werden nur in Konfigurationen mit Multiple Availability Zone (MAZ) FSX for ONTAP unterstützt.
+
++
+Subnetze sollten für hohe Verfügbarkeit nicht dieselbe Routentabelle verwenden.
+
++
+... Wählen Sie im Feld *Clusterkonfiguration - Knoten 1* die primäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der primären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
+... Wählen Sie im Feld *Cluster-Konfiguration - Knoten 2* die sekundäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der sekundären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
+
+
+
+
+. Geben Sie unter *Anwendungseinstellungen* einen Benutzernamen und ein Passwort für *Datenbankanmeldeinformationen* ein.
+. Geben Sie unter *Connectivity* Folgendes an:
++
+.. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar.
+.. *Active Directory*:
++
+... Wählen Sie im Feld *Domain Name* einen Namen für die Domain aus oder geben Sie ihn ein.
++
+.... Bei von AWS gemanagten Active Directories werden Domänennamen im Dropdown-Menü angezeigt.
+.... Geben Sie für ein benutzerverwaltetes Active Directory einen Namen in das Feld *Suchen und Hinzufügen* ein, und klicken Sie auf *Hinzufügen*.
+
+
+... Geben Sie im Feld *DNS-Adresse* die DNS-IP-Adresse für die Domain ein. Sie können bis zu 3 IP-Adressen hinzufügen.
++
+Bei von AWS gemanagten Active Directories wird die DNS-IP-Adresse(n) im Dropdown-Menü angezeigt.
+
+... Geben Sie im Feld *Benutzername* den Benutzernamen für die Active Directory-Domäne ein.
+... Geben Sie im Feld *Passwort* ein Passwort für die Active Directory-Domain ein.
+
+
+
+
+. Geben Sie unter *Infrastruktur-Einstellungen* Folgendes an:
++
+.. *FSX für ONTAP-System*: Erstellen Sie ein neues FSX für ONTAP-Dateisystem oder verwenden Sie ein vorhandenes FSX für ONTAP-Dateisystem.
++
+... * Erstellen Sie ein neues FSX für ONTAP*: Geben Sie Benutzernamen und Passwort ein.
++
+Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
+
+... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
+
+
+.. *Größe des Datenlaufwerks*: Geben Sie die Kapazität des Datenlaufwerks ein und wählen Sie die Kapazitätseinheit aus.
+
+
+. Zusammenfassung:
++
+.. *Voreinstellung Vorschau*: Überprüfen Sie die Standardkonfigurationen, die von Quick Create festgelegt wurden.
+.. *Geschätzte Kosten*: Gibt eine Schätzung der Kosten an, die Ihnen entstehen könnten, wenn Sie die angezeigten Ressourcen bereitgestellt haben.
+
+
+. Klicken Sie Auf *Erstellen*.
++
+Alternativ können Sie, wenn Sie jetzt eine dieser Standardeinstellungen ändern möchten, den Datenbankserver mit Advanced Create erstellen.
+
++
+Sie können auch *Konfiguration speichern* auswählen, um den Host später bereitzustellen.
+
+
+
+--
+.Erweiterte Erstellung
+--
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus.
+. Wählen Sie *Advanced Create*.
+. Wählen Sie für *Deployment model* *Failover Cluster Instance* oder *Single Instance* aus.
+. Geben Sie unter *AWS settings* Folgendes an:
++
+.. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
++
+Mit den AWS-Zugangsdaten mit _Automate_-Berechtigungen kann Workload Factory den neuen Datenbank-Host über Ihr AWS-Konto in Workload Factory implementieren und managen.
+
++
+Mit AWS Zugangsdaten mit _read_ Berechtigungen kann Workload Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation-Konsole verwenden können.
+
++
+Wenn Sie keine AWS-Anmeldeinformationen in Workload Factory haben und den neuen Server in Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+
++
+Wenn Sie das Formular zum Erstellen eines neuen Servers in Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
+
++
+Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb von Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
+
+.. *Region & VPC*: Wählen Sie eine Region und ein VPC-Netzwerk.
++
+Stellen Sie sicher, dass Sicherheitsgruppen für einen vorhandenen Schnittstellenendpunkt den Zugriff auf das HTTPS-Protokoll (443) auf die ausgewählten Subnetze ermöglichen.
+
++
+AWS-Service-Schnittstellen-Endpunkte (SQS, FSX, EC2, CloudWatch, Cloud-Bildung, SSM) und S3-Gateway-Endpunkt werden während der Implementierung erstellt, wenn nicht gefunden wird.
+
++
+VPC-DNS-Attribute `EnableDnsSupport` und `EnableDnsHostnames` werden geändert, um Auflösung der Endpunktadresse zu aktivieren, falls nicht bereits auf gesetzt `true`.
+
+.. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze entsprechend dem von Ihnen gewählten Bereitstellungsmodell aus.
++
+
+NOTE: FCI-Implementierungen werden nur in Konfigurationen mit Multiple Availability Zone (MAZ) FSX for ONTAP unterstützt.
+
++
+Subnetze sollten für hohe Verfügbarkeit nicht dieselbe Routentabelle verwenden.
+
++
+Für Einzelinstanzimplementierungen entwickelt::
++
+--
+... Wählen Sie im Feld *Cluster-Konfiguration - Knoten 1* aus dem Dropdown-Menü eine Verfügbarkeitszone aus der *Verfügbarkeitszone* und ein Subnetz aus dem *Subnetz*-Dropdown-Menü aus.
+
+
+--
+Für FCI-Implementierungen::
++
+--
+... Wählen Sie im Feld *Clusterkonfiguration - Knoten 1* die primäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der primären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
+... Wählen Sie im Feld *Cluster-Konfiguration - Knoten 2* die sekundäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der sekundären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
+
+
+--
+
+
+.. *Sicherheitsgruppe*: Wählen Sie eine vorhandene Sicherheitsgruppe aus oder erstellen Sie eine neue Sicherheitsgruppe.
++
+Während der Implementierung eines neuen Servers werden drei Sicherheitsgruppen an die SQL Nodes (EC2 Instanzen) angeschlossen.
+
++
+... Eine Sicherheitsgruppe für Workloads wird erstellt, um Ports und Protokolle zu ermöglichen, die für die Microsoft SQL- und Windows-Cluster-Kommunikation auf Knoten erforderlich sind.
+... Im Fall von AWS-Managed Active Directory wird die Sicherheitsgruppe, die an den Verzeichnisdienst angeschlossen ist, automatisch zu den Microsoft SQL-Knoten hinzugefügt, um die Kommunikation mit Active Directory zu ermöglichen.
+... Für ein vorhandenes FSX für ONTAP-Dateisystem wird die ihm zugeordnete Sicherheitsgruppe automatisch zu den SQL-Knoten hinzugefügt, die die Kommunikation mit dem Dateisystem ermöglicht. Wenn ein neues FSX für ONTAP-System erstellt wird, wird eine neue Sicherheitsgruppe für das FSX für ONTAP-Dateisystem erstellt und die gleiche Sicherheitsgruppe wird auch an SQL-Knoten angeschlossen.
++
+Für ein benutzerverwaltetes Active Directory können Sie eine Sicherheitsgruppe auswählen, die Datenverkehr von Ihren vorhandenen Systemen zulässt, die eine Verbindung zur Datenbank herstellen müssen. Die Sicherheitsgruppe sollte die Kommunikation mit den Active Directory-Domänencontrollern aus den Subnetzen ermöglichen, in denen EC2-Instanzen für Microsoft SQL konfiguriert sind.
+
+
+
+
+
+. Geben Sie unter *Anwendungseinstellungen* Folgendes an:
++
+.. Wählen Sie unter *SQL Server install type* *Lizenz included AMI* oder *Use Custom AMI* aus.
++
+... Wenn Sie *Lizenz enthalten AMI* auswählen, geben Sie Folgendes an:
++
+.... *Betriebssystem*: Wählen Sie *Windows Server 2016*, *Windows Server 2019* oder *Windows Server 2022*.
+.... *Database Edition*: Wählen Sie *SQL Server Standard Edition* oder *SQL Server Enterprise Edition*.
+.... *Datenbankversion*: Wählen Sie *SQL Server 2016*, *SQL Server 2019* oder *SQL Server 2022*.
+.... *SQL Server AMI*: Wählen Sie aus dem Dropdown-Menü einen SQL Server AMI aus.
+
+
+... Wenn Sie *Benutzerdefiniertes AMI verwenden* auswählen, wählen Sie im Dropdown-Menü eine AMI aus.
+
+
+.. *SQL Server-Sammlung*: Wählen Sie eine Sammlung für den Server aus.
++
+
+NOTE: Wenn der ausgewählte Sortiersatz nicht installationskompatibel ist, empfehlen wir, die Standardsortierung „SQL_Latin1_General_CP1_CI_AS“ auszuwählen.
+
+.. *Datenbankname*: Geben Sie den Namen des Datenbank-Clusters ein.
+.. *Datenbankanmeldeinformationen*: Geben Sie einen Benutzernamen und ein Passwort für ein neues Dienstkonto ein oder verwenden Sie vorhandene Dienstkontoanmeldeinformationen im Active Directory.
+
+
+. Geben Sie unter *Connectivity* Folgendes an:
++
+.. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar, um sich sicher mit Ihrer Instanz zu verbinden.
+.. *Active Directory*: Geben Sie die folgenden Active Directory-Details an:
++
+... Wählen Sie im Feld *Domain Name* einen Namen für die Domain aus oder geben Sie ihn ein.
++
+.... Bei von AWS gemanagten Active Directories werden Domänennamen im Dropdown-Menü angezeigt.
+.... Geben Sie für ein benutzerverwaltetes Active Directory einen Namen in das Feld *Suchen und Hinzufügen* ein, und klicken Sie auf *Hinzufügen*.
+
+
+... Geben Sie im Feld *DNS-Adresse* die DNS-IP-Adresse für die Domain ein. Sie können bis zu 3 IP-Adressen hinzufügen.
++
+Bei von AWS gemanagten Active Directories wird die DNS-IP-Adresse(n) im Dropdown-Menü angezeigt.
+
+... Geben Sie im Feld *Benutzername* den Benutzernamen für die Active Directory-Domäne ein.
+... Geben Sie im Feld *Passwort* ein Passwort für die Active Directory-Domain ein.
+
+
+
+
+. Geben Sie unter *Infrastruktur-Einstellungen* Folgendes an:
++
+.. *DB Instanztyp*: Wählen Sie den Typ der Datenbankinstanz aus dem Dropdown-Menü aus.
+.. *FSX für ONTAP-System*: Erstellen Sie ein neues FSX für ONTAP-Dateisystem oder verwenden Sie ein vorhandenes FSX für ONTAP-Dateisystem.
++
+... * Erstellen Sie ein neues FSX für ONTAP*: Geben Sie Benutzernamen und Passwort ein.
++
+Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
+
+... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
+
+
+.. *Snapshot Policy*: Standardmäßig aktiviert. Snapshots werden täglich erstellt und haben eine Aufbewahrungsfrist von 7 Tagen.
++
+Die Snapshots werden Volumes zugewiesen, die für SQL-Workloads erstellt wurden.
+
+.. *Größe des Datenlaufwerks*: Geben Sie die Kapazität des Datenlaufwerks ein und wählen Sie die Kapazitätseinheit aus.
+.. *Bereitgestellte IOPS*: Wählen Sie *automatisch* oder *vom Benutzer bereitgestellt*. Wenn Sie *User-provisioned* auswählen, geben Sie den IOPS-Wert ein.
+.. *Durchsatzkapazität*: Wählen Sie die Durchsatzkapazität aus dem Dropdown-Menü.
++
+In bestimmten Regionen können Sie eine Durchsatzkapazität von 4 Gbit/s wählen. Um eine Durchsatzkapazität von 4 GB/s bereitzustellen, muss Ihr FSX für ONTAP-Dateisystem mit mindestens 5,120 gib SSD-Speicherkapazität und 160,000 SSD-IOPS konfiguriert werden.
+
+.. *Verschlüsselung*: Wählen Sie einen Schlüssel aus Ihrem Konto oder einen Schlüssel aus einem anderen Konto. Sie müssen den Verschlüsselungsschlüssel ARN von einem anderen Konto eingeben.
++
+Die benutzerdefinierten FSX for ONTAP-Schlüssel werden basierend auf der Serviceinführbarkeit nicht aufgeführt. Wählen Sie einen geeigneten FSX-Verschlüsselungsschlüssel aus. Nicht-FSX-Verschlüsselungen verursachen Fehler bei der Servererstellung.
+
++
+Von AWS gemanagte Schlüssel werden nach Servicetauglichkeit gefiltert.
+
+.. *Tags*: Optional können Sie bis zu 40 Tags hinzufügen.
+.. *Simple Notification Service*: Optional können Sie den Simple Notification Service (SNS) für diese Konfiguration aktivieren, indem Sie ein SNS-Thema für Microsoft SQL Server aus dem Dropdown-Menü auswählen.
++
+... Aktivieren Sie den Simple Notification Service.
+... Wählen Sie im Dropdown-Menü ein ARN aus.
+
+
+.. *CloudWatch Monitoring*: Optional können Sie CloudWatch Monitoring aktivieren.
++
+Wir empfehlen die Aktivierung von CloudWatch zum Debuggen im Fehlerfall. Die Ereignisse, die in der AWS CloudFormation-Konsole angezeigt werden, haben eine hohe Ebene und geben nicht die Ursache an. Alle detaillierten Protokolle werden im Ordner in den EC2-Instanzen gespeichert `C:\cfn\logs` .
+
++
+In CloudWatch wird eine Protokollgruppe mit dem Namen des Stacks erstellt. Unter der Protokollgruppe wird ein Protokollstrom für jeden Validierungs-Node und jeden SQL-Node angezeigt. CloudWatch zeigt den Skriptfortschritt an und liefert Informationen, um zu verstehen, ob und wann die Bereitstellung fehlschlägt.
+
+.. *Resource Rollback*: Diese Funktion wird derzeit nicht unterstützt.
+
+
+. Zusammenfassung
++
+.. *Geschätzte Kosten*: Gibt eine Schätzung der Kosten an, die Ihnen entstehen könnten, wenn Sie die angezeigten Ressourcen bereitgestellt haben.
+
+
+. Klicken Sie auf *Create*, um den neuen Datenbank-Host bereitzustellen.
++
+Alternativ können Sie die Konfiguration speichern.
+
+
+
+--
+====
+
+
+== Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server
+
+Nachdem der Server bereitgestellt wurde, aktiviert Workload Factory keine Remote-Verbindung auf dem Microsoft SQL Server. Führen Sie die folgenden Schritte aus, um die Remote-Verbindung zu aktivieren.
+
+.Schritte
+. Verwenden Sie die Computeridentität für NTLM unter link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["Netzwerksicherheit: Zulassen, dass das lokale System die Computeridentität für NTLM verwendet"^] in der Microsoft-Dokumentation.
+. Überprüfen Sie die Konfiguration der dynamischen Ports mithilfe link:https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection["Beim Herstellen einer Verbindung zu SQL Server ist ein Netzwerk- oder instanzspezifischer Fehler aufgetreten"] der Microsoft-Dokumentation.
+. Lassen Sie die erforderliche Client-IP oder das erforderliche Subnetz in der Sicherheitsgruppe zu.
+
+
+.Wie es weiter geht
+Jetzt können Sie link:create-database.html["Erstellen Sie eine Datenbank in Workload Factory"].

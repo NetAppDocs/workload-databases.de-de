@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: quick-start-databases.html 
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Datenbanken haben drei verschiedene Modi mit unterschiedlichen Anforderungen. 
+---
+= Schneller Start für Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Datenbanken können Sie sofort im _Basic_-Modus starten. Wenn Sie mit Workload Factory Hosts ermitteln, Ressourcen verwalten und vieles mehr möchten, können Sie in wenigen Schritten beginnen.
+
+Für den Einstieg benötigen Sie ein AWS-Konto.
+
+Führen Sie die folgenden Schritte für den Einstieg in die Workload Factory-Datenbanken aus.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Melden Sie sich bei Workload Factory an
+[role="quick-margin-para"]
+Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Richten Sie ein Konto bei Workload Factory ein"^] und link:https://console.workloads.netapp.com["Melden Sie sich"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Fügen Sie Anmeldeinformationen und Berechtigungen hinzu
+[role="quick-margin-para"]
+Wählen Sie zwischen link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_Basic_, _read_ und _Automate_ Betriebsmodi"^].
+
+[role="quick-margin-para"]
+Wenn Sie im _BASIC_-Modus arbeiten, müssen Sie nicht weiter gehen. Sie können mit Workload Factory Datenbanken beginnen, um teilweise fertige Codebeispiele zu kopieren. Klicken Sie in der Kachel Datenbanken auf *Deploy Database Host*. link:create-database-server.html["Erfahren Sie, wie Sie einen Datenbankserver implementieren"].
+
+[role="quick-margin-para"]
+Wenn Sie im _read_- oder _Automate_-Modus arbeiten, müssen Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie einem Konto manuell Anmeldeinformationen hinzu"^] Workload-Funktionen wie Datenbanken und AI auswählen und die IAM-Richtlinien erstellen, um sicherzustellen, dass Sie über die richtigen Berechtigungen für den Betrieb im _read_- oder _Automate_-Modus verfügen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] Stellen Sie einen Datenbankserver bereit
+[role="quick-margin-para"]
+Wenn Sie sich für den Betrieb im _Automate_-Modus entschieden haben, müssen oder müssen Sie link:create-database-server.html["Bereitstellen"] link:detect-host.html["Einen Datenbankserver erkennen"] Ihre Hostressourcen verwalten, bevor Sie Benutzerdatenbanken hinzufügen.
+
+.Wie es weiter geht
+Wenn Sie über von FSX for ONTAP gemanagte Hosts in Ihrem Datenbankbestand verfügen, können Sie link:create-database.html["Erstellen Sie eine Benutzerdatenbank"] oder link:create-sandbox-clone.html["Klonen Sie Ihren Host, um eine Sandbox zu erstellen"].
+
+Wenn Sie Elastic Block Store-Hosts in Ihrem Datenbankbestand haben, können Sie link:explore-savings.html["Entdecken Sie Einsparungen mit dem Rechner für Storage-Einsparungen"].

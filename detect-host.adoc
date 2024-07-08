@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: detect-host.html 
+keywords: detect, detect server instance, instance, detect a database host, instance 
+summary: Erkennen einer Microsoft SQL Server-Instanz in Workload Factory for Databases 
+---
+= Erkennen einer Microsoft SQL Server-Instanz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erkennen einer Microsoft SQL Server-Instanz in Workload Factory for Databases
+
+Diese Aufgabe dient zur Erkennung einer _unerkannten Instanz_.
+
+.Über diese Aufgabe
+Wenn AWS-Anmeldeinformationen in Workload Factory zugeordnet sind, ermöglicht Datenbanken die automatische Erkennung von Microsoft SQL-Servern ab SQL Server 2016 mit den folgenden AWS-Storage-Typen:
+
+* FSX für ONTAP
+* Elastic Block Store (EBS)
+* FSX für Windows-Dateiserver
+
+
+In Datenbanken werden erkannte Instanzen wie folgt kategorisiert:
+
+* _Unerkannte Instanzen_: Nicht erkannte Instanzen, die von Workload Factory automatisch erkannt wurden. Instanzen werden in den folgenden Fällen nicht erkannt:
++
+** Microsoft SQL Server-Authentifizierung schlägt fehl.
+** Das FSX für ONTAP-Dateisystem für den Microsoft SQL-Server ist bei Ihrem Konto in Workload Factory nicht registriert.
+
+
+* _Unmanaged Instances_: Erkannte Instanzen, die nicht von Workload Factory gemanagt werden
+* _Managed Instances_: Erkannte Instanzen, die von Workload Factory gemanagt werden
+
+
+Der erste Schritt zur Verwaltung einer Microsoft SQL Server-Instanz oder Host-Instanz in Workload Factory für Datenbanken besteht darin, eine nicht erkannte Datenbank-Server-Instanz zu erkennen.
+
+.Bevor Sie beginnen
+Die Anforderungen für die Erkennung einer nicht erkannten Datenbank-Server-Instanz sind wie folgt:
+
+* Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für das AWS Konto"^] eine Datenbankserverinstanz in Workload Factory erkennen.
+* Der Speichertyp für die Instanz muss einer der folgenden sein:
++
+** FSX für ONTAP
+** Elastic Block Store (EBS)
+** FSX für Windows-Dateiserver
+
+
+* EC2-Instanzen müssen über ein Rollen-/Instanzprofil verfügen, das eine SSM-Verbindung zum Erkennen ermöglicht.
++
+Wenn eine Microsoft SQL-Instanz erkannt wird, wird die vorhandene Umgebung nicht geändert. Die Erkennung erfolgt über AWS Systems Manager Session Manager (SSM). Ohne das richtige IAM-Instanzprofil schlägt die Erkennung fehl. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html["Erfahren Sie mehr über die SSM-Fehlerbehebung"^].
+
+
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des zu erkennenden Hosts zu erweitern.
++
+Der Host wird erweitert, und Host-Instanzen werden angezeigt.
+
+. Klicken Sie auf das Menü mit drei Punkten der zu erkennenden Instanz.
+. Klicken Sie Auf *Detect*.
+. Geben Sie im Dialogfeld *Instanz erkennen* den Benutzernamen und das Kennwort des Microsoft SQL Servers oder den Benutzernamen und das Kennwort des FSX for ONTAP ein.
++
+Workload Factory versucht, Ihre Microsoft SQL-Anmeldedaten oder FSX for ONTAP-Anmeldedaten zu validieren.
+
++
+Wenn eine dieser Anmeldeinformationen nicht verfügbar ist, versucht Workload Factory, das Modul in PowerShell zu installieren `aws.tools.SimpleSystemsManagement` .
+
+. Klicken Sie Auf *Detect*.
++
+Erkannte Instanzinformationen werden angezeigt.
+
+. Wählen Sie *Ja, Instanz über Workload Factory verwalten* oder *Nein*.
+. Klicken Sie Auf *Fertig*.
+
+
+.Wie es weiter geht
+Wenn der Speichertyp für die Host-Instanz FSX für ONTAP ist, können Sie link:manage-server.html["Managen Sie die Instanz über Workload Factory"].
