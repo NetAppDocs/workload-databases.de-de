@@ -140,12 +140,12 @@ Implementierungsarchitekturen für einzelne Verfügbarkeitszonen und mehrere Ver
 .Single Availability Zone
 Das folgende Diagramm zeigt eine eigenständige Architektur mit einer einzelnen Verfügbarkeitszone in einer einzelnen Region.
 
-image:diagram-SAZ-database-architecture.png["Diagramm der eigenständigen Architektur mit einer einzigen Verfügbarkeitszone-Implementierung von Amazon FSX for NetApp ONTAP in einer einzigen Region"]
+image:diagram-SAZ-database-architecture.png["Diagramm einer eigenständigen Architektur mit einer einzigen Verfügbarkeitszone-Implementierung von Amazon FSX for NetApp ONTAP in einer einzigen Region"]
 
 .Mehrere Verfügbarkeitszonen
 Im folgenden Diagramm wird die HA-Architektur (High-Availability) mit zwei Nodes und dem FCI-Cluster (Failover Cluster Instance) in einer einzelnen Region dargestellt.
 
-image:diagram-MAZ-database-architecture.png["Diagramm der Hochverfügbarkeits-Architektur mit zwei Knoten mit Failover-Cluster-Instanzen-Cluster in einer einzelnen Region"]
+image:diagram-MAZ-database-architecture.png["Diagramm einer Hochverfügbarkeits-Architektur mit zwei Nodes mit Failover-Cluster-Instanzen in einer einzelnen Region"]
 
 
 

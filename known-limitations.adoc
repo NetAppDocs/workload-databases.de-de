@@ -108,3 +108,9 @@ Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-V
 * Auf der Registerkarte Inventar werden die geschätzten Kosten für jede Microsoft SQL-Instanz auf der Ebene des FSX für ONTAP-Dateisystems und nicht für Volumes, die die SQL-Instanz hosten, berechnet.
 * Berechnungen zu den Ersparnissen werden für FSX for Windows File Server nicht unterstützt.
 
+
+
+
+== Mehrere FSX für ONTAP-Dateisysteme
+
+Workload Factory unterstützt nicht das Erstellen oder Speichern von Konfigurationen für Microsoft SQL Server mit mehreren FSX für ONTAP-Dateisystemen. Es wird nur eine Bereitstellung von FSX for ONTAP-Dateisystemkonfigurationen unterstützt.
