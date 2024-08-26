@@ -30,6 +30,11 @@ FSX for ONTAP-Dateisysteme verfügen über zwei Microsoft SQL Server-Bereitstell
 
 
 --
+Microsoft Multi-Path-I/O-Konfiguration:: Beide Bereitstellungsmodelle für Microsoft SQL Server erfordern die LUN-Erstellung mithilfe des iSCSI-Storage-Protokolls. Workload Factory konfiguriert Microsoft Multipath I/O (MPIO) als Teil der Konfiguration von LUNs für SQL Server über FSX für ONTAP. MPIO wird auf der Grundlage von Best Practices für AWS und NetApp konfiguriert.
+
+
+Weitere Informationen finden Sie unter link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["SQL Server-Hochverfügbarkeitsimplementierungen mit Amazon FSX for NetApp ONTAP"^].
+
 Active Directory:: Während der Bereitstellung geschieht Folgendes für Active Directory (AD):
 +
 --
@@ -173,6 +178,14 @@ Bei von AWS gemanagten Active Directories wird die DNS-IP-Adresse(n) im Dropdown
 Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
 
 ... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
++
+Stellen Sie für vorhandene FSX for ONTAP-Dateisysteme Folgendes sicher:
+
++
+**** Die an FSX for ONTAP angeschlossene Routinggruppe ermöglicht die Verwendung von Routen zu den Subnetzen für die Bereitstellung.
+**** Die Sicherheitsgruppe ermöglicht Datenverkehr aus den für die Bereitstellung verwendeten Subnetzen, insbesondere HTTPS- (443) und iSCSI- (3260) TCP-Ports.
+
+
 
 
 .. *Größe des Datenlaufwerks*: Geben Sie die Kapazität des Datenlaufwerks ein und wählen Sie die Kapazitätseinheit aus.
@@ -264,7 +277,7 @@ Während der Implementierung eines neuen Servers werden drei Sicherheitsgruppen 
 ... Im Fall von AWS-Managed Active Directory wird die Sicherheitsgruppe, die an den Verzeichnisdienst angeschlossen ist, automatisch zu den Microsoft SQL-Knoten hinzugefügt, um die Kommunikation mit Active Directory zu ermöglichen.
 ... Für ein vorhandenes FSX für ONTAP-Dateisystem wird die ihm zugeordnete Sicherheitsgruppe automatisch zu den SQL-Knoten hinzugefügt, die die Kommunikation mit dem Dateisystem ermöglicht. Wenn ein neues FSX für ONTAP-System erstellt wird, wird eine neue Sicherheitsgruppe für das FSX für ONTAP-Dateisystem erstellt und die gleiche Sicherheitsgruppe wird auch an SQL-Knoten angeschlossen.
 +
-Für ein benutzerverwaltetes Active Directory können Sie eine Sicherheitsgruppe auswählen, die Datenverkehr von Ihren vorhandenen Systemen zulässt, die eine Verbindung zur Datenbank herstellen müssen. Die Sicherheitsgruppe sollte die Kommunikation mit den Active Directory-Domänencontrollern aus den Subnetzen ermöglichen, in denen EC2-Instanzen für Microsoft SQL konfiguriert sind.
+Stellen Sie für ein benutzerverwaltetes Active Directory sicher, dass die auf der AD-Instanz konfigurierte Sicherheitsgruppe Datenverkehr von Subnetzen zulässt, die für die Bereitstellung verwendet werden. Die Sicherheitsgruppe sollte die Kommunikation mit den Active Directory-Domänencontrollern aus den Subnetzen ermöglichen, in denen EC2-Instanzen für Microsoft SQL konfiguriert sind.
 
 
 
@@ -325,6 +338,14 @@ Bei von AWS gemanagten Active Directories wird die DNS-IP-Adresse(n) im Dropdown
 Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
 
 ... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
++
+Stellen Sie für vorhandene FSX for ONTAP-Dateisysteme Folgendes sicher:
+
++
+**** Die an FSX for ONTAP angeschlossene Routinggruppe ermöglicht die Verwendung von Routen zu den Subnetzen für die Bereitstellung.
+**** Die Sicherheitsgruppe ermöglicht Datenverkehr aus den für die Bereitstellung verwendeten Subnetzen, insbesondere HTTPS- (443) und iSCSI- (3260) TCP-Ports.
+
+
 
 
 .. *Snapshot Policy*: Standardmäßig aktiviert. Snapshots werden täglich erstellt und haben eine Aufbewahrungsfrist von 7 Tagen.
