@@ -70,12 +70,6 @@ Benutzerdefinierte Verschlüsselungsschlüssel für FSX for ONTAP werden gemäß
 
 
 
-== Microsoft SQL Server-Erkennung
-
-Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
-
-
-
 == CloudFormation-Vorlage
 
 Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-Vorlage (YAML-Datei) hat eine begrenzte Aufbewahrungsfrist von sieben Tagen.
@@ -85,12 +79,7 @@ Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-V
 == Sandbox-Support
 
 * Es können maximal 50 Sandbox-Klone von einem Datenbankserver erstellt werden.
-* Sandbox-Erstellung wird in den folgenden Fällen nicht unterstützt:
-+
-** Daten- und Protokolldateien befinden sich auf derselben Festplatte.
-** Die Quelldatenbank enthält mehrere Datendateien.
-
-
+* Die Sandbox-Erstellung wird nicht unterstützt, wenn die Quelldatenbank über mehrere Datendateien verfügt, die auf mehr als 2 Festplatten verteilt sind.
 
 
 
@@ -98,7 +87,7 @@ Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-V
 == Erkennung und Verwaltung von Microsoft SQL Server
 
 * Das Erkennen und Verwalten von Microsoft SQL-Instanzen wird nicht unterstützt, wenn ein privates Netzwerk ohne externe Konnektivität verwendet wird.
-* Wenn Microsoft SQL-Instanzen die Windows-basierte Authentifizierung blockieren und nur die Microsoft SQL-Benutzerauthentifizierung zulassen, wird die Microsoft SQL Server-Erkennung unterstützt, aber Verwaltungsvorgänge werden nicht unterstützt.
+* Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
 
 
 
