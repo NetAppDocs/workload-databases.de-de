@@ -49,7 +49,23 @@ Quelldatenbank:: Für den Klon benötigen Sie eine Quelldatenbank.
 .. *Zieldatenbank*: Geben Sie einen Namen für den Sandbox-Klon ein.
 
 
-. *Mount*: Wählen Sie *Mount-Punkt automatisch zuweisen* oder *Mount-Punkt-Pfad definieren*. Wenn Sie *Mount-Punkt-Pfad definieren* auswählen, geben Sie den Mount-Punkt-Pfad ein.
+. *Mount*: Beim Klonen einer SQL-Datenbank, die mehrere Daten und/oder Protokolldateien enthält, klont Workload Factory alle Dateien unter dem automatisch zugewiesenen oder definierten Laufwerksbuchstaben.
++
+Wählen Sie eine der folgenden Optionen:
+
++
+.. *Mount-Punkt automatisch zuweisen*
+.. *Pfad für Mount-Punkt definieren*
++
+Geben Sie Folgendes an, um den Pfad des Bereitstellungspunkts zu definieren:
+
++
+*** Geben Sie den Laufwerkbuchstaben für den Pfad der Datendatei ein.
+*** Geben Sie den Laufwerksbuchstaben für den Pfad der Protokolldatei ein.
+
+
+
+
 . *Tag definieren*: Wählen Sie ein Tag, um den Sandbox-Klon zu definieren.
 . Klicken Sie Auf *Erstellen*.
 

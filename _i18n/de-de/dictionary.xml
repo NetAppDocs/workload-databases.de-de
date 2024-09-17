@@ -233,7 +233,6 @@
   <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*Ziel-Datenbank-Host*: Wählen Sie einen Ziel-Datenbank-Host für den Sandbox-Klon, der in der gleichen VPC ist und hat das gleiche FSX für ONTAP-Dateisystem wie der Quell-Host.</block>
   <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*Zieldatenbankinstanz*: Wählen Sie die Zieldatenbankinstanz für den Sandbox-Klon aus.</block>
   <block id="26e615a604b088a660581f026763c30b" category="list-text">*Zieldatenbank*: Geben Sie einen Namen für den Sandbox-Klon ein.</block>
-  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*Mount*: Wählen Sie *Mount-Punkt automatisch zuweisen* oder *Mount-Punkt-Pfad definieren*. Wenn Sie *Mount-Punkt-Pfad definieren* auswählen, geben Sie den Mount-Punkt-Pfad ein.</block>
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Tag definieren*: Wählen Sie ein Tag, um den Sandbox-Klon zu definieren.</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Um den Fortschritt des Jobs zu überprüfen, wechseln Sie zur Registerkarte *Job-Überwachung*.</block>
   <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">Löschen Sie einen Sandbox-Klon, wenn Sie ihn nicht mehr benötigen.</block>
@@ -781,4 +780,11 @@
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">Im _BASIC_-Modus können Sie den Inhalt aus dem Codebox-Fenster kopieren und die empfohlene Konfiguration mit einer der Codebox-Methoden bereitstellen.</block>
   <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">Die Sandbox-Erstellung wird nicht unterstützt, wenn die Quelldatenbank über mehrere Datendateien verfügt, die auf mehr als 2 Festplatten verteilt sind.</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 September 2024</block>
+  <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*Mount*: Beim Klonen einer SQL-Datenbank, die mehrere Daten und/oder Protokolldateien enthält, klont Workload Factory alle Dateien unter dem automatisch zugewiesenen oder definierten Laufwerksbuchstaben.</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">Wählen Sie eine der folgenden Optionen:</block>
+  <block id="f5154bf526cc04b2839db0c72b2a7c22" category="list-text">*Mount-Punkt automatisch zuweisen*</block>
+  <block id="c9e660490143e459ec13d72934832f2c" category="list-text">*Pfad für Mount-Punkt definieren*</block>
+  <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">Geben Sie Folgendes an, um den Pfad des Bereitstellungspunkts zu definieren:</block>
+  <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">Geben Sie den Laufwerkbuchstaben für den Pfad der Datendatei ein.</block>
+  <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">Geben Sie den Laufwerksbuchstaben für den Pfad der Protokolldatei ein.</block>
 </blocks>
