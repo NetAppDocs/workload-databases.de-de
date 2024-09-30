@@ -35,6 +35,14 @@ Um eine dieser Aufgaben zu erledigen, müssen Sie link:detect-host.html["Erkenne
 
 Verwalten einer erkannten oder nicht verwalteten Microsoft SQL Server-Instanz für einen Host.
 
+Um eine Hostinstanz in einem privaten Netzwerk ohne externe Konnektivität zu managen, müssen die folgenden Endpunkte in der VPC verfügbar sein und mit den Subnetzen verbunden sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
 .Bevor Sie beginnen
 Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 

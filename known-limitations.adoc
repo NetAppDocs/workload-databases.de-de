@@ -78,25 +78,19 @@ Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-V
 
 == Sandbox-Support
 
-* Es können maximal 50 Sandbox-Klone von einem Datenbankserver erstellt werden.
-* Die Sandbox-Erstellung wird nicht unterstützt, wenn die Quelldatenbank über mehrere Datendateien verfügt, die auf mehr als 2 Festplatten verteilt sind.
-
+Es können maximal 50 Sandbox-Klone von einem Datenbankserver erstellt werden.
 
 
 
 == Erkennung und Verwaltung von Microsoft SQL Server
 
-* Das Erkennen und Verwalten von Microsoft SQL-Instanzen wird nicht unterstützt, wenn ein privates Netzwerk ohne externe Konnektivität verwendet wird.
-* Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
-
+Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
 
 
 
 == Einsparungen entdecken
 
-* Auf der Registerkarte Inventar werden die geschätzten Kosten für jede Microsoft SQL-Instanz auf der Ebene des FSX für ONTAP-Dateisystems und nicht für Volumes, die die SQL-Instanz hosten, berechnet.
-* Berechnungen zu den Ersparnissen werden für FSX for Windows File Server nicht unterstützt.
-
+Auf der Registerkarte Inventar werden die geschätzten Kosten für jede Microsoft SQL-Instanz auf der Ebene des FSX für ONTAP-Dateisystems und nicht für Volumes, die die SQL-Instanz hosten, berechnet.
 
 
 
