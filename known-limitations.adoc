@@ -78,7 +78,7 @@ Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-V
 
 == Sandbox-Support
 
-Es können maximal 50 Sandbox-Klone von einem Datenbankserver erstellt werden.
+Es können maximal 90 Sandbox-Klone von einem Datenbankserver erstellt werden.
 
 
 
