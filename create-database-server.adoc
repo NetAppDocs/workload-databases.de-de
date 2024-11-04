@@ -91,7 +91,10 @@ Active Directory:: Wenn Sie eine Verbindung zu Active Directory herstellen, müs
 
 == Schritt 1: Erstellen Sie einen Datenbankserver
 
-Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in Workload Factory mit _Automate_-Modus-Berechtigungen abzuschließen.
+Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in Workload Factory mit _Automate_-Modus-Berechtigungen abzuschließen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
+
+
+NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet `fsxadmin` und `vsadmin` Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen. Zusätzlich zu den _Automate_-Modus-Berechtigungen müssen Sie die folgenden Berechtigungen für das Benutzerkonto hinzufügen: `iam:TagRole` Und `iam:TagInstanceProfile`.
 
 [role="tabbed-block"]
 ====

@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: optimize-overview.html 
+keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: Die BlueXP  Workload-Farm für Datenbanken bietet kontinuierliche Optimierung für Microsoft SQL Server-Implementierungen auf Amazon FSX für NetApp ONTAP Storage. 
+---
+= Kontinuierliche Optimierung für die BlueXP  Workload-Farm für Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die BlueXP  Workload-Farm für Datenbanken bietet kontinuierliche Optimierung für Microsoft SQL Server-Implementierungen auf Amazon FSX für NetApp ONTAP Storage.
+
+Kontinuierliche Optimierung scannt und bewertet Ihre Datenbankinfrastruktur nach Bedarf automatisch, um sicherzustellen, dass große Bestände optimale Performance, Kosteneffizienz und Einhaltung von Best Practices erzielen. Die Funktion bietet Ihnen einen umfassenden Bericht mit Einblicken und Empfehlungen zur Optimierung.
+
+Dank kontinuierlicher Optimierung können Sie Probleme in der Datenbankinfrastruktur erkennen, erforderliche Änderungen erkennen und Maßnahmen ergreifen.
+
+Die wichtigsten Funktionen:
+
+* Kontinuierliche Bewertung
+* Automatische Validierung von Best Practices
+* Empfehlungen zur Größenanpassung
+* Proaktive Beobachtbarkeit
+* Einblick in Aktion
+* AWS hat eine gut konzipierte Framework Advisor Architektur
+
+
+Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.
+
+link:optimize-configurations.html["Optimierte Konfigurationen für Microsoft SQL Server Implementierungen"]

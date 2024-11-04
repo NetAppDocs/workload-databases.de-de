@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: optimize-configurations.html 
+keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: Datenbanken überprüft Storage-Konfigurationen von Microsoft SQL Server und liefert Erkenntnisse und Empfehlungen, mit denen Sie optimale Betriebsabläufe erzielen können. 
+---
+= Optimierte Konfigurationen für Microsoft SQL Server Implementierungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Assessment liefern Ihnen Einblicke, Empfehlungen und Optimierungen für optimale Betriebsabläufe.
+
+.Über diese Aufgabe
+Die Bewertung wird automatisch und kontinuierlich einmal täglich für Microsoft SQL Server-Instanzen mit FSX für ONTAP-Storage ausgeführt, der in der Workload-Fabrik gemanagt wird. Bewertungsberichte sind im Optimierungs-Dashboard nur verfügbar, wenn ein täglicher geplanter Job nach der Bereitstellung oder nach der Verwaltung einer Instanz ausgeführt wurde.
+
+Die Workload-Fabrik bietet detaillierte Empfehlungen zur Optimierung der Konfigurationen auf Basis der Best Practices für FSX für ONTAP-Storage.
+
+Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgenden Konfigurationen für Microsoft SQL Server-Instanzen:
++
+--
+* Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks
+* Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb
+* Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr
+* Compute: Einschließlich Rightsizing
+
+
+--
+
+
+.Bevor Sie beginnen
+* Sie müssen über Anmeldedaten mit Lese- oder Automatisierungsberechtigungen verfügen.
+* Um den Storage einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz von der Workload-Fabrik gemanagt werden und der Storage-Typ muss FSX für ONTAP sein.
+* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration optimieren.
+
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.
++
+Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+
+. Wählen Sie das Menü mit drei Punkten der zu scannenden Instanz und dann *Optimieren*.
+. Überprüfen Sie auf der Seite „optimierte Instanz“ für den Host die Ergebnisse der Storage-Bewertung.
++
+Filter können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags sortiert werden.
+
++
+Bei Bedarf können Sie einen Bericht über die Ergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.
+
+. Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.
++
+Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
+
+. Wählen Sie diese Option aus, um nicht optimierte Konfigurationen zu optimieren.
+. Sehen Sie sich die Optimierungsübersicht und die Aktionselemente an, die im Optimierungsdialog angezeigt werden, um zu erfahren, was passieren wird, wenn Sie sich für eine Optimierung entscheiden. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.
+. Wählen Sie *Weiter*, um die Konfiguration zu optimieren.
+
+
+.Ergebnis
+Der Optimierungsprozess wird gestartet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.

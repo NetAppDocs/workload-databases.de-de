@@ -63,6 +63,7 @@ Workload Factory für Datenbanken bietet die folgenden Funktionen:
 * *Sandbox-Erstellung*: Erstellen Sie eine isolierte On-Demand-Datenbankumgebung, die für Tests, Integration, Diagnose und Schulung verwendet werden kann, ohne die Produktionsdaten zu beeinträchtigen.
 * *Datenbankerstellung*: Erstellen Sie eine Benutzerdatenbank für Ihre vorhandenen Microsoft SQL Server mit _Quick_ oder _Advanced_ create Modi, um Ihre Datenbanksortierung, Dateinamen und Größen zu konfigurieren. Die Speicherkonfiguration ist inbegriffen.
 * *Job Monitoring*: Überwachen und verfolgen Sie den Fortschritt der Ausführung von Datenbankjobs und diagnostizieren und beheben Sie Probleme, falls ein Fehler auftritt.
+* *Kontinuierliche Optimierung*: Scannt kontinuierlich Ihre Microsoft SQL Server-Anlage offline und bietet Ihnen einen umfassenden Bericht mit Einblicken, Möglichkeiten und Empfehlungen, um Ihnen zu helfen, betriebliche Spitzenleistungen zu erzielen.
 
 
 
@@ -83,6 +84,18 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Weit
 Drei verschiedene Betriebsmodi - _BASIC_, _read_ und _Automate_ - bieten flexible Optionen für die Bereitstellung innerhalb und außerhalb von Workload Factory. Erhalten Sie sofort einen Wert bei Zero-Trust im _BASIC_-Modus mit Code-Snippets für den Einsatz außerhalb von Workload Factory. Erhalten Sie einen inkrementellen Wert mit inkrementellem Vertrauen in den Modi _read_ und _Automate_.
 
 Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi in Workload Factory"^].
+
+
+
+== Tools zur Verwendung von Workload Factory
+
+Sie können BlueXP Workload Factory mit folgenden Tools verwenden:
+
+* *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
+* *REST API*: Mit den REST-APIs der Workload Factory können Sie Microsoft SQL Server und andere AWS-Ressourcen bereitstellen und verwalten
+* *CloudFormation*: Mit AWS CloudFormation-Code können Sie die in der Workload Factory-Konsole definierten Aktionen ausführen, um AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu managen.
+* *Terraform BlueXP Workload Factory Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload Factory-Konsole generiert werden.
+
 
 
 
