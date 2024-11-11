@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-sandbox-clone.html 
 keywords: create, clone, sandbox 
-summary: Erstellen Sie in Workload Factory für Datenbanken einen Sandbox-Klon. 
+summary: In BlueXP  Workload Factory für Datenbanken einen Sandbox-Klon erstellen. 
 ---
-= Erstellen Sie in Workload Factory für Datenbanken einen Sandbox-Klon
+= In BlueXP  Workload Factory für Datenbanken einen Sandbox-Klon erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Durch die Erstellung eines Sandbox-Klons einer Datenbank in Workload Factory für Datenbanken können Sie den Klon für Entwicklungs-, Test-, Integrations-, Analyse-, Schulungs- und Qualitätssicherung und vieles mehr, ohne die Quelldatenbank zu ändern.
+Mit der Erstellung eines Sandbox-Klons einer Datenbank in der BlueXP -Workload-Fabrik für Datenbanken können Sie den Klon für Entwicklung, Tests, Integration, Analysen, Training, Qualitätssicherung und mehr verwenden, ohne die Quelldatenbank zu ändern.
 
 .Über diese Aufgabe
 Aus dem letzten Snapshot auf der Quelldatenbank wird ein Sandbox-Klon erstellt. Es kann in demselben Microsoft SQL Server wie die Quelldatenbank geklont oder in einem anderen Microsoft SQL Server geklont werden, sofern sie dasselbe FSX für ONTAP Dateisystem nutzen.
@@ -19,19 +19,19 @@ Aus dem letzten Snapshot auf der Quelldatenbank wird ein Sandbox-Klon erstellt. 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie einen Sandbox-Klon erstellen.
 
-Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Konto-Anmeldedaten und _read_ oder _Automate_ Modus-Berechtigungen"^] in Workload Factory einen Sandbox-Klon erstellen.
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Konto-Anmeldedaten und _read_ oder _Automate_ Modus-Berechtigungen"^]in der Workload Factory einen Sandbox-Klon erstellen.
 +
 --
-Alternativ können Sie die Codebox verwenden, um eine teilweise abgeschlossene Vorlage zu kopieren oder eine fertige Vorlage zu erstellen, damit Sie den Sandbox-Klon außerhalb von Workload Factory mit REST API erstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
+Alternativ können Sie die Codebox verwenden, um eine teilweise abgeschlossene Vorlage zu kopieren oder eine fertige Vorlage zu erstellen, sodass Sie den Sandbox-Klon außerhalb der Workload Factory mit REST API erstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
 
 --
-Microsoft SQL Server:: Sie benötigen einen verwalteten Microsoft SQL Server in Workload Factory für Datenbanken, um den neuen Sandbox-Klon zu hosten.
+Microsoft SQL Server:: Sie benötigen einen verwalteten Microsoft SQL Server in der Workload-Fabrik für Datenbanken, um den neuen Sandbox-Klon zu hosten.
 AWS System Manager:: Stellen Sie sicher, dass die `NT Authority\SYSTEM` Benutzerberechtigung auf dem Microsoft SQL-Host über AWS Systems Manager aktiviert ist.
 Quelldatenbank:: Für den Klon benötigen Sie eine Quelldatenbank.
 
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
 . Wählen Sie auf der Registerkarte Sandboxes die Option *Neue Sandbox erstellen* aus.

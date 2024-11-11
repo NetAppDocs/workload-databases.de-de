@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-clone.html 
 keywords: split, clone, source, new database 
-summary: Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf, um eine neue Datenbank zu erstellen. 
+summary: Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf, um eine neue Datenbank in der BlueXP  Workload-Fabrik für Datenbanken zu erstellen. 
 ---
 = Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf, um eine neue 
 
 
 [role="lead"]
-Durch die Aufteilung eines Sandbox-Klons aus seiner Quelldatenbank wird eine neue Datenbank erstellt, die eine bestimmte Menge an Speicherkapazität verbraucht. Der Klon wird gelöscht, wenn der Split abgeschlossen ist und die neue Datenbank im Bestand angezeigt wird.
+In der BlueXP -Workload-Fabrik für Datenbanken wird durch die Aufteilung eines Sandbox-Klons aus seiner Quelldatenbank eine neue Datenbank erstellt, die eine bestimmte Menge an Speicherkapazität verbraucht. Der Klon wird gelöscht, wenn der Split abgeschlossen ist und die neue Datenbank im Bestand angezeigt wird.
 
 .Bevor Sie beginnen
 Berücksichtigen Sie, wie viel Storage-Kapazität für die neue Datenbank benötigt wird. Falls erforderlich, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["Erhöhen Sie die Kapazität des Filesystems"^] für das FSX für ONTAP-Dateisystem, bevor Sie beginnen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
 . Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, den Sie teilen möchten.

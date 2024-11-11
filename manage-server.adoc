@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: Verwalten Sie Microsoft SQL Server-Instanzen in Workload Factory für Datenbanken. 
+summary: Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Farm für Datenbanken. 
 ---
-= Managen von Microsoft SQL Server-Instanzen
+= Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Managen Sie Microsoft SQL Server-Instanzen, um den Instanz- und Datenbankstatus, die Ressourcenauslastung, den Schutz und die Storage-Performance in Workload Factory für Datenbanken zu überwachen.
+Managen Sie Microsoft SQL Server-Instanzen, um den Instanz- und Datenbankstatus, die Ressourcenauslastung, die Sicherung und die Storage-Performance in der BlueXP  Workload-Farm für Datenbanken zu überwachen.
 
 Datenbanken können Microsoft SQL Server Instanzen nur mit FSX für ONTAP Filesystem-Storage managen.
 
@@ -61,7 +61,7 @@ Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Klicken Sie in der Zeile des zu verwaltenden Hosts auf *Verwalten*.
@@ -69,7 +69,7 @@ Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 . Klicken Sie Auf *Verwalten*.
 
 
-Der Vorgang schlägt fehl, wenn auf dem Microsoft SQL Server bestimmte PowerShell-Module und Verwaltungsskripte fehlen. Workload Factory löst einen Ressourcenauftrag vorbereiten aus, um fehlende Module und Skripte zu installieren, die Sie auf der Registerkarte Jobüberwachung anzeigen können. Wenn der Job abgeschlossen ist, versuchen Sie erneut, die Hostinstanz zu verwalten.
+Der Vorgang schlägt fehl, wenn auf dem Microsoft SQL Server bestimmte PowerShell-Module und Verwaltungsskripte fehlen. Workload Factory löst einen Prepare Resource Job aus, um fehlende Module und Skripte zu installieren, die Sie auf der Registerkarte Job Monitoring anzeigen können. Wenn der Job abgeschlossen ist, versuchen Sie erneut, die Hostinstanz zu verwalten.
 
 
 
@@ -78,7 +78,7 @@ Der Vorgang schlägt fehl, wenn auf dem Microsoft SQL Server bestimmte PowerShel
 Sie können eine verwaltete Instanz anzeigen, indem Sie die folgenden Schritte ausführen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.
@@ -98,7 +98,7 @@ Die Übersicht über die Instanz wird auf der Registerkarte „Inventar“ angez
 Sie können die von der verwalteten Instanz verwalteten Datenbanken anzeigen, indem Sie die folgenden Schritte ausführen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.
@@ -119,7 +119,7 @@ Die Liste der Datenbanken in der Instanz wird auf der Registerkarte Inventar ang
 Heben Sie die Verwaltung einer Hostinstanz auf, indem Sie die folgenden Schritte ausführen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Host-Instanz zu erweitern, deren Verwaltung aufgehoben werden soll.

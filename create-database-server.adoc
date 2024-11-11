@@ -2,21 +2,21 @@
 sidebar: sidebar 
 permalink: create-database-server.html 
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: Erstellen Sie einen neuen Microsoft SQL Server in Workload Factory für Datenbanken. 
+summary: Erstellen Sie einen neuen Microsoft SQL Server in der BlueXP -Workload-Farm für Datenbanken. 
 ---
-= Erstellen Sie einen Datenbankserver in Workload Factory für Datenbanken
+= Erstellen Sie einen Datenbankserver in der BlueXP -Workload-Fabrik für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Die Erstellung eines neuen Microsoft SQL-Servers oder Datenbank-Hosts in Datenbanken erfordert eine FSX for ONTAP-Bereitstellung des Dateisystems und Ressourcen für Active Directory.
+Die Erstellung eines neuen Microsoft SQL-Servers oder Datenbank-Hosts in der BlueXP -Workload-Farm für Datenbanken erfordert eine Bereitstellung von FSX für ONTAP-Dateisystem und Ressourcen für Active Directory.
 
 .Über diese Aufgabe
 Sie benötigen die Zugangsdaten für das AWS Konto und die _Automate_ Berechtigungen.
 
-Informieren Sie sich zunächst über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Hostkonfiguration, die Active Directory-Bereitstellung, die Betriebsmodi von Workload Factory und die Anforderungen für diesen Vorgang.
+Informieren Sie sich zunächst über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Hostkonfiguration, die Active Directory-Bereitstellung, die Betriebsmodi der Workload-Werkseinstellungen und die Anforderungen, die für diesen Vorgang erforderlich sind.
 
 Nach der Bereitstellung müssen Sie <<Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server,Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server>>.
 
@@ -52,25 +52,22 @@ Ressourcen-Rollbacks:: Wenn Sie ein Rollback Ihrer DNS-Ressourcen (Domain Name S
 
 
 --
-Betriebsmodi für Workload Factory:: Workload Factory bietet drei Betriebsmodi, je nachdem, wie bequem Sie sich bei Workload Factory Ihre AWS Ressourcen managen lassen.
-+
---
-*_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb von Workload Factory auszufüllen.
+Workload Factory-Betriebsmodi:: Die Workload-Fabrik bietet drei Betriebsmodi, je nachdem, wie komfortabel Sie Ihre AWS Ressourcen über die Werkseinstellungen hinweg managen können.
 
-*_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können auch zu CloudFormation von Workload Factory mit den ausgefüllten Formulardetails umleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in Workload Factory zu verwalten.
 
-*_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen in Workload Factory erstellen und managen können.
+*_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in der Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb der Arbeitslast ab Werk zu erstellen.
 
---
+*_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können die ausgefüllten Formulardetails auch zur CloudFormation aus der Workload Factory weiterleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in der Workload Factory zu verwalten.
 
+*_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen innerhalb der Workload-Fabrik erstellen und managen können.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.
 
-Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus"^] einen neuen Datenbankhost in Workload Factory erstellen.
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
 +
 --
-Alternativ können Sie mit der Codebox eine leere Vorlage kopieren oder eine fertige Vorlage erstellen, sodass Sie mit REST-API, AWS CLI oder AWS CloudFormation eine Datenbank außerhalb von Workload Factory bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
+Alternativ können Sie mit der Codebox eine leere Vorlage kopieren oder eine fertige Vorlage erstellen, damit Sie mit REST-API, AWS CLI oder AWS CloudFormation eine Datenbank außerhalb der Workload-Factory bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
 
 --
 Active Directory:: Wenn Sie eine Verbindung zu Active Directory herstellen, müssen Sie über Administratorzugriff mit Berechtigungen verfügen, um Folgendes tun zu können:
@@ -91,7 +88,7 @@ Active Directory:: Wenn Sie eine Verbindung zu Active Directory herstellen, müs
 
 == Schritt 1: Erstellen Sie einen Datenbankserver
 
-Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in Workload Factory mit _Automate_-Modus-Berechtigungen abzuschließen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
+Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen _Automate_ zu erledigen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
 
 
 NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet `fsxadmin` und `vsadmin` Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen. Zusätzlich zu den _Automate_-Modus-Berechtigungen müssen Sie die folgenden Berechtigungen für das Benutzerkonto hinzufügen: `iam:TagRole` Und `iam:TagInstanceProfile`.
@@ -104,26 +101,26 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 NOTE: In _Quick Create_ ist FCI das Standardbereitgabemodell, Windows 2016 die Standardversion von Windows und SQL 2019 Standard Edition die Standardversion von SQL.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus.
 . Wählen Sie *Schnellerstelle*.
 . Geben Sie unter *AWS settings* Folgendes an:
 +
 .. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
 +
-Mit den AWS-Zugangsdaten mit _Automate_-Berechtigungen kann Workload Factory den neuen Datenbank-Host über Ihr AWS-Konto in Workload Factory implementieren und managen.
+AWS Zugangsdaten mit _Automate_ Berechtigungen ermöglichen die werkseitige Implementierung und das Management des neuen Datenbank-Hosts über Ihr AWS-Konto innerhalb der Workload-Fabrik.
 
 +
-Mit AWS Zugangsdaten mit _read_ Berechtigungen kann Workload Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation-Konsole verwenden können.
+Mit AWS Zugangsdaten mit _read_ Berechtigungen kann die Workload-Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation Konsole verwenden können.
 
 +
-Wenn Sie keine AWS-Anmeldeinformationen in Workload Factory haben und den neuen Server in Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
 
 +
-Wenn Sie das Formular zum Erstellen eines neuen Servers in Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie das Formular zum Erstellen eines neuen Servers in der Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
 
 +
-Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb von Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
+Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb der Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
 
 .. *Region & VPC*: Wählen Sie eine Region und ein VPC-Netzwerk.
 +
@@ -213,7 +210,7 @@ Sie können auch *Konfiguration speichern* auswählen, um den Host später berei
 .Erweiterte Erstellung
 --
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Workload Factory-Konsole"^].
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus.
 . Wählen Sie *Advanced Create*.
 . Wählen Sie für *Deployment model* *Failover Cluster Instance* oder *Single Instance* aus.
@@ -221,19 +218,19 @@ Sie können auch *Konfiguration speichern* auswählen, um den Host später berei
 +
 .. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
 +
-Mit den AWS-Zugangsdaten mit _Automate_-Berechtigungen kann Workload Factory den neuen Datenbank-Host über Ihr AWS-Konto in Workload Factory implementieren und managen.
+AWS Zugangsdaten mit _Automate_ Berechtigungen ermöglichen die werkseitige Implementierung und das Management des neuen Datenbank-Hosts über Ihr AWS-Konto innerhalb der Workload-Fabrik.
 
 +
-Mit AWS Zugangsdaten mit _read_ Berechtigungen kann Workload Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation-Konsole verwenden können.
+Mit AWS Zugangsdaten mit _read_ Berechtigungen kann die Workload-Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation Konsole verwenden können.
 
 +
-Wenn Sie keine AWS-Anmeldeinformationen in Workload Factory haben und den neuen Server in Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
 
 +
-Wenn Sie das Formular zum Erstellen eines neuen Servers in Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie das Formular zum Erstellen eines neuen Servers in der Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
 
 +
-Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb von Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
+Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb der Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
 
 .. *Region & VPC*: Wählen Sie eine Region und ein VPC-Netzwerk.
 +
@@ -402,7 +399,7 @@ Alternativ können Sie die Konfiguration speichern.
 
 == Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server
 
-Nachdem der Server bereitgestellt wurde, aktiviert Workload Factory keine Remote-Verbindung auf dem Microsoft SQL Server. Führen Sie die folgenden Schritte aus, um die Remote-Verbindung zu aktivieren.
+Nach der Bereitstellung des Servers wird die Remote-Verbindung auf dem Microsoft SQL Server von Workload Factory nicht aktiviert. Führen Sie die folgenden Schritte aus, um die Remote-Verbindung zu aktivieren.
 
 .Schritte
 . Verwenden Sie die Computeridentität für NTLM unter link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["Netzwerksicherheit: Zulassen, dass das lokale System die Computeridentität für NTLM verwendet"^] in der Microsoft-Dokumentation.
@@ -411,4 +408,4 @@ Nachdem der Server bereitgestellt wurde, aktiviert Workload Factory keine Remote
 
 
 .Wie es weiter geht
-Jetzt können Sie link:create-database.html["Erstellen Sie eine Datenbank in Workload Factory"].
+Jetzt können Sie link:create-database.html["Erstellen einer Datenbank in der BlueXP -Workload-Farm für Datenbanken"].

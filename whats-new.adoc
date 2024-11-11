@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory' 
-summary: Informieren Sie sich über die Neuerungen bei Workload Factory für Datenbanken. 
+summary: Informieren Sie sich über die Neuerungen bei der BlueXP  Workload-Farm für Datenbanken. 
 ---
-= Was ist neu
+= Neuerungen bei der BlueXP -Workload-Farm für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -63,9 +63,9 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Mit 
 
 === Navigieren Sie von der Startseite zum Einsparungsrechner
 
-Sie können nun von der link:https://console.workloads.netapp.com["Workload Factory-Konsole"^]Homepage zum Einsparungsrechner navigieren. Wählen Sie zum Einstieg Elastic Block Store und FSX for Windows File Server aus.
+Sie können nun von der link:https://console.workloads.netapp.com["Arbeitslastwerkkonsole"^]Homepage zum Einsparungsrechner navigieren. Wählen Sie zum Einstieg Elastic Block Store und FSX for Windows File Server aus.
 
-image:screenshot-explore-savings-home-small.png["Screenshot der Workload Factory Konsole-Startseite. Die Abbildung zeigt die Kachel „Datenbanken“ mit einer neuen Schaltfläche „Explore Savings“. Klicken Sie auf die Schaltfläche, um ein Dropdown-Menü zu öffnen. Das Dropdown-Menü hat zwei Optionen - Microsoft SQL Server auf EBS und Microsoft SQL Server auf FSX für Windows File Server."]
+image:screenshot-explore-savings-home-small.png["Screenshot der Workload Factory-Konsole-Homepage. Die Abbildung zeigt die Kachel „Datenbanken“ mit einer neuen Schaltfläche „Explore Savings“. Klicken Sie auf die Schaltfläche, um ein Dropdown-Menü zu öffnen. Das Dropdown-Menü hat zwei Optionen - Microsoft SQL Server auf EBS und Microsoft SQL Server auf FSX für Windows File Server."]
 
 
 
@@ -105,8 +105,8 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Mit 
 
 
 
-=== Erstversion von Workload Factory für Datenbanken
+=== Erstversion der BlueXP -Workload-Farm für Datenbanken
 
-Die erste Version umfasst die Möglichkeit, mit Amazon FSX for NetApp ONTAP als Storage-Umgebung für Ihre Datenbank-Workloads die Einsparungen zu untersuchen, Microsoft SQL-Server zu erkennen, zu managen und zu implementieren, Datenbanken zu implementieren und zu klonen und diese Jobs innerhalb der Workload Factory zu überwachen.
+Die erste Version umfasst die Möglichkeit, mit Amazon FSX for NetApp ONTAP als Storage-Umgebung für Ihre Datenbank-Workloads Einsparungen zu erkunden, Microsoft SQL-Server zu erkennen, zu managen und zu implementieren, Datenbanken bereitzustellen und zu klonen und diese Jobs innerhalb der Workload-Farm zu überwachen.
 
 link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Lernen Sie Datenbanken kennen"^]

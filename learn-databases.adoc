@@ -2,30 +2,30 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: Datenbanken sind ein End-to-End-Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices zur Optimierung, automatischen Thin Cloning sowie Monitoring- und Lösungsfunktionen. 
+summary: BlueXP  Workload-Farm für Datenbanken ist ein End-to-End-Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices für Optimierung, automatisches Thin Cloning sowie Überwachungs- und Lösungsfunktionen. 
 ---
-= Erfahren Sie mehr über Workload Factory für Datenbanken
+= Erfahren Sie mehr über die BlueXP  Workload-Farm für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory für Datenbanken ist ein umfassender Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices zur Optimierung, zum automatischen Thin Cloning sowie zu Überwachungs- und Lösungsfunktionen.
+BlueXP  Workload-Farm für Datenbanken ist ein End-to-End-Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices für Optimierung, automatisches Thin Cloning sowie Überwachungs- und Lösungsfunktionen.
 
 
 
-== Was ist Workload Factory für Datenbanken?
+== Was ist eine BlueXP -Workload-Fabrik für Datenbanken?
 
-Workload Factory for Databases erkennt, bewertet, plant, stellt und verschiebt Microsoft SQL Server-Daten auf Amazon FSX for NetApp ONTAP (FSX for ONTAP)-Implementierungen, die optimiert sind, um Ihre Erwartungen an Performance und Kosten unter Einhaltung von branchenspezifischen Best Practices zu erfüllen. Workload Factory sorgt im gesamten Lebenszyklus für kontinuierliche Optimierung und Management von Datenbanken auf FSX für ONTAP.
+Die BlueXP  Workload-Farm für Datenbanken erkennt, bewertet, plant, stellt und verschiebt Microsoft SQL Server-Daten auf Amazon FSX for NetApp ONTAP (FSX for ONTAP)-Implementierungen, die optimiert sind, um Ihre Performance- und Kostenerwartungen unter Einhaltung der Best Practices der Branche zu erfüllen. Während des gesamten Lebenszyklus sorgt die Workload-Fabrik für kontinuierliche Optimierung und Management von Datenbanken auf FSX für ONTAP.
 
-Weitere Informationen zu Workload Factory finden Sie im link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Übersicht über Workload Factory"^].
+Weitere Informationen zur Workload Factory finden Sie im link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Übersicht über die Workload-Fabrik"^].
 
 
 
-== Vorteile von Workload Factory für selbst gemanagte Datenbanken
+== Vorteile der Workload-Farm für selbst gemanagte Datenbanken
 
-Workload Factory bietet die folgenden Vorteile: Best Practices und Automatisierung für selbstverwaltete Datenbanken.
+Workload Factory bietet die folgenden Vorteile: Best Practices und Automatisierung für selbst gemanagte Datenbanken.
 
 
 
@@ -44,26 +44,39 @@ Workload Factory bietet die folgenden Vorteile: Best Practices und Automatisieru
 Workload Factory führt mit der _Codebox_ eine integrierte Automatisierung ein. Die Codebox bietet folgende Automatisierungsvorteile:
 
 * *Code Snippet Generation*: Infrastructure-as-Code (IAC) Snippets werden während der Ressourcenerstellung erzeugt, was eine nahtlose Integration in bestehende Orchestrierungs-Workflows ermöglicht.
-* *Co-Pilot für Infrastructure-as-Code*: Die Codebox ist ein Co-Pilot für Infrastructure-as-Code (IAC), der Entwicklern und DevOps bei der Codegenerierung hilft, jeden von Workload Factory unterstützten Vorgang auszuführen.
+* *Co-Pilot für Infrastructure-as-Code*: Die Codebox ist ein Co-Pilot für Infrastructure-as-Code (IAC), der Entwicklern und DevOps bei der Erstellung von Code hilft, um jeden von der Workload Factory unterstützten Betrieb auszuführen.
 * *Code-Viewer und Automations-Katalog*: Die Codebox bietet einen Code-Viewer für die schnelle Analyse der Automatisierung und einen Automatisierungs-Katalog für eine schnelle spätere Wiederverwendung.
 
 
 
 
-=== Workload Factory für Datenbankfunktionen
+=== Workload-Fabrik für Datenbankfunktionen
 
-Workload Factory für Datenbanken bietet die folgenden Funktionen:
+Workload Factory für Datenbanken bietet folgende Funktionen:
 
 * *Einfache, schnelle Bereitstellungen*: Vereinfachen und optimieren Sie Ihre Bereitstellungserfahrung, indem Sie Antworten auf Spezifikationsfragen auswählen und die normalerweise erforderliche Zeit für die Untersuchung der Bereitstellung und Konfiguration Ihres Microsoft SQL Server auf AWS vermeiden.
-* *Automatisierte Orchestrierung*: Verfügbar über die Workload Factory Benutzeroberfläche mit _Quick_ und _Advanced_ Erstellen von Bereitstellungsmodi, Chatbot von Workload Factory und API mit AWS CloudFormation.
+* *Automatisierte Orchestrierung*: Verfügbar über die Workload Factory User Interface mit _Quick_ und _Advanced_ Erstellen von Implementierungsmodi, Chatbot der Workload Factory und API mit AWS CloudFormation.
 * *Integrierte Funktionen*: Nutzen Sie Best Practices für NetApp, Microsoft und Amazon sowie die in die Bereitstellungskonfiguration integrierte Auswahl an AWS-Ressourcen.
-* *Kostenschätzung*: Bewerten Sie potenzielle Kosteneinsparungen mit dem Storage-Rechner von Workload Factory, der die Kosten für Speicherung, Computing, SQL-Lizenzierung, Snapshots und Klonen in Einzelposten für bestehende Microsoft SQL Server-Implementierungen mit Elastic Block Store im Vergleich zu FSX für ONTAP schätzt und detailliert beschreibt.
-* *Wiederverwendbare Automatisierungsvorlagen*: Erstellen, Wiederverwenden und Anpassen von CloudFormation-Vorlagen aus der Workload Factory Codebox für zukünftige Microsoft SQL Server-Bereitstellungen in mehreren Umgebungen.
+* *Kostenschätzung*: Bewerten Sie die potenziellen Kosteneinsparungen mit dem Einsparungsrechner, der die Kosten für Storage, Compute, SQL-Lizenzierung, Snapshots und Klonen in Einzelposten für bestehende Microsoft SQL Server-Implementierungen mit Elastic Block Store und FSX für Windows-Dateiserver im Vergleich zu FSX für ONTAP schätzt und detailliert beschreibt.
+* *Wiederverwendbare Automatisierungsvorlagen*: Erstellen, Wiederverwenden und Anpassen von CloudFormation-Vorlagen aus der Workload-Factory Codebox für zukünftige Microsoft SQL Server-Bereitstellungen in mehreren Umgebungen.
 * *Ermittlung und Bereitstellung von AWS-Ressourcen*: Automatische Erkennung von Microsoft SQL-Servern auf FSX für ONTAP, FSX für Windows-Dateiserver und Elastic Block Store, die über Ihr AWS-Konto bereitgestellt werden. Der Datenbankbestand dient als Ausgangspunkt für die Erkundung von Einsparungsmöglichkeiten für Server in anderen AWS Storage-Systemen oder eines Management-Tools für FSX für ONTAP-basierte Server und Instanzen.
 * *Sandbox-Erstellung*: Erstellen Sie eine isolierte On-Demand-Datenbankumgebung, die für Tests, Integration, Diagnose und Schulung verwendet werden kann, ohne die Produktionsdaten zu beeinträchtigen.
 * *Datenbankerstellung*: Erstellen Sie eine Benutzerdatenbank für Ihre vorhandenen Microsoft SQL Server mit _Quick_ oder _Advanced_ create Modi, um Ihre Datenbanksortierung, Dateinamen und Größen zu konfigurieren. Die Speicherkonfiguration ist inbegriffen.
 * *Job Monitoring*: Überwachen und verfolgen Sie den Fortschritt der Ausführung von Datenbankjobs und diagnostizieren und beheben Sie Probleme, falls ein Fehler auftritt.
 * *Kontinuierliche Optimierung*: Scannt kontinuierlich Ihre Microsoft SQL Server-Anlage offline und bietet Ihnen einen umfassenden Bericht mit Einblicken, Möglichkeiten und Empfehlungen, um Ihnen zu helfen, betriebliche Spitzenleistungen zu erzielen.
+
+
+
+
+== Tools zur Verwendung der Workload Factory
+
+Sie können die Workload Factory mit den folgenden Tools verwenden:
+
+* *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
+* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können
+* *REST-API*: Mit REST-APIs für Workload Factory können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen
+* *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto.
+* *Terraform BlueXP  Workload Factory Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload Factory-Konsole generiert werden.
 
 
 
@@ -75,26 +88,26 @@ Workload Factory für Datenbanken bietet die folgenden Funktionen:
 * *Datenmanagement und Effizienz*: FSX for ONTAP bietet verschiedene Funktionen zur Verbesserung von Datenmanagement und Effizienz, z. B. platzsparende Thin Clones, Thin Provisioning, Komprimierung und Deduplizierung sowie Tiering selten genutzter Daten in den Kapazitäts-Pool.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Weitere Informationen zu FSX für ONTAP für Workload Factory"^].
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Erfahren Sie mehr über FSX für ONTAP für die Workload-Fabrik"^].
 
 
 
-=== Betriebsmodi in Workload Factory
+=== Betriebsmodi in der Workload Factory
 
-Drei verschiedene Betriebsmodi - _BASIC_, _read_ und _Automate_ - bieten flexible Optionen für die Bereitstellung innerhalb und außerhalb von Workload Factory. Erhalten Sie sofort einen Wert bei Zero-Trust im _BASIC_-Modus mit Code-Snippets für den Einsatz außerhalb von Workload Factory. Erhalten Sie einen inkrementellen Wert mit inkrementellem Vertrauen in den Modi _read_ und _Automate_.
+Drei verschiedene Betriebsmodi - _BASIC_, _read_ und _Automate_ - bieten flexible Optionen für den Einsatz innerhalb und außerhalb der Workload Factory. Erhalten Sie im _BASIC_-Modus sofort einen Wert ohne Vertrauen mit Codeschnipseln für die Verwendung außerhalb der Arbeitslast. Erhalten Sie einen inkrementellen Wert mit inkrementellem Vertrauen in den Modi _read_ und _Automate_.
 
-Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi in Workload Factory"^].
+Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi in der Workload Factory"^].
 
 
 
-== Tools zur Verwendung von Workload Factory
+== Tools zur Verwendung der Workload Factory
 
-Sie können BlueXP Workload Factory mit folgenden Tools verwenden:
+Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
 
 * *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
-* *REST API*: Mit den REST-APIs der Workload Factory können Sie Microsoft SQL Server und andere AWS-Ressourcen bereitstellen und verwalten
-* *CloudFormation*: Mit AWS CloudFormation-Code können Sie die in der Workload Factory-Konsole definierten Aktionen ausführen, um AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu managen.
-* *Terraform BlueXP Workload Factory Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload Factory-Konsole generiert werden.
+* *REST API*: Mit REST-APIs für die Workload Factory können Sie Microsoft SQL Server und andere AWS-Ressourcen bereitstellen und verwalten
+* *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto.
+* *Terraform BlueXP -Workload-Factory-Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload Factory-Konsole generiert werden.
 
 
 
@@ -105,7 +118,7 @@ Sie können BlueXP Workload Factory mit folgenden Tools verwenden:
 
 === Unterstützte Konfigurationen
 
-Workload Factory für Microsoft SQL Server unterstützt sowohl Hochverfügbarkeit (immer bei Failover-Cluster-Instanzen) als auch Einzelinstanzimplementierungen gemäß den Best Practices von AWS, NetApp ONTAP und SQL Server.
+Die Workload-Farm für Microsoft SQL Server unterstützt sowohl Hochverfügbarkeit (immer bei Failover-Cluster-Instanzen) als auch Einzelinstanzimplementierungen gemäß den Best Practices von AWS, NetApp ONTAP und SQL Server.
 
 [cols="2a,2a,2a,2a"]
 |===
@@ -193,4 +206,4 @@ Die folgenden AWS Regionen werden nicht unterstützt:
 
 Amazon FSX für NetApp ONTAP ist eine AWS-First-Party-Lösung. Wenn Sie Fragen oder Probleme des technischen Supports im Zusammenhang mit Ihrem FSX für ONTAP-Filesystem, Ihrer Infrastruktur oder jeder Lösung, die diesen Service verwendet, verwenden Sie das Support-Center in Ihrer AWS-Managementkonsole, um einen Support-Fall für AWS zu eröffnen. Wählen Sie den Service „FSX for ONTAP“ und die entsprechende Kategorie aus. Geben Sie die verbleibenden Informationen an, die zur Erstellung Ihres AWS-Supportfalls erforderlich sind.
 
-Allgemeine Fragen zu Workload Factory- oder Workload Factory-Anwendungen und -Diensten finden Sie unter link:get-help.html["Erhalten Sie Hilfe zu Datenbanken für Workload Factory"].
+Allgemeine Fragen zu den Anwendungen und Dienstleistungen der Arbeitslast-Fabrik oder der Arbeitslast-Fabrik finden Sie unter link:get-help.html["Hier erhalten Sie Hilfe für die BlueXP -Workload-Farm für Datenbanken"].
