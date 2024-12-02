@@ -19,37 +19,34 @@ Sie benötigen die Zugangsdaten für das AWS Konto und die _Automate_ Berechtigu
 Informieren Sie sich zunächst über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Hostkonfiguration, die Active Directory-Bereitstellung, die Betriebsmodi der Workload-Werkseinstellungen und die Anforderungen, die für diesen Vorgang erforderlich sind.
 
 FSX für ONTAP-File-System-Implementierungen:: Die Erstellung eines neuen PostgreSQL-Servers erfordert ein FSX für ONTAP-Dateisystem als Storage-Backend. Sie können ein bestehendes FSX für ONTAP-Dateisystem verwenden oder ein neues Dateisystem erstellen. Wenn Sie ein bestehendes FSX für ONTAP-Dateisystem als Datenbankserver-Storage-Back-End auswählen, erstellen wir eine neue Storage-VM für die PostgreSQL-Workloads.
-
-
++
+--
 FSX für ONTAP-Dateisysteme unterstützt _Standalone_-Bereitstellungen für PostgreSQL. Workload Factory erstellt ein einzelnes Verfügbarkeitszonen-FSX für ONTAP-Dateisystem zusätzlich zu separaten Volumes und LUNs für Daten-, Protokoll- und tempdb-Dateien.
 
+--
 Workload Factory-Betriebsmodi:: Die Workload-Fabrik bietet drei Betriebsmodi, je nachdem, wie komfortabel Sie Ihre AWS Ressourcen über die Werkseinstellungen hinweg managen können.
-
-
++
+--
 *_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in der Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb der Arbeitslast ab Werk zu erstellen.
 
 *_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können die ausgefüllten Formulardetails auch zur CloudFormation aus der Workload Factory weiterleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in der Workload Factory zu verwalten.
 
 *_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen innerhalb der Workload-Fabrik erstellen und managen können.
 
+--
+
+
 .Bevor Sie beginnen
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.
 
 Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
-+
---
-Alternativ können Sie mit der Codebox eine leere Vorlage kopieren oder eine fertige Vorlage erstellen, damit Sie mit REST-API, AWS CLI oder AWS CloudFormation eine Datenbank außerhalb der Workload-Factory bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
-
---
 
 
 
 
 == Erstellen Sie einen Datenbankserver
 
-Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen _Automate_ zu erledigen. Sie können auch die folgenden Tools in der Codebox verwenden: REST API und CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
-
-+
+Sie können den Bereitstellungsmodus „_Advanced create_“ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen „_Automate_“ abzuschließen. Folgende in der Codebox verfügbare Tools sind auch verfügbar: REST-API, AWS-CLI und AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -179,6 +176,3 @@ In CloudWatch wird eine Protokollgruppe mit dem Namen des Stacks erstellt. Unter
 Alternativ können Sie die Konfiguration speichern.
 
 
-
-.Wie es weiter geht
-Jetzt können Sie link:create-database.html["Erstellen einer Datenbank in der BlueXP -Workload-Farm für Datenbanken"].
