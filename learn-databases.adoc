@@ -104,6 +104,7 @@ Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/
 
 Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
 
+* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können
 * *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
 * *REST API*: Mit REST-APIs für die Workload Factory können Sie Microsoft SQL Server und andere AWS-Ressourcen bereitstellen und verwalten
 * *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto.

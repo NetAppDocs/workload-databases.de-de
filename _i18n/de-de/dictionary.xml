@@ -57,7 +57,6 @@
   <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">Schritt 1: Erstellen Sie einen Datenbankserver</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">Schnelle Erstellung</block>
   <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">In _Quick Create_ ist FCI das Standardbereitgabemodell, Windows 2016 die Standardversion von Windows und SQL 2019 Standard Edition die Standardversion von SQL.</block>
-  <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus.</block>
   <block id="6139861719bbe0b1fa9017ee94fd4e8e" category="list-text">Wählen Sie *Schnellerstelle*.</block>
   <block id="cc3305aa1264f3bb3f5edf4bbf7f1ab1" category="list-text">Geben Sie unter *AWS settings* Folgendes an:</block>
   <block id="0ddee9622b04a20edcfe59424067f924" category="list-text">*AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.</block>
@@ -398,14 +397,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open Source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Workload Factory</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workload Factory für Datenbanken</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory für GenAI</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload-Fabrik für VMware</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="6130b5542240619621b88baf10547d84" category="paragraph">Datenbanken können Microsoft SQL Server Instanzen nur mit FSX für ONTAP Filesystem-Storage managen.</block>
   <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Instanzverwaltung für Microsoft SQL Server</block>
   <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">Die Instanzverwaltung von Microsoft SQL Server umfasst die folgenden Aufgaben:</block>
@@ -866,4 +857,38 @@
   <block id="9d57e52330b97c81921959c45b7d8a7c" category="sidebar">Implementieren Sie Microsoft SQL Server-Konfigurationen und managen Sie Datenbankumgebungen auf FSX für ONTAP-File-System-Storage in BlueXP  Workload Factory.</block>
   <block id="e214e71355e2ee8687f09c83bfbdaabc" category="sidebar">BlueXP  Workload-Fabrik für Datenbankdokumentation</block>
   <block id="f3ffe4a909ed7f4cc0f396f199ae3471" category="sidebar">Erfahren Sie mehr über die Workload-Farm für Datenbanken</block>
+  <block id="18caf85143cff2e29943f7fa50a9d531" category="doc">Kontinuierliche Optimierung ergänzt die Behebung und Bewertung von Compute-Ressourcen</block>
+  <block id="275b08f4e33388b6598899e256fe46b3" category="paragraph">Datenbanken bieten jetzt Einblicke und Empfehlungen, um Compute-Ressourcen für Microsoft SQL Server Instanzen zu optimieren. Wir messen die CPU-Auslastung und nutzen den AWS Compute Optimizer Service, um Instanztypen der optimalen Größe zu empfehlen und Sie über verfügbare Betriebssystem-Patches zu informieren. Wenn Sie Compute-Ressourcen optimieren, können Sie fundierte Entscheidungen zu Instanztypen treffen, was zu Kosteneinsparungen und einer effizienten Ressourcenauslastung führt.</block>
+  <block id="9aa94e25ba754a44d094b78775213e48" category="inline-link-macro">Optimierte Konfigurationen von Compute-Ressourcen</block>
+  <block id="25a5dc6deeba5d476ff665ad9c968a2b" category="paragraph"><block ref="25a5dc6deeba5d476ff665ad9c968a2b" category="inline-link-macro-rx"></block></block>
+  <block id="f3cfd7c95d3ff2b556d90beb191fa77a" category="section-title">PostgreSQL-Unterstützung</block>
+  <block id="49db1f79602c9ba8e5704a68010c4023" category="paragraph">Sie können jetzt eigenständige PostgreSQL-Server-Implementierungen in Datenbanken implementieren und verwalten.</block>
+  <block id="3627a14d7dc2feba3834d63a37ebb394" category="inline-link-macro">Erstellen Sie einen PostgreSQL-Server</block>
+  <block id="02b7dd87f2a54e2b540ac84598c20252" category="paragraph"><block ref="02b7dd87f2a54e2b540ac84598c20252" category="inline-link-macro-rx"></block></block>
+  <block id="a08c0d26c5f5640f1f5e9c497b9e6819" category="paragraph">Alternativ können Sie mit der Codebox eine leere Vorlage kopieren oder eine fertige Vorlage erstellen, damit Sie mit REST-API, AWS CLI und AWS CloudFormation eine Datenbank außerhalb der Workload-Factory bereitstellen können. <block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>.</block>
+  <block id="6a5525182ed1f6bca47fea4ee51a3e58" category="list-text">Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus und wählen Sie dann *Microsoft SQL Server* aus dem Dropdown-Menü aus.</block>
+  <block id="16982b5e2c79b1d8f052bfa663a64d77" category="summary">Erstellen Sie einen neuen PostgreSQL-Server innerhalb der BlueXP -Workload-Farm für Datenbanken.</block>
+  <block id="c4f70f11159098cce8873623bffb07aa" category="doc">Erstellen Sie einen PostgreSQL-Server in der BlueXP  Workload Factory</block>
+  <block id="5f8d928d8901c8b01302b1c3be720b44" category="paragraph">Die Erstellung eines neuen PostgreSQL-Servers oder Datenbank-Hosts in der BlueXP  Workload Factory für Datenbanken erfordert eine FSX for ONTAP-Dateisystembereitstellung und Ressourcen für Active Directory.</block>
+  <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">Die Erstellung eines neuen PostgreSQL-Servers erfordert ein FSX für ONTAP-Dateisystem als Storage-Backend. Sie können ein bestehendes FSX für ONTAP-Dateisystem verwenden oder ein neues Dateisystem erstellen. Wenn Sie ein bestehendes FSX für ONTAP-Dateisystem als Datenbankserver-Storage-Back-End auswählen, erstellen wir eine neue Storage-VM für die PostgreSQL-Workloads.</block>
+  <block id="0f691a321e4cb91f0a8529931ba7bd47" category="paragraph">FSX für ONTAP-Dateisysteme unterstützt _Standalone_-Bereitstellungen für PostgreSQL. Workload Factory erstellt ein einzelnes Verfügbarkeitszonen-FSX für ONTAP-Dateisystem zusätzlich zu separaten Volumes und LUNs für Daten-, Protokoll- und tempdb-Dateien.</block>
+  <block id="2fd4d401e5c831dec7c9d6e1b557896e" category="paragraph">Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen _Automate_ zu erledigen. Sie können auch die folgenden Tools in der Codebox verwenden: REST API und CloudFormation. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="dc1a4c3a44cba39fe1ecdcc15fe01cc7" category="list-text">Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus und wählen Sie dann *PostgreSQL* aus dem Dropdown-Menü aus.</block>
+  <block id="26bef182e4e84557ce657df6398df5a0" category="list-text">Für *Deployment model* ist *Standalone Instance* die Standardeinstellung.</block>
+  <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze aus.</block>
+  <block id="d576650f664651e9b2569ccb346b6649" category="list-text">Wählen Sie im Feld *Cluster-Konfiguration - Knoten 1* eine Verfügbarkeitszone aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus dem Dropdown-Menü *Subnetz* aus.</block>
+  <block id="720301aea3fac96d94759700c949e15f" category="paragraph">Während der Implementierung eines neuen Servers werden zwei Sicherheitsgruppen mit den SQL Nodes (EC2 Instanzen) verbunden.</block>
+  <block id="f8473adfeac8aca2a2eaa799d6cde778" category="list-text">Eine Sicherheitsgruppe für Workloads wird erstellt, um die für PostgreSQL erforderlichen Ports und Protokolle zu ermöglichen.</block>
+  <block id="a405e08f97e410f1eb5924541a4cb30c" category="list-text">Für ein vorhandenes FSX for ONTAP-Dateisystem wird die ihm zugeordnete Sicherheitsgruppe automatisch zum PostgreSQL-Knoten hinzugefügt, der die Kommunikation mit dem Dateisystem ermöglicht. Wenn ein neues FSX für ONTAP-System erstellt wird, wird eine neue Sicherheitsgruppe für das FSX für ONTAP-Dateisystem erstellt und die gleiche Sicherheitsgruppe wird auch an SQL-Knoten angeschlossen.</block>
+  <block id="5d48b45f2ad58c8e1145b474d95593f9" category="list-text">Wählen Sie das *Betriebssystem* aus dem Dropdown-Menü aus.</block>
+  <block id="6dd53f240f48678994cf9b0109fa0ec2" category="list-text">Wählen Sie die *PostgreSQL-Version* aus dem Dropdown-Menü aus.</block>
+  <block id="d456e032669379ad4e2388045a89301d" category="list-text">*Datenbankservername*: Geben Sie den Namen des Datenbank-Clusters ein.</block>
+  <block id="b4d85afb201cbf3edb4623ef0d8da5e6" category="list-text">Wählen Sie unter *Connectivity* ein Schlüsselpaar aus, um eine sichere Verbindung zu Ihrer Instanz herzustellen.</block>
+  <block id="54d16066caaf498f7f6443098c30a2be" category="paragraph">Die Snapshots werden Volumes zugewiesen, die für PostgreSQL-Workloads erstellt wurden.</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP -Workload ist werkseitig eingestellt</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">Bis 01. Dezember 2024</block>
+  <block id="d35a0f72475ce4ac5dbb2e790338586d" category="sidebar">Erstellen Sie Microsoft SQL Server</block>
+  <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">PostgreSQL-Server erstellen</block>
 </blocks>
