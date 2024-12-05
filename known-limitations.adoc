@@ -103,3 +103,9 @@ Workload Factory unterstützt nicht das Erstellen oder Speichern von Konfigurati
 == Regionale Verfügbarkeit für Microsoft SQL Server-Implementierung in einem privaten Netzwerk mit Terraform
 
 Die Bereitstellung von Microsoft SQL Server in einem privaten Netzwerk ohne ausgehende Konnektivität mit Terraform wird nur in der Region US-East-1 (N. Virginia) unterstützt.
+
+
+
+== PostgreSQL-Unterstützung
+
+PostgreSQL unterstützt weder Amazon CloudWatch noch die Implementierung in einem privaten Netzwerk.

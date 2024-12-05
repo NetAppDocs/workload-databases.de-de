@@ -176,3 +176,6 @@ In CloudWatch wird eine Protokollgruppe mit dem Namen des Stacks erstellt. Unter
 Alternativ können Sie die Konfiguration speichern.
 
 
+
+.Wie es weiter geht
+Sie können Benutzer, Remote-Zugriff und Datenbanken auf dem bereitgestellten PostgreSQL-Server manuell konfigurieren.
