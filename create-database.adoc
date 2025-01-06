@@ -52,7 +52,7 @@ Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwen
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
-. Klicken Sie auf das drei Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
+. Klicken Sie auf das drei-Punkt-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
 . Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:
 +
 .. *Datenbankname*: Geben Sie den Namen der Datenbank ein.
@@ -85,7 +85,7 @@ Wenn Sie eine dieser Standardeinstellungen jetzt ändern möchten, ändern Sie a
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
-. Klicken Sie auf das drei Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
+. Klicken Sie auf das drei-Punkt-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
 . Wählen Sie *Benutzerdatenbank erstellen*.
 . Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:
 +

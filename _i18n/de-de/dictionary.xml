@@ -8,9 +8,7 @@
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Über diese Aufgabe</block>
   <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">Wenn Sie einen Sandbox-Klon von einer Quelldatenbank erstellen, während diese beschäftigt ist, sind die Daten des Klons möglicherweise nicht mit dem neuesten Snapshot der Quelldatenbank synchronisiert. Dieser Vorgang überprüft die Integrität aller Objekte im Sandbox-Klon und stellt fest, ob die Sandbox-Klondaten aktuell sind.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
-  <block id="a22aeb541c430c47c35bcc20690ea51a" category="list-text">Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.</block>
   <block id="a1029809e498e81eaada752a6b08cd7c" category="list-text">Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.</block>
-  <block id="627f12b5ce917853e0580a84a419249f" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das Menü drei Punkte des Sandbox-Klons, um die Integrität zu überprüfen.</block>
   <block id="4959cbb15c588c0b15ed2cb6bf243a79" category="list-text">Wählen Sie *Integritätsprüfung ausführen*.</block>
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">Klicken Sie im Dialogfeld Integritätsprüfung auf *Integritätsprüfung*.</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">Überprüfen Sie den Status der Integritätsprüfung in Sandboxes oder in der Jobüberwachung.</block>
@@ -18,7 +16,6 @@
   <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">Verbinden Sie einen Sandbox-Klon mit einer CI/CD-Pipeline mit REST-API-Code und verbessern Sie so die Softwarebereitstellung durch Automatisierung.</block>
   <block id="2af2cf99863645202599afd2708773e2" category="doc">Sandbox-Klon mit CI/CD-Tools verbinden</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">Um eine neue Softwareversion automatisch für den Datenbankklon bereitzustellen, sollten Sie eine Verbindung zu einer CI/CD-Pipeline herstellen. Verwenden Sie den von diesem Vorgang bereitgestellten REST-API-Code, um die Verbindung herzustellen.</block>
-  <block id="efb5b5e68dc2811878125ac310982a90" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, um eine Verbindung zu CI/CD-Tools herzustellen.</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">Wählen Sie *Verbindung zu CI/CD-Tools herstellen*.</block>
   <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">Kopieren oder laden Sie im CI/CD-Dialogfeld den für die Verbindung mit CI/CD-Tools erforderlichen REST-API-Code herunter.</block>
   <block id="00a06b08857b60c805bcaf007a9ddc9c" category="list-text">Klicken Sie Auf *Schließen*.</block>
@@ -160,7 +157,6 @@
   <block id="1271a3d360115d2332889fc326f89944" category="section-title">Erstellen Sie eine Datenbank</block>
   <block id="ceef677928e7c6188983fdf4dd271a6e" category="list-text">Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.</block>
   <block id="8b882c3fbdc1d7d9a3892836061c41c2" category="list-text">Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.</block>
-  <block id="d5db8d6216dad5bc8022812b7a525fca" category="list-text">Klicken Sie auf das drei Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.</block>
   <block id="16b7e1ed68be5b41e619ec00b93a3de0" category="list-text">Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:</block>
   <block id="a657ad1c8328b5552791626de3484dcb" category="list-text">*Datenbankname*: Geben Sie den Namen der Datenbank ein.</block>
   <block id="16aa8185bcc829996f58f9ef641ffca9" category="list-text">*Sortierung*: Wählen Sie eine Sammlung für die Datenbank aus. Die Standardsortierung SQL_Latin1_General_CP1_CI_AS“ auf Microsoft SQL Server ist ausgewählt.</block>
@@ -195,8 +191,6 @@
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Tag definieren*: Wählen Sie ein Tag, um den Sandbox-Klon zu definieren.</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Um den Fortschritt des Jobs zu überprüfen, wechseln Sie zur Registerkarte *Job-Überwachung*.</block>
   <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf</block>
-  <block id="cae7cdfa55ee9d21054e32871fcf98f8" category="list-text">Klicken Sie in der Kachel Datenbanken auf *Gehe zu Datenbankbestand*.</block>
-  <block id="60fd4df454072e2b3067c30385649e4a" category="list-text">Klicken Sie auf das Menü mit drei Punkten des Sandbox-Klons, den Sie löschen möchten.</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Wählen Sie *Löschen*.</block>
   <block id="1aef21babcea64bea2aff92468198535" category="list-text">Klicken Sie im Dialogfeld Löschen auf *Löschen*.</block>
   <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Erkennen einer Microsoft SQL Server-Instanz</block>
@@ -214,7 +208,6 @@
   <block id="a218784743407787312891b174efa23d" category="paragraph">Wenn eine Microsoft SQL-Instanz erkannt wird, wird die vorhandene Umgebung nicht geändert. Die Erkennung erfolgt über AWS Systems Manager Session Manager (SSM). Ohne das richtige IAM-Instanzprofil schlägt die Erkennung fehl. <block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>.</block>
   <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des zu erkennenden Hosts zu erweitern.</block>
   <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">Der Host wird erweitert, und Host-Instanzen werden angezeigt.</block>
-  <block id="2cb6ba113505ade5a7c3bcb4dd91f24a" category="list-text">Klicken Sie auf das Menü mit drei Punkten der zu erkennenden Instanz.</block>
   <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">Klicken Sie Auf *Detect*.</block>
   <block id="52f93363b11de846f37617dc280f35b6" category="list-text">Geben Sie im Dialogfeld *Instanz erkennen* den Benutzernamen und das Kennwort des Microsoft SQL Servers oder den Benutzernamen und das Kennwort des FSX for ONTAP ein.</block>
   <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">Erkannte Instanzinformationen werden angezeigt.</block>
@@ -226,29 +219,22 @@
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.</block>
   <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">Überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">Bereitstellungsmethoden</block>
-  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp bietet für Workload Factory und die zugehörigen Cloud-Services unterschiedliche Unterstützung. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Holen Sie sich Hilfe</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Erhalten Sie Support für FSX für ONTAP</block>
-  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Für technischen Support in Bezug auf FSX for ONTAP, seine Infrastruktur oder jede Lösung, die den Service verwendet, siehe „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX für ONTAP</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Nutzen Sie die unten beschriebenen Support-Optionen, um technischen Support für Workload Factory und seine Storage-Lösungen und -Services zu erhalten.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Nutzen Sie Self-Support-Optionen</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Diese Optionen sind kostenlos verfügbar, 24 Stunden am Tag, 7 Tage die Woche:</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Dokumentation</block>
-  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">Die Workload Factory-Dokumentation, die Sie derzeit anzeigen.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Wissensdatenbank</block>
   <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
-  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Durchsuchen Sie die Workload Factory Knowledge Base, um hilfreiche Artikel zur Fehlerbehebung zu finden.</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Communitys</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Erstellen Sie einen Fall mit dem NetApp Support</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Zusätzlich zu den oben genannten Self-Support-Optionen können Sie gemeinsam mit einem NetApp Support-Experten eventuelle Probleme nach der Aktivierung des Supports beheben.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Bevor Sie beginnen</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Erfahren Sie, wie Sie sich für Support registrieren</block>
-  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihrer Workload Factory Anmeldung. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
-  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Wählen Sie oben rechts in der Workload Factory-Konsole *Hilfe &gt; Support* aus.</block>
   <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">Wenn Sie diese Option auswählen, wird die BlueXP Konsole um eine neue Browserregisterkarte geöffnet und das Support Dashboard geladen.</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Wählen Sie auf der Seite *Ressourcen* eine der verfügbaren Optionen unter Technischer Support:</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Wählen Sie *Rufen Sie uns an*, wenn Sie mit jemandem am Telefon sprechen möchten. Sie werden zu einer Seite auf netapp.com weitergeleitet, auf der die Telefonnummern aufgeführt sind, die Sie anrufen können.</block>
@@ -423,34 +409,28 @@
   <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">Sie können eine verwaltete Instanz anzeigen, indem Sie die folgenden Schritte ausführen.</block>
   <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.</block>
   <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">Der Host wird erweitert, und die Hostinstanzen werden angezeigt.</block>
-  <block id="d389f01b8dde275b0dcea0f5988294e9" category="list-text">Klicken Sie auf das Menü mit drei Punkten der Instanz, die angezeigt werden soll, und wählen Sie dann *Instanz anzeigen*.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
   <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">Die Übersicht über die Instanz wird auf der Registerkarte „Inventar“ angezeigt.</block>
   <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">Sie können die von der verwalteten Instanz verwalteten Datenbanken anzeigen, indem Sie die folgenden Schritte ausführen.</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.</block>
-  <block id="80dfa1b683b7a7caa12e2cd38f13eb9e" category="list-text">Klicken Sie auf das Menü mit den drei Punkten der Instanz, die die anzuzeitigen Datenbanken enthält.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Wählen Sie *Datenbanken anzeigen*.</block>
   <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">Die Liste der Datenbanken in der Instanz wird auf der Registerkarte Inventar angezeigt.</block>
   <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">Heben Sie die Verwaltung einer Hostinstanz auf, indem Sie die folgenden Schritte ausführen.</block>
   <block id="65cc39a76868117dd307472ad16886fe" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Host-Instanz zu erweitern, deren Verwaltung aufgehoben werden soll.</block>
-  <block id="2c5e94e7fb3f058dd79551c37346e05f" category="list-text">Klicken Sie auf das Menü mit drei Punkten der Instanz, die Sie aufheben möchten.</block>
   <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">Wählen Sie *Unmanage*.</block>
   <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">Die Hostinstanz wird jetzt nicht mehr verwaltet.</block>
   <block id="252215232d636a7c096b2327e9a20b42" category="doc">Überwachen von Datenbanken</block>
-  <block id="8e6a6b95adffc91a47a882f2247cc6b3" category="paragraph">Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Darüber hinaus helfen Filter nach Typ und Status, die Suchfunktion und die Option zum Herunterladen der Jobtabelle bei der Navigation und Berichterstellung von Datenbankjobs.</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">Die Jobüberwachung unterstützt je nach Job bis zu drei Überwachungsstufen. Beispielsweise verfolgt die Jobüberwachung bei der Erstellung neuer Datenbanken und Sandbox-Klone übergeordnete Jobs und untergeordnete Jobs.</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Ebenen der Jobüberwachung</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">Ebene 1 (übergeordneter Job): Verfolgt den Job für die Hostbereitstellung.</block>
   <block id="0954e42bf0119b1189263290f1e567d2" category="list-text">Ebene 2 (Unterjob): Verfolgt die untergeordneten Jobs im Zusammenhang mit dem übergeordneten Job der Hostbereitstellung.</block>
   <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">Stufe 3 (Task): Listet die Reihenfolge der Aktionen auf, die für jede Ressource durchgeführt werden.</block>
   <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">Aufgabenstatus</block>
-  <block id="b281132bb97bdf5fa0ee45a03264aa8b" category="list-text">Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _in Bearbeitung_, _abgeschlossen_ und _fehlgeschlagen_ Jobs.</block>
   <block id="5c7a83ffcacee6b5f8b97e61c20dc908" category="list-text">Speicherung von Jobereignissen</block>
   <block id="a4c455fbdb91b6c5a283d4a40626cd5b" category="list-text">Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche gespeichert.</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">Überwachen von Jobs</block>
   <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">Wählen Sie in Datenbanken die Registerkarte *Job Monitoring* aus.</block>
   <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">Verwenden Sie auf der Registerkarte Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.</block>
-  <block id="3edf792d0146bcfb61f393f728075b2a" category="list-text">Klicken Sie auf das drei Punkte-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.</block>
   <block id="22358702cb945913fe9b03fc1642777a" category="summary">Datenbanken haben drei verschiedene Modi mit unterschiedlichen Anforderungen.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Eins</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Zwei</block>
@@ -467,12 +447,9 @@
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">Erstellen Sie eine Benutzerdatenbank</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">Klonen Sie Ihren Host, um eine Sandbox zu erstellen</block>
   <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">Wenn Sie über von FSX for ONTAP gemanagte Hosts in Ihrem Datenbankbestand verfügen, können Sie <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> oder <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>.</block>
-  <block id="62fb4ddd9c2ed78b886998ecd2d0e7c9" category="inline-link-macro">Entdecken Sie Einsparungen mit dem Rechner für Storage-Einsparungen</block>
-  <block id="46e1e62b294ac077d36c03536775e77e" category="paragraph">Wenn Sie Elastic Block Store-Hosts in Ihrem Datenbankbestand haben, können Sie <block ref="83cf511a46d8dbc3be6811900e4a471e" category="inline-link-macro-rx"></block>.</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">Durch das Aktualisieren eines Klons wird der Klon entweder in der Quelldatenbank zum aktuellen Zeitpunkt oder in einem Snapshot der Quelldatenbank aktualisiert, der zu einem früheren Zeitpunkt erstellt wurde. Alle am Sandbox-Klon vorgenommenen Änderungen werden gelöscht.</block>
   <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">Eine Aktualisierung ist nur möglich, wenn die Quelldatenbank aktiv ist.</block>
   <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Um einen Datenbankklon aus einem Snapshot zu aktualisieren, muss die Quelldatenbank mindestens einen Snapshot für den Vorgang haben.</block>
-  <block id="cab3779344e3617fc74d747eece40a4b" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, den Sie aktualisieren möchten.</block>
   <block id="112777b2a7f0a6d4155f3e87ae0eb154" category="list-text">Wählen Sie * Aktualisieren*.</block>
   <block id="8d614611d1796186ed0a5e31381198f3" category="list-text">Wählen Sie im Dialogfeld Aktualisieren eine der folgenden Optionen aus:</block>
   <block id="566e9d53702323dfc23f81cbdc95c142" category="list-text">*Auf aktuelle Zeit aktualisieren*</block>
@@ -480,17 +457,13 @@
   <block id="a9b30d5aec7c9f917986ea976c3be0c1" category="paragraph">Wählen Sie für diese Option den Datenbank-Snapshot aus dem Dropdown-Menü aus, auf den Sie aktualisieren möchten.</block>
   <block id="d687cb57e7c0a2bc72631659265b9d28" category="list-text">Klicken Sie Auf *Aktualisieren*.</block>
   <block id="36bfe5aa9dbfbad068e6721ddea626bb" category="paragraph">Beim Klonen einer Datenbank handelt es sich bei der Erstellung um einen _Baseline_ -Klon. Die Daten in der geklonten Datenbank sind zum Zeitpunkt der Erstellung mit der Quelldatenbank identisch. Wenn sich die Daten in einem Sandbox-Datenbankklon im Laufe der Zeit ändern, sollten Sie die Daten zum Zeitpunkt der ersten Erstellung des Klons wieder in die Basislinie zurücksetzen. Diese Operation wird als Neubaselining eines Klons bezeichnet. Statt einen neuen Klon als Basis zu erstellen, wird jedoch Platz gespart. Alle Änderungen am Sandbox-Klon werden jedoch gelöscht.</block>
-  <block id="e25b967c54d3008b230ffd4e18be90cb" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, den Sie zurücksetzen möchten.</block>
   <block id="0975db7a2f5f2be54dab36d8b76af890" category="list-text">Wählen Sie * Neu-Baseline*.</block>
   <block id="ee39d3157a6b84476b1e530c43e7e0af" category="list-text">Klicken Sie im Dialogfeld „Neu-Baseline“ auf *Neu-Baseline*.</block>
   <block id="bad5772919d73bf3b17433524b58ead6" category="inline-link-macro">Erhöhen Sie die Kapazität des Filesystems</block>
   <block id="eed30e1e95c32e95da513640e3e7e215" category="paragraph">Berücksichtigen Sie, wie viel Storage-Kapazität für die neue Datenbank benötigt wird. Falls erforderlich, <block ref="ecf193ca0846a4137269dac878e92281" category="inline-link-macro-rx"></block> für das FSX für ONTAP-Dateisystem, bevor Sie beginnen.</block>
-  <block id="be0c57159940db106da8c592b3a6f1a7" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, den Sie teilen möchten.</block>
   <block id="54e2c4dd2b9e992b761540f131754e81" category="list-text">Wählen Sie *Split*.</block>
   <block id="05b751f4cbd4ae2611783e6ab193a961" category="list-text">Klicken Sie im Dialogfeld Teilen auf *Split*.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Für den Support anmelden</block>
-  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Für den Support von Workload Factory und seinen Storage-Lösungen und -Services ist eine Support-Registrierung erforderlich. Sie müssen sich für Support über die BlueXP Konsole registrieren, einer separaten webbasierten Konsole von Workload Factory.</block>
-  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">Durch die Registrierung für den Support wird die NetApp-Unterstützung für einen Fileservice eines Cloud-Providers nicht aktiviert. Technischer Support im Zusammenhang mit einem Fileservice eines Cloud-Providers, seiner Infrastruktur oder einer Lösung, die den Service verwendet, finden Sie unter „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Übersicht über die Support-Registrierung</block>
   <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">Die Registrierung Ihres Support-Abonnements für Ihre Account-ID (Ihre 20-stellige Seriennummer 960xxxxxxx auf der Seite „Support Resources“ in BlueXP) dient als zentrale Support-Abonnement-ID. Jedes BlueXP-Abonnement für Support auf Kontoebene muss registriert werden.</block>
   <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">Durch das Registrieren von Funktionen wie das Öffnen von Support-Tickets und die automatische Generierung von Support-Cases. Die Registrierung ist abgeschlossen, indem wie unten beschrieben Konten der NetApp Support Website (NSS) zu BlueXP hinzugefügt werden.</block>
@@ -530,7 +503,6 @@
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp sollte sich bei diesem Prozess mit Ihnen in Verbindung setzen. Dies ist eine einmalige Onboarding-Übung für neue Benutzer.</block>
   <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Wenn Sie über Ihren Account für die NetApp Support-Website verfügen, ordnen Sie das Konto Ihrer BlueXP Anmeldung zu, indem Sie die unter aufgeführten Schritte ausführen <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
   <block id="5e121c3e57ce0f4b69bb4130bd318d27" category="doc">Verbindungsinformationen eines Sandbox-Klons anzeigen</block>
-  <block id="5a329dc3d14f5744534c14ef1f73aee2" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, um die Verbindungsinformationen anzuzeigen.</block>
   <block id="43c2cf40a7db4f77b2c6c793066c47a5" category="list-text">Wählen Sie *Verbindungsinformationen anzeigen*.</block>
   <block id="383d22dfa0525ab8f4cf0db98c16e30f" category="list-text">Kopieren Sie im Dialogfeld Verbindungsinformationen anzeigen die Verbindungsinformationen, falls erforderlich.</block>
   <block id="e180b7ca8fea43e3b6bee94a5f547753" category="paragraph">Lernen Sie die Neuerungen bei Datenbanken kennen.</block>
@@ -668,10 +640,8 @@
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden</block>
   <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">Regionale Verfügbarkeit für Microsoft SQL Server-Implementierung in einem privaten Netzwerk mit Terraform</block>
-  <block id="eb4fca182b3b78e9a38aa1f6f59c8857" category="paragraph">Die Bereitstellung von Microsoft SQL Server in einem privaten Netzwerk ohne ausgehende Konnektivität mit Terraform wird nur in der Region US-East-1 (N. Virginia) unterstützt.</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*Kontinuierliche Optimierung*: Scannt kontinuierlich Ihre Microsoft SQL Server-Anlage offline und bietet Ihnen einen umfassenden Bericht mit Einblicken, Möglichkeiten und Empfehlungen, um Ihnen zu helfen, betriebliche Spitzenleistungen zu erzielen.</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Optimierte Konfigurationen für Microsoft SQL Server Implementierungen</block>
-  <block id="a843374a240a6303e99f9130260dec04" category="paragraph">Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Assessment liefern Ihnen Einblicke, Empfehlungen und Optimierungen für optimale Betriebsabläufe.</block>
   <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">Die Bewertung wird automatisch und kontinuierlich einmal täglich für Microsoft SQL Server-Instanzen mit FSX für ONTAP-Storage ausgeführt, der in der Workload-Fabrik gemanagt wird. Bewertungsberichte sind im Optimierungs-Dashboard nur verfügbar, wenn ein täglicher geplanter Job nach der Bereitstellung oder nach der Verwaltung einer Instanz ausgeführt wurde.</block>
   <block id="72e34efcd5e12ef888a19ad8bd33c28b" category="paragraph">Die Workload-Fabrik bietet detaillierte Empfehlungen zur Optimierung der Konfigurationen auf Basis der Best Practices für FSX für ONTAP-Storage.</block>
   <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">Was gescannt wird</block>
@@ -679,14 +649,9 @@
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb</block>
   <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr</block>
-  <block id="96ca9ac0bd1d71d3fe0162c29b8a4ff3" category="list-text">Compute: Einschließlich Rightsizing</block>
   <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">Sie müssen über Anmeldedaten mit Lese- oder Automatisierungsberechtigungen verfügen.</block>
   <block id="86bd4600548ee1b734f704338ab13665" category="list-text">Um den Storage einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz von der Workload-Fabrik gemanagt werden und der Storage-Typ muss FSX für ONTAP sein.</block>
   <block id="40213188bf240529a1293728c4187a56" category="list-text">Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration optimieren.</block>
-  <block id="1833c64ed881d7aac5733a15a8116354" category="list-text">Wählen Sie das Menü mit drei Punkten der zu scannenden Instanz und dann *Optimieren*.</block>
-  <block id="3adf495aa133934a4330d99e0ad90fc1" category="list-text">Überprüfen Sie auf der Seite „optimierte Instanz“ für den Host die Ergebnisse der Storage-Bewertung.</block>
-  <block id="a09500dc3402d71be1fe58158c5cdfc9" category="paragraph">Filter können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags sortiert werden.</block>
-  <block id="49aaa10529fcf35af76ba4e06450bb15" category="paragraph">Bei Bedarf können Sie einen Bericht über die Ergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.</block>
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Wählen Sie diese Option aus, um nicht optimierte Konfigurationen zu optimieren.</block>
@@ -773,7 +738,6 @@
   <block id="64fc7ef1abfec5624461bb34e030bb56" category="paragraph">Wenn der Speichertyp für die Host-Instanz FSX für ONTAP ist, können Sie <block ref="ff12e6f62a651f5b7e33780a9c5be656" category="inline-link-macro-rx"></block>.</block>
   <block id="51bdfc0a469b2ea10ef9ab2e5263224e" category="doc">Einsparungen bei der BlueXP -Workload-Farm für Datenbanken</block>
   <block id="4237b026a2f2298ebdf4286d1e4746ed" category="paragraph">Erkunden Sie die Einsparungen in der BlueXP  Workload-Farm für Datenbanken für Ihre Datenbank-Workloads, indem Sie die Kosten für die Verwendung von Amazon EBS (Elastic Block Store) und FSX für Windows File Server-Storage mit FSX für ONTAP Storage vergleichen.</block>
-  <block id="a1917d6ff4e9175797a62d227c1e958a" category="paragraph">Die Workload-Farm bietet einen Einsparungsrechner, mit dem Sie verschiedene Kostenkomponenten für die Ausführung von Microsoft SQL Server-Workloads wie Storage, Computing, SQL-Lizenzen, Snapshots und Klone für Ihre Datenbank-Workloads auf FSX für ONTAP-Filesystemen mit Elastic Block Store (EBS) und FSX für Windows-File-Server-Storage vergleichen können. Abhängig von Ihren Storage-Anforderungen sind FSX für ONTAP-Filesysteme für Datenbank-Workloads am kostengünstigsten. Der Rechner zeigt an, ob der Speicher für die Datenbank-Workloads auf diesen Microsoft SQL-Servern weniger kostet, wenn Sie ein FSX für ONTAP-Dateisystem verwenden.</block>
   <block id="900c2260545f89be7eb6271a29d450e1" category="paragraph">Wenn die Workload-Fabrik feststellt, dass Sie durch die Ausführung dieser Workloads auf einem FSX für ONTAP-Filesystem Geld sparen können, können Sie Microsoft SQL over FSX für ONTAP direkt vom Rechner in der Workload-Fabrik implementieren. Wenn Sie mehrere Microsoft SQL Server Instanzen über Elastic Block Store oder FSX für Windows File Server Storage nutzen, empfehlen wir eine FSX für ONTAP-Konfiguration mit einer einzigen SQL-Instanz.</block>
   <block id="c0265d0f691fe5773c4ffeb0c523daf8" category="paragraph">Informieren Sie sich über die Einsparungen für erkannte Hosts: Workload Factory verknüpft Ihre vorhandenen Microsoft SQL-Server und zieht die Details zum Rechner für einen automatischen Vergleich ein. Sie müssen automatische Berechtigungen erteilen, um diese Rechneroption verwenden zu können. Sie können den Anwendungsfall ändern, aber alle anderen Details werden automatisch in der Berechnung ermittelt.</block>
   <block id="5817c5b26a2a7f4c1334dc3c03403f64" category="paragraph">Workload Factory tritt in die erkannten Elastic Block Store- und FSX for Windows File Server-Hosteigenschaften ein, sodass Sie die Einsparungen automatisch erkunden können.</block>
@@ -829,7 +793,6 @@
   <block id="23528eaa34e1b5044421f8a835380bbd" category="paragraph">Der Vorgang schlägt fehl, wenn auf dem Microsoft SQL Server bestimmte PowerShell-Module und Verwaltungsskripte fehlen. Workload Factory löst einen Prepare Resource Job aus, um fehlende Module und Skripte zu installieren, die Sie auf der Registerkarte Job Monitoring anzeigen können. Wenn der Job abgeschlossen ist, versuchen Sie erneut, die Hostinstanz zu verwalten.</block>
   <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der BlueXP  Workload-Fabrik für Datenbanken.</block>
   <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">Überwachen von Datenbanken in der BlueXP  Workload-Fabrik</block>
-  <block id="e39ca1c265a18be9c20bb49d3258ca1d" category="summary">Die BlueXP -Workload-Fabrik für Datenbanken überprüft Speicherkonfigurationen von Microsoft SQL-Servern und liefert Einblicke und Empfehlungen, um Ihnen zu helfen, Ihre betrieblichen Abläufe zu optimieren.</block>
   <block id="a4ed8b9b5c07e17e147e982e5e6be7b7" category="doc">Schnellstart für die BlueXP -Workload-Farm für Datenbanken</block>
   <block id="a84f8251adb867b65a51f661db71e24f" category="paragraph">Mit der BlueXP  Workload-Fabrik für Datenbanken können Sie sofort im _Basic_-Modus starten. Wenn Sie die Workload Factory verwenden möchten, um Hosts zu ermitteln, Ressourcen zu verwalten und vieles mehr, können Sie in wenigen Schritten beginnen.</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">Sie benötigen ein AWS-Konto, um Datenbanken verwenden zu können.</block>
@@ -890,5 +853,77 @@
   <block id="81a9b579c806be28ed6e048084a47b52" category="inline-link-macro">Lernen Sie die Verwendung von Terraform von Codebox</block>
   <block id="0ec2c706568900a3077d2c43bb52bde7" category="admonition">Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> und<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen. Zusätzlich zu den _Automate_-Modus-Berechtigungen müssen Sie die folgenden Berechtigungen für das Benutzerkonto hinzufügen:<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block> Und<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>. <block ref="916d5d5f037ba2ec9358c38001da7d8f" category="inline-link-macro-rx"></block>.</block>
   <block id="037f00cd2eafb994bfbd866e78bb7bc3" category="paragraph">Sie können Benutzer, Remote-Zugriff und Datenbanken auf dem bereitgestellten PostgreSQL-Server manuell konfigurieren.</block>
-  <block id="3b801b5b7ccdf00990044d1e2711d31e" category="paragraph">PostgreSQL unterstützt weder Amazon CloudWatch noch die Implementierung in einem privaten Netzwerk.</block>
+  <block id="f418f614e126c9d215de85f00b5b7a7e" category="doc">Verbesserungen am DatenbankDashboard</block>
+  <block id="c18a3eee23770f4e57bfa9ffe245c428" category="paragraph">Ein neues Design des Dashboards umfasst die folgenden Grafiken und Verbesserungen:</block>
+  <block id="47ecffc6ee3a1f9bca5a81d55169b8b6" category="list-text">Das Diagramm „Hostverteilung“ zeigt die Anzahl der Microsoft SQL Server-Hosts und PostgreSQL-Hosts an</block>
+  <block id="ec506ecd03b96cac2e19d3abac7aa16e" category="list-text">Details zur Verteilung von Instanzen umfassen die Gesamtanzahl der erkannten Instanzen und die Anzahl der verwalteten Microsoft SQL Server- und PostgreSQL-Instanzen</block>
+  <block id="9bb5ee528a11ed94b071f88a078be55e" category="list-text">Zu den Details der Datenbankverteilung zählen die Gesamtzahl der Datenbanken sowie die Anzahl der verwalteten Microsoft SQL Server- und PostgreSQL-Datenbanken</block>
+  <block id="01fe24ee345a62672acb8a16826117d0" category="list-text">Optimierungswert und -Status für verwaltete und Online-Instanzen</block>
+  <block id="341934677d47967f5c6e737476247396" category="list-text">Optimierungsdetails für Storage-, Computing- und Applikationskategorien</block>
+  <block id="fb2f60a13243e168f321a9de2af52d51" category="list-text">Optimierungsdetails für Microsoft SQL Server Instanzen-Konfigurationen wie Storage-Sizing, Storage Layout, ONTAP Storage, Computing und Applikationen</block>
+  <block id="18168aa68b74c030711fe95b2b74afac" category="list-text">Potenzielle Einsparungen bei Datenbank-Workloads, die auf Amazon Elastic Block Store und FSX für Windows File Server Storage-Umgebungen ausgeführt werden, im Vergleich zu Amazon FSX für NetApp ONTAP Storage</block>
+  <block id="1886db6545ee593b7bf9014a318fd354" category="section-title">Neuer Status „mit Problemen abgeschlossen“ in der Jobüberwachung</block>
+  <block id="ddd4a54acb0820f07017dcad26528779" category="paragraph">Die Jobüberwachungsfunktion für Datenbanken bietet jetzt den neuen Status „mit Problemen abgeschlossen“, sodass Sie erfahren können, welche untergeordneten Jobs Probleme hatten und welche Probleme auftreten.</block>
+  <block id="c72aad21ecf48b0a4f27430d70c166da" category="inline-link-macro">Überwachen Sie Ihre Datenbanken</block>
+  <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
+  <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">Bewertung und Optimierung für überprovisionierte Microsoft SQL Server-Lizenzen</block>
+  <block id="f90a806c02db45741274868bc065ab90" category="paragraph">Der Einsparungsrechner bewertet nun, ob die Enterprise Edition für Ihre Microsoft SQL Server-Bereitstellung erforderlich ist. Wenn eine Lizenz überprovisioniert ist, empfiehlt der Rechner ein Downgrade. Sie können die Lizenz in Datenbanken automatisch herunterstufen, indem Sie die Anwendung optimieren.</block>
+  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.</block>
+  <block id="89beb934231f6ea165d992b7e0925877" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, um die Integrität zu überprüfen.</block>
+  <block id="5b8419bd5ee6af2c2f5fd0ef8e3ca4a9" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, um eine Verbindung zu CI/CD-Tools herzustellen.</block>
+  <block id="5e85f9bc067e4ee023078ba85e21857b" category="list-text">Klicken Sie auf das drei-Punkt-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.</block>
+  <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">Klicken Sie in der Kachel Datenbanken auf *Gehe zu Datenbank-Inventar*.</block>
+  <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">Klicken Sie auf das drei-Punkt-Menü des Sandbox-Klons, den Sie löschen möchten.</block>
+  <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">Klicken Sie auf das Menü mit drei Punkten der zu erkennenden Instanz.</block>
+  <block id="5656d5e94b1fd6f866e48df7c3bf45b3" category="paragraph">Die Workload-Farm bietet einen Einsparungsrechner, mit dem Sie verschiedene Kostenkomponenten für die Ausführung von Microsoft SQL Server-Workloads wie Storage, Computing, SQL-Lizenzen, Snapshots und Klone für Ihre Datenbank-Workloads auf FSX für ONTAP-Filesystemen mit Elastic Block Store (EBS) und FSX für Windows-File-Server-Storage vergleichen können. Abhängig von Ihren Storage-Anforderungen sind FSX für ONTAP-Filesysteme für Datenbank-Workloads am kostengünstigsten.</block>
+  <block id="2c84d2f326a80650e1f5b43257e48421" category="paragraph">Der Rechner zeigt an, ob der Speicher für die Datenbank-Workloads auf diesen Microsoft SQL-Servern weniger kostet, wenn Sie ein FSX für ONTAP-Dateisystem verwenden.</block>
+  <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server-Bereitstellungsanalyse</block>
+  <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">Der Rechner führt eine umfassende Analyse Ihrer SQL Server-Bereitstellung durch, um sicherzustellen, dass die verwendeten Ressourcen und Funktionen der SQL Server-Edition entsprechen. Hier sind die wichtigsten Faktoren und Bedingungen, die der Rechner prüft, bevor er eine Herabstufung auf Standard Edition empfiehlt:</block>
+  <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Implementierungsmodell</block>
+  <block id="9c67ec91896556f3bd46fddd92093d04" category="list-text">Der Rechner bewertet das Implementierungsmodell und ob die Enterprise Edition erforderlich ist.</block>
+  <block id="1ca7013158d8416bb0a3239a9a7e8910" category="list-text">Zugewiesene Ressourcen</block>
+  <block id="9812aa4803326e6a5401134b4e94a3d3" category="list-text">Der Rechner bewertet die Bedingungen der folgenden lizenzabhängigen zugewiesenen Ressourcen:</block>
+  <block id="4b810d3bd37142aca8bc7441044ac6e1" category="list-text">VCPUs der Zielinstanz: Die Instanz verfügt über 48 oder weniger virtuelle CPUs.</block>
+  <block id="3152b3044e87ba29a0ef483b2905447f" category="list-text">Arbeitsspeicherzuweisung: Die Instanz hat 128 GB oder weniger Arbeitsspeicher.</block>
+  <block id="509a14e7eed7c8c8d42162d9af93a1ec" category="list-text">Nutzung von Enterprise-Funktionen</block>
+  <block id="4fdb074e0b83810d198c8cb5f3b2752e" category="list-text">Der Rechner überprüft, ob eine der folgenden Enterprise-Funktionen verwendet wird:</block>
+  <block id="0337db3af77375f3eca40ab259fad71c" category="list-text">Enterprise-Funktionen auf Datenbankebene</block>
+  <block id="3d01a99bca7dfee0c24b05774c636f2b" category="list-text">Online-Indexvorgänge</block>
+  <block id="a042028704aa193c37c291b87325adba" category="list-text">Ressourcenkontrolle</block>
+  <block id="bde0cb834299864818961ff69bf50c2a" category="list-text">Peer-to-Peer- oder Oracle-Replizierung</block>
+  <block id="11abd4a419be10d4141e0034d99314af" category="list-text">R/Python-Erweiterungen</block>
+  <block id="b4cc3328bb29447a4e3bfe42f68c706e" category="list-text">Speicheroptimierte tempdb</block>
+  <block id="931f2fcd53e5a10ccfc806cb89a2b27c" category="paragraph">Wenn die bewertete SQL Server-Instanz keine der oben genannten Enterprise-Funktionen verwendet und die Ressourcenbeschränkungen erfüllt, empfiehlt der Rechner, die Lizenz auf die Standard Edition herunterzustufen. Diese Empfehlung soll Ihnen helfen, Ihre SQL Server Lizenzierungskosten zu optimieren, ohne die Performance oder Funktionalität zu beeinträchtigen.</block>
+  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetApp bietet Unterstützung für die BlueXP -Workload-Fabrik und seine Cloud-Services auf unterschiedliche Weise. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
+  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">Für technischen Support in Bezug auf FSX for ONTAP, seine Infrastruktur oder jede Lösung, die den Service verwendet, siehe „Hilfe erhalten“ in der Dokumentation zur Workload-Fabrik für dieses Produkt.</block>
+  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">Die Arbeitslastwerkdokumentation, die Sie derzeit anzeigen.</block>
+  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">Durchsuchen Sie die Workload Factory Knowledge Base, um hilfreiche Artikel zur Fehlerbehebung zu finden.</block>
+  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
+  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihren werkseitigen Workload-Anmeldedaten. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Wählen Sie oben rechts in der Arbeitslastwerkkonsole *Hilfe &gt; Support* aus.</block>
+  <block id="eb3607016e0d79a6f82dfbbdd3422282" category="paragraph">Die Bereitstellung von Microsoft SQL Server in einem privaten Netzwerk ohne ausgehende Konnektivität mit Terraform wird nur in der Region US-East-1 (N. Virginia) unterstützt. PostgreSQL unterstützt weder Amazon CloudWatch noch die Implementierung in einem privaten Netzwerk.</block>
+  <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">Klicken Sie auf das drei-Punkt-Menü der Instanz, die angezeigt werden soll, und wählen Sie dann *Instanz anzeigen*.</block>
+  <block id="6b30d701929b5a35aad77b847528d165" category="list-text">Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.</block>
+  <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">Klicken Sie auf das drei-Punkt-Menü der Instanz, die Sie aufheben möchten.</block>
+  <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.</block>
+  <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _laufende_, _abgeschlossene_, _abgeschlossene mit Problemen_ und _fehlgeschlagene_ Jobs.</block>
+  <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Klicken Sie auf das drei-Punkt-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.</block>
+  <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server-Konfigurationen und bietet Ihnen Einblicke und Empfehlungen, um Ihre betrieblichen Abläufe zu optimieren.</block>
+  <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Diese Funktion bietet Einblicke und Empfehlungen mit der Option zur automatischen Optimierung nicht optimierter Konfigurationen, sodass Ihre Datenbank-Workloads optimale Betriebsabläufe erzielen.</block>
+  <block id="31930d30084ccfe65cbf1bef8898f9a1" category="list-text">Compute: Enthält Rightsizing und Betriebssystem-Patches</block>
+  <block id="2a998f4a900b2db1c9b1028e9f7ff6f4" category="list-text">Anwendungen: Einschließlich Microsoft SQL Server-Lizenzen</block>
+  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">Wählen Sie auf der Registerkarte *Inventar* den Dropdown-Pfeil aus, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.</block>
+  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">Wählen Sie das drei-Punkt-Menü der Instanz und dann *Optimieren*.</block>
+  <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">Überprüfen Sie auf der Seite Instanz optimieren für die SQL Server-Instanz die Ergebnisse der Bewertung.</block>
+  <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Sie können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.</block>
+  <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">Sie können auch einen Bericht der Bewertungsergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.</block>
+  <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">Einsparungsrechner</block>
+  <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">Wenn Sie Elastic Block Store oder FSX für Windows File Server-Hosts in Ihrem Datenbankbestand haben, können Sie <block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>.</block>
+  <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, den Sie aktualisieren möchten.</block>
+  <block id="e464b3f9b68caf988cec7cd7b5263281" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, den Sie zurücksetzen möchten.</block>
+  <block id="07755964277c2a6aa1a5c2e771d7dbe0" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, den Sie teilen möchten.</block>
+  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">Für den Support ist eine Registrierung erforderlich, um technischen Support zu erhalten, der speziell für die BlueXP  Workload-Fabrik und die Storage-Lösungen und -Services von NetApp vorgesehen ist. Sie müssen sich für den Support über die BlueXP -Konsole registrieren, bei der es sich um eine separate webbasierte Konsole von der Workload-Werkseinstellung handelt.</block>
+  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">Durch die Registrierung für den Support wird die NetApp-Unterstützung für einen Fileservice eines Cloud-Providers nicht aktiviert. Technischer Support zu einem Fileservice eines Cloud-Providers, seiner Infrastruktur oder einer Lösung, die den Service verwendet, finden Sie unter „Hilfe erhalten“ in der Dokumentation zur Workload-Farm des jeweiligen Produkts.</block>
+  <block id="195066d54d760bc240b0879aa7a483bf" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, um die Verbindungsinformationen anzuzeigen.</block>
+  <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">06 Januar 2025</block>
 </blocks>

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: Die BlueXP -Workload-Fabrik für Datenbanken überprüft Speicherkonfigurationen von Microsoft SQL-Servern und liefert Einblicke und Empfehlungen, um Ihnen zu helfen, Ihre betrieblichen Abläufe zu optimieren. 
+summary: Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server-Konfigurationen und bietet Ihnen Einblicke und Empfehlungen, um Ihre betrieblichen Abläufe zu optimieren. 
 ---
 = Optimierte Konfigurationen für Microsoft SQL Server Implementierungen
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Die BlueXP -Workload-Fabrik für Datenbanken überprüft Speicherkonfi
 
 
 [role="lead"]
-Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Assessment liefern Ihnen Einblicke, Empfehlungen und Optimierungen für optimale Betriebsabläufe.
+Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Diese Funktion bietet Einblicke und Empfehlungen mit der Option zur automatischen Optimierung nicht optimierter Konfigurationen, sodass Ihre Datenbank-Workloads optimale Betriebsabläufe erzielen.
 
 .Über diese Aufgabe
 Die Bewertung wird automatisch und kontinuierlich einmal täglich für Microsoft SQL Server-Instanzen mit FSX für ONTAP-Storage ausgeführt, der in der Workload-Fabrik gemanagt wird. Bewertungsberichte sind im Optimierungs-Dashboard nur verfügbar, wenn ein täglicher geplanter Job nach der Bereitstellung oder nach der Verwaltung einer Instanz ausgeführt wurde.
@@ -24,7 +24,8 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 * Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks
 * Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb
 * Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr
-* Compute: Einschließlich Rightsizing
+* Compute: Enthält Rightsizing und Betriebssystem-Patches
+* Anwendungen: Einschließlich Microsoft SQL Server-Lizenzen
 
 
 --
@@ -39,18 +40,17 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.
+. Wählen Sie auf der Registerkarte *Inventar* den Dropdown-Pfeil aus, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.
 +
-Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+Der Host wird erweitert, und Host-Instanzen werden angezeigt.
 
-. Wählen Sie das Menü mit drei Punkten der zu scannenden Instanz und dann *Optimieren*.
-. Überprüfen Sie auf der Seite „optimierte Instanz“ für den Host die Ergebnisse der Storage-Bewertung.
+. Wählen Sie das drei-Punkt-Menü der Instanz und dann *Optimieren*.
+. Überprüfen Sie auf der Seite Instanz optimieren für die SQL Server-Instanz die Ergebnisse der Bewertung.
 +
-Filter können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags sortiert werden.
+Sie können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.
 
 +
-Bei Bedarf können Sie einen Bericht über die Ergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.
+Sie können auch einen Bericht der Bewertungsergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.
 
 . Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.
 +

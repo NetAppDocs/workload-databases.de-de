@@ -38,4 +38,4 @@ Wenn Sie sich für den Betrieb im _Automate_-Modus entschieden haben, müssen od
 .Wie es weiter geht
 Wenn Sie über von FSX for ONTAP gemanagte Hosts in Ihrem Datenbankbestand verfügen, können Sie link:create-database.html["Erstellen Sie eine Benutzerdatenbank"] oder link:create-sandbox-clone.html["Klonen Sie Ihren Host, um eine Sandbox zu erstellen"].
 
-Wenn Sie Elastic Block Store-Hosts in Ihrem Datenbankbestand haben, können Sie link:explore-savings.html["Entdecken Sie Einsparungen mit dem Rechner für Storage-Einsparungen"].
+Wenn Sie Elastic Block Store oder FSX für Windows File Server-Hosts in Ihrem Datenbankbestand haben, können Sie link:explore-savings.html["Einsparungsrechner"].

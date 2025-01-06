@@ -25,7 +25,7 @@ Um einen Datenbankklon aus einem Snapshot zu aktualisieren, muss die Quelldatenb
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
-. Klicken Sie auf der Registerkarte Sandboxes auf das Menü mit drei Punkten des Sandbox-Klons, den Sie aktualisieren möchten.
+. Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, den Sie aktualisieren möchten.
 . Wählen Sie * Aktualisieren*.
 . Wählen Sie im Dialogfeld Aktualisieren eine der folgenden Optionen aus:
 +

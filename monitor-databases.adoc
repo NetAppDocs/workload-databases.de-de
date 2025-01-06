@@ -14,7 +14,7 @@ summary: Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb d
 Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der BlueXP  Workload-Fabrik für Datenbanken.
 
 .Über diese Aufgabe
-Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Darüber hinaus helfen Filter nach Typ und Status, die Suchfunktion und die Option zum Herunterladen der Jobtabelle bei der Navigation und Berichterstellung von Datenbankjobs.
+Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.
 
 Die Jobüberwachung unterstützt je nach Job bis zu drei Überwachungsstufen. Beispielsweise verfolgt die Jobüberwachung bei der Erstellung neuer Datenbanken und Sandbox-Klone übergeordnete Jobs und untergeordnete Jobs.
 
@@ -27,7 +27,7 @@ Ebenen der Jobüberwachung::
 
 
 --
-Aufgabenstatus:: Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _in Bearbeitung_, _abgeschlossen_ und _fehlgeschlagen_ Jobs.
+Aufgabenstatus:: Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _laufende_, _abgeschlossene_, _abgeschlossene mit Problemen_ und _fehlgeschlagene_ Jobs.
 Speicherung von Jobereignissen:: Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche gespeichert.
 
 
@@ -40,5 +40,5 @@ Speicherung von Jobereignissen:: Ereignisse zur Jobüberwachung werden 30 Tage l
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Job Monitoring* aus.
 . Verwenden Sie auf der Registerkarte Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.
-. Klicken Sie auf das drei Punkte-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.
+. Klicken Sie auf das drei-Punkt-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.
 

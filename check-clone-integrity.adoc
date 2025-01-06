@@ -20,7 +20,7 @@ Wenn Sie einen Sandbox-Klon von einer Quelldatenbank erstellen, während diese b
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
-. Klicken Sie auf der Registerkarte Sandboxes auf das Menü drei Punkte des Sandbox-Klons, um die Integrität zu überprüfen.
+. Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, um die Integrität zu überprüfen.
 . Wählen Sie *Integritätsprüfung ausführen*.
 . Klicken Sie im Dialogfeld Integritätsprüfung auf *Integritätsprüfung*.
 . Überprüfen Sie den Status der Integritätsprüfung in Sandboxes oder in der Jobüberwachung.

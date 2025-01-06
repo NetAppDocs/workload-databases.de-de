@@ -85,7 +85,7 @@ Sie können eine verwaltete Instanz anzeigen, indem Sie die folgenden Schritte a
 +
 Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
 
-. Klicken Sie auf das Menü mit drei Punkten der Instanz, die angezeigt werden soll, und wählen Sie dann *Instanz anzeigen*.
+. Klicken Sie auf das drei-Punkt-Menü der Instanz, die angezeigt werden soll, und wählen Sie dann *Instanz anzeigen*.
 
 
 .Ergebnis
@@ -105,7 +105,7 @@ Sie können die von der verwalteten Instanz verwalteten Datenbanken anzeigen, in
 +
 Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
 
-. Klicken Sie auf das Menü mit den drei Punkten der Instanz, die die anzuzeitigen Datenbanken enthält.
+. Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.
 . Wählen Sie *Datenbanken anzeigen*.
 
 
@@ -126,7 +126,7 @@ Heben Sie die Verwaltung einer Hostinstanz auf, indem Sie die folgenden Schritte
 +
 Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
 
-. Klicken Sie auf das Menü mit drei Punkten der Instanz, die Sie aufheben möchten.
+. Klicken Sie auf das drei-Punkt-Menü der Instanz, die Sie aufheben möchten.
 . Wählen Sie *Unmanage*.
 
 

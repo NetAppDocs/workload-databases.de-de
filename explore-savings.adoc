@@ -13,11 +13,48 @@ summary: 'Erkunden Sie die Einsparungen für Ihre Datenbank-Workloads, indem Sie
 [role="lead"]
 Erkunden Sie die Einsparungen in der BlueXP  Workload-Farm für Datenbanken für Ihre Datenbank-Workloads, indem Sie die Kosten für die Verwendung von Amazon EBS (Elastic Block Store) und FSX für Windows File Server-Storage mit FSX für ONTAP Storage vergleichen.
 
-Die Workload-Farm bietet einen Einsparungsrechner, mit dem Sie verschiedene Kostenkomponenten für die Ausführung von Microsoft SQL Server-Workloads wie Storage, Computing, SQL-Lizenzen, Snapshots und Klone für Ihre Datenbank-Workloads auf FSX für ONTAP-Filesystemen mit Elastic Block Store (EBS) und FSX für Windows-File-Server-Storage vergleichen können. Abhängig von Ihren Storage-Anforderungen sind FSX für ONTAP-Filesysteme für Datenbank-Workloads am kostengünstigsten. Der Rechner zeigt an, ob der Speicher für die Datenbank-Workloads auf diesen Microsoft SQL-Servern weniger kostet, wenn Sie ein FSX für ONTAP-Dateisystem verwenden.
+
+
+== Über diese Aufgabe
+
+Die Workload-Farm bietet einen Einsparungsrechner, mit dem Sie verschiedene Kostenkomponenten für die Ausführung von Microsoft SQL Server-Workloads wie Storage, Computing, SQL-Lizenzen, Snapshots und Klone für Ihre Datenbank-Workloads auf FSX für ONTAP-Filesystemen mit Elastic Block Store (EBS) und FSX für Windows-File-Server-Storage vergleichen können. Abhängig von Ihren Storage-Anforderungen sind FSX für ONTAP-Filesysteme für Datenbank-Workloads am kostengünstigsten.
+
+Der Rechner zeigt an, ob der Speicher für die Datenbank-Workloads auf diesen Microsoft SQL-Servern weniger kostet, wenn Sie ein FSX für ONTAP-Dateisystem verwenden.
 
 image:screenshot-ebs-savings-calculator.png["Ein Screenshot der Seite mit dem Einsparungsrechner zeigt die ausgewählte Konfiguration von Microsoft SQL Server für Amazon Elastic Block Store links mit der Option zum Anpassen von Snapshot- und Klonwerten. Kosteneinsparungen in Dollar und Prozentsätzen sowie die monatlichen Gesamtkosten für die Verwendung von Microsoft SQL Server auf FSX für ONTAP und Elastic Block Store Storage werden auf der linken Seite angezeigt."]
 
 Wenn die Workload-Fabrik feststellt, dass Sie durch die Ausführung dieser Workloads auf einem FSX für ONTAP-Filesystem Geld sparen können, können Sie Microsoft SQL over FSX für ONTAP direkt vom Rechner in der Workload-Fabrik implementieren. Wenn Sie mehrere Microsoft SQL Server Instanzen über Elastic Block Store oder FSX für Windows File Server Storage nutzen, empfehlen wir eine FSX für ONTAP-Konfiguration mit einer einzigen SQL-Instanz.
+
+
+
+== SQL Server-Bereitstellungsanalyse
+
+Der Rechner führt eine umfassende Analyse Ihrer SQL Server-Bereitstellung durch, um sicherzustellen, dass die verwendeten Ressourcen und Funktionen der SQL Server-Edition entsprechen. Hier sind die wichtigsten Faktoren und Bedingungen, die der Rechner prüft, bevor er eine Herabstufung auf Standard Edition empfiehlt:
+
+Implementierungsmodell:: Der Rechner bewertet das Implementierungsmodell und ob die Enterprise Edition erforderlich ist.
+Zugewiesene Ressourcen:: Der Rechner bewertet die Bedingungen der folgenden lizenzabhängigen zugewiesenen Ressourcen:
++
+--
+* VCPUs der Zielinstanz: Die Instanz verfügt über 48 oder weniger virtuelle CPUs.
+* Arbeitsspeicherzuweisung: Die Instanz hat 128 GB oder weniger Arbeitsspeicher.
+
+
+--
+Nutzung von Enterprise-Funktionen:: Der Rechner überprüft, ob eine der folgenden Enterprise-Funktionen verwendet wird:
++
+--
+* Enterprise-Funktionen auf Datenbankebene
+* Online-Indexvorgänge
+* Ressourcenkontrolle
+* Peer-to-Peer- oder Oracle-Replizierung
+* R/Python-Erweiterungen
+* Speicheroptimierte tempdb
+
+
+--
+
+
+Wenn die bewertete SQL Server-Instanz keine der oben genannten Enterprise-Funktionen verwendet und die Ressourcenbeschränkungen erfüllt, empfiehlt der Rechner, die Lizenz auf die Standard Edition herunterzustufen. Diese Empfehlung soll Ihnen helfen, Ihre SQL Server Lizenzierungskosten zu optimieren, ohne die Performance oder Funktionalität zu beeinträchtigen.
 
 
 
@@ -31,7 +68,7 @@ Informieren Sie sich über die Einsparungen für erkannte Hosts: Workload Factor
 
 
 
-== Entdecken Sie Einsparungen durch Anpassung
+=== Entdecken Sie Einsparungen durch Anpassung
 
 Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 
@@ -111,7 +148,7 @@ Scrollen Sie zusätzlich nach unten auf der Seite zu *PDF exportieren* oder *Ber
 ====
 
 
-== Untersuchen Sie die Einsparungen für erkannte Hosts
+=== Untersuchen Sie die Einsparungen für erkannte Hosts
 
 Workload Factory tritt in die erkannten Elastic Block Store- und FSX for Windows File Server-Hosteigenschaften ein, sodass Sie die Einsparungen automatisch erkunden können.
 
