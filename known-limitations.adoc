@@ -100,6 +100,12 @@ Workload Factory unterstützt nicht das Erstellen oder Speichern von Konfigurati
 
 
 
-== Regionale Verfügbarkeit für Microsoft SQL Server-Implementierung in einem privaten Netzwerk mit Terraform
+== Bewertung von Patches für das Betriebssystem zur Optimierung
 
-Die Bereitstellung von Microsoft SQL Server in einem privaten Netzwerk ohne ausgehende Konnektivität mit Terraform wird nur in der Region US-East-1 (N. Virginia) unterstützt. PostgreSQL unterstützt weder Amazon CloudWatch noch die Implementierung in einem privaten Netzwerk.
+Die für Optimierungszwecke vorgestellte Bewertung von Betriebssystem-Patches darf in einem privaten Netzwerk nicht funktionieren. Die Bewertung basiert auf AWS Patch Manager. Informationen zum Patchen von Windows EC2-Instanzen in einem privaten Netzwerk finden Sie unter link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Der AWS Cloud Operations Blog „How to Patch Windows EC2 Instances in private Subnets using AWS Systems Manager“"^].
+
+
+
+== Optimierung für die Größenanpassung von Compute
+
+Wenn Sie auf bestimmte Instanztypen wechseln, wird die Netzwerkkonfiguration möglicherweise zurückgesetzt, was dann während der Optimierung zu einem Ausfall der Knotenverbindung und einem Jobausfall führen kann. Möglicherweise sind manuelle Eingriffe erforderlich, um die DNS-Einstellung und iSCSI-Sitzungen zu überprüfen und zu aktualisieren. Weitere Informationen zu EC2-Größenbeschränkungen finden Sie unterlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elastic Compute Cloud Dokumentation"^].
