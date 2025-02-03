@@ -16,7 +16,7 @@ Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend di
 .Über diese Aufgabe
 Die Bewertung wird automatisch und kontinuierlich einmal täglich für Microsoft SQL Server-Instanzen mit FSX für ONTAP-Storage ausgeführt, der in der Workload-Fabrik gemanagt wird. Bewertungsberichte sind im Optimierungs-Dashboard nur verfügbar, wenn ein täglicher geplanter Job nach der Bereitstellung oder nach der Verwaltung einer Instanz ausgeführt wurde.
 
-Die Workload-Fabrik bietet detaillierte Empfehlungen zur Optimierung der Konfigurationen auf Basis der Best Practices für FSX für ONTAP-Storage.
+Die Workload-Fabrik bietet detaillierte Empfehlungen zur Optimierung der Konfigurationen auf Basis der Best Practices für FSX für ONTAP-Storage. Sie können die Empfehlungen überprüfen und wählen, ob nicht optimierte Konfigurationen optimiert werden sollen.
 
 Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgenden Konfigurationen für Microsoft SQL Server-Instanzen:
 +
@@ -24,8 +24,8 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 * Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks
 * Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb
 * Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr
-* Compute: Enthält Rightsizing und Betriebssystem-Patches
-* Anwendungen: Einschließlich Microsoft SQL Server-Lizenzen
+* Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading
+* Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
 
 
 --
@@ -34,8 +34,11 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 .Bevor Sie beginnen
 * Sie müssen über Anmeldedaten mit Lese- oder Automatisierungsberechtigungen verfügen.
 * Um den Storage einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz von der Workload-Fabrik gemanagt werden und der Storage-Typ muss FSX für ONTAP sein.
-* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration optimieren.
+* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration optimieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
 
+
+
+NOTE: Der Optimierungsprozess kann zu Instanzausfällen oder Serviceunterbrechungen führen. Überprüfen Sie die Optimierungszusammenfassung und die Aktionselemente, bevor Sie eine Konfiguration optimieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
