@@ -43,6 +43,14 @@ Um eine Hostinstanz in einem privaten Netzwerk ohne externe Konnektivität zu ma
 * `fsx`
 
 
+Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen verwenden, müssen Sie den Zugriff auf die folgenden Domänen zulassen, damit die Verwaltungsvorgänge funktionieren:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
 .Bevor Sie beginnen
 Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 
