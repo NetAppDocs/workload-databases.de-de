@@ -14,12 +14,16 @@ indexpage:
       url: "/quick-start-databases.html"
   - title: Nutzen Datenbanken
     links:
-    - title: Erstellen Sie einen Datenbankserver
+    - title: Einsparungen entdecken
+      url: "/explore-savings.html"
+    - title: Erstellen Sie einen Microsoft SQL Server
       url: "/create-database-server.html"
+    - title: Erstellen Sie einen PostgreSQL-Server
+      url: "/create-postgresql-server.html"
     - title: Erstellen Sie eine Datenbank
       url: "/create-database.html"
-    - title: Überwachen einer Datenbank
-      url: "/monitor-databases.html"
+    - title: Optimieren von Konfigurationen
+      url: "/optimize-configurations.html"
   - title: Wissen und Support
     links:
     - title: Für den Support anmelden

@@ -14,9 +14,7 @@ summary: Erstellen Sie einen neuen Microsoft SQL Server in der BlueXP -Workload
 Die Erstellung eines neuen Microsoft SQL-Servers oder Datenbank-Hosts in der BlueXP -Workload-Farm für Datenbanken erfordert eine Bereitstellung von FSX für ONTAP-Dateisystem und Ressourcen für Active Directory.
 
 .Über diese Aufgabe
-Sie benötigen die Zugangsdaten für das AWS Konto und die _Automate_ Berechtigungen.
-
-Informieren Sie sich zunächst über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Hostkonfiguration, die Active Directory-Bereitstellung, die Betriebsmodi der Workload-Werkseinstellungen und die Anforderungen, die für diesen Vorgang erforderlich sind.
+Bevor Sie einen Microsoft SQL Server aus der Workload Factory erstellen, informieren Sie sich über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Host-Konfiguration, die Active Directory-Bereitstellung, die Betriebsmodi der Workload Factory und die Anforderungen für diesen Vorgang.
 
 Nach der Bereitstellung müssen Sie <<Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server,Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server>>.
 

@@ -26,6 +26,7 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 * Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr
 * Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading
 * Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
+* Ausfallsicherheit: Einschließlich lokaler Snapshots
 
 
 --
