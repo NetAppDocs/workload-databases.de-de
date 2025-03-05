@@ -16,6 +16,6 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 Sie können jetzt Terraform aus der Codebox verwenden, um Microsoft SQL Server bereitzustellen.
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["Erstellen Sie einen Datenbankserver"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwenden Sie Terraform aus der Codebox"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["Erstellen Sie einen Datenbankserver"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwenden Sie Terraform aus der Codebox"]
 
