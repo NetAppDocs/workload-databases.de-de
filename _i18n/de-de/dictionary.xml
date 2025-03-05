@@ -98,7 +98,6 @@
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">Wählen Sie im Feld *Cluster-Konfiguration - Knoten 1* aus dem Dropdown-Menü eine Verfügbarkeitszone aus der *Verfügbarkeitszone* und ein Subnetz aus dem *Subnetz*-Dropdown-Menü aus.</block>
   <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">Für FCI-Implementierungen</block>
   <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*Sicherheitsgruppe*: Wählen Sie eine vorhandene Sicherheitsgruppe aus oder erstellen Sie eine neue Sicherheitsgruppe.</block>
-  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">Während der Implementierung eines neuen Servers werden drei Sicherheitsgruppen an die SQL Nodes (EC2 Instanzen) angeschlossen.</block>
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">Eine Sicherheitsgruppe für Workloads wird erstellt, um Ports und Protokolle zu ermöglichen, die für die Microsoft SQL- und Windows-Cluster-Kommunikation auf Knoten erforderlich sind.</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">Im Fall von AWS-Managed Active Directory wird die Sicherheitsgruppe, die an den Verzeichnisdienst angeschlossen ist, automatisch zu den Microsoft SQL-Knoten hinzugefügt, um die Kommunikation mit Active Directory zu ermöglichen.</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">Für ein vorhandenes FSX für ONTAP-Dateisystem wird die ihm zugeordnete Sicherheitsgruppe automatisch zu den SQL-Knoten hinzugefügt, die die Kommunikation mit dem Dateisystem ermöglicht. Wenn ein neues FSX für ONTAP-System erstellt wird, wird eine neue Sicherheitsgruppe für das FSX für ONTAP-Dateisystem erstellt und die gleiche Sicherheitsgruppe wird auch an SQL-Knoten angeschlossen.</block>
@@ -1004,4 +1003,5 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
+  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Sicherheitsgruppe*: Wählen Sie eine vorhandene Sicherheitsgruppe aus oder erstellen Sie eine neue Sicherheitsgruppe. Während der Implementierung eines neuen Servers werden drei Sicherheitsgruppen an die SQL Nodes (EC2 Instanzen) angeschlossen.</block>
 </blocks>

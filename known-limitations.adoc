@@ -58,12 +58,6 @@ Die Verwaltung von Konfigurationen für „Always On“-Verfügbarkeitsgruppen w
 
 
 
-== Vom Benutzer gemanagte Active Directory-Sicherheitsgruppen
-
-Wenn Sie während der Implementierung von Microsoft SQL Server in Workload Factory „benutzerverwaltetes Active Directory“ auswählen, müssen Sie eine Sicherheitsgruppe bereitstellen, die den Datenverkehr zwischen den EC2-Instanzen zum Verzeichnisdienst für die Bereitstellung zulässt. Workload Factory fügt die Sicherheitsgruppe für benutzerverwaltetes Active Directory nicht automatisch an, wie es für von AWS verwaltetes Microsoft AD der Fall ist.
-
-
-
 == Benutzerdefinierte Verschlüsselung
 
 Benutzerdefinierte Verschlüsselungsschlüssel für FSX for ONTAP werden gemäß der Service-Anwendbarkeit nicht aufgeführt. Sie müssen den entsprechenden Schlüssel auswählen. Managed Keys in AWS werden nach der Anwendbarkeit des Services gefiltert.

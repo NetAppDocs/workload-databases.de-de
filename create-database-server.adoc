@@ -42,6 +42,14 @@ Active Directory:: Während der Bereitstellung geschieht Folgendes für Active D
 
 
 --
+
+
+
+
+== Vom Benutzer gemanagte Active Directory-Sicherheitsgruppen
+
+Wenn Sie während der Implementierung von Microsoft SQL Server in Workload Factory „benutzerverwaltetes Active Directory“ auswählen, müssen Sie eine Sicherheitsgruppe bereitstellen, die den Datenverkehr zwischen den EC2-Instanzen zum Verzeichnisdienst für die Bereitstellung zulässt. Workload Factory fügt die Sicherheitsgruppe für benutzerverwaltetes Active Directory nicht automatisch an, wie es für von AWS verwaltetes Microsoft AD der Fall ist.
+
 Ressourcen-Rollbacks:: Wenn Sie ein Rollback Ihrer DNS-Ressourcen (Domain Name System) durchführen möchten, werden die Ressourceneinträge in AD und DNS nicht automatisch entfernt. Sie können die Datensätze wie folgt vom DNS-Server und AD entfernen.
 +
 --
@@ -258,10 +266,7 @@ Für FCI-Implementierungen::
 --
 
 
-.. *Sicherheitsgruppe*: Wählen Sie eine vorhandene Sicherheitsgruppe aus oder erstellen Sie eine neue Sicherheitsgruppe.
-+
-Während der Implementierung eines neuen Servers werden drei Sicherheitsgruppen an die SQL Nodes (EC2 Instanzen) angeschlossen.
-
+.. *Sicherheitsgruppe*: Wählen Sie eine vorhandene Sicherheitsgruppe aus oder erstellen Sie eine neue Sicherheitsgruppe. Während der Implementierung eines neuen Servers werden drei Sicherheitsgruppen an die SQL Nodes (EC2 Instanzen) angeschlossen.
 +
 ... Eine Sicherheitsgruppe für Workloads wird erstellt, um Ports und Protokolle zu ermöglichen, die für die Microsoft SQL- und Windows-Cluster-Kommunikation auf Knoten erforderlich sind.
 ... Im Fall von AWS-Managed Active Directory wird die Sicherheitsgruppe, die an den Verzeichnisdienst angeschlossen ist, automatisch zu den Microsoft SQL-Knoten hinzugefügt, um die Kommunikation mit Active Directory zu ermöglichen.
