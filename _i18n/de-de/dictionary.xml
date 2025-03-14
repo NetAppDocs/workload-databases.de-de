@@ -1001,4 +1001,8 @@
   <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">Sie können den Bereitstellungsmodus „_Advanced create_“ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen „_Automate_“ abzuschließen. Die Codebox bietet auch folgende Tools: REST-API, AWS-CLI, AWS CloudFormation und Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
   <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">PostgreSQL-Hochverfügbarkeitskonfiguration</block>
   <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">Sie können jetzt eine HA-Konfiguration für PostgreSQL Server implementieren.</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs und Community</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp Community</block>
+  <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP Blogs</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Cloud-Webinare</block>
 </blocks>
