@@ -48,11 +48,107 @@ Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.c
 
 == Erstellen Sie einen Datenbankserver
 
-Sie können den Bereitstellungsmodus „_Advanced create_“ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen „_Automate_“ abzuschließen. Die Codebox bietet auch folgende Tools: REST-API, AWS-CLI, AWS CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
+Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen _Automate_ zu erledigen. Die Codebox bietet auch folgende Tools: REST-API, AWS-CLI, AWS CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
 
 
 NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet `fsxadmin` und `vsadmin` Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen. Zusätzlich zu den _Automate_-Modus-Berechtigungen müssen Sie die folgenden Berechtigungen für das Benutzerkonto hinzufügen: `iam:TagRole` Und `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Lernen Sie die Verwendung von Terraform von Codebox"^].
 
+[role="tabbed-block"]
+====
+.Schnelle Erstellung
+--
+
+NOTE: In _Quick Create_ ist HA das Standardbereitgabemodell, Windows 2016 die Standardversion von Windows und SQL 2019 Standard Edition die Standardversion von SQL.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus und wählen Sie dann *PostgreSQL Server* aus dem Dropdown-Menü aus.
+. Wählen Sie *Schnellerstelle*.
+. Geben Sie unter *Landezone* Folgendes an:
++
+.. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
++
+AWS Zugangsdaten mit _Automate_ Berechtigungen ermöglichen die werkseitige Implementierung und das Management des neuen Datenbank-Hosts über Ihr AWS-Konto innerhalb der Workload-Fabrik.
+
++
+Mit AWS Zugangsdaten mit _read_ Berechtigungen kann die Workload-Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation Konsole verwenden können.
+
++
+Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+
++
+Wenn Sie das Formular zum Erstellen eines neuen Servers in der Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
+
++
+Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb der Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.
+
+.. *Region & VPC*: Wählen Sie eine Region und ein VPC-Netzwerk.
++
+Stellen Sie sicher, dass Sicherheitsgruppen für einen vorhandenen Schnittstellenendpunkt den Zugriff auf das HTTPS-Protokoll (443) auf die ausgewählten Subnetze ermöglichen.
+
++
+AWS-Serviceschnittstellen-Endpunkte (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) und der S3-Gateway-Endpunkt werden während der Bereitstellung erstellt, wenn nicht gefunden.
+
++
+VPC-DNS-Attribute `EnableDnsSupport` und `EnableDnsHostnames` werden geändert, um die Auflösung der Endpunktadresse zu aktivieren, wenn sie nicht bereits auf festgelegt sind `true`.
+
+.. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze aus.
++
+
+NOTE: HA-Implementierungen werden nur in Konfigurationen mit Multiple Availability Zone (MAZ) FSX for ONTAP unterstützt.
+
++
+Subnetze sollten für hohe Verfügbarkeit nicht dieselbe Routentabelle verwenden.
+
++
+... Wählen Sie im Feld *Clusterkonfiguration - Knoten 1* die primäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der primären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
+... Wählen Sie im Feld *Cluster-Konfiguration - Knoten 2* die sekundäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der sekundären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
+
+
+
+
+. Geben Sie unter *Anwendungseinstellungen* einen Benutzernamen und ein Passwort für *Datenbankanmeldeinformationen* ein.
+. Wählen Sie unter *Connectivity* ein Schlüsselpaar aus, um eine sichere Verbindung zu Ihrer Instanz herzustellen.
+. Geben Sie unter *Infrastruktur-Einstellungen* Folgendes an:
++
+.. *FSX für ONTAP-System*: Erstellen Sie ein neues FSX für ONTAP-Dateisystem oder verwenden Sie ein vorhandenes FSX für ONTAP-Dateisystem.
++
+... * Erstellen Sie ein neues FSX für ONTAP*: Geben Sie Benutzernamen und Passwort ein.
++
+Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
+
+... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
++
+Stellen Sie für vorhandene FSX for ONTAP-Dateisysteme Folgendes sicher:
+
++
+**** Die an FSX for ONTAP angeschlossene Routinggruppe ermöglicht die Verwendung von Routen zu den Subnetzen für die Bereitstellung.
+**** Die Sicherheitsgruppe ermöglicht Datenverkehr aus den für die Bereitstellung verwendeten Subnetzen, insbesondere HTTPS- (443) und iSCSI- (3260) TCP-Ports.
+
+
+
+
+.. *Größe des Datenlaufwerks*: Geben Sie die Kapazität des Datenlaufwerks ein und wählen Sie die Kapazitätseinheit aus.
+
+
+. Zusammenfassung:
++
+.. *Voreinstellung Vorschau*: Überprüfen Sie die Standardkonfigurationen, die von Quick Create festgelegt wurden.
+.. *Geschätzte Kosten*: Gibt eine Schätzung der Kosten an, die Ihnen entstehen könnten, wenn Sie die angezeigten Ressourcen bereitgestellt haben.
+
+
+. Klicken Sie Auf *Erstellen*.
++
+Alternativ können Sie, wenn Sie jetzt eine dieser Standardeinstellungen ändern möchten, den Datenbankserver mit Advanced Create erstellen.
+
++
+Sie können auch *Konfiguration speichern* auswählen, um den Host später bereitzustellen.
+
+
+
+--
+.Erweiterte Erstellung
+--
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Deploy Database Host* aus und wählen Sie dann *PostgreSQL Server* aus dem Dropdown-Menü aus.
@@ -189,5 +285,7 @@ Alternativ können Sie die Konfiguration speichern.
 
 
 
+--
+====
 .Wie es weiter geht
 Sie können Benutzer, Remote-Zugriff und Datenbanken auf dem bereitgestellten PostgreSQL-Server manuell konfigurieren.

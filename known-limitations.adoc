@@ -119,3 +119,17 @@ Die für Optimierungszwecke vorgestellte Bewertung von Betriebssystem-Patches da
 == Lokale Einsparungsberechnung
 
 Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokalen Storage mit Microsoft SQL Server werden nicht berücksichtigt.
+
+
+
+== Regionsübergreifende Replizierungsbewertung
+
+* Die Optimierungsbewertung kann nicht ermitteln, ob regionsübergreifende Replizierung (CRR) verwendet wird, wenn sich das Ziel-Filesystem FSX für ONTAP in einem anderen AWS-Konto befindet.
+* Workload Factory bewertet nur die CRR-Konfiguration des Quell-FSX für ONTAP-Dateisystem.
+
+
+
+
+== Anzahl an Datenbanken in SQL Server Instanzen
+
+Auf der Registerkarte Inventar und im Dashboard unterstützt die Workload Factory bis zu 850 Datenbanken innerhalb von SQL-Serverinstanzen.
