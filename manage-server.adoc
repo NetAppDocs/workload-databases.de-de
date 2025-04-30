@@ -58,14 +58,45 @@ Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 * PowerShell7 ist erforderlich, um die Datenbankinstanz zu verwalten. Installieren Sie PowerShell7 manuell unter link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Microsoft PowerShell-Dokumentation für Windows"^].
 * Alle Managementvorgänge werden vom AWS System Manager Agent mit Benutzerrechte ausgeführt `NT Authority\SYSTEM` . Geben Sie die folgenden Berechtigungen für den Benutzer auf dem Datenbankserver an `NT Authority\SYSTEM` :
 +
-** `“ALTER SETTINGS”`
-** `“CONTROL SERVER”`
-** `“ALTER ANY DATABASE”`
-** `“VIEW ANY DEFINITION”`
-** `“CONNECT ANY DATABASE”`
-** `“CREATE ANY DATABASE”`
+[cols="2,2a"]
+|===
+| Melden Sie sich an | Wo erforderlich? 
 
 
+| `VIEW ANY DEFINITION`  a| 
+Bestandsaufnahme, Bewertung, Korrektur, Datenbank erstellen, Sandbox-Klon erstellen, Einsparungen entdecken
+
+
+
+| `CONNECT ANY DATABASE`  a| 
+Bestandsaufnahme, Bewertung, Korrektur, Datenbank erstellen, Sandbox-Klon erstellen
+
+
+
+| `VIEW SERVER STATE`  a| 
+Bestandsaufnahme, Bewertung, Korrektur, Datenbank erstellen, Sandbox-Klon erstellen
+
+
+
+| `CREATE ANY DATABASE`  a| 
+Datenbank erstellen und Sandbox-Klon erstellen
+
+
+
+| `CONTROL SERVER`  a| 
+Sandbox-Klon erstellen
+
+
+
+| `ALTER ANY DATABASE`  a| 
+Sandbox-Klon erstellen
+
+
+
+| `ALTER SETTINGS`  a| 
+Sandbox-Klon erstellen, Korrektur für MAXDOP
+
+|===
 
 
 .Schritte
