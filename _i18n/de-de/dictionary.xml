@@ -633,7 +633,6 @@
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Wählen Sie diese Option aus, um nicht optimierte Konfigurationen zu optimieren.</block>
-  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">Sehen Sie sich die Optimierungsübersicht und die Aktionselemente an, die im Optimierungsdialog angezeigt werden, um zu erfahren, was passieren wird, wenn Sie sich für eine Optimierung entscheiden. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.</block>
   <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">Wählen Sie *Weiter*, um die Konfiguration zu optimieren.</block>
   <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">Der Optimierungsprozess wird gestartet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.</block>
   <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">Die BlueXP  Workload-Farm für Datenbanken bietet kontinuierliche Optimierung für Microsoft SQL Server-Implementierungen auf Amazon FSX für NetApp ONTAP Storage.</block>
@@ -875,8 +874,6 @@
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Klicken Sie auf das drei-Punkt-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server-Konfigurationen und bietet Ihnen Einblicke und Empfehlungen, um Ihre betrieblichen Abläufe zu optimieren.</block>
   <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Diese Funktion bietet Einblicke und Empfehlungen mit der Option zur automatischen Optimierung nicht optimierter Konfigurationen, sodass Ihre Datenbank-Workloads optimale Betriebsabläufe erzielen.</block>
-  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">Wählen Sie auf der Registerkarte *Inventar* den Dropdown-Pfeil aus, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.</block>
-  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">Wählen Sie das drei-Punkt-Menü der Instanz und dann *Optimieren*.</block>
   <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">Überprüfen Sie auf der Seite Instanz optimieren für die SQL Server-Instanz die Ergebnisse der Bewertung.</block>
   <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Sie können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.</block>
   <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">Sie können auch einen Bericht der Bewertungsergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.</block>
@@ -1038,4 +1035,51 @@
   <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
   <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
   <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">Sandbox-Klon erstellen, Korrektur für MAXDOP</block>
+  <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">Dashboard-Verbesserungen</block>
+  <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">Kunden- und regionsübergreifende Ansichten sind verfügbar, wenn Sie in der BlueXP  Workload Factory-Konsole zwischen den Registerkarten navigieren. Die neuen Ansichten verbessern das Ressourcenmanagement, die Überwachung und die Optimierung.</block>
+  <block id="6e21267988cadc818dd398393c695465" category="list-text">Über die Kachel *potenzielle Einsparungen* im Dashboard können Sie schnell überprüfen, was Sie sparen könnten, indem Sie vom Amazon Elastic Block Store oder Amazon FSX for Windows File Server zu FSX for ONTAP wechseln.</block>
+  <block id="255a96bb0a74416846fbad7e40f8ddf4" category="section-title">Ad-hoc-Scans für Datenbankkonfigurationen verfügbar</block>
+  <block id="2b1a16b6cd72c9555872ec61d3334af5" category="paragraph">Die BlueXP -Workload-Fabrik für Datenbanken scannt gemanagte Microsoft SQL Server-Instanzen automatisch mit FSX für ONTAP Storage auf potenzielle Konfigurationsprobleme. Zusätzlich zum täglichen Scan können Sie jetzt jederzeit scannen.</block>
+  <block id="365d8fe4130e8c12f4a3defc920178dd" category="section-title">Entfernung von Beurteilungsunterlagen vor Ort</block>
+  <block id="c4fd25bd6650f0eaedfd01e29fbecddd" category="paragraph">Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host untersucht haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus der BlueXP  Workload Factory zu entfernen.</block>
+  <block id="ae548505379d0043460d8c15540cb546" category="section-title">Klonbereinigung</block>
+  <block id="0d003b1e16a8cf8a4b6c0774ee3a0f41" category="paragraph">Die Bewertung und Korrektur der Klonbereinigung identifiziert und managt alte und teure Klone. Klone, die älter als 60 Tage sind, können aktualisiert oder aus der BlueXP -Workload-Werkseinstellungen gelöscht werden.</block>
+  <block id="6da89f0beda0fbec41b06125b0b7ad32" category="section-title">Verschieben und Verwerfen der Konfigurationsanalyse</block>
+  <block id="4a9a50cea48d9e2ded3becc284af4e41" category="paragraph">Einige Konfigurationen gelten möglicherweise nicht für Ihre Datenbankumgebungen. Sie haben jetzt die Möglichkeit, eine bestimmte Konfigurationsanalyse um 30 Tage zu verschieben oder die Analyse zu verwerfen.</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">Terminologie für Berechtigungen wurde aktualisiert</block>
+  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">Die Benutzeroberfläche und Dokumentation der Workload Factory verwenden jetzt „Read-Only“, um auf Leseberechtigungen und „Read-Write“ zu verweisen, um Berechtigungen zu automatisieren.</block>
+  <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">Entfernung des lokalen Hosts</block>
+  <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host untersucht haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus der BlueXP  Workload Factory zu entfernen. Wählen Sie das drei-Punkt-Menü des lokalen Microsoft SQL Server-Hosts aus und wählen Sie dann *Löschen* aus.</block>
+  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">Klone: Umfasst Optionen zum Aktualisieren und Löschen von Klonen (Sandbox-Umgebungen), die älter als 60 Tage sind</block>
+  <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">Wählen Sie auf der Registerkarte *Inventar* die Registerkarte *Instanzen* aus.</block>
+  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">Wählen Sie das drei-Punkt-Menü der zu optimierenden Instanz aus und wählen Sie dann *optimieren*.</block>
+  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">Überprüfen Sie für alle Konfigurationen mit Ausnahme der Klonbereinigung im Optimierungsdialog die Optimierungsdetails, um zu erfahren, was bei der Optimierung geschieht. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.</block>
+  <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">Wählen Sie für die Klonbereinigung geklonte Datenbanken (Sandbox) zum Aktualisieren oder Löschen aus.</block>
+  <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">Durch das Aktualisieren eines Klons wird er mit der Quelldatenbank synchronisiert. Aktualisierung ist nur für Klone verfügbar, die in den Werkseinstellungen des Workloads erstellt wurden.</block>
+  <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">Durch Löschen eines Klons wird dieser dauerhaft gelöscht, Speicherplatz wird freigegeben und die Kosten werden gesenkt. Sie können Klone löschen, die in und außerhalb der Werkseinstellungen des Workloads erstellt wurden.</block>
+  <block id="cf00508631c0415d4089fb10cbe0511d" category="summary">Verschieben oder verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht für Ihre Datenbankumgebung gelten, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden.</block>
+  <block id="0cdf26a09e8e4cde6653e44f4abd73fb" category="doc">Verschieben oder verwerfen Sie die Analyse von Datenbankkonfigurationen</block>
+  <block id="77df5d7dfd76cd0e6a1a7a837c509672" category="paragraph">Verschieben oder verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht für Ihre Datenbankumgebung gelten, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. Sie können eine verschobene oder zurückgeschobene Konfigurationsanalyse jederzeit wieder aktivieren.</block>
+  <block id="54498ab3155b38b14174ab9dd5caef5a" category="paragraph">Die Applikationsanforderungen für Datenbankkonfigurationen variieren. Workload Factory bietet Ihnen zwei Optionen, um die Analyse bestimmter Datenbankkonfigurationen zu überspringen, sodass Sie nur relevante Probleme überwachen und einen genauen Überblick über den Zustand relevanter Konfigurationen erhalten können. Wenn eine bestimmte Konfigurationsanalyse verschoben oder verworfen wird, wird die Konfiguration nicht in der Gesamtoptimierungsbewertung berücksichtigt.</block>
+  <block id="47112685bf756c67c8ac297ef60e48dc" category="paragraph">Sie können die Konfigurationsanalyse auf der Konfigurationsebene und auf der SQL Server-Instanzebene verschieben, verwerfen und reaktivieren.</block>
+  <block id="8a219fba8bbd202ad1f7a47267ff5a2d" category="list-text">*30 Tage verschieben*: Eine Verschiebung der Analyse wird die Analyse für 30 Tage beenden. Nach 30 Tagen wird die Analyse automatisch neu gestartet.</block>
+  <block id="71e07950d625dfcf829cac7019fb6f26" category="list-text">*Abweisen*: Das Ablehnen der Analyse verschiebt die Analyse auf unbestimmte Zeit. Sie können die Analyse bei Bedarf neu starten.</block>
+  <block id="cd5a81e0d9eeff49759cb9a6eaa2e1e2" category="paragraph">Sie können die folgenden Konfigurationen für Microsoft SQL Server-Instanzen verschieben oder schließen:</block>
+  <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="list-text">Klone</block>
+  <block id="75d9a01908e416c932fa5ee3fa0c77a3" category="paragraph">Die folgenden Anweisungen beschreiben, wie Sie eine Analyse auf Konfigurationsebene verschieben, schließen oder reaktivieren. Um die folgenden Aufgaben für bestimmte SQL Server-Instanzen auszuführen, starten Sie auf der Registerkarte *Dashboard*.</block>
+  <block id="43d86b2167e8a3464a552ee706d46d88" category="paragraph-title">Verschieben</block>
+  <block id="38d07dc1916e6ca30a9f936368828d18" category="paragraph">Verschieben, um eine Konfigurationsanalyse für 30 Tage zu stoppen. Nach 30 Tagen wird die Analyse automatisch neu gestartet.</block>
+  <block id="b8bad4787f04ab4d4933464f551ed74c" category="list-text">Scrollen Sie auf der Registerkarte *Inventar* nach unten zur Konfiguration, um sie zu verschieben, wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *30 Tage verschieben*.</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">Wählen Sie *Weiter*.</block>
+  <block id="8dca288df860b62f4b631d87b4320f91" category="paragraph">Die Konfigurationsanalyse hält 30 Tage an.</block>
+  <block id="c8a59e7135a20b362f9c768b09454fdb" category="paragraph-title">Verwerfen</block>
+  <block id="26765b6cc82b68114c879d49f83b0e5a" category="paragraph">Schließen, um eine Konfigurationsanalyse auf unbestimmte Zeit zu beenden. Sie können die Analyse bei Bedarf neu starten.</block>
+  <block id="fd9eed8a1f28cfe92f0d2d738455682b" category="list-text">Scrollen Sie auf der Registerkarte *Inventar* nach unten zur Konfiguration, um sie zu schließen, wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *Verwerfen*.</block>
+  <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">Die Konfigurationsanalyse wird beendet.</block>
+  <block id="8e88e8d3ce1694ab82d525e91ae7c572" category="paragraph-title">Reaktivieren</block>
+  <block id="54a679b97854ca1a358ef23dc83cfce6" category="paragraph">Aktivieren Sie eine verschobene oder abgeschobene Konfigurationsanalyse jederzeit erneut.</block>
+  <block id="58e2f7c25b65ba2e36fc6778b985ab34" category="list-text">Scrollen Sie auf der Registerkarte *Inventar* nach unten zur Konfiguration, um sie erneut zu aktivieren, wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *Reactivate*.</block>
+  <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">Die Konfigurationsanalyse wird reaktiviert und findet täglich im Vorwärtslauf statt.</block>
+  <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">04 Mai 2025</block>
+  <block id="f865802ec5f0fe104a096589d51b39a4" category="sidebar">Verschieben der Konfigurationsanalyse</block>
 </blocks>

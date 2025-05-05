@@ -27,6 +27,7 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 * Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading
 * Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
 * Ausfallsicherheit: Einschließlich lokaler Snapshots, FSX für ONTAP-Backups und regionsübergreifender Replizierung (CRR)
+* Klone: Umfasst Optionen zum Aktualisieren und Löschen von Klonen (Sandbox-Umgebungen), die älter als 60 Tage sind
 
 
 --
@@ -44,11 +45,8 @@ NOTE: Der Optimierungsprozess kann zu Instanzausfällen oder Serviceunterbrechun
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie auf der Registerkarte *Inventar* den Dropdown-Pfeil aus, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.
-+
-Der Host wird erweitert, und Host-Instanzen werden angezeigt.
-
-. Wählen Sie das drei-Punkt-Menü der Instanz und dann *Optimieren*.
+. Wählen Sie auf der Registerkarte *Inventar* die Registerkarte *Instanzen* aus.
+. Wählen Sie das drei-Punkt-Menü der zu optimierenden Instanz aus und wählen Sie dann *optimieren*.
 . Überprüfen Sie auf der Seite Instanz optimieren für die SQL Server-Instanz die Ergebnisse der Bewertung.
 +
 Sie können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.
@@ -64,7 +62,16 @@ Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht o
 +
 *Select all* ist die Standardeinstellung, aber Sie können bestimmte Ressourcen zur Optimierung auswählen.
 
-. Sehen Sie sich die Optimierungsübersicht und die Aktionselemente an, die im Optimierungsdialog angezeigt werden, um zu erfahren, was passieren wird, wenn Sie sich für eine Optimierung entscheiden. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.
++
+.. Überprüfen Sie für alle Konfigurationen mit Ausnahme der Klonbereinigung im Optimierungsdialog die Optimierungsdetails, um zu erfahren, was bei der Optimierung geschieht. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.
+.. Wählen Sie für die Klonbereinigung geklonte Datenbanken (Sandbox) zum Aktualisieren oder Löschen aus.
++
+*** Durch das Aktualisieren eines Klons wird er mit der Quelldatenbank synchronisiert. Aktualisierung ist nur für Klone verfügbar, die in den Werkseinstellungen des Workloads erstellt wurden.
+*** Durch Löschen eines Klons wird dieser dauerhaft gelöscht, Speicherplatz wird freigegeben und die Kosten werden gesenkt. Sie können Klone löschen, die in und außerhalb der Werkseinstellungen des Workloads erstellt wurden.
+
+
+
+
 . Wählen Sie *Weiter*, um die Konfiguration zu optimieren.
 
 

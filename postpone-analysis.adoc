@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: postpone-analysis.html 
+keywords: postpone configuration analysis, dismiss configuration analysis, postpone, dismiss, stop, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: Verschieben oder verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht für Ihre Datenbankumgebung gelten, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. 
+---
+= Verschieben oder verwerfen Sie die Analyse von Datenbankkonfigurationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verschieben oder verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht für Ihre Datenbankumgebung gelten, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. Sie können eine verschobene oder zurückgeschobene Konfigurationsanalyse jederzeit wieder aktivieren.
+
+.Über diese Aufgabe
+Die Applikationsanforderungen für Datenbankkonfigurationen variieren. Workload Factory bietet Ihnen zwei Optionen, um die Analyse bestimmter Datenbankkonfigurationen zu überspringen, sodass Sie nur relevante Probleme überwachen und einen genauen Überblick über den Zustand relevanter Konfigurationen erhalten können. Wenn eine bestimmte Konfigurationsanalyse verschoben oder verworfen wird, wird die Konfiguration nicht in der Gesamtoptimierungsbewertung berücksichtigt.
+
+Sie können die Konfigurationsanalyse auf der Konfigurationsebene und auf der SQL Server-Instanzebene verschieben, verwerfen und reaktivieren.
+
+* *30 Tage verschieben*: Eine Verschiebung der Analyse wird die Analyse für 30 Tage beenden. Nach 30 Tagen wird die Analyse automatisch neu gestartet.
+* *Abweisen*: Das Ablehnen der Analyse verschiebt die Analyse auf unbestimmte Zeit. Sie können die Analyse bei Bedarf neu starten.
+
+
+Sie können die folgenden Konfigurationen für Microsoft SQL Server-Instanzen verschieben oder schließen:
+
+* Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks
+* Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb
+* Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr
+* Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading
+* Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
+* Ausfallsicherheit: Einschließlich lokaler Snapshots, FSX für ONTAP-Backups und regionsübergreifender Replizierung (CRR)
+* Klone
+
+
+Die folgenden Anweisungen beschreiben, wie Sie eine Analyse auf Konfigurationsebene verschieben, schließen oder reaktivieren. Um die folgenden Aufgaben für bestimmte SQL Server-Instanzen auszuführen, starten Sie auf der Registerkarte *Dashboard*.
+
+[role="tabbed-block"]
+====
+.Verschieben
+Verschieben, um eine Konfigurationsanalyse für 30 Tage zu stoppen. Nach 30 Tagen wird die Analyse automatisch neu gestartet.
+
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Scrollen Sie auf der Registerkarte *Inventar* nach unten zur Konfiguration, um sie zu verschieben, wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *30 Tage verschieben*.
+. Wählen Sie *Weiter*.
+
+
+.Ergebnis
+Die Konfigurationsanalyse hält 30 Tage an.
+
+--
+.Verwerfen
+Schließen, um eine Konfigurationsanalyse auf unbestimmte Zeit zu beenden. Sie können die Analyse bei Bedarf neu starten.
+
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Scrollen Sie auf der Registerkarte *Inventar* nach unten zur Konfiguration, um sie zu schließen, wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *Verwerfen*.
+. Wählen Sie *Weiter*.
+
+
+.Ergebnis
+Die Konfigurationsanalyse wird beendet.
+
+--
+.Reaktivieren
+Aktivieren Sie eine verschobene oder abgeschobene Konfigurationsanalyse jederzeit erneut.
+
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Scrollen Sie auf der Registerkarte *Inventar* nach unten zur Konfiguration, um sie erneut zu aktivieren, wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *Reactivate*.
+. Wählen Sie *Weiter*.
+
+
+.Ergebnis
+Die Konfigurationsanalyse wird reaktiviert und findet täglich im Vorwärtslauf statt.
+
+--
+====
