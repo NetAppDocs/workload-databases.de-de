@@ -68,19 +68,6 @@ Workload Factory für Datenbanken bietet folgende Funktionen:
 
 
 
-== Tools zur Verwendung der Workload Factory
-
-Sie können die Workload Factory mit den folgenden Tools verwenden:
-
-* *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
-* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können
-* *REST-API*: Mit REST-APIs für Workload Factory können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen
-* *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto.
-* *Terraform BlueXP  Workload Factory Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload Factory-Konsole generiert werden.
-
-
-
-
 == Vorteile von Amazon FSX for ONTAP für selbst gemanagte Datenbanken
 
 * *Langlebigkeit, Verfügbarkeit und Zuverlässigkeit*: FSX for ONTAP bietet mehrere Funktionen, die die Haltbarkeit und Verfügbarkeit von selbst gemanagten Datenbanken verbessern, die auf FSX for ONTAP gehostet werden. Dazu gehören Hochverfügbarkeit mit Unterstützung für einzelne und mehrere Verfügbarkeitszonen-Bereitstellungen, applikationsspezifische Snapshots, verbesserte Disaster Recovery durch Replikation und effizientes Backup.
@@ -104,11 +91,13 @@ Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/
 
 Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
 
-* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können
-* *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
-* *REST API*: Mit REST-APIs für die Workload Factory können Sie Microsoft SQL Server und andere AWS-Ressourcen bereitstellen und verwalten
-* *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto.
-* *Terraform BlueXP -Workload-Factory-Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload Factory-Konsole generiert werden.
+* *Workload Factory Konsole*: Die Workload Factory Konsole bietet einen visuellen, ganzheitlichen Blick auf Ihre Anwendungen und Projekte.
+* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können.
+* *Fragen Sie mich*: Verwenden Sie den Ask Me AI-Assistenten, um Fragen zu stellen und mehr über Workload Factory zu erfahren, ohne die Workload Factory Web UI zu verlassen. Rufen Sie mich im Menü Arbeitsbelastung Werkshilfe auf.
+* *CloudShell CLI*: Workload Factory enthält eine CloudShell CLI zum Verwalten und Betreiben von AWS- und NetApp-Umgebungen über Konten hinweg über eine einzige browserbasierte CLI. Greifen Sie über die oberste Leiste der Workload-Factory-Konsole auf CloudShell zu.
+* *REST-API*: Verwenden Sie die REST-APIs für die Workload Factory, um Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen bereitzustellen und zu managen.
+* *CloudFormation*: Verwenden Sie AWS CloudFormation-Code für die Durchführung der Aktionen, die Sie in der Workload-Factory-Konsole definiert haben, um AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu managen.
+* *Terraform BlueXP -Workload-Factory-Provider*: Verwenden Sie Terraform, um Infrastruktur-Workflows zu erstellen und zu managen, die in der Workload Factory-Konsole generiert werden.
 
 
 
