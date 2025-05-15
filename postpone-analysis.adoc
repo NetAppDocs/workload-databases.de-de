@@ -38,9 +38,9 @@ Die folgenden Anweisungen beschreiben, wie Sie eine Analyse auf Konfigurationseb
 [role="tabbed-block"]
 ====
 .Verschieben
+--
 Verschieben, um eine Konfigurationsanalyse für 30 Tage zu stoppen. Nach 30 Tagen wird die Analyse automatisch neu gestartet.
 
---
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
@@ -53,9 +53,9 @@ Die Konfigurationsanalyse hält 30 Tage an.
 
 --
 .Verwerfen
+--
 Schließen, um eine Konfigurationsanalyse auf unbestimmte Zeit zu beenden. Sie können die Analyse bei Bedarf neu starten.
 
---
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
@@ -68,9 +68,9 @@ Die Konfigurationsanalyse wird beendet.
 
 --
 .Reaktivieren
+--
 Aktivieren Sie eine verschobene oder abgeschobene Konfigurationsanalyse jederzeit erneut.
 
---
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
