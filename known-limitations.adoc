@@ -132,4 +132,4 @@ Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokale
 
 == Anzahl an Datenbanken in SQL Server Instanzen
 
-Auf der Registerkarte Inventar und im Dashboard unterstützt die Workload Factory bis zu 850 Datenbanken innerhalb von SQL-Serverinstanzen.
+Auf der Registerkarte Inventar und im Dashboard unterstützt die Workload Factory bis zu 1.500 Datenbanken innerhalb von SQL-Serverinstanzen.
