@@ -212,7 +212,6 @@
   <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">Wählen Sie *Ja, Instanz über Workload Factory verwalten* oder *Nein*.</block>
   <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">Klicken Sie Auf *Fertig*.</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:</block>
-  <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">Erfahren Sie, wie Sie Hosts erkennen</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">Bereitstellungsmethoden</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Holen Sie sich Hilfe</block>
@@ -595,7 +594,6 @@
   <block id="0df73578de7c34ef150c1f37953113f5" category="paragraph">Mit FSX für Windows File Server Storage können Sie jetzt die Einsparungen von erkannten Microsoft SQL Servern auf Amazon EC2 untersuchen. Abhängig von Ihren SQL-Server- und Storage-Anforderungen sind Sie vielleicht der Meinung, dass FSX für ONTAP-Storage die kosteneffizienteste Lösung für Ihre Datenbank-Workloads ist.</block>
   <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">Es stehen zwei Rechner-Optionen zur Verfügung, um den Kostenvergleich zwischen Ihren Systemen und FSX for ONTAP zu bilden – Anpassung und Erkennung.</block>
   <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">Untersuchen Sie die Einsparungen für erkannte Hosts</block>
-  <block id="70cd361d4d146e35701d6144f1c0ab2b" category="list-text">Erkennen von Hosts in EBS und FSX für Windows Storage in Ihrem Datenbankbestand <block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>.</block>
   <block id="8f334cc9204ebef849d5d29b3d23b485" category="list-text">Wählen Sie in der Kachel „Datenbanken“ aus dem Dropdown-Menü *Einsparungen erkunden* und dann *Microsoft SQL Server auf FSX für Windows* aus.</block>
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">Entdecken Sie Einsparungen durch Anpassung</block>
   <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">Klicken Sie auf der Registerkarte Einsparungen erkunden auf *Einsparungen erkunden* des Datenbankservers mithilfe von EBS Storage.</block>
@@ -1079,6 +1077,11 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CloudShell CLI*: Workload Factory enthält eine CloudShell CLI zum Verwalten und Betreiben von AWS- und NetApp-Umgebungen über Konten hinweg über eine einzige browserbasierte CLI. Greifen Sie über die oberste Leiste der Workload-Factory-Konsole auf CloudShell zu.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*REST-API*: Verwenden Sie die REST-APIs für die Workload Factory, um Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen bereitzustellen und zu managen.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Verwenden Sie AWS CloudFormation-Code für die Durchführung der Aktionen, die Sie in der Workload-Factory-Konsole definiert haben, um AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu managen.</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP -Workload-Factory-Provider*: Verwenden Sie Terraform, um Infrastruktur-Workflows zu erstellen und zu managen, die in der Workload Factory-Konsole generiert werden.</block>
   <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Auf der Registerkarte Inventar und im Dashboard unterstützt die Workload Factory bis zu 1.500 Datenbanken innerhalb von SQL-Serverinstanzen.</block>
+  <block id="905bc3578e603008d83976307778ddcc" category="list-text">Gehen Sie wie folgt vor, um Empfehlungen für Instanztypen zu erhalten und die Kostengenauigkeit zu verbessern:</block>
+  <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">Erteilen Sie Berechtigungen für Amazon CloudWatch und AWS Compute Optimizer.</block>
+  <block id="1dffe1578c264cd074d1fbf2823deeca" category="list-text">Melden Sie sich bei der AWS-Managementkonsole an und öffnen Sie den IAM-Dienst.</block>
+  <block id="429fc992484e56fc5119b7b343df8bab" category="list-text">Bearbeiten Sie die Richtlinie für die IAM-Rolle. Kopieren und fügen Sie die folgenden Amazon CloudWatch- und AWS Compute Optimizer-Berechtigungen hinzu.</block>
+  <block id="948ce9adc60f5781dbfbd99d2c9d74d5" category="list-text">Melden Sie sich für das kostenpflichtige AWS-Konto bei AWS Compute Optimizer an.</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP -Workload-Factory-Provider*: Verwenden Sie Terraform, um Infrastruktur-Workflows zu erstellen und zu managen, die in der Workload Factory-Konsole generiert werden.</block>
 </blocks>

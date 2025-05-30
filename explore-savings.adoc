@@ -169,7 +169,56 @@ Workload Factory tritt in die erkannten Elastic Block Store- und FSX for Windows
 Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Gewähren Sie _read-only_ oder _read/write_ Berechtigungen"^] Verwenden Sie Ihr AWS-Konto, um Elastic Block Store (EBS) und FSX for Windows-Systeme auf der Registerkarte „Einsparungen entdecken“ zu erkennen und die Einsparungsberechnung im Einsparungsrechner anzuzeigen.
-* Erkennen von Hosts in EBS und FSX für Windows Storage in Ihrem Datenbankbestand link:detect-host.html["Erfahren Sie, wie Sie Hosts erkennen"].
+* Gehen Sie wie folgt vor, um Empfehlungen für Instanztypen zu erhalten und die Kostengenauigkeit zu verbessern:
++
+.. Erteilen Sie Berechtigungen für Amazon CloudWatch und AWS Compute Optimizer.
++
+... Melden Sie sich bei der AWS-Managementkonsole an und öffnen Sie den IAM-Dienst.
+... Bearbeiten Sie die Richtlinie für die IAM-Rolle. Kopieren und fügen Sie die folgenden Amazon CloudWatch- und AWS Compute Optimizer-Berechtigungen hinzu.
++
+[source, json]
+----
+{
+"Version": "2012-10-17",
+"Statement": [
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEnrollmentStatus",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:PutRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEffectiveRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEC2InstanceRecommendations",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingGroups",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingInstances",
+   "Resource": "*"
+  }
+]
+}
+----
+
+
+.. Melden Sie sich für das kostenpflichtige AWS-Konto bei AWS Compute Optimizer an.
+
+
 
 
 Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
