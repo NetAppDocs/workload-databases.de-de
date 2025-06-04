@@ -19,7 +19,7 @@ Aus dem letzten Snapshot auf der Quelldatenbank wird ein Sandbox-Klon erstellt. 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie einen Sandbox-Klon erstellen.
 
-Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Konto-Anmeldedaten und _read_ oder _Automate_ Modus-Berechtigungen"^]in der Workload Factory einen Sandbox-Klon erstellen.
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Nur-Lese- oder Lese-/Schreibmodus"^]in der Workload Factory einen Sandbox-Klon erstellen.
 +
 --
 Alternativ können Sie die Codebox verwenden, um eine teilweise abgeschlossene Vorlage zu kopieren oder eine fertige Vorlage zu erstellen, sodass Sie den Sandbox-Klon außerhalb der Workload Factory mit REST API erstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].

@@ -102,13 +102,13 @@ NOTE: In _Quick Create_ ist FCI das Standardbereitgabemodell, Windows 2016 die S
 +
 .. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
 +
-AWS Zugangsdaten mit _Automate_ Berechtigungen ermöglichen die werkseitige Implementierung und das Management des neuen Datenbank-Hosts über Ihr AWS-Konto innerhalb der Workload-Fabrik.
+AWS-Anmeldeinformationen mit Lese-/Schreibberechtigungen ermöglichen der Workload Factory die Bereitstellung und Verwaltung des neuen Datenbankhosts von Ihrem AWS-Konto innerhalb der Workload Factory.
 
 +
-Mit AWS Zugangsdaten mit _read_ Berechtigungen kann die Workload-Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation Konsole verwenden können.
+Mit AWS-Anmeldeinformationen mit Nur-Lese-Berechtigungen kann die Workload Factory eine CloudFormation-Vorlage generieren, die Sie in der AWS CloudFormation-Konsole verwenden können.
 
 +
-Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus für Datenbank-Workloads manuell hinzu.
 
 +
 Wenn Sie das Formular zum Erstellen eines neuen Servers in der Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
@@ -212,16 +212,16 @@ Sie können auch *Konfiguration speichern* auswählen, um den Host später berei
 +
 .. *AWS Credentials*: Wählen Sie AWS Credentials mit Automatisierungsberechtigungen aus, um den neuen Datenbank-Host bereitzustellen.
 +
-AWS Zugangsdaten mit _Automate_ Berechtigungen ermöglichen die werkseitige Implementierung und das Management des neuen Datenbank-Hosts über Ihr AWS-Konto innerhalb der Workload-Fabrik.
+AWS-Anmeldeinformationen mit Lese-/Schreibberechtigungen ermöglichen der Workload Factory die Bereitstellung und Verwaltung des neuen Datenbankhosts von Ihrem AWS-Konto innerhalb der Workload Factory.
 
 +
-Mit AWS Zugangsdaten mit _read_ Berechtigungen kann die Workload-Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation Konsole verwenden können.
+Mit AWS-Anmeldeinformationen mit Nur-Lese-Berechtigungen kann die Workload Factory eine CloudFormation-Vorlage generieren, die Sie in der AWS CloudFormation-Konsole verwenden können.
 
 +
-Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus für Datenbank-Workloads manuell hinzu.
 
 +
-Wenn Sie das Formular zum Erstellen eines neuen Servers in der Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _read_-Modus für Datenbank-Workloads manuell hinzu.
+Wenn Sie das Formular zum Erstellen eines neuen Servers in der Workload Factory ausfüllen möchten, damit Sie eine vollständige YAML-Dateivorlage für die Bereitstellung in AWS CloudFormation herunterladen können, folgen Sie *Option 2*, um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Erstellen des neuen Servers in AWS CloudFormation verfügen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den schreibgeschützten Modus für Datenbank-Workloads manuell hinzu.
 
 +
 Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codebox herunterladen, um den Stack außerhalb der Workload Factory ohne Anmeldeinformationen oder Berechtigungen zu erstellen. Wählen Sie *CloudFormation* aus der Dropdown-Liste in der Codebox aus, um die YAML-Datei herunterzuladen.

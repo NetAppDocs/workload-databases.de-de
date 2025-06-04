@@ -50,7 +50,7 @@ Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen 
 
 == Bevor Sie beginnen
 
-Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese- oder Automatisierungsmodus hinzufügen"^] .
+Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
 
 
 
