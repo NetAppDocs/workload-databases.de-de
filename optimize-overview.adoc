@@ -1,25 +1,21 @@
 ---
 sidebar: sidebar 
 permalink: optimize-overview.html 
-keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: Die BlueXP  Workload-Farm für Datenbanken bietet kontinuierliche Optimierung für Microsoft SQL Server-Implementierungen auf Amazon FSX für NetApp ONTAP Storage. 
+keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
+summary: Workload Factory für Datenbanken analysiert regelmäßig Microsoft SQL Server-Konfigurationen, um festzustellen, ob Probleme vorliegen. 
 ---
-= Kontinuierliche Optimierung für die BlueXP  Workload-Farm für Datenbanken
+= Konfigurationsanalyse für Datenbankumgebungen in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Die BlueXP  Workload-Farm für Datenbanken bietet kontinuierliche Optimierung für Microsoft SQL Server-Implementierungen auf Amazon FSX für NetApp ONTAP Storage.
-
-Kontinuierliche Optimierung scannt und bewertet Ihre Datenbankinfrastruktur nach Bedarf automatisch, um sicherzustellen, dass große Bestände optimale Performance, Kosteneffizienz und Einhaltung von Best Practices erzielen. Die Funktion bietet Ihnen einen umfassenden Bericht mit Einblicken und Empfehlungen zur Optimierung.
-
-Dank kontinuierlicher Optimierung können Sie Probleme in der Datenbankinfrastruktur erkennen, erforderliche Änderungen erkennen und Maßnahmen ergreifen.
+Workload Factory für Datenbanken analysiert regelmäßig Datenbankkonfigurationen, um festzustellen, ob Probleme mit Microsoft SQL Server-Bereitstellungen auf Amazon FSx für NetApp ONTAP-Speicher vorliegen. Bei Problemen zeigt Ihnen Workload Factory die Ursachen und erklärt, was geändert werden muss, um sicherzustellen, dass Ihre Datenbankkonfigurationen maximale Leistung, Kosteneffizienz und Best Practices erreichen.
 
 Die wichtigsten Funktionen:
 
-* Kontinuierliche Bewertung
+* Tägliche Konfigurationsanalyse
 * Automatische Validierung von Best Practices
 * Empfehlungen zur Größenanpassung
 * Proaktive Beobachtbarkeit
@@ -27,6 +23,34 @@ Die wichtigsten Funktionen:
 * AWS hat eine gut konzipierte Framework Advisor Architektur
 
 
-Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.
 
-link:optimize-configurations.html["Optimierte Konfigurationen für Microsoft SQL Server Implementierungen"]
+
+== Zustand der Architektur gut
+
+In der Workload-Factory-Konsole auf Filesystem-Ebene wird der gut konzipierte Status für alle FSX for ONTAP-Dateisysteme aufgeführt. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut strukturiert“ kategorisiert. Wenn Sie den Status „gut strukturiert“ auswählen, werden Sie auf die Registerkarte „gut strukturiert“ im Dateisystem weitergeleitet, auf der Sie die gut konzipierte Punktzahl, die Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden können.
+
+Gut konzipierte Punktzahl:: Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
+Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
++
+--
+* _Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.
+* _Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.
+* _Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.
+* _Kostenoptimierung_: Zielt darauf ab, einen geschäftlichen Nutzen zu erzielen und gleichzeitig Kosten zu minimieren.
+* _Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.
+
+
+--
+Analyseumfang:: Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.
+
+
+
+
+== Analyseanforderungen
+
+Für eine vollständige Analyse der Datenbankumgebung müssen Hostinstanzen registriert und online sein.
+
+link:register-instance.html["Erfahren Sie, wie Sie eine Hostinstanz registrieren."]
+
+.Wie es weiter geht
+link:optimize-configurations.html["Implementieren Sie gut konzipierte Datenbankkonfigurationen"]

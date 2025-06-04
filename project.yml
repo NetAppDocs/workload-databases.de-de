@@ -38,20 +38,36 @@ sidebar:
         url: "/create-database-server.html"
       - title: PostgreSQL-Server erstellen
         url: "/create-postgresql-server.html"
-    - title: Einen Datenbankserver erkennen
-      url: "/detect-host.html"
-    - title: Erstellen Sie eine Datenbank
-      url: "/create-database.html"
+    - title: Verwalten von Instanzen
+      entries:
+      - title: Instanzmanagement
+        url: manage-instance.html
+      - title: Registrieren einer Instanz
+        url: "/register-instance.html"
+      - title: Datenbanken anzeigen
+        url: "/view-databases.html"
+      - title: Erstellen Sie eine Datenbank
+        url: "/create-database.html"
+      - title: Sandbox-Klon erstellen
+        url: "/create-sandbox-clone.html"
     - title: Mit Codebox automatisieren
       url: "/automate-codebox.html"
   - title: Administration und Überwachung
     entries:
+    - title: Überwachen von Datenbanken
+      url: "/monitor-databases.html"
+    - title: Implementieren von Best Practices für die Konfiguration
+      entries:
+      - title: Konfigurationsanalyse für Datenbanken
+        url: "/optimize-overview.html"
+      - title: Implementieren Sie gut konzipierte Datenbankkonfigurationen
+        url: "/optimize-configurations.html"
+      - title: Verschieben der Konfigurationsanalyse
+        url: "/postpone-analysis.html"
     - title: Managen eines Microsoft SQL-Servers
       url: "/manage-server.html"
     - title: Management von Klonen
       entries:
-      - title: Sandbox-Klon erstellen
-        url: "/create-sandbox-clone.html"
       - title: Integrität eines Sandbox-Klons prüfen
         url: "/check-clone-integrity.html"
       - title: Zurücksetzen eines Sandbox-Klons
@@ -66,16 +82,6 @@ sidebar:
         url: "/split-clone.html"
       - title: Sandbox-Klon löschen
         url: "/delete-clone.html"
-    - title: Überwachen von Datenbanken
-      url: "/monitor-databases.html"
-    - title: SQL Server optimieren
-      entries:
-      - title: Kontinuierliche Optimierung im Überblick
-        url: "/optimize-overview.html"
-      - title: Optimieren von Konfigurationen
-        url: "/optimize-configurations.html"
-      - title: Verschieben der Konfigurationsanalyse
-        url: "/postpone-analysis.html"
   - title: Wissen und Support
     entries:
     - title: Für den Support anmelden

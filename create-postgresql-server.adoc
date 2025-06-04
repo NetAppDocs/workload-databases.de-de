@@ -26,22 +26,12 @@ FSX for ONTAP-Dateisysteme verfügen über zwei PostgreSQL-Server-Bereitstellung
 
 
 --
-Workload Factory-Betriebsmodi:: Die Workload-Fabrik bietet drei Betriebsmodi, je nachdem, wie komfortabel Sie Ihre AWS Ressourcen über die Werkseinstellungen hinweg managen können.
-+
---
-*_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in der Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb der Arbeitslast ab Werk zu erstellen.
-
-*_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können die ausgefüllten Formulardetails auch zur CloudFormation aus der Workload Factory weiterleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in der Workload Factory zu verwalten.
-
-*_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen innerhalb der Workload-Fabrik erstellen und managen können.
-
---
 
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.
 
-Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
 
 
 

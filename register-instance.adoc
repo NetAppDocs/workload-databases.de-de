@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: register-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+summary: Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Farm für Datenbanken. 
+---
+= Registrieren Sie Instanzen in der Workload Factory für Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Registrieren Sie Hostinstanzen, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.
+
+Datenbanken können Instanzen nur mit FSx für ONTAP-Dateisystemspeicher registrieren.
+
+
+
+== Über die Aufgabe
+
+Das Registrieren einer Hostinstanz umfasst zwei Schritte: die Authentifizierung der Instanz und die Vorbereitung der Instanz, indem sichergestellt wird, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz installiert sind.
+
+Sie können Links mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.
+
+
+NOTE: Workload Factory unterstützt ausschließlich die Registrierung und Verwaltung von Microsoft SQL Server-Hostinstanzen. Abhängig von den in Workload Factory ausgewählten AWS-Kontoanmeldeinformationen werden möglicherweise PostgreSQL- und Oracle-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen nur auf Amazon Linux-Betriebssystemen und Oracle-Instanzen nur auf Red Hat Enterprise Linux.
+
+
+
+== Registrieren einer Hostinstanz in einem privaten Netzwerk
+
+Um eine Hostinstanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen verwenden, müssen Sie den Zugriff auf die folgenden Domänen zulassen, damit die Verwaltungsvorgänge funktionieren:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
+
+
+== Bevor Sie beginnen
+
+Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese- oder Automatisierungsmodus hinzufügen"^] .
+
+
+
+== Registrieren einer Hostinstanz
+
+Das Registrieren einer Hostinstanz umfasst die Instanzauthentifizierung und -vorbereitung.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Wählen Sie auf der Registerkarte „Inventar“ die Registerkarte *Instanzen* aus.
+. Navigieren Sie zu der zu verwaltenden Instanz und wählen Sie *Instanz registrieren*.
+. Geben Sie auf der Seite „Instanz registrieren“ den Benutzernamen und das Kennwort für SQL Server sowie den Benutzernamen und das Kennwort für das FSx for ONTAP-Dateisystem ein.
+. Wählen Sie *Weiter*.
+. Bereiten Sie die Instanz vor, indem Sie sicherstellen, dass sie die erforderlichen Voraussetzungen erfüllt. Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, klicken Sie auf *Weiter*, um die Instanz zu registrieren. Falls Sie Maßnahmen ergreifen müssen, führen Sie die folgenden Schritte aus.
++
+.. Falls fehlend, wählen Sie Workload Factory aus, um *fehlende AWS- und NetApp PowerShell-Module zu installieren*.
+.. Falls das fehlende Modul fehlt, wählen Sie die Workload Factory aus, um das fehlende PowerShell 7 zu installieren. Die Installation des fehlenden PowerShell-Moduls 7 erfordert einen Systemneustart.
+.. Überprüfen Sie die Liste der Voraussetzungen für die folgenden Funktionen. Eine Voraussetzung muss erfüllt sein, um die Instanz registrieren zu können.
++
+*** *Überprüfen Sie gut strukturierte Probleme und Empfehlungen*
+*** *Beheben Sie gut konzipierte Probleme*
+*** *Datenbank erstellen*
+*** *Datenbankkopien erstellen (Sandbox)*
++
+Zum Erfüllen der Voraussetzungen gehört die Aktualisierung Ihrer AWS IAM-Richtlinienberechtigungen, EC2 IAM-Instanzprofilberechtigungen, SQL Server-Berechtigungen und PowerShell-Module.
+
+
+
+.. Erfüllen Sie mindestens eine fehlende Voraussetzung, um fortzufahren.
+.. Wenn eine oder mehrere Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Instanz *registrieren*.
+
+
+
+
+.Ergebnis
+Die Anforderung zur Registrierung der Instanz wird gestartet. Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.

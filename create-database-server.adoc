@@ -4,17 +4,17 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Erstellen Sie einen neuen Microsoft SQL Server in der BlueXP -Workload-Farm für Datenbanken. 
 ---
-= Erstellen Sie einen Datenbankserver in der BlueXP -Workload-Fabrik für Datenbanken
+= Erstellen Sie einen Microsoft SQL Server in der Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Die Erstellung eines neuen Microsoft SQL-Servers oder Datenbank-Hosts in der BlueXP -Workload-Farm für Datenbanken erfordert eine Bereitstellung von FSX für ONTAP-Dateisystem und Ressourcen für Active Directory.
+Zum Erstellen eines neuen Microsoft SQL Servers oder Datenbankhosts in der Workload Factory für Datenbanken sind eine FSx für die ONTAP-Dateisystembereitstellung und Ressourcen für Active Directory erforderlich.
 
 .Über diese Aufgabe
-Bevor Sie einen Microsoft SQL Server aus der Workload Factory erstellen, informieren Sie sich über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Host-Konfiguration, die Active Directory-Bereitstellung, die Betriebsmodi der Workload Factory und die Anforderungen für diesen Vorgang.
+Informieren Sie sich vor dem Erstellen eines Microsoft SQL Servers aus der Workload Factory über die verfügbaren Speicherbereitstellungstypen für die Datenbankhostkonfiguration, die Microsoft Multi-Path I/O-Konfiguration, die Active Directory-Bereitstellung, Netzwerkdetails und die Anforderungen zum Abschließen dieses Vorgangs.
 
 Nach der Bereitstellung müssen Sie <<Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server,Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server>>.
 
@@ -58,19 +58,12 @@ Ressourcen-Rollbacks:: Wenn Sie ein Rollback Ihrer DNS-Ressourcen (Domain Name S
 
 
 --
-Workload Factory-Betriebsmodi:: Die Workload-Fabrik bietet drei Betriebsmodi, je nachdem, wie komfortabel Sie Ihre AWS Ressourcen über die Werkseinstellungen hinweg managen können.
 
-
-*_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in der Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb der Arbeitslast ab Werk zu erstellen.
-
-*_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können die ausgefüllten Formulardetails auch zur CloudFormation aus der Workload Factory weiterleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in der Workload Factory zu verwalten.
-
-*_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen innerhalb der Workload-Fabrik erstellen und managen können.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.
 
-Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
+Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
 Active Directory:: Wenn Sie eine Verbindung zu Active Directory herstellen, müssen Sie über Administratorzugriff mit Berechtigungen verfügen, um Folgendes tun zu können:
 +
 --
@@ -125,13 +118,16 @@ Optional können Sie eine teilweise ausgefüllte YAML-Dateivorlage aus der Codeb
 
 .. *Region & VPC*: Wählen Sie eine Region und ein VPC-Netzwerk.
 +
-Stellen Sie sicher, dass Sicherheitsgruppen für einen vorhandenen Schnittstellenendpunkt den Zugriff auf das HTTPS-Protokoll (443) auf die ausgewählten Subnetze ermöglichen.
+Stellen Sie sicher, dass Bereitstellungssubnetze mit vorhandenen Schnittstellenendpunkten verknüpft sind und Sicherheitsgruppen den Zugriff auf das HTTPS-Protokoll (443) auf die ausgewählten Subnetze ermöglichen.
 
 +
 AWS-Serviceschnittstellen-Endpunkte (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) und der S3-Gateway-Endpunkt werden während der Bereitstellung erstellt, wenn nicht gefunden.
 
 +
 VPC-DNS-Attribute `EnableDnsSupport` und `EnableDnsHostnames` werden geändert, um die Auflösung der Endpunktadresse zu aktivieren, wenn sie nicht bereits auf festgelegt sind `true`.
+
++
+Bei Verwendung eines Cross-VPC-DNS sollte die Sicherheitsgruppe für Endpunkte in der anderen VPC, in der sich der DNS befindet, Port 443 für Bereitstellungssubnetze freigeben. Andernfalls sollten Sie beim Beitritt zu einem Cross-VPC-Active Directory einen DNS-Resolver aus der lokalen VPC bereitstellen. In einer Umgebung mit mehreren replizierten Domänencontrollern können Sie, wenn einige Domänencontroller vom Subnetz aus nicht erreichbar sind, *zu CloudFormation umleiten* und Folgendes eingeben:  `Preferred domain controller` um eine Verbindung mit Active Directory herzustellen.
 
 .. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze gemäß dem Failover Cluster Instance (FCI)-Bereitstellungsmodell aus.
 +

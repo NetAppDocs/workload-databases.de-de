@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: BlueXP  Workload-Farm für Datenbanken ist ein End-to-End-Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices für Optimierung, automatisches Thin Cloning sowie Überwachungs- und Lösungsfunktionen. 
+summary: Workload Factory für Datenbanken ist ein End-to-End-Dienst zur Bereitstellung und Wartung von Datenbanken mit integrierten Best Practices zur Optimierung, automatischem Thin Cloning sowie Überwachungs- und Lösungsfunktionen. 
 ---
-= Erfahren Sie mehr über die BlueXP  Workload-Farm für Datenbanken
+= Erfahren Sie mehr über die Workload-Farm für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload-Farm für Datenbanken ist ein End-to-End-Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices für Optimierung, automatisches Thin Cloning sowie Überwachungs- und Lösungsfunktionen.
+Workload Factory für Datenbanken ist ein End-to-End-Dienst zur Bereitstellung und Wartung von Datenbanken mit integrierten Best Practices zur Optimierung, automatischem Thin Cloning sowie Überwachungs- und Lösungsfunktionen.
 
 
 
-== Was ist eine BlueXP -Workload-Fabrik für Datenbanken?
+== Was ist eine Workload Factory für Datenbanken?
 
-Die BlueXP  Workload-Farm für Datenbanken erkennt, bewertet, plant, stellt und verschiebt Microsoft SQL Server-Daten auf Amazon FSX for NetApp ONTAP (FSX for ONTAP)-Implementierungen, die optimiert sind, um Ihre Performance- und Kostenerwartungen unter Einhaltung der Best Practices der Branche zu erfüllen. Während des gesamten Lebenszyklus sorgt die Workload-Fabrik für kontinuierliche Optimierung und Management von Datenbanken auf FSX für ONTAP.
+Workload Factory für Datenbanken erkennt, bewertet, plant, stellt bereit und verschiebt Microsoft SQL Server-Daten zu Amazon FSx für NetApp ONTAP-Bereitstellungen (FSx für ONTAP), die optimiert sind, um Ihre Leistungs- und Kostenerwartungen zu erfüllen und gleichzeitig den Best Practices der Branche zu entsprechen. Während des gesamten Lebenszyklus sorgt die Workload-Fabrik für kontinuierliche Optimierung und Management von Datenbanken auf FSX für ONTAP.
 
 Weitere Informationen zur Workload Factory finden Sie im link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Übersicht über die Workload-Fabrik"^].
 
@@ -81,7 +81,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Erfa
 
 === Betriebsmodi in der Workload Factory
 
-Drei verschiedene Betriebsmodi - _BASIC_, _read_ und _Automate_ - bieten flexible Optionen für den Einsatz innerhalb und außerhalb der Workload Factory. Erhalten Sie im _BASIC_-Modus sofort einen Wert ohne Vertrauen mit Codeschnipseln für die Verwendung außerhalb der Arbeitslast. Erhalten Sie einen inkrementellen Wert mit inkrementellem Vertrauen in den Modi _read_ und _Automate_.
+Drei verschiedene Betriebsmodi – _Basis_, _Nur-Lesen_ und _Lesen/Schreiben_ – bieten flexible Optionen für die Bereitstellung innerhalb und außerhalb der Workload Factory. Erhalten Sie im _BASIC_-Modus sofort einen Wert ohne Vertrauen mit Codeschnipseln für die Verwendung außerhalb der Arbeitslast. Erzielen Sie inkrementellen Mehrwert durch inkrementelles Vertrauen in den Modi _Nur-Lesen_ und _Lesen/Schreiben_.
 
 Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi in der Workload Factory"^].
 

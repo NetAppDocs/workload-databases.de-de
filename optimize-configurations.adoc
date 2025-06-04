@@ -4,21 +4,21 @@ permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
 summary: Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server-Konfigurationen und bietet Ihnen Einblicke und Empfehlungen, um Ihre betrieblichen Abläufe zu optimieren. 
 ---
-= Optimierte Konfigurationen für Microsoft SQL Server Implementierungen
+= Implementieren Sie gut strukturierte Datenbankkonfigurationen in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Diese Funktion bietet Einblicke und Empfehlungen mit der Option zur automatischen Optimierung nicht optimierter Konfigurationen, sodass Ihre Datenbank-Workloads optimale Betriebsabläufe erzielen.
+Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und implementieren Sie Best Practices für Ihre Datenbankkonfigurationen mithilfe der Workload Factory. Sie können Probleme leicht erkennen und Maßnahmen ergreifen, um die Architektur von Konfigurationen zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
 
 .Über diese Aufgabe
-Die Bewertung wird automatisch und kontinuierlich einmal täglich für Microsoft SQL Server-Instanzen mit FSX für ONTAP-Storage ausgeführt, der in der Workload-Fabrik gemanagt wird. Bewertungsberichte sind im Optimierungs-Dashboard nur verfügbar, wenn ein täglicher geplanter Job nach der Bereitstellung oder nach der Verwaltung einer Instanz ausgeführt wurde.
+Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihre Konfigurationen Best Practices entsprechen.
 
-Die Workload-Fabrik bietet detaillierte Empfehlungen zur Optimierung der Konfigurationen auf Basis der Best Practices für FSX für ONTAP-Storage. Sie können die Empfehlungen überprüfen und wählen, ob nicht optimierte Konfigurationen optimiert werden sollen.
+Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme zu überprüfen und diese Probleme über das Datenbankinventar in der Workload Factory-Konsole zu beheben.
 
-Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgenden Konfigurationen für Microsoft SQL Server-Instanzen:
+Was analysiert wird:: Workload Factory analysiert den ordnungsgemäßen Architekturstatus der folgenden Konfigurationen für Microsoft SQL Server-Instanzen:
 +
 --
 * Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks
@@ -27,43 +27,40 @@ Was gescannt wird:: Workload Factory bewertet den Optimierungsstatus der folgend
 * Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading
 * Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
 * Ausfallsicherheit: Einschließlich lokaler Snapshots, FSX für ONTAP-Backups und regionsübergreifender Replizierung (CRR)
-* Klone: Umfasst Optionen zum Aktualisieren und Löschen von Klonen (Sandbox-Umgebungen), die älter als 60 Tage sind
+* Klone: Enthält Optionen zum Aktualisieren und Löschen von Klonen (Sandboxen), die innerhalb oder außerhalb der Workload Factory erstellt wurden und älter als 60 Tage sind
 
 
 --
 
 
 .Bevor Sie beginnen
-* Sie müssen über Anmeldedaten mit Lese- oder Automatisierungsberechtigungen verfügen.
-* Um den Storage einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz von der Workload-Fabrik gemanagt werden und der Storage-Typ muss FSX für ONTAP sein.
-* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration optimieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
+* Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Lese-/Schreibberechtigungen"^] um Ihre Datenbankkonfigurationen zu analysieren.
+* Um den Speicher einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz in der Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein. link:register-instance.html["Erfahren Sie, wie Sie eine Hostinstanz registrieren."]
+* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
 
 
 
-NOTE: Der Optimierungsprozess kann zu Instanzausfällen oder Serviceunterbrechungen führen. Überprüfen Sie die Optimierungszusammenfassung und die Aktionselemente, bevor Sie eine Konfiguration optimieren.
+NOTE: Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Lesen Sie die Empfehlung sorgfältig durch, bevor Sie sich für die Korrektur einer Konfiguration entscheiden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie auf der Registerkarte *Inventar* die Registerkarte *Instanzen* aus.
-. Wählen Sie das drei-Punkt-Menü der zu optimierenden Instanz aus und wählen Sie dann *optimieren*.
-. Überprüfen Sie auf der Seite Instanz optimieren für die SQL Server-Instanz die Ergebnisse der Bewertung.
+. Wählen Sie *Probleme beheben* aus, um Konfigurationsprobleme für die Instanz anzuzeigen.
+. Überprüfen Sie auf der Statusseite „Well-Architected“ für die Hostinstanz die Ergebnisse der Analyse.
 +
-Sie können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.
+Sie können Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.
 
 +
-Sie können auch einen Bericht der Bewertungsergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.
+Sie können auch einen Bericht mit den Ergebnissen herunterladen, indem Sie *PDF exportieren* auswählen.
 
-. Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.
-+
-Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
-
-. Wählen Sie diese Option aus, um nicht optimierte Konfigurationen zu optimieren.
+. Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Zu den Empfehlungen gehören bewährte Methoden, potenzielle Fallstricke nicht optimierter Konfigurationen und wichtige Überlegungen. Überprüfen Sie die Empfehlung sorgfältig.
+. Wählen Sie „Konfigurationsprobleme anzeigen und beheben“ aus, wenn die Option verfügbar ist.
 +
 *Select all* ist die Standardeinstellung, aber Sie können bestimmte Ressourcen zur Optimierung auswählen.
 
 +
-.. Überprüfen Sie für alle Konfigurationen mit Ausnahme der Klonbereinigung im Optimierungsdialog die Optimierungsdetails, um zu erfahren, was bei der Optimierung geschieht. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.
+.. Lesen Sie für alle Konfigurationen außer der Klonbereinigung die Empfehlungen, um zu erfahren, was passiert, wenn Sie sich für die Optimierung entscheiden. Einige Korrekturvorgänge können zu Instanzausfallzeiten oder Dienstunterbrechungen führen.
 .. Wählen Sie für die Klonbereinigung geklonte Datenbanken (Sandbox) zum Aktualisieren oder Löschen aus.
 +
 *** Durch das Aktualisieren eines Klons wird er mit der Quelldatenbank synchronisiert. Aktualisierung ist nur für Klone verfügbar, die in den Werkseinstellungen des Workloads erstellt wurden.
@@ -72,8 +69,8 @@ Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht o
 
 
 
-. Wählen Sie *Weiter*, um die Konfiguration zu optimieren.
+. Wählen Sie *Weiter*, um das Konfigurationsproblem zu beheben.
 
 
 .Ergebnis
-Der Optimierungsprozess wird gestartet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.
+Der Sanierungsprozess wird eingeleitet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.

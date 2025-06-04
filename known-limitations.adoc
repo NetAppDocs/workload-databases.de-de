@@ -15,6 +15,12 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
+== Unterstützung der Hostinstanzerkennung
+
+Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.
+
+
+
 == Unterstützung für AMI-Bildversionen
 
 Für jede SQL-Version werden nur bis zu vier aktuelle Versionen oder Revisionen von AMI-Images angezeigt. Wir lassen die Installation von einem AMI-Image, das älter als die letzten vier Versionen ist, nicht zu.
@@ -127,9 +133,3 @@ Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokale
 * Die Optimierungsbewertung kann nicht ermitteln, ob regionsübergreifende Replizierung (CRR) verwendet wird, wenn sich das Ziel-Filesystem FSX für ONTAP in einem anderen AWS-Konto befindet.
 * Workload Factory bewertet nur die CRR-Konfiguration des Quell-FSX für ONTAP-Dateisystem.
 
-
-
-
-== Anzahl an Datenbanken in SQL Server Instanzen
-
-Auf der Registerkarte Inventar und im Dashboard unterstützt die Workload Factory bis zu 1.500 Datenbanken innerhalb von SQL-Serverinstanzen.

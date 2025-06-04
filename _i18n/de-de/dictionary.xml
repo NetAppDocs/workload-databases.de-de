@@ -41,7 +41,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
   <block id="b2f899f972527ed53c986fff0ea809c9" category="paragraph">Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.</block>
   <block id="ee87d4c496da752f756c502bf6d73599" category="list-text">Anmeldeinformationen und Berechtigungen</block>
-  <block id="1b3eca0f21789e391339e536902a0773" category="inline-link-macro">Zugangsdaten für AWS Konten und Berechtigungen für den automatisierten Modus</block>
   <block id="4e79c01286f2a10af230320a37d7ce30" category="inline-link-macro">Erfahren Sie mehr über die Codebox-Automatisierung</block>
   <block id="6aa474bc798ba983a2979f974d7af008" category="list-text">Wenn Sie eine Verbindung zu Active Directory herstellen, müssen Sie über Administratorzugriff mit Berechtigungen verfügen, um Folgendes tun zu können:</block>
   <block id="711b4926fa677fe43f56947d4d5cafe7" category="list-text">Treten Sie der Domain bei</block>
@@ -191,26 +190,6 @@
   <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Wählen Sie *Löschen*.</block>
   <block id="1aef21babcea64bea2aff92468198535" category="list-text">Klicken Sie im Dialogfeld Löschen auf *Löschen*.</block>
-  <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Erkennen einer Microsoft SQL Server-Instanz</block>
-  <block id="89d4e8decf00d1ba7948a89df7b705a6" category="paragraph">Diese Aufgabe dient zur Erkennung einer _unerkannten Instanz_.</block>
-  <block id="36df1b975561708b246ef1801ea416e5" category="list-text">FSX für ONTAP</block>
-  <block id="4b222d59a012c5cc128037a5a473cde7" category="list-text">Elastic Block Store (EBS)</block>
-  <block id="abef82f89770aefd53c1cafe296c05f7" category="list-text">FSX für Windows-Dateiserver</block>
-  <block id="0c58524f460d0dca6bc74f75070e81b4" category="paragraph">In Datenbanken werden erkannte Instanzen wie folgt kategorisiert:</block>
-  <block id="8482966e54e535a17c37e8a9e60719d9" category="list-text">Microsoft SQL Server-Authentifizierung schlägt fehl.</block>
-  <block id="d7d2bdfad20e8678423a16803cafd735" category="paragraph">Die Anforderungen für die Erkennung einer nicht erkannten Datenbank-Server-Instanz sind wie folgt:</block>
-  <block id="38a12b37ae4221c5fda46c9430a61d47" category="inline-link-macro">Zugangsdaten für das AWS Konto</block>
-  <block id="dc009403919a36e84e394bfc7dac9390" category="list-text">Der Speichertyp für die Instanz muss einer der folgenden sein:</block>
-  <block id="3962b6fab28418ee6542523fce705073" category="list-text">EC2-Instanzen müssen über ein Rollen-/Instanzprofil verfügen, das eine SSM-Verbindung zum Erkennen ermöglicht.</block>
-  <block id="5dff7dc03e6adf7d4ca469820cdba620" category="inline-link-macro">Erfahren Sie mehr über die SSM-Fehlerbehebung</block>
-  <block id="a218784743407787312891b174efa23d" category="paragraph">Wenn eine Microsoft SQL-Instanz erkannt wird, wird die vorhandene Umgebung nicht geändert. Die Erkennung erfolgt über AWS Systems Manager Session Manager (SSM). Ohne das richtige IAM-Instanzprofil schlägt die Erkennung fehl. <block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>.</block>
-  <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des zu erkennenden Hosts zu erweitern.</block>
-  <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">Der Host wird erweitert, und Host-Instanzen werden angezeigt.</block>
-  <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">Klicken Sie Auf *Detect*.</block>
-  <block id="52f93363b11de846f37617dc280f35b6" category="list-text">Geben Sie im Dialogfeld *Instanz erkennen* den Benutzernamen und das Kennwort des Microsoft SQL Servers oder den Benutzernamen und das Kennwort des FSX for ONTAP ein.</block>
-  <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">Erkannte Instanzinformationen werden angezeigt.</block>
-  <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">Wählen Sie *Ja, Instanz über Workload Factory verwalten* oder *Nein*.</block>
-  <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">Klicken Sie Auf *Fertig*.</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">Bereitstellungsmethoden</block>
@@ -378,36 +357,11 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open Source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.</block>
-  <block id="6130b5542240619621b88baf10547d84" category="paragraph">Datenbanken können Microsoft SQL Server Instanzen nur mit FSX für ONTAP Filesystem-Storage managen.</block>
-  <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Instanzverwaltung für Microsoft SQL Server</block>
-  <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">Die Instanzverwaltung von Microsoft SQL Server umfasst die folgenden Aufgaben:</block>
-  <block id="4c2074388cf4ff8bed676ca933f2b317" category="list-text">Managen einer Host-Instanz</block>
-  <block id="994fd8f490177306769be0a7cbfcc3e6" category="list-text">Zeigen Sie eine verwaltete Instanz an</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">Datenbanken anzeigen</block>
-  <block id="516bc1905150a9c47ed4ba785d304c08" category="list-text">Heben Sie die Verwaltung einer Hostinstanz auf</block>
-  <block id="327ffbd91edd4e33d5518e4e2ffe32a7" category="inline-link-macro">Erkennen Sie eine oder mehrere Hostinstanzen</block>
-  <block id="f55f72ac990fbff5b0fa9fa6ef2a43f8" category="paragraph">Um eine dieser Aufgaben zu erledigen, müssen Sie <block ref="7590173c3966c31656f7462bb5d71596" category="inline-link-macro-rx"></block>.</block>
-  <block id="9ee949a52ce818bc3dc8adf7994630ff" category="paragraph">Verwalten einer erkannten oder nicht verwalteten Microsoft SQL Server-Instanz für einen Host.</block>
-  <block id="cd78ff90ddf6720085af92558142d117" category="list-text">Sie müssen eine erkannte Instanz im Host haben, die für die Verwaltung verfügbar ist.</block>
-  <block id="ec23fcbca926c2c56578aa4b009e5426" category="inline-link-macro">Microsoft PowerShell-Dokumentation für Windows</block>
-  <block id="0a2076265c3748f47dd0af532c7aface" category="list-text">PowerShell7 ist erforderlich, um die Datenbankinstanz zu verwalten. Installieren Sie PowerShell7 manuell unter <block ref="83fcecee5da20c347486b34eede460ed" category="inline-link-macro-rx"></block>.</block>
-  <block id="14018e7d1ee628c58a60c375fd95df80" category="list-text">Alle Managementvorgänge werden vom AWS System Manager Agent mit Benutzerrechte ausgeführt<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> . Geben Sie die folgenden Berechtigungen für den Benutzer auf dem Datenbankserver an<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> :</block>
-  <block id="aac2a7646728f5a7e043cf96134ccdb3" category="list-text">Klicken Sie in der Zeile des zu verwaltenden Hosts auf *Verwalten*.</block>
-  <block id="2fb4e3404c1ed4190dc6ef818393c670" category="list-text">Wählen Sie eine oder mehrere zu verwaltende Hostinstanzen aus.</block>
-  <block id="5a71da60e1bd3ad61adeed4b3b25dfd4" category="list-text">Klicken Sie Auf *Verwalten*.</block>
-  <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">Sie können eine verwaltete Instanz anzeigen, indem Sie die folgenden Schritte ausführen.</block>
-  <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und die verwalteten Instanzen anzuzeigen.</block>
   <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">Der Host wird erweitert, und die Hostinstanzen werden angezeigt.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
-  <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">Die Übersicht über die Instanz wird auf der Registerkarte „Inventar“ angezeigt.</block>
-  <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">Sie können die von der verwalteten Instanz verwalteten Datenbanken anzeigen, indem Sie die folgenden Schritte ausführen.</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Wählen Sie *Datenbanken anzeigen*.</block>
-  <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">Die Liste der Datenbanken in der Instanz wird auf der Registerkarte Inventar angezeigt.</block>
-  <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">Heben Sie die Verwaltung einer Hostinstanz auf, indem Sie die folgenden Schritte ausführen.</block>
-  <block id="65cc39a76868117dd307472ad16886fe" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Host-Instanz zu erweitern, deren Verwaltung aufgehoben werden soll.</block>
-  <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">Wählen Sie *Unmanage*.</block>
-  <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">Die Hostinstanz wird jetzt nicht mehr verwaltet.</block>
   <block id="252215232d636a7c096b2327e9a20b42" category="doc">Überwachen von Datenbanken</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">Die Jobüberwachung unterstützt je nach Job bis zu drei Überwachungsstufen. Beispielsweise verfolgt die Jobüberwachung bei der Erstellung neuer Datenbanken und Sandbox-Klone übergeordnete Jobs und untergeordnete Jobs.</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Ebenen der Jobüberwachung</block>
@@ -420,22 +374,15 @@
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">Überwachen von Jobs</block>
   <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">Wählen Sie in Datenbanken die Registerkarte *Job Monitoring* aus.</block>
   <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">Verwenden Sie auf der Registerkarte Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.</block>
-  <block id="22358702cb945913fe9b03fc1642777a" category="summary">Datenbanken haben drei verschiedene Modi mit unterschiedlichen Anforderungen.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Eins</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Zwei</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Fügen Sie Anmeldeinformationen und Berechtigungen hinzu</block>
-  <block id="ef10fd0583cb29fae9962398dccb7949" category="inline-link-macro">_Basic_, _read_ und _Automate_ Betriebsmodi</block>
-  <block id="bdb2387bd633174e2bf3ed30c7e23fcd" category="paragraph">Wählen Sie zwischen <block ref="c3b5a6253a0d0b0237f0d9c1e9a7dfa2" category="inline-link-macro-rx"></block>.</block>
   <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">Erfahren Sie, wie Sie einen Datenbankserver implementieren</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">Fügen Sie einem Konto manuell Anmeldeinformationen hinzu</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Drittens</block>
   <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Stellen Sie einen Datenbankserver bereit</block>
-  <block id="078f40fa23e0672777adc7c05d4773dd" category="inline-link-macro">Bereitstellen</block>
-  <block id="84c21b8cc296c1da3bb78060284eaac1" category="inline-link-macro">Einen Datenbankserver erkennen</block>
-  <block id="fb4bdf4175298f0102e06e87845aa4d6" category="paragraph">Wenn Sie sich für den Betrieb im _Automate_-Modus entschieden haben, müssen oder müssen Sie <block ref="59bd3d71ec0b7c2f2cdc48f826101be3" category="inline-link-macro-rx"></block> <block ref="ce52b47cf84b17846dfd2d3004a17efa" category="inline-link-macro-rx"></block> Ihre Hostressourcen verwalten, bevor Sie Benutzerdatenbanken hinzufügen.</block>
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">Erstellen Sie eine Benutzerdatenbank</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">Klonen Sie Ihren Host, um eine Sandbox zu erstellen</block>
-  <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">Wenn Sie über von FSX for ONTAP gemanagte Hosts in Ihrem Datenbankbestand verfügen, können Sie <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> oder <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>.</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">Durch das Aktualisieren eines Klons wird der Klon entweder in der Quelldatenbank zum aktuellen Zeitpunkt oder in einem Snapshot der Quelldatenbank aktualisiert, der zu einem früheren Zeitpunkt erstellt wurde. Alle am Sandbox-Klon vorgenommenen Änderungen werden gelöscht.</block>
   <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">Eine Aktualisierung ist nur möglich, wenn die Quelldatenbank aktiv ist.</block>
   <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Um einen Datenbankklon aus einem Snapshot zu aktualisieren, muss die Quelldatenbank mindestens einen Snapshot für den Vorgang haben.</block>
@@ -506,7 +453,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Was ist neu</block>
   <block id="991fc877b6135bcda7435016745ae066" category="sidebar">Verwenden Sie Datenbank-Workloads</block>
   <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">Erstellen Sie einen neuen Datenbankserver</block>
-  <block id="4564dd7bc0da251c3d18fb2269904a81" category="sidebar">Einen Datenbankserver erkennen</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administration und Überwachung</block>
   <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Managen eines Microsoft SQL-Servers</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">Management von Klonen</block>
@@ -602,7 +548,6 @@
   <block id="60d184cc6fb4054879723de86764a020" category="list-text">Geben Sie optional im Einsparungsrechner die folgenden Details zu Klonen (Schattenkopien) und Snapshots in Ihrem FSX für Windows Storage an, um eine genauere Schätzung der Kosteneinsparungen zu erhalten.</block>
   <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">Wenn FSX für Windows Schattenkopien erkannt werden, ist der Standardwert *Daily*. Wenn Schattenkopien nicht erkannt werden, ist der Standardwert *Keine Snapshot-Frequenz*.</block>
   <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der FSX für Windows-Konfiguration ein.</block>
-  <block id="55376293ec338d45989562b49241fa71" category="paragraph">Um eine Hostinstanz in einem privaten Netzwerk ohne externe Konnektivität zu managen, müssen die folgenden Endpunkte in der VPC verfügbar sein und mit den Subnetzen verbunden sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.</block>
   <block id="021cd7b44c92e0977eee47344e7f4a7b" category="list-text"><block ref="d2c8dc6d0833da0998d37357f2d65fca" prefix="" category="inline-code"></block></block>
   <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
@@ -619,36 +564,17 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Verwenden Sie Terraform aus der Codebox</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*Kontinuierliche Optimierung*: Scannt kontinuierlich Ihre Microsoft SQL Server-Anlage offline und bietet Ihnen einen umfassenden Bericht mit Einblicken, Möglichkeiten und Empfehlungen, um Ihnen zu helfen, betriebliche Spitzenleistungen zu erzielen.</block>
-  <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Optimierte Konfigurationen für Microsoft SQL Server Implementierungen</block>
-  <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">Die Bewertung wird automatisch und kontinuierlich einmal täglich für Microsoft SQL Server-Instanzen mit FSX für ONTAP-Storage ausgeführt, der in der Workload-Fabrik gemanagt wird. Bewertungsberichte sind im Optimierungs-Dashboard nur verfügbar, wenn ein täglicher geplanter Job nach der Bereitstellung oder nach der Verwaltung einer Instanz ausgeführt wurde.</block>
-  <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">Was gescannt wird</block>
-  <block id="af27bafd548aa3e366e582049aeb65f1" category="list-text">Workload Factory bewertet den Optimierungsstatus der folgenden Konfigurationen für Microsoft SQL Server-Instanzen:</block>
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">Storage-Dimensionierung: Umfasst Storage-Tier, File-System-Reserve, Größe des Protokolllaufwerks und Größe des tempdb-Laufwerks</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb</block>
   <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">Storage-Konfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Multi-Path-I/O-Status, Richtlinien und Sitzungen und vieles mehr</block>
-  <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">Sie müssen über Anmeldedaten mit Lese- oder Automatisierungsberechtigungen verfügen.</block>
-  <block id="86bd4600548ee1b734f704338ab13665" category="list-text">Um den Storage einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz von der Workload-Fabrik gemanagt werden und der Storage-Typ muss FSX für ONTAP sein.</block>
-  <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.</block>
-  <block id="c9e425055996f71ecfc858708d926276" category="paragraph">Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.</block>
-  <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Wählen Sie diese Option aus, um nicht optimierte Konfigurationen zu optimieren.</block>
-  <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">Wählen Sie *Weiter*, um die Konfiguration zu optimieren.</block>
-  <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">Der Optimierungsprozess wird gestartet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.</block>
-  <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">Die BlueXP  Workload-Farm für Datenbanken bietet kontinuierliche Optimierung für Microsoft SQL Server-Implementierungen auf Amazon FSX für NetApp ONTAP Storage.</block>
-  <block id="9d62eb1e78c18c53c2bc3d807f4d5b04" category="doc">Kontinuierliche Optimierung für die BlueXP  Workload-Farm für Datenbanken</block>
-  <block id="b97ec9fa7955169dbb93f4727a02e87d" category="paragraph">Kontinuierliche Optimierung scannt und bewertet Ihre Datenbankinfrastruktur nach Bedarf automatisch, um sicherzustellen, dass große Bestände optimale Performance, Kosteneffizienz und Einhaltung von Best Practices erzielen. Die Funktion bietet Ihnen einen umfassenden Bericht mit Einblicken und Empfehlungen zur Optimierung.</block>
-  <block id="638c7d8777be813a6cc36be0ae2ccf68" category="paragraph">Dank kontinuierlicher Optimierung können Sie Probleme in der Datenbankinfrastruktur erkennen, erforderliche Änderungen erkennen und Maßnahmen ergreifen.</block>
   <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">Die wichtigsten Funktionen:</block>
-  <block id="5767d06d754465b4eceaed828d43069f" category="list-text">Kontinuierliche Bewertung</block>
   <block id="8c0981b34ea19373e1dcf1c3d034f097" category="list-text">Automatische Validierung von Best Practices</block>
   <block id="029d49350caff46ab3e1f31c9c60f494" category="list-text">Empfehlungen zur Größenanpassung</block>
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">Proaktive Beobachtbarkeit</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">Einblick in Aktion</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS hat eine gut konzipierte Framework Advisor Architektur</block>
   <block id="de29686d1474303323860ff8044fc4ed" category="paragraph">Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.</block>
-  <block id="ca3feda4f22b6d2a240006fa0a33f99e" category="paragraph"><block ref="ca3feda4f22b6d2a240006fa0a33f99e" category="inline-link-macro-rx"></block></block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">Bis 3. November 2024</block>
-  <block id="372aea905d324ed9cf6878e3f3ed7abc" category="sidebar">SQL Server optimieren</block>
-  <block id="6ca43380ae924ff967599986889184b3" category="sidebar">Kontinuierliche Optimierung im Überblick</block>
   <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">Optimieren von Konfigurationen</block>
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">Erstversion der BlueXP -Workload-Farm für Datenbanken</block>
   <block id="fe582581097e432c4b1b3f3135f39b72" category="paragraph">Die erste Version umfasst die Möglichkeit, mit Amazon FSX for NetApp ONTAP als Storage-Umgebung für Ihre Datenbank-Workloads Einsparungen zu erkunden, Microsoft SQL-Server zu erkennen, zu managen und zu implementieren, Datenbanken bereitzustellen und zu klonen und diese Jobs innerhalb der Workload-Farm zu überwachen.</block>
@@ -662,15 +588,7 @@
   <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">Melden Sie sich mit einem der <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>an.</block>
   <block id="842cadd8705fae5a3bbfb5a3b59568fe" category="paragraph">Verbindung eines Sandbox-Klons mit einer CI/CD-Pipeline (Continuous Integration and Continuous Delivery) mit REST-API-Code zur Verbesserung der Softwarebereitstellung durch Automatisierung in der BlueXP -Workload-Farm für Datenbanken</block>
   <block id="920d5db87e34d780e98c3efabde9041b" category="summary">Erstellen Sie einen neuen Microsoft SQL Server in der BlueXP -Workload-Farm für Datenbanken.</block>
-  <block id="0eafa9073db40c1542192aa961e80360" category="doc">Erstellen Sie einen Datenbankserver in der BlueXP -Workload-Fabrik für Datenbanken</block>
-  <block id="c3882e9ef595e2071c5d33931b535f75" category="paragraph">Die Erstellung eines neuen Microsoft SQL-Servers oder Datenbank-Hosts in der BlueXP -Workload-Farm für Datenbanken erfordert eine Bereitstellung von FSX für ONTAP-Dateisystem und Ressourcen für Active Directory.</block>
   <block id="e688adbe92be47aae67ff0624dc5033a" category="list-text">Beide Bereitstellungsmodelle für Microsoft SQL Server erfordern die LUN-Erstellung mithilfe des iSCSI-Storage-Protokolls. Workload Factory konfiguriert Microsoft Multipath I/O (MPIO) als Teil der Konfiguration von LUNs für SQL Server über FSX für ONTAP. MPIO wird auf der Grundlage von Best Practices für AWS und NetApp konfiguriert.</block>
-  <block id="0d52db4b096880e69c4e146f0ba49f37" category="list-text">Workload Factory-Betriebsmodi</block>
-  <block id="f9d2517e544fb26af8171abd3daf978c" category="list-text">Die Workload-Fabrik bietet drei Betriebsmodi, je nachdem, wie komfortabel Sie Ihre AWS Ressourcen über die Werkseinstellungen hinweg managen können.</block>
-  <block id="22d129236109e381371997931d9e2552" category="paragraph">*_Basic_ Mode*: In dieser Betriebsart müssen Sie keine AWS-Kontoanmeldeinformationen in der Workload Factory zuordnen. Sie können eine teilweise gefüllte YAML-Vorlage aus der Codebox kopieren oder herunterladen, um sie außerhalb der Arbeitslast ab Werk zu erstellen.</block>
-  <block id="a538aa1311e84c0f42a362aece349223" category="paragraph">*_Read_ Mode*: In diesem Betriebsmodus geben Sie AWS-Kontoanmeldeinformationen mit Leseberechtigungen an, mit denen Sie das _Quick create_ oder _Advanced create_ Formular ausfüllen und dann kopieren oder herunterladen können. Sie können die ausgefüllten Formulardetails auch zur CloudFormation aus der Workload Factory weiterleiten. Und Sie werden in der Lage sein, den bereitgestellten Datenbankserver in der Workload Factory zu verwalten.</block>
-  <block id="02b7989729e7d5233996b9d03d093fc1" category="paragraph">*_Automate_ Mode*: In diesem Betriebsmodus stellen Sie AWS-Kontoanmeldeinformationen mit automatischen Berechtigungen bereit, mit denen Sie AWS-Ressourcen innerhalb der Workload-Fabrik erstellen und managen können.</block>
-  <block id="6e604948d399e1365a2d5a11ee7838d8" category="list-text">Sie müssen <block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block>einen neuen Datenbank-Host in der Workload Factory erstellen.</block>
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">AWS Zugangsdaten mit _Automate_ Berechtigungen ermöglichen die werkseitige Implementierung und das Management des neuen Datenbank-Hosts über Ihr AWS-Konto innerhalb der Workload-Fabrik.</block>
   <block id="cc04c98a943715d655ef7f99796aae2a" category="paragraph">Mit AWS Zugangsdaten mit _read_ Berechtigungen kann die Workload-Factory eine CloudFormation-Vorlage erstellen, die Sie in der AWS CloudFormation Konsole verwenden können.</block>
   <block id="b4db11619512665a02befd7699ec1538" category="paragraph">Wenn Sie keine AWS-Anmeldeinformationen in der Workload Factory haben und den neuen Server in der Workload Factory erstellen möchten, folgen Sie *Option 1*, um zur Seite Anmeldedaten zu gelangen. Fügen Sie die erforderlichen Anmeldeinformationen und Berechtigungen für den _Automate_-Modus für Datenbank-Workloads manuell hinzu.</block>
@@ -697,18 +615,6 @@
   <block id="23fb636062a19e5367fc7e960e315c4c" category="list-text">*Mount*: Beim Klonen einer SQL-Datenbank, die mehrere Daten und/oder Protokolldateien enthält, klont Workload Factory alle Dateien unter dem automatisch zugewiesenen oder definierten Laufwerksbuchstaben.</block>
   <block id="f18c09ef6c0024eb6c989751920a14b8" category="summary">Löschen Sie einen Sandbox-Klon in den BlueXP -Workload-Fabriken, wenn Sie ihn nicht mehr benötigen.</block>
   <block id="b77d65b48658772b1938bb5f92515cad" category="paragraph">Wenn Sie einen Sandbox-Klon in der BlueXP  Workload-Fabrik für Datenbanken löschen und keine Speicherkapazität mehr freigeben möchten, löschen Sie ihn.</block>
-  <block id="fbb4a1d64b556827c605ba040ca56ae4" category="summary">Erkennen einer Microsoft SQL Server-Instanz in der BlueXP -Workload-Fabrik für Datenbanken.</block>
-  <block id="178414bb543c963fec57976ea2336e31" category="paragraph">Wenn AWS-Anmeldedaten in der Workload-Fabrik zugeordnet sind, ermöglicht Datenbanken die automatische Erkennung von Microsoft SQL-Servern ab SQL Server 2016 mit den folgenden AWS-Storage-Typen:</block>
-  <block id="89431105385d4cca92651e5744f72524" category="list-text">_Undetected Instances_: Nicht erkannte Instanzen, die von der Workload Factory automatisch erkannt wurden. Instanzen werden in den folgenden Fällen nicht erkannt:</block>
-  <block id="419a941115159d4985613564bc390429" category="list-text">Das FSX für ONTAP-Dateisystem für den Microsoft SQL-Server ist nicht bei Ihrem Konto in Workload Factory registriert.</block>
-  <block id="ed7308cd20331dcb0eda88490074a613" category="list-text">_Unmanaged Instances_: Erkannte Instanzen, die nicht von der Workload Factory gemanagt werden</block>
-  <block id="05a7af3bced3936cf1cba360e81ad241" category="list-text">_Managed Instances_: Erkannte Instanzen, die von der Workload Factory gemanagt werden</block>
-  <block id="1469195c081bd9ee6ffd6a3cb8fb9125" category="paragraph">Der erste Schritt zur Verwaltung einer Microsoft SQL Server-Instanz oder Host-Instanz in der Workload Factory für Datenbanken besteht darin, eine nicht erkannte Datenbankserverinstanz zu erkennen.</block>
-  <block id="9a7295dfae67ffbc9b3db0308d671d81" category="list-text">Sie müssen <block ref="8daf2318f1eb74a04bc7cb12c8d5f7c1" category="inline-link-macro-rx"></block>eine Datenbankserverinstanz in der Workload Factory erkennen.</block>
-  <block id="9a5427eccfb5f1515fe411b7234b8d16" category="paragraph">Workload Factory validiert Ihre Microsoft SQL-Anmeldedaten oder FSX for ONTAP-Anmeldedaten.</block>
-  <block id="e16048662fe75d93a18c006c49a59e5b" category="paragraph">Wenn eine dieser Anmeldeinformationen nicht verfügbar ist, versucht Workload Factory, das Modul in PowerShell zu installieren<block ref="80caa08185fe6ba2da6b227f3c292956" prefix=" " category="inline-code"></block>.</block>
-  <block id="ee7e8786e2029f74d5565c2e6e78c36b" category="inline-link-macro">Managen Sie die Instanz über die Workload Factory</block>
-  <block id="64fc7ef1abfec5624461bb34e030bb56" category="paragraph">Wenn der Speichertyp für die Host-Instanz FSX für ONTAP ist, können Sie <block ref="ff12e6f62a651f5b7e33780a9c5be656" category="inline-link-macro-rx"></block>.</block>
   <block id="51bdfc0a469b2ea10ef9ab2e5263224e" category="doc">Einsparungen bei der BlueXP -Workload-Farm für Datenbanken</block>
   <block id="5817c5b26a2a7f4c1334dc3c03403f64" category="paragraph">Workload Factory tritt in die erkannten Elastic Block Store- und FSX for Windows File Server-Hosteigenschaften ein, sodass Sie die Einsparungen automatisch erkunden können.</block>
   <block id="02cb01a24a3bd2f230f64c9dacb47b9b" category="paragraph">Wenn die Workload-Farm EBS-Hosts erkennt, werden Sie auf die Registerkarte „Einsparungen“ umgeleitet. Wenn die Workload Factory keine EBS-Hosts erkennt, werden Sie zum Rechner umgeleitet zu <block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>.</block>
@@ -723,10 +629,6 @@
   <block id="4a50857e1707616ee60a78ae42c9b8a0" category="paragraph">Die Verwaltung von Konfigurationen für „Always On“-Verfügbarkeitsgruppen wird in der Workload-Werkseinstellung nicht unterstützt.</block>
   <block id="620aae64a79a6a9f3dd3cbcf536b15df" category="paragraph">Wenn Sie während der Implementierung von Microsoft SQL Server in Workload Factory „benutzerverwaltetes Active Directory“ auswählen, müssen Sie eine Sicherheitsgruppe bereitstellen, die den Datenverkehr zwischen den EC2-Instanzen zum Verzeichnisdienst für die Bereitstellung zulässt. Workload Factory fügt die Sicherheitsgruppe für benutzerverwaltetes Active Directory nicht automatisch an, wie es für von AWS verwaltetes Microsoft AD der Fall ist.</block>
   <block id="647fea922cff8e907550de558b4cd653" category="paragraph">Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in der Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.</block>
-  <block id="2d2f2539dd2892084fc34cbfe31682b2" category="summary">BlueXP  Workload-Farm für Datenbanken ist ein End-to-End-Implementierungs- und Wartungsservice für Datenbanken mit integrierten Best Practices für Optimierung, automatisches Thin Cloning sowie Überwachungs- und Lösungsfunktionen.</block>
-  <block id="9917001ac32006ffab5f623defff5594" category="doc">Erfahren Sie mehr über die BlueXP  Workload-Farm für Datenbanken</block>
-  <block id="ca48023f43ae7d0f01c30714fa4362cc" category="section-title">Was ist eine BlueXP -Workload-Fabrik für Datenbanken?</block>
-  <block id="61a2b695c9f4d3466b19505da26ac088" category="paragraph">Die BlueXP  Workload-Farm für Datenbanken erkennt, bewertet, plant, stellt und verschiebt Microsoft SQL Server-Daten auf Amazon FSX for NetApp ONTAP (FSX for ONTAP)-Implementierungen, die optimiert sind, um Ihre Performance- und Kostenerwartungen unter Einhaltung der Best Practices der Branche zu erfüllen. Während des gesamten Lebenszyklus sorgt die Workload-Fabrik für kontinuierliche Optimierung und Management von Datenbanken auf FSX für ONTAP.</block>
   <block id="70cb57a8d5d75d8762d6b082d319dec7" category="inline-link-macro">Übersicht über die Workload-Fabrik</block>
   <block id="092d6885b847467d6999738db9651764" category="paragraph">Weitere Informationen zur Workload Factory finden Sie im <block ref="f3c978a33f5f67b2b7f311b0ac6d0acd" category="inline-link-macro-rx"></block>.</block>
   <block id="ebfbd585b037101117706b78fcfab22b" category="section-title">Vorteile der Workload-Farm für selbst gemanagte Datenbanken</block>
@@ -743,27 +645,20 @@
   <block id="11366d0688d978b3372702f5c4d33b84" category="inline-link-macro">Erfahren Sie mehr über FSX für ONTAP für die Workload-Fabrik</block>
   <block id="27dfabff613e2389e886e5b797252438" category="paragraph"><block ref="2e826ed2a2f94b608ac7d80f7c1db3b6" category="inline-link-macro-rx"></block>.</block>
   <block id="5e403a4c3b152d7f395a9974ccfd4e4c" category="section-title">Betriebsmodi in der Workload Factory</block>
-  <block id="63aab450b65202ef9696852b9418f590" category="paragraph">Drei verschiedene Betriebsmodi - _BASIC_, _read_ und _Automate_ - bieten flexible Optionen für den Einsatz innerhalb und außerhalb der Workload Factory. Erhalten Sie im _BASIC_-Modus sofort einen Wert ohne Vertrauen mit Codeschnipseln für die Verwendung außerhalb der Arbeitslast. Erhalten Sie einen inkrementellen Wert mit inkrementellem Vertrauen in den Modi _read_ und _Automate_.</block>
   <block id="eb6e457556694fbc8d187534ac1188e1" category="inline-link-macro">Betriebsmodi in der Workload Factory</block>
   <block id="7bb004aef4b112c40189995d006d040c" category="paragraph">Erfahren Sie mehr über <block ref="eda3e48a35318d9f8306be63aaa1ab6b" category="inline-link-macro-rx"></block>.</block>
   <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:</block>
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">Die Workload-Farm für Microsoft SQL Server unterstützt sowohl Hochverfügbarkeit (immer bei Failover-Cluster-Instanzen) als auch Einzelinstanzimplementierungen gemäß den Best Practices von AWS, NetApp ONTAP und SQL Server.</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">Allgemeine Fragen zu den Anwendungen und Dienstleistungen der Arbeitslast-Fabrik oder der Arbeitslast-Fabrik finden Sie unter <block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>.</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Farm für Datenbanken.</block>
-  <block id="6dfa042d17c941d5173ba2a408668399" category="doc">Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Fabrik</block>
-  <block id="83cfe3edf099a1d48675a62ae60f03ce" category="paragraph">Managen Sie Microsoft SQL Server-Instanzen, um den Instanz- und Datenbankstatus, die Ressourcenauslastung, die Sicherung und die Storage-Performance in der BlueXP  Workload-Farm für Datenbanken zu überwachen.</block>
-  <block id="23528eaa34e1b5044421f8a835380bbd" category="paragraph">Der Vorgang schlägt fehl, wenn auf dem Microsoft SQL Server bestimmte PowerShell-Module und Verwaltungsskripte fehlen. Workload Factory löst einen Prepare Resource Job aus, um fehlende Module und Skripte zu installieren, die Sie auf der Registerkarte Job Monitoring anzeigen können. Wenn der Job abgeschlossen ist, versuchen Sie erneut, die Hostinstanz zu verwalten.</block>
   <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der BlueXP  Workload-Fabrik für Datenbanken.</block>
   <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">Überwachen von Datenbanken in der BlueXP  Workload-Fabrik</block>
-  <block id="a4ed8b9b5c07e17e147e982e5e6be7b7" category="doc">Schnellstart für die BlueXP -Workload-Farm für Datenbanken</block>
-  <block id="a84f8251adb867b65a51f661db71e24f" category="paragraph">Mit der BlueXP  Workload-Fabrik für Datenbanken können Sie sofort im _Basic_-Modus starten. Wenn Sie die Workload Factory verwenden möchten, um Hosts zu ermitteln, Ressourcen zu verwalten und vieles mehr, können Sie in wenigen Schritten beginnen.</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">Sie benötigen ein AWS-Konto, um Datenbanken verwenden zu können.</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">Mit diesen Schritten starten.</block>
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Melden Sie sich bei der BlueXP  Workload Factory an</block>
   <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link-macro">Richten Sie ein Konto mit Workload Factory ein</block>
   <block id="f6c71053fa21be1c35ee95758a3d1050" category="paragraph">Sie müssen <block ref="782deaad814daa4f2ae09237c9394f09" category="inline-link-macro-rx"></block>sich mit einem der anmelden<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>.</block>
   <block id="a4470118de925b41004832644492fcab" category="paragraph">Wenn Sie im _BASIC_-Modus arbeiten, müssen Sie nicht weiter gehen. Sie können mit Datenbanken beginnen, um teilweise abgeschlossene Codebeispiele zu kopieren. Klicken Sie in der Kachel Datenbanken auf *Deploy Database Host*. <block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>.</block>
-  <block id="32a8aefac32feaf1c84e6e0e9a9f24c1" category="paragraph">Wenn Sie im _read_- oder _Automate_-Modus arbeiten, müssen Sie <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>die Workload-Funktionen auswählen, z. B. Datenbanken und GenAI, und die IAM-Richtlinien erstellen, um sicherzustellen, dass Sie über die richtigen Berechtigungen für den Betrieb im _read_- oder _Automate_-Modus verfügen.</block>
   <block id="c1b68fc67f0e2b970d81dd29c91edb3c" category="summary">Aktualisierung eines Sandbox-Klons in der BlueXP  Workload-Fabrik für Datenbanken.</block>
   <block id="6aa117cc6340cd2479e82444cbbadea9" category="doc">Aktualisierung eines Sandbox-Klons in der BlueXP  Workload-Fabrik für Datenbanken</block>
   <block id="99ce2cd9a13526e0582af2c9fa2a4382" category="paragraph">Aktualisieren Sie einen Datenbankklon in der BlueXP -Workload-Farm für Datenbanken, damit dieser zum aktuellen oder vorherigen Zeitpunkt der Quelldatenbank entspricht.</block>
@@ -831,7 +726,6 @@
   <block id="5e85f9bc067e4ee023078ba85e21857b" category="list-text">Klicken Sie auf das drei-Punkt-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.</block>
   <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">Klicken Sie in der Kachel Datenbanken auf *Gehe zu Datenbank-Inventar*.</block>
   <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">Klicken Sie auf das drei-Punkt-Menü des Sandbox-Klons, den Sie löschen möchten.</block>
-  <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">Klicken Sie auf das Menü mit drei Punkten der zu erkennenden Instanz.</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server-Bereitstellungsanalyse</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">Der Rechner führt eine umfassende Analyse Ihrer SQL Server-Bereitstellung durch, um sicherzustellen, dass die verwendeten Ressourcen und Funktionen der SQL Server-Edition entsprechen. Hier sind die wichtigsten Faktoren und Bedingungen, die der Rechner prüft, bevor er eine Herabstufung auf Standard Edition empfiehlt:</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Implementierungsmodell</block>
@@ -856,17 +750,11 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihren werkseitigen Workload-Anmeldedaten. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Wählen Sie oben rechts in der Arbeitslastwerkkonsole *Hilfe &gt; Support* aus.</block>
-  <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">Klicken Sie auf das drei-Punkt-Menü der Instanz, die angezeigt werden soll, und wählen Sie dann *Instanz anzeigen*.</block>
   <block id="6b30d701929b5a35aad77b847528d165" category="list-text">Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.</block>
-  <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">Klicken Sie auf das drei-Punkt-Menü der Instanz, die Sie aufheben möchten.</block>
   <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.</block>
   <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _laufende_, _abgeschlossene_, _abgeschlossene mit Problemen_ und _fehlgeschlagene_ Jobs.</block>
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Klicken Sie auf das drei-Punkt-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server-Konfigurationen und bietet Ihnen Einblicke und Empfehlungen, um Ihre betrieblichen Abläufe zu optimieren.</block>
-  <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">Die BlueXP  Workload-Fabrik für Datenbanken scannt und bewertet fortlaufend die Microsoft SQL-Serverbereitstellungskonfigurationen, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Diese Funktion bietet Einblicke und Empfehlungen mit der Option zur automatischen Optimierung nicht optimierter Konfigurationen, sodass Ihre Datenbank-Workloads optimale Betriebsabläufe erzielen.</block>
-  <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">Überprüfen Sie auf der Seite Instanz optimieren für die SQL Server-Instanz die Ergebnisse der Bewertung.</block>
-  <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Sie können nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.</block>
-  <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">Sie können auch einen Bericht der Bewertungsergebnisse herunterladen, indem Sie *PDF exportieren* auswählen.</block>
   <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">Einsparungsrechner</block>
   <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">Wenn Sie Elastic Block Store oder FSX für Windows File Server-Hosts in Ihrem Datenbankbestand haben, können Sie <block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>.</block>
   <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, den Sie aktualisieren möchten.</block>
@@ -910,11 +798,8 @@
   <block id="222ef17ae6eab247553156232cd650e1" category="list-text">Aktualisieren Sie für genauere Ergebnisse die Datenverarbeitungsinformationen sowie die Speicher- und Leistungsdetails.</block>
   <block id="b0398f49dbe9d04be8ddd17378899545" category="list-text">Optional können Sie die folgenden Details zu Klonen (Schattenkopien) und Snapshots in Ihrer lokalen Datenbankumgebung bereitstellen und erhalten so eine genauere Schätzung der Kosteneinsparungen.</block>
   <block id="7240997fa0d75a11f0b991615772d5d3" category="list-text">*Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der On-Premises-Konfiguration ein.</block>
-  <block id="2eb9a2599d85acb350f462d9f474f6c6" category="paragraph">Die Workload-Fabrik bietet detaillierte Empfehlungen zur Optimierung der Konfigurationen auf Basis der Best Practices für FSX für ONTAP-Storage. Sie können die Empfehlungen überprüfen und wählen, ob nicht optimierte Konfigurationen optimiert werden sollen.</block>
   <block id="4597adc0f9f3096964b3b3efbe708588" category="list-text">Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading</block>
   <block id="af022f8b2257d68b04e48e672c457177" category="list-text">Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen</block>
-  <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration optimieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.</block>
-  <block id="926cb4c482170392f69cc268b20f8346" category="admonition">Der Optimierungsprozess kann zu Instanzausfällen oder Serviceunterbrechungen führen. Überprüfen Sie die Optimierungszusammenfassung und die Aktionselemente, bevor Sie eine Konfiguration optimieren.</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">03 Februar 2025</block>
   <block id="382e51924c0a806fea2a0017322199a5" category="section-title">Optimierungsbeschränkungen</block>
   <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">Optimierung der ONTAP- und Betriebssystemkonfiguration</block>
@@ -937,7 +822,6 @@
   <block id="3231190e9014bf678d835272ec7c9234" category="paragraph">Die BlueXP -Workload-Fabrik für Datenbanken unterstützt jetzt die Wiederherstellung der maximalen Parallelität (Maximum Degree of Parallelism, MAXDOP)-Serverkonfiguration. Wenn die MAXDOP-Konfiguration nicht optimal ist, können Sie die Konfiguration für die BlueXP -Workload Factory optimieren lassen.</block>
   <block id="4a21bedf189bb26f9f4aeb26c0dc26a2" category="section-title">Bericht zur Einsparungsanalyse per E-Mail</block>
   <block id="5b89ef008454fd9a61723d3572865363" category="paragraph">Wenn Sie die Einsparungen für Ihre Amazon Elastic Block Store und FSX für Windows File Server Storage-Umgebungen im Vergleich zu FSX für ONTAP erkunden, können Sie sich nun den Empfehlungsbericht per E-Mail an sich selbst, Teammitglieder und Kunden senden.</block>
-  <block id="11ddb0c16aeebaa5c378a44c0d6300d8" category="paragraph">Bevor Sie einen Microsoft SQL Server aus der Workload Factory erstellen, informieren Sie sich über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Host-Konfiguration, die Active Directory-Bereitstellung, die Betriebsmodi der Workload Factory und die Anforderungen für diesen Vorgang.</block>
   <block id="d165069c83b8bcdcdac74dac0647a6f8" category="paragraph">Bevor Sie einen PostgreSQL-Server aus der BlueXP  Workload Factory erstellen, informieren Sie sich über die verfügbaren Speicherbereitstellungstypen für die Datenbank-Host-Konfiguration, die Betriebsmodi der Workload-Factory und die Anforderungen für diesen Vorgang.</block>
   <block id="a54a2d2457f861c5ced69c71edee65c9" category="paragraph">FSX for ONTAP-Dateisysteme verfügen über zwei PostgreSQL-Server-Bereitstellungsmodelle: _High Availability (HA)_ oder _Single Instance_. Abhängig vom von dem von Ihnen gewählten FSX for ONTAP-Bereitstellungsmodell werden verschiedene Ressourcen für das FSX for ONTAP-Dateisystem erstellt.</block>
   <block id="7081d1beb2d41751a0211b5a5c5f3b56" category="list-text">*Bereitstellung von Hochverfügbarkeit*: Ein Dateisystem mit mehreren Verfügbarkeitszonen FSX für NetApp ONTAP wird bereitgestellt, wenn ein neues Dateisystem FSX für ONTAP für die Bereitstellung von Hochverfügbarkeit ausgewählt wird. Separate Volumes und LUNs werden für Daten-, Protokoll- und tempdb-Dateien für eine HA-Implementierung erstellt. Ein zusätzliches Volume und eine LUN werden für Quorum oder Witness Disk für Windows Cluster erstellt. DIE HA-Bereitstellung konfiguriert die Streaming-Replikation zwischen dem primären und dem sekundären PostgreSQL-Server.</block>
@@ -1003,27 +887,12 @@
   <block id="b06b1cc67628f13db38ca890693627fb" category="section-title">Regionsübergreifende Replizierungsbewertung</block>
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">Die Optimierungsbewertung kann nicht ermitteln, ob regionsübergreifende Replizierung (CRR) verwendet wird, wenn sich das Ziel-Filesystem FSX für ONTAP in einem anderen AWS-Konto befindet.</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">Workload Factory bewertet nur die CRR-Konfiguration des Quell-FSX für ONTAP-Dateisystem.</block>
-  <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Anzahl an Datenbanken in SQL Server Instanzen</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Ausfallsicherheit: Einschließlich lokaler Snapshots, FSX für ONTAP-Backups und regionsübergreifender Replizierung (CRR)</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Select all* ist die Standardeinstellung, aber Sie können bestimmte Ressourcen zur Optimierung auswählen.</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">Bis 04. April 2025</block>
   <block id="bcfa2187892cfb20acb57dea1d6a38b4" category="paragraph">Informieren Sie sich über die Einsparungen für erkannte Hosts: Workload Factory verknüpft Ihre vorhandenen Microsoft SQL-Server und zieht die Details zum Rechner für einen automatischen Vergleich ein. Sie müssen _read-only_ oder _read/write_ Berechtigungen erteilen, um diese Rechneroption verwenden zu können. Sie können den Anwendungsfall ändern, aber alle anderen Details werden automatisch in der Berechnung ermittelt.</block>
   <block id="f2f8123dee39336570b9e59a3326fd18" category="inline-link-macro">Gewähren Sie _read-only_ oder _read/write_ Berechtigungen</block>
   <block id="f557e9f26b531156ccdbc9c32935d13a" category="list-text"><block ref="6a1dbb436eb1da80c34b82a70d7d9175" category="inline-link-macro-rx"></block> Verwenden Sie Ihr AWS-Konto, um Elastic Block Store (EBS) und FSX for Windows-Systeme auf der Registerkarte „Einsparungen entdecken“ zu erkennen und die Einsparungsberechnung im Einsparungsrechner anzuzeigen.</block>
-  <block id="3c424272d86dd628323516001aa99e6e" category="cell">Melden Sie sich an</block>
-  <block id="7b749fcc97c5c2a0bb8e16cb377f5a71" category="cell">Wo erforderlich?</block>
-  <block id="c9bc7594ee62d0c351dae6b83370562b" category="cell"><block ref="ef51f73dd4b173855a32e89075ae6d6a" prefix="" category="inline-code"></block></block>
-  <block id="55b9e1ad0e3385fe9e930e60422bf964" category="paragraph">Bestandsaufnahme, Bewertung, Korrektur, Datenbank erstellen, Sandbox-Klon erstellen, Einsparungen entdecken</block>
-  <block id="52dbdba9f8efc424e3647d5fa9481b33" category="cell"><block ref="997eaa81353e01df1a3834bc67b02895" prefix="" category="inline-code"></block></block>
-  <block id="9c63fb58881db7f963fbc50219125431" category="paragraph">Bestandsaufnahme, Bewertung, Korrektur, Datenbank erstellen, Sandbox-Klon erstellen</block>
-  <block id="c2d30b0b254c8547b9acbbdd90603d7a" category="cell"><block ref="60c6c6d38d8a5aa079b31fa10cc7c20a" prefix="" category="inline-code"></block></block>
-  <block id="8a2d6633dcb68e6ff0d85222e7082082" category="cell"><block ref="29eaac47a48cb18afd7ccf57582f12e4" prefix="" category="inline-code"></block></block>
-  <block id="fa51fd57abb0283d815c171a4b309940" category="paragraph">Datenbank erstellen und Sandbox-Klon erstellen</block>
-  <block id="c95188979745727b537f665c08755be5" category="cell"><block ref="af0cad6b0855295d542d0a31e5d61e2b" prefix="" category="inline-code"></block></block>
-  <block id="fa778d6d07c47f1228af4ce6bcb13480" category="paragraph">Sandbox-Klon erstellen</block>
-  <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
-  <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
-  <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">Sandbox-Klon erstellen, Korrektur für MAXDOP</block>
   <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">Dashboard-Verbesserungen</block>
   <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">Kunden- und regionsübergreifende Ansichten sind verfügbar, wenn Sie in der BlueXP  Workload Factory-Konsole zwischen den Registerkarten navigieren. Die neuen Ansichten verbessern das Ressourcenmanagement, die Überwachung und die Optimierung.</block>
   <block id="6e21267988cadc818dd398393c695465" category="list-text">Über die Kachel *potenzielle Einsparungen* im Dashboard können Sie schnell überprüfen, was Sie sparen könnten, indem Sie vom Amazon Elastic Block Store oder Amazon FSX for Windows File Server zu FSX for ONTAP wechseln.</block>
@@ -1039,10 +908,7 @@
   <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">Die Benutzeroberfläche und Dokumentation der Workload Factory verwenden jetzt „Read-Only“, um auf Leseberechtigungen und „Read-Write“ zu verweisen, um Berechtigungen zu automatisieren.</block>
   <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">Entfernung des lokalen Hosts</block>
   <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host untersucht haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus der BlueXP  Workload Factory zu entfernen. Wählen Sie das drei-Punkt-Menü des lokalen Microsoft SQL Server-Hosts aus und wählen Sie dann *Löschen* aus.</block>
-  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">Klone: Umfasst Optionen zum Aktualisieren und Löschen von Klonen (Sandbox-Umgebungen), die älter als 60 Tage sind</block>
   <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">Wählen Sie auf der Registerkarte *Inventar* die Registerkarte *Instanzen* aus.</block>
-  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">Wählen Sie das drei-Punkt-Menü der zu optimierenden Instanz aus und wählen Sie dann *optimieren*.</block>
-  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">Überprüfen Sie für alle Konfigurationen mit Ausnahme der Klonbereinigung im Optimierungsdialog die Optimierungsdetails, um zu erfahren, was bei der Optimierung geschieht. Einige Optimierungsvorgänge können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen.</block>
   <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">Wählen Sie für die Klonbereinigung geklonte Datenbanken (Sandbox) zum Aktualisieren oder Löschen aus.</block>
   <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">Durch das Aktualisieren eines Klons wird er mit der Quelldatenbank synchronisiert. Aktualisierung ist nur für Klone verfügbar, die in den Werkseinstellungen des Workloads erstellt wurden.</block>
   <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">Durch Löschen eines Klons wird dieser dauerhaft gelöscht, Speicherplatz wird freigegeben und die Kosten werden gesenkt. Sie können Klone löschen, die in und außerhalb der Werkseinstellungen des Workloads erstellt wurden.</block>
@@ -1077,11 +943,152 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CloudShell CLI*: Workload Factory enthält eine CloudShell CLI zum Verwalten und Betreiben von AWS- und NetApp-Umgebungen über Konten hinweg über eine einzige browserbasierte CLI. Greifen Sie über die oberste Leiste der Workload-Factory-Konsole auf CloudShell zu.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*REST-API*: Verwenden Sie die REST-APIs für die Workload Factory, um Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen bereitzustellen und zu managen.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Verwenden Sie AWS CloudFormation-Code für die Durchführung der Aktionen, die Sie in der Workload-Factory-Konsole definiert haben, um AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu managen.</block>
-  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Auf der Registerkarte Inventar und im Dashboard unterstützt die Workload Factory bis zu 1.500 Datenbanken innerhalb von SQL-Serverinstanzen.</block>
   <block id="905bc3578e603008d83976307778ddcc" category="list-text">Gehen Sie wie folgt vor, um Empfehlungen für Instanztypen zu erhalten und die Kostengenauigkeit zu verbessern:</block>
   <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">Erteilen Sie Berechtigungen für Amazon CloudWatch und AWS Compute Optimizer.</block>
   <block id="1dffe1578c264cd074d1fbf2823deeca" category="list-text">Melden Sie sich bei der AWS-Managementkonsole an und öffnen Sie den IAM-Dienst.</block>
   <block id="429fc992484e56fc5119b7b343df8bab" category="list-text">Bearbeiten Sie die Richtlinie für die IAM-Rolle. Kopieren und fügen Sie die folgenden Amazon CloudWatch- und AWS Compute Optimizer-Berechtigungen hinzu.</block>
   <block id="948ce9adc60f5781dbfbd99d2c9d74d5" category="list-text">Melden Sie sich für das kostenpflichtige AWS-Konto bei AWS Compute Optimizer an.</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP -Workload-Factory-Provider*: Verwenden Sie Terraform, um Infrastruktur-Workflows zu erstellen und zu managen, die in der Workload Factory-Konsole generiert werden.</block>
+  <block id="938691193541892254da342a65418ef3" category="doc">PostgreSQL- und Oracle-Erkennung</block>
+  <block id="a35833d039b2504ef8c787b30e723967" category="paragraph">Sie können jetzt die Instanzen, die PostgreSQL-Serverdatenbanken und Oracle-Datenbankbereitstellungen in Ihrem AWS-Konto ausführen, in der Workload Factory-Konsole ermitteln. Erkannte Instanzen werden im Datenbankinventar angezeigt.</block>
+  <block id="fd1fe4efcf471a552598d4396db84a26" category="section-title">Aktualisierte Terminologie „Optimierung“</block>
+  <block id="a832a618559e9b6325bfe90eb3e86587" category="paragraph">Workload Factory wurde früher als „Optimierung“ bezeichnet und verwendet jetzt „Well-Architected Issues“ und „Well-Architected Status“, um die Analyse von Datenbankkonfigurationen zu beschreiben, und „Fix“, um Abhilfemaßnahmen für Möglichkeiten zur Verbesserung von Datenbankkonfigurationen zu beschreiben, um Best-Practice-Empfehlungen zu erfüllen.</block>
+  <block id="c551233916d554410ddca9f767142b1a" category="inline-link-macro">Konfigurationsanalyse für Datenbankumgebungen in der Workload Factory</block>
+  <block id="2cfa2ba77f1346dd5f1a96ad6f3af2b2" category="paragraph"><block ref="2cfa2ba77f1346dd5f1a96ad6f3af2b2" category="inline-link-macro-rx"></block></block>
+  <block id="f0b8560f05681c5a0a0de7a2cb0d761e" category="section-title">Verbessertes Onboarding für Host-Instanzen</block>
+  <block id="2acb806aac138a6758718c6f833095ab" category="paragraph">Anstelle der Begriffe „unerkannt“, „unverwaltet“ oder „verwaltet“ für die Verwaltung von Hostinstanzen verwendet Workload Factory jetzt „Registrieren“ für das Onboarding von Hostinstanzen. Der neue Registrierungsprozess umfasst die Authentifizierung und Vorbereitung von Hostinstanzen, sodass Sie Ressourcen in Ihren Datenbankkonfigurationen in der Workload Factory-Konsole erstellen, überwachen, analysieren und reparieren können. Der Vorbereitungsschritt im Registrierungsprozess zeigt an, ob Ihre Hostinstanzen für die Verwaltung bereit sind.</block>
+  <block id="4f91bce4a20615964f35d2fd97ddb2e1" category="inline-link-macro">Instanzmanagement</block>
+  <block id="68d9261728b0a851ce7bc78b7cfd2a69" category="paragraph"><block ref="68d9261728b0a851ce7bc78b7cfd2a69" category="inline-link-macro-rx"></block></block>
+  <block id="a037440b0e452d149e3d4cdec9e6a911" category="doc">Erstellen Sie einen Microsoft SQL Server in der Workload Factory für Datenbanken</block>
+  <block id="5d89a931c9c04b55c06760675a1ace5a" category="paragraph">Zum Erstellen eines neuen Microsoft SQL Servers oder Datenbankhosts in der Workload Factory für Datenbanken sind eine FSx für die ONTAP-Dateisystembereitstellung und Ressourcen für Active Directory erforderlich.</block>
+  <block id="633d049f8d85b55877f18aabc34b1da8" category="paragraph">Informieren Sie sich vor dem Erstellen eines Microsoft SQL Servers aus der Workload Factory über die verfügbaren Speicherbereitstellungstypen für die Datenbankhostkonfiguration, die Microsoft Multi-Path I/O-Konfiguration, die Active Directory-Bereitstellung, Netzwerkdetails und die Anforderungen zum Abschließen dieses Vorgangs.</block>
+  <block id="ccac5f43f95e209ed7e8f8ddd1b75d8b" category="inline-link-macro">AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus</block>
+  <block id="b949760a108bef94fc7f866ca09b5155" category="list-text">Sie müssen <block ref="09d2f3d3c667abb40f8d2ba111b9c06b" category="inline-link-macro-rx"></block>einen neuen Datenbank-Host in der Workload Factory erstellen.</block>
+  <block id="f8c2bea89896f4c645e761417ab6d4bd" category="paragraph">Stellen Sie sicher, dass Bereitstellungssubnetze mit vorhandenen Schnittstellenendpunkten verknüpft sind und Sicherheitsgruppen den Zugriff auf das HTTPS-Protokoll (443) auf die ausgewählten Subnetze ermöglichen.</block>
+  <block id="e2aadc51c2249a0d2d63030bd046d5b5" category="paragraph">Bei Verwendung eines Cross-VPC-DNS sollte die Sicherheitsgruppe für Endpunkte in der anderen VPC, in der sich der DNS befindet, Port 443 für Bereitstellungssubnetze freigeben. Andernfalls sollten Sie beim Beitritt zu einem Cross-VPC-Active Directory einen DNS-Resolver aus der lokalen VPC bereitstellen. In einer Umgebung mit mehreren replizierten Domänencontrollern können Sie, wenn einige Domänencontroller vom Subnetz aus nicht erreichbar sind, *zu CloudFormation umleiten* und Folgendes eingeben: <block ref="a756f9902f1db5a37f12d3f459f172a5" prefix=" " category="inline-code"></block> um eine Verbindung mit Active Directory herzustellen.</block>
+  <block id="83e91497a1333c0a1b677d8c63d846d9" category="list-text">Klicken Sie auf das Drei-Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.</block>
+  <block id="ed3f634cbd31e15d5053aa9ab9457edd" category="summary">Melden Sie die Registrierung einer Hostinstanz ab, wenn Sie Instanzressourcen nicht mehr bereitstellen oder überwachen möchten.</block>
+  <block id="179df01f4b6338c16193d13eebec699f" category="doc">Aufheben der Registrierung einer Hostinstanz in der Workload Factory</block>
+  <block id="d5b67e9f32aa7f075a02dc0f4ccc6c3a" category="paragraph">Heben Sie die Registrierung einer Hostinstanz auf, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten. Durch die Aufhebung der Registrierung von Instanzen wird auch die von der Hostinstanz belegte Speicherkapazität reduziert.</block>
+  <block id="db8588c095bdb42680df1d8ae6e6c242" category="paragraph">Sie können die Instanz später erneut registrieren.</block>
+  <block id="8271201bd0a4537e2de1fc26930a2ba9" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Hostinstanz zu erweitern, deren Registrierung Sie aufheben möchten.</block>
+  <block id="6e58f833a8c88963786858e4cd0820f1" category="list-text">Klicken Sie auf das Drei-Punkte-Menü der Instanz, um sich abzumelden.</block>
+  <block id="a20e9b47d2ae2e8dcad4b38296aada53" category="list-text">Wählen Sie *Abmelden*.</block>
+  <block id="ac142b4fd3c523bd0cca87e5783c6edf" category="paragraph">Die Registrierung der Hostinstanz ist nun aufgehoben. Sie können die Instanz später erneut registrieren.</block>
+  <block id="57b8b12d92efb891c61703846230423a" category="section-title">Unterstützung der Hostinstanzerkennung</block>
+  <block id="7d02c7321e50b7c2fa346dd9edc083f2" category="paragraph">Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.</block>
+  <block id="6923ba19fe8a091f76827ff8c86785de" category="summary">Workload Factory für Datenbanken ist ein End-to-End-Dienst zur Bereitstellung und Wartung von Datenbanken mit integrierten Best Practices zur Optimierung, automatischem Thin Cloning sowie Überwachungs- und Lösungsfunktionen.</block>
+  <block id="bb3a81d6ea3e61933815d8c7984727a3" category="section-title">Was ist eine Workload Factory für Datenbanken?</block>
+  <block id="2d2ef55c7d048aa8eb19ea9e98550603" category="paragraph">Workload Factory für Datenbanken erkennt, bewertet, plant, stellt bereit und verschiebt Microsoft SQL Server-Daten zu Amazon FSx für NetApp ONTAP-Bereitstellungen (FSx für ONTAP), die optimiert sind, um Ihre Leistungs- und Kostenerwartungen zu erfüllen und gleichzeitig den Best Practices der Branche zu entsprechen. Während des gesamten Lebenszyklus sorgt die Workload-Fabrik für kontinuierliche Optimierung und Management von Datenbanken auf FSX für ONTAP.</block>
+  <block id="9d31d07638cfa37e022a93f50a24a37a" category="paragraph">Drei verschiedene Betriebsmodi – _Basis_, _Nur-Lesen_ und _Lesen/Schreiben_ – bieten flexible Optionen für die Bereitstellung innerhalb und außerhalb der Workload Factory. Erhalten Sie im _BASIC_-Modus sofort einen Wert ohne Vertrauen mit Codeschnipseln für die Verwendung außerhalb der Arbeitslast. Erzielen Sie inkrementellen Mehrwert durch inkrementelles Vertrauen in den Modi _Nur-Lesen_ und _Lesen/Schreiben_.</block>
+  <block id="a114eda0d7b20c56bc3d8d99fe48b64a" category="summary">Erfahren Sie mehr über die Instanzverwaltung in der Workload Factory für Datenbanken.</block>
+  <block id="88425651b441fbd6a0bc45cd78baf191" category="doc">Instanzverwaltung in der Workload Factory für Datenbanken</block>
+  <block id="90df9f628849131025aeded82280eaa8" category="paragraph">Die Verwaltung registrierter Hostinstanzen in der Workload Factory umfasst die Bereitstellung von Ressourcen für Ihre Instanzen, wie das Erstellen von Datenbanken und Datenbankklonen, sowie die Überwachung von Instanz- und Datenbankstatus, Ressourcenauslastung, Schutz und Speicherleistung. Darüber hinaus können Sie den Status Ihrer Datenbankkonfigurationen analysieren und Best Practices für die Konfiguration implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken. Die Instanzverwaltung ist nur für Instanzen mit FSx für ONTAP-Dateisystemspeicher verfügbar.</block>
+  <block id="c68f5f76376c72c5e7b3bfeebbd4b69f" category="inline-link-macro">Registrieren einer Hostinstanz</block>
+  <block id="9dafbc056db1eec54c306ae9f92c0be1" category="paragraph">Sie müssen <block ref="44c655052a7d5397fca0e24c93e80dee" category="inline-link-macro-rx"></block> um eine der folgenden Verwaltungsaufgaben auszuführen.</block>
+  <block id="a40a9332a94e9ee509dd52088052022f" category="paragraph">Zu den Managementaufgaben gehören:</block>
+  <block id="32b73a9b89aeca54ae1906ac5b5c40a3" category="inline-link-macro">Erstellen einer Datenbank</block>
+  <block id="d0a9d2136da399d9e73cfadd54adfb7a" category="list-text"><block ref="d0a9d2136da399d9e73cfadd54adfb7a" category="inline-link-macro-rx"></block></block>
+  <block id="45e1b252e76746345363ea0d06920684" category="inline-link-macro">Erstellen eines Datenbankklons (Sandbox)</block>
+  <block id="fd8a54c517020c653ae1776e8e00d343" category="list-text"><block ref="fd8a54c517020c653ae1776e8e00d343" category="inline-link-macro-rx"></block></block>
+  <block id="050cc3957bb212dc2758e7dd27f7faf8" category="inline-link-macro">Datenbanken anzeigen</block>
+  <block id="7a403e4f1f2e0af187fa5a95116054cc" category="list-text"><block ref="7a403e4f1f2e0af187fa5a95116054cc" category="inline-link-macro-rx"></block></block>
+  <block id="f4a7fa0c2cfabd3c771238fbdb6c7ae5" category="inline-link-macro">Überwachen von Datenbankvorgängen</block>
+  <block id="b92726505ce75a5aa80c8086ae979c25" category="list-text"><block ref="b92726505ce75a5aa80c8086ae979c25" category="inline-link-macro-rx"></block></block>
+  <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">Implementierung gut konzipierter Datenbankkonfigurationen</block>
+  <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
+  <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">Implementieren Sie gut strukturierte Datenbankkonfigurationen in der Workload Factory</block>
+  <block id="0006f418861a6fb47d59a74b3db28869" category="paragraph">Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und implementieren Sie Best Practices für Ihre Datenbankkonfigurationen mithilfe der Workload Factory. Sie können Probleme leicht erkennen und Maßnahmen ergreifen, um die Architektur von Konfigurationen zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.</block>
+  <block id="bffcd6aaeac8e97cf82007491fd97512" category="paragraph">Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihre Konfigurationen Best Practices entsprechen.</block>
+  <block id="622529f53e43499d3ab7bec3ddade638" category="paragraph">Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme zu überprüfen und diese Probleme über das Datenbankinventar in der Workload Factory-Konsole zu beheben.</block>
+  <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">Was analysiert wird</block>
+  <block id="f6e75af7aefeb95ed6d70c67eae48cbc" category="list-text">Workload Factory analysiert den ordnungsgemäßen Architekturstatus der folgenden Konfigurationen für Microsoft SQL Server-Instanzen:</block>
+  <block id="eb39e8dfd54bf78043b2372b30f7b2b6" category="list-text">Klone: Enthält Optionen zum Aktualisieren und Löschen von Klonen (Sandboxen), die innerhalb oder außerhalb der Workload Factory erstellt wurden und älter als 60 Tage sind</block>
+  <block id="05733d6679707441838e3ca92fcb1e85" category="inline-link-macro">AWS-Kontoanmeldeinformationen und Lese-/Schreibberechtigungen</block>
+  <block id="e6ff59cff1eb616f7a9d6b770313807a" category="list-text">Sie müssen <block ref="6428f71963510d960d64cd03bb6513ae" category="inline-link-macro-rx"></block> um Ihre Datenbankkonfigurationen zu analysieren.</block>
+  <block id="bb4dc454356e65051d8e22516b60a260" category="inline-link-macro">Erfahren Sie, wie Sie eine Hostinstanz registrieren.</block>
+  <block id="606bc152b33b9976e88d57b374a1d46f" category="list-text">Um den Speicher einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz in der Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein. <block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
+  <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.</block>
+  <block id="55900adb296775523b32b30486b0de17" category="admonition">Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Lesen Sie die Empfehlung sorgfältig durch, bevor Sie sich für die Korrektur einer Konfiguration entscheiden.</block>
+  <block id="da0f3dbe0b914fb78e47ff54702db3df" category="list-text">Wählen Sie *Probleme beheben* aus, um Konfigurationsprobleme für die Instanz anzuzeigen.</block>
+  <block id="a85bf70a610b181df621eea76d0068e4" category="list-text">Überprüfen Sie auf der Statusseite „Well-Architected“ für die Hostinstanz die Ergebnisse der Analyse.</block>
+  <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">Sie können Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.</block>
+  <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">Sie können auch einen Bericht mit den Ergebnissen herunterladen, indem Sie *PDF exportieren* auswählen.</block>
+  <block id="f73028254f9c4297e3f60654068105e0" category="list-text">Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Zu den Empfehlungen gehören bewährte Methoden, potenzielle Fallstricke nicht optimierter Konfigurationen und wichtige Überlegungen. Überprüfen Sie die Empfehlung sorgfältig.</block>
+  <block id="dae891145ffbf1b1653fc3da2a87faac" category="list-text">Wählen Sie „Konfigurationsprobleme anzeigen und beheben“ aus, wenn die Option verfügbar ist.</block>
+  <block id="af60fff54046e840f7e220def239ff80" category="list-text">Lesen Sie für alle Konfigurationen außer der Klonbereinigung die Empfehlungen, um zu erfahren, was passiert, wenn Sie sich für die Optimierung entscheiden. Einige Korrekturvorgänge können zu Instanzausfallzeiten oder Dienstunterbrechungen führen.</block>
+  <block id="45b5dce37159255d07342e3102124571" category="list-text">Wählen Sie *Weiter*, um das Konfigurationsproblem zu beheben.</block>
+  <block id="94450f16c61ccd686586b6a304d73bda" category="paragraph">Der Sanierungsprozess wird eingeleitet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.</block>
+  <block id="79d26843be417ff5c9a9e3a3deda3e50" category="summary">Workload Factory für Datenbanken analysiert regelmäßig Microsoft SQL Server-Konfigurationen, um festzustellen, ob Probleme vorliegen.</block>
+  <block id="dd79b42f7eeac8287405a50984fca176" category="paragraph">Workload Factory für Datenbanken analysiert regelmäßig Datenbankkonfigurationen, um festzustellen, ob Probleme mit Microsoft SQL Server-Bereitstellungen auf Amazon FSx für NetApp ONTAP-Speicher vorliegen. Bei Problemen zeigt Ihnen Workload Factory die Ursachen und erklärt, was geändert werden muss, um sicherzustellen, dass Ihre Datenbankkonfigurationen maximale Leistung, Kosteneffizienz und Best Practices erreichen.</block>
+  <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">Tägliche Konfigurationsanalyse</block>
+  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">Zustand der Architektur gut</block>
+  <block id="766f78d394e3aa97e328026acbda4d55" category="paragraph">In der Workload-Factory-Konsole auf Filesystem-Ebene wird der gut konzipierte Status für alle FSX for ONTAP-Dateisysteme aufgeführt. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut strukturiert“ kategorisiert. Wenn Sie den Status „gut strukturiert“ auswählen, werden Sie auf die Registerkarte „gut strukturiert“ im Dateisystem weitergeleitet, auf der Sie die gut konzipierte Punktzahl, die Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden können.</block>
+  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">Gut konzipierte Punktzahl</block>
+  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.</block>
+  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">Konfigurationskategorien</block>
+  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.</block>
+  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.</block>
+  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.</block>
+  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.</block>
+  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_Kostenoptimierung_: Zielt darauf ab, einen geschäftlichen Nutzen zu erzielen und gleichzeitig Kosten zu minimieren.</block>
+  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.</block>
+  <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">Analyseumfang</block>
+  <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">Analyseanforderungen</block>
+  <block id="389751c9d4b8ea76783de1b291cac92f" category="paragraph">Für eine vollständige Analyse der Datenbankumgebung müssen Hostinstanzen registriert und online sein.</block>
+  <block id="f22f9817b1d52aa896a88fe9442f70ef" category="paragraph"><block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
+  <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">Implementieren Sie gut konzipierte Datenbankkonfigurationen</block>
+  <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
+  <block id="27cb094655bbfaa4d3b2c3b34d1c1557" category="summary">Beginnen Sie mit der Workload Factory für Datenbanken, um Infrastructure-as-Code-Snippets zu verwenden, Hosts zu entdecken, Ressourcen zu verwalten und mehr.</block>
+  <block id="9581188088644b11d46ac4ae29789386" category="doc">Schnellstart für Workload Factory für Datenbanken</block>
+  <block id="0bf39c9f8183add14af5a19ad4c80ff7" category="paragraph">Mit Workload Factory für Datenbanken können Sie sofort im _Basis_-Modus loslegen. Wenn Sie die Workload Factory verwenden möchten, um Hosts zu ermitteln, Ressourcen zu verwalten und vieles mehr, können Sie in wenigen Schritten beginnen.</block>
+  <block id="742b9524a4ab93b49eb1614d2aa4287b" category="inline-link-macro">Betriebsmodi _Basis_, _Nur-Lesen_ und _Lesen/Schreiben_</block>
+  <block id="e19be16b30ba3a27ed29174edef4c120" category="paragraph">Wählen Sie zwischen <block ref="5653101a5bec855c555e8762c96ccdfc" category="inline-link-macro-rx"></block>.</block>
+  <block id="b60b67e70947e6a46c89e0d1c15f532f" category="paragraph">Wenn Sie im _Nur-Lese-Modus_ oder _Lesen/Schreiben_ arbeiten, müssen Sie <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> Dazu gehört die Auswahl von Workload-Funktionen wie Datenbanken und GenAI sowie die Erstellung der IAM-Richtlinien, um sicherzustellen, dass Sie über die richtigen Berechtigungen für den Betrieb im _Nur-Lese_- oder _Lese-/Schreib_-Modus verfügen.</block>
+  <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">Bereitstellen eines Hostservers</block>
+  <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">eine Instanz registrieren</block>
+  <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">Wenn Sie den Lese-/Schreibmodus verwenden möchten, müssen Sie <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> oder <block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block> um Ihre Hostressourcen zu verwalten und bevor Sie Benutzerdatenbanken hinzufügen.</block>
+  <block id="db04547f806a50b5e3c5bbceb867c6c9" category="paragraph">Wenn Sie Host-Instanzen mit FSx für ONTAP-Dateisystemspeicher in Ihrem Datenbankinventar registriert haben, können Sie <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> oder <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
+  <block id="8373481dd509f9b495f59748db1aa76d" category="doc">Registrieren Sie Instanzen in der Workload Factory für Datenbanken</block>
+  <block id="794053eb13ca148da7e2fcaea90530b3" category="paragraph">Registrieren Sie Hostinstanzen, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.</block>
+  <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">Datenbanken können Instanzen nur mit FSx für ONTAP-Dateisystemspeicher registrieren.</block>
+  <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">Über die Aufgabe</block>
+  <block id="29e386e963401779c0de5dccb7b701a0" category="paragraph">Das Registrieren einer Hostinstanz umfasst zwei Schritte: die Authentifizierung der Instanz und die Vorbereitung der Instanz, indem sichergestellt wird, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz installiert sind.</block>
+  <block id="dda5f7103fa5228c52d16c80f09cc5ad" category="paragraph">Sie können Links mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.</block>
+  <block id="2a627091d8c05a05162dae18a0e3dc31" category="admonition">Workload Factory unterstützt ausschließlich die Registrierung und Verwaltung von Microsoft SQL Server-Hostinstanzen. Abhängig von den in Workload Factory ausgewählten AWS-Kontoanmeldeinformationen werden möglicherweise PostgreSQL- und Oracle-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen nur auf Amazon Linux-Betriebssystemen und Oracle-Instanzen nur auf Red Hat Enterprise Linux.</block>
+  <block id="5e6ee18c02f118771f0e10235d44bd14" category="section-title">Registrieren einer Hostinstanz in einem privaten Netzwerk</block>
+  <block id="0af95213cc557c61a7ba3ca92d68f09e" category="paragraph">Um eine Hostinstanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.</block>
+  <block id="d38541ea862d6762d01f5f9d42fbd683" category="inline-link-macro">Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese- oder Automatisierungsmodus hinzufügen</block>
+  <block id="36bfb43c49e597b3bb45a5bb2997033b" category="paragraph">Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, <block ref="dd302a73ba9dc99cb46da731db0bf41c" category="inline-link-macro-rx"></block> .</block>
+  <block id="6a408aaa659cc5010ab5ed464d20688c" category="section-title">Registrieren einer Hostinstanz</block>
+  <block id="75cd4168051c5052e88a17b464261a1b" category="paragraph">Das Registrieren einer Hostinstanz umfasst die Instanzauthentifizierung und -vorbereitung.</block>
+  <block id="573898775af774ec571967393eb2000b" category="list-text">Wählen Sie auf der Registerkarte „Inventar“ die Registerkarte *Instanzen* aus.</block>
+  <block id="c5058b99cc6deeedc6528c1f97fb85d0" category="list-text">Navigieren Sie zu der zu verwaltenden Instanz und wählen Sie *Instanz registrieren*.</block>
+  <block id="aade5563fc6aa38dd34cae4243205c2f" category="list-text">Geben Sie auf der Seite „Instanz registrieren“ den Benutzernamen und das Kennwort für SQL Server sowie den Benutzernamen und das Kennwort für das FSx for ONTAP-Dateisystem ein.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Wählen Sie *Weiter*.</block>
+  <block id="572a54088f94488130d1ac3055b373ac" category="list-text">Bereiten Sie die Instanz vor, indem Sie sicherstellen, dass sie die erforderlichen Voraussetzungen erfüllt. Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, klicken Sie auf *Weiter*, um die Instanz zu registrieren. Falls Sie Maßnahmen ergreifen müssen, führen Sie die folgenden Schritte aus.</block>
+  <block id="6f46b8383b008a103c4bdd369e5fa92e" category="list-text">Falls fehlend, wählen Sie Workload Factory aus, um *fehlende AWS- und NetApp PowerShell-Module zu installieren*.</block>
+  <block id="32ab85eda4f533657c12e81e940cffd6" category="list-text">Falls das fehlende Modul fehlt, wählen Sie die Workload Factory aus, um das fehlende PowerShell 7 zu installieren. Die Installation des fehlenden PowerShell-Moduls 7 erfordert einen Systemneustart.</block>
+  <block id="3a36d2a0f50b8674db7030efa3481a16" category="list-text">Überprüfen Sie die Liste der Voraussetzungen für die folgenden Funktionen. Eine Voraussetzung muss erfüllt sein, um die Instanz registrieren zu können.</block>
+  <block id="63d045fa5e972b158cfb23097e222ca7" category="list-text">*Überprüfen Sie gut strukturierte Probleme und Empfehlungen*</block>
+  <block id="fadeabdd0af8696756351a03b6a3e38f" category="list-text">*Beheben Sie gut konzipierte Probleme*</block>
+  <block id="682848268cf27965cff502f178244a95" category="list-text">*Datenbank erstellen*</block>
+  <block id="e1f772db4ebe33be8870db0341b57f2e" category="list-text">*Datenbankkopien erstellen (Sandbox)*</block>
+  <block id="bbd75173916a59e2d03d0aa3c8453950" category="paragraph">Zum Erfüllen der Voraussetzungen gehört die Aktualisierung Ihrer AWS IAM-Richtlinienberechtigungen, EC2 IAM-Instanzprofilberechtigungen, SQL Server-Berechtigungen und PowerShell-Module.</block>
+  <block id="00e81f5539f96548498b7f28a5b0bf73" category="list-text">Erfüllen Sie mindestens eine fehlende Voraussetzung, um fortzufahren.</block>
+  <block id="efad96be420cc388123ecddd686d794e" category="list-text">Wenn eine oder mehrere Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Instanz *registrieren*.</block>
+  <block id="a037e794bf828053866493b8452ab9c7" category="paragraph">Die Anforderung zur Registrierung der Instanz wird gestartet. Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.</block>
+  <block id="5dfcf5a53e6a3c94eb359647b453a807" category="summary">Um eine Übersicht über die Datenbankressourcen in der Workload Factory zu erhalten, zeigen Sie alle Datenbanken im Datenbankbestand an. Sie können auch Datenbanken pro einzelner registrierter Instanz anzeigen.</block>
+  <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">Anzeigen von Datenbanken in der Workload Factory für Datenbanken</block>
+  <block id="0ab190804913b1145bf64c21befa3286" category="list-text">Hostinstanzen, die Datenbankressourcen enthalten, müssen über FSx für ONTAP-Dateisystemspeicher verfügen.</block>
+  <block id="682d1e77482e7088c166b62c34287660" category="inline-link-macro">Hostinstanzen registrieren</block>
+  <block id="13e6dec9f19066e3153eb07ec978ea2b" category="list-text">Hostinstanzen müssen in der Workload Factory registriert sein. Erfahren Sie, wie man <block ref="2dbc08dda5209ee806e4433f973c765a" category="inline-link-macro-rx"></block>.</block>
+  <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">Anzeigen von Datenbanken für eine einzelne Instanz</block>
+  <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">Datenbanken für alle Instanzen anzeigen</block>
+  <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">Sie haben die Datenbankressourcen innerhalb der Workload Factory angezeigt.</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 Juni 2025</block>
+  <block id="ebb5d0c39395173ae9cea85bcf7d498e" category="sidebar">Registrieren einer Instanz</block>
+  <block id="c38254582571637e4bded341a22ff035" category="sidebar">Verwalten von Instanzen</block>
+  <block id="414fc89f66239e288860442b939928c9" category="sidebar">Implementieren von Best Practices für die Konfiguration</block>
+  <block id="a78c9036bfa9cb64272150072bb64123" category="sidebar">Konfigurationsanalyse für Datenbanken</block>
 </blocks>
