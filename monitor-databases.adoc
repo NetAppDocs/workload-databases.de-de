@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der BlueXP  Workload-Fabrik für Datenbanken. 
+summary: Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der Workload Factory für Datenbanken. 
 ---
-= Überwachen von Datenbanken in der BlueXP  Workload-Fabrik
+= Überwachen von Datenbankjobs in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der BlueXP  Workload-Fabrik für Datenbanken.
+Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der Workload Factory für Datenbanken.
 
 .Über diese Aufgabe
 Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.

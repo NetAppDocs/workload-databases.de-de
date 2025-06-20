@@ -54,7 +54,7 @@ sidebar:
       url: "/automate-codebox.html"
   - title: Administration und Überwachung
     entries:
-    - title: Überwachen von Datenbanken
+    - title: Überwachen von Datenbankjobs
       url: "/monitor-databases.html"
     - title: Implementieren von Best Practices für die Konfiguration
       entries:
@@ -64,8 +64,6 @@ sidebar:
         url: "/optimize-configurations.html"
       - title: Verschieben der Konfigurationsanalyse
         url: "/postpone-analysis.html"
-    - title: Managen eines Microsoft SQL-Servers
-      url: "/manage-server.html"
     - title: Management von Klonen
       entries:
       - title: Integrität eines Sandbox-Klons prüfen

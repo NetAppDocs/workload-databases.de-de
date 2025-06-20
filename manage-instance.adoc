@@ -20,6 +20,5 @@ Zu den Managementaufgaben gehören:
 * link:create-database.html["Erstellen einer Datenbank"]
 * link:create-sandbox-clone.html["Erstellen eines Datenbankklons (Sandbox)"]
 * link:view-databases.html["Datenbanken anzeigen"]
-* link:monitor-databases.html["Überwachen von Datenbankvorgängen"]
 * link:optimize-configurations.html["Implementierung gut konzipierter Datenbankkonfigurationen"]
 
