@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-instance.html 
-keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
 summary: Erfahren Sie mehr über die Instanzverwaltung in der Workload Factory für Datenbanken. 
 ---
 = Instanzverwaltung in der Workload Factory für Datenbanken
@@ -11,9 +11,9 @@ summary: Erfahren Sie mehr über die Instanzverwaltung in der Workload Factory f
 
 
 [role="lead"]
-Die Verwaltung registrierter Hostinstanzen in der Workload Factory umfasst die Bereitstellung von Ressourcen für Ihre Instanzen, wie das Erstellen von Datenbanken und Datenbankklonen, sowie die Überwachung von Instanz- und Datenbankstatus, Ressourcenauslastung, Schutz und Speicherleistung. Darüber hinaus können Sie den Status Ihrer Datenbankkonfigurationen analysieren und Best Practices für die Konfiguration implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken. Die Instanzverwaltung ist nur für Instanzen mit FSx für ONTAP-Dateisystemspeicher verfügbar.
+Die Verwaltung registrierter Instanzen in der Workload Factory umfasst die Bereitstellung von Ressourcen für Ihre Instanzen, z. B. das Erstellen von Datenbanken und Datenbankklonen, sowie die Überwachung des Instanz- und Datenbankstatus, der Ressourcenauslastung, des Schutzes und der Speicherleistung. Darüber hinaus können Sie den Status Ihrer Datenbankkonfigurationen analysieren und Best Practices für die Konfiguration implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken. Die Instanzverwaltung ist nur für Instanzen mit FSx für ONTAP-Dateisystemspeicher verfügbar.
 
-Sie müssen link:register-instance.html["Registrieren einer Hostinstanz"] um eine der folgenden Verwaltungsaufgaben auszuführen.
+Sie müssen link:register-instance.html["eine Instanz registrieren"] um eine der folgenden Verwaltungsaufgaben auszuführen.
 
 Zu den Managementaufgaben gehören:
 

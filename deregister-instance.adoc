@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
-summary: Melden Sie die Registrierung einer Hostinstanz ab, wenn Sie Instanzressourcen nicht mehr bereitstellen oder überwachen möchten. 
+summary: Melden Sie die Registrierung einer Instanz ab, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten. 
 ---
-= Aufheben der Registrierung einer Hostinstanz in der Workload Factory
+= Abmelden einer Instanz in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Heben Sie die Registrierung einer Hostinstanz auf, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten. Durch die Aufhebung der Registrierung von Instanzen wird auch die von der Hostinstanz belegte Speicherkapazität reduziert.
+Melden Sie eine Instanz ab, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten. Durch die Abmeldung wird auch die von der Instanz belegte Speicherkapazität gelöscht.
 
 Sie können die Instanz später erneut registrieren.
 
@@ -19,13 +19,13 @@ Sie können die Instanz später erneut registrieren.
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Hostinstanz zu erweitern, deren Registrierung Sie aufheben möchten.
+. Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Instanz zu erweitern, deren Registrierung Sie aufheben möchten.
 +
-Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+Der Host wird erweitert und die Instanzen werden angezeigt.
 
 . Klicken Sie auf das Drei-Punkte-Menü der Instanz, um sich abzumelden.
 . Wählen Sie *Abmelden*.
 
 
 .Ergebnis
-Die Registrierung der Hostinstanz ist nun aufgehoben. Sie können die Instanz später erneut registrieren.
+Die Instanz ist nun abgemeldet. Sie können die Instanz später erneut registrieren.

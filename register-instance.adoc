@@ -11,7 +11,7 @@ summary: Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-F
 
 
 [role="lead"]
-Registrieren Sie Hostinstanzen, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.
+Registrieren Sie Instanzen, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.
 
 Datenbanken können Instanzen nur mit FSx für ONTAP-Dateisystemspeicher registrieren.
 
@@ -19,18 +19,18 @@ Datenbanken können Instanzen nur mit FSx für ONTAP-Dateisystemspeicher registr
 
 == Über die Aufgabe
 
-Das Registrieren einer Hostinstanz umfasst zwei Schritte: die Authentifizierung der Instanz und die Vorbereitung der Instanz, indem sichergestellt wird, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz installiert sind.
+Das Registrieren einer Instanz umfasst zwei Schritte: die Authentifizierung der Instanz und die Vorbereitung der Instanz, indem sichergestellt wird, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz installiert sind.
 
 Sie können Links mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.
 
 
-NOTE: Workload Factory unterstützt ausschließlich die Registrierung und Verwaltung von Microsoft SQL Server-Hostinstanzen. Abhängig von den in Workload Factory ausgewählten AWS-Kontoanmeldeinformationen werden möglicherweise PostgreSQL- und Oracle-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen nur auf Amazon Linux-Betriebssystemen und Oracle-Instanzen nur auf Red Hat Enterprise Linux.
+NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen. Abhängig von den in Workload Factory ausgewählten AWS-Kontoanmeldeinformationen werden möglicherweise PostgreSQL- und Oracle-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen nur auf Amazon Linux-Betriebssystemen und Oracle-Instanzen nur auf Red Hat Enterprise Linux.
 
 
 
-== Registrieren einer Hostinstanz in einem privaten Netzwerk
+== Registrieren einer Instanz in einem privaten Netzwerk
 
-Um eine Hostinstanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
+Um eine Instanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -50,23 +50,44 @@ Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen 
 
 == Bevor Sie beginnen
 
-Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
+Beachten Sie Folgendes, bevor Sie eine Instanz registrieren:
+
+* Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
+* Bei Verwendung von Windows-Domänenbenutzeranmeldeinformationen zur Authentifizierung für SQL Server-Verwaltungsvorgänge aktiviert Workload Factory die CredSSP-Delegierung auf den SQL-Knoten. Wenn die CredSSP-Delegierung für alle Domänencomputer mit der Gruppenrichtlinie blockiert ist, funktioniert die Authentifizierung mit Windows-Benutzeranmeldeinformationen nicht.
 
 
 
-== Registrieren einer Hostinstanz
 
-Das Registrieren einer Hostinstanz umfasst die Instanzauthentifizierung und -vorbereitung.
+== Registrieren einer Instanz
+
+Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbereitung.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Wählen Sie auf der Registerkarte „Inventar“ die Registerkarte *Instanzen* aus.
-. Navigieren Sie zu der zu verwaltenden Instanz und wählen Sie *Instanz registrieren*.
-. Geben Sie auf der Seite „Instanz registrieren“ den Benutzernamen und das Kennwort für SQL Server sowie den Benutzernamen und das Kennwort für das FSx for ONTAP-Dateisystem ein.
-. Wählen Sie *Weiter*.
-. Bereiten Sie die Instanz vor, indem Sie sicherstellen, dass sie die erforderlichen Voraussetzungen erfüllt. Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, klicken Sie auf *Weiter*, um die Instanz zu registrieren. Falls Sie Maßnahmen ergreifen müssen, führen Sie die folgenden Schritte aus.
+. Wählen Sie aus, ob Sie eine einzelne Instanz oder mehrere Instanzen registrieren möchten.
++
+.. Registrierung einer einzelnen Instanz: Navigieren Sie zu der zu verwaltenden Instanz und wählen Sie *Instanz registrieren*.
+.. Registrierung mehrerer Instanzen: Wählen Sie die Schaltfläche *Mehrere Instanzen registrieren*.
++
+Für die Registrierung mehrerer Instanzen stehen zwei Optionen zur Verfügung. In beiden Fällen müssen die Instanzen denselben Authentifizierungsstatus aufweisen (nicht authentifiziert oder authentifiziert).
+
++
+*** Nicht authentifizierte Instanzen: Wählen Sie mehrere nicht authentifizierte Instanzen zur Registrierung aus. Diese Instanzen müssen dieselben Authentifizierungsdaten und FSx for ONTAP-Anmeldeinformationen verwenden. Wählen Sie *Übernehmen* und dann *Weiter*.
+*** Authentifizierte Instanzen: Wählen Sie mehrere authentifizierte Instanzen zur Registrierung aus und wählen Sie dann *Weiter*.
+
+
+
+
+. Wählen Sie in Schritt 2 auf der Seite „Instanzen registrieren“ den Instanzauthentifizierungsmodus aus, geben Sie die folgenden Details ein und wählen Sie *Weiter*. Wenn Instanzen bereits authentifiziert sind, wählen Sie *Weiter*.
++
+** *SQL Server-Authentifizierung*: Geben Sie den Benutzernamen und das Kennwort des SQL Servers sowie den Benutzernamen und das Kennwort des FSx for ONTAP-Dateisystems ein.
+** *Windows-Authentifizierung*: Geben Sie den Windows-Benutzernamen und das Kennwort sowie den Benutzernamen und das Kennwort für das FSx for ONTAP-Dateisystem ein.
+
+
+. Bereiten Sie in Schritt 3 die Instanz vor, indem Sie sicherstellen, dass die Instanz die erforderlichen Voraussetzungen erfüllt. Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, klicken Sie auf *Weiter*, um die Instanz zu registrieren. Falls Sie Maßnahmen ergreifen müssen, führen Sie die folgenden Schritte aus.
 +
 .. Falls fehlend, wählen Sie Workload Factory aus, um *fehlende AWS- und NetApp PowerShell-Module zu installieren*.
 .. Falls das fehlende Modul fehlt, wählen Sie die Workload Factory aus, um das fehlende PowerShell 7 zu installieren. Die Installation des fehlenden PowerShell-Moduls 7 erfordert einen Systemneustart.

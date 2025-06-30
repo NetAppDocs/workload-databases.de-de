@@ -87,6 +87,8 @@ Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwen
 
 NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet `fsxadmin` und `vsadmin` Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen. Zusätzlich zu den _Automate_-Modus-Berechtigungen müssen Sie die folgenden Berechtigungen für das Benutzerkonto hinzufügen: `iam:TagRole` Und `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Lernen Sie die Verwendung von Terraform von Codebox"^].
 
+Während der Bereitstellung aktiviert Workload Factory CredSSP für die Anmeldeinformationsdelegierung an Skripts zur SQL-Bereitstellung. Wenn die CredSSP-Delegierung für alle Domänencomputer mit der Gruppenrichtlinie blockiert wird, schlägt die Bereitstellung fehl. Nach der Bereitstellung deaktiviert Workload Factory CredSSP.
+
 [role="tabbed-block"]
 ====
 .Schnelle Erstellung
