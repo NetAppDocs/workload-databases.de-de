@@ -13,7 +13,10 @@ summary: Erstellen Sie einen neuen Microsoft SQL Server in der BlueXP -Workload
 [role="lead"]
 Zum Erstellen eines neuen Microsoft SQL Servers oder Datenbankhosts in der Workload Factory für Datenbanken sind eine FSx für die ONTAP-Dateisystembereitstellung und Ressourcen für Active Directory erforderlich.
 
-.Über diese Aufgabe
+
+
+== Über diese Aufgabe
+
 Informieren Sie sich vor dem Erstellen eines Microsoft SQL Servers aus der Workload Factory über die verfügbaren Speicherbereitstellungstypen für die Datenbankhostkonfiguration, die Microsoft Multi-Path I/O-Konfiguration, die Active Directory-Bereitstellung, Netzwerkdetails und die Anforderungen zum Abschließen dieses Vorgangs.
 
 Nach der Bereitstellung müssen Sie <<Schritt 2: Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server,Aktivieren Sie die Remoteverbindung auf dem Microsoft SQL Server>>.
@@ -42,14 +45,7 @@ Active Directory:: Während der Bereitstellung geschieht Folgendes für Active D
 
 
 --
-
-
-
-
-== Vom Benutzer gemanagte Active Directory-Sicherheitsgruppen
-
-Wenn Sie während der Implementierung von Microsoft SQL Server in Workload Factory „benutzerverwaltetes Active Directory“ auswählen, müssen Sie eine Sicherheitsgruppe bereitstellen, die den Datenverkehr zwischen den EC2-Instanzen zum Verzeichnisdienst für die Bereitstellung zulässt. Workload Factory fügt die Sicherheitsgruppe für benutzerverwaltetes Active Directory nicht automatisch an, wie es für von AWS verwaltetes Microsoft AD der Fall ist.
-
+Vom Benutzer gemanagte Active Directory-Sicherheitsgruppen:: Wenn Sie während der Implementierung von Microsoft SQL Server in Workload Factory „benutzerverwaltetes Active Directory“ auswählen, müssen Sie eine Sicherheitsgruppe bereitstellen, die den Datenverkehr zwischen den EC2-Instanzen zum Verzeichnisdienst für die Bereitstellung zulässt. Workload Factory fügt die Sicherheitsgruppe für benutzerverwaltetes Active Directory nicht automatisch an, wie es für von AWS verwaltetes Microsoft AD der Fall ist.
 Ressourcen-Rollbacks:: Wenn Sie ein Rollback Ihrer DNS-Ressourcen (Domain Name System) durchführen möchten, werden die Ressourceneinträge in AD und DNS nicht automatisch entfernt. Sie können die Datensätze wie folgt vom DNS-Server und AD entfernen.
 +
 --
@@ -60,7 +56,10 @@ Ressourcen-Rollbacks:: Wenn Sie ein Rollback Ihrer DNS-Ressourcen (Domain Name S
 --
 
 
-.Bevor Sie beginnen
+
+
+== Bevor Sie beginnen
+
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie einen neuen Datenbank-Host erstellen.
 
 Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.

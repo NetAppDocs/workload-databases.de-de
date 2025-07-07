@@ -26,24 +26,23 @@ Sie können Links mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldein
 
 NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen. Abhängig von den in Workload Factory ausgewählten AWS-Kontoanmeldeinformationen werden möglicherweise PostgreSQL- und Oracle-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen nur auf Amazon Linux-Betriebssystemen und Oracle-Instanzen nur auf Red Hat Enterprise Linux.
 
-
-
-== Registrieren einer Instanz in einem privaten Netzwerk
-
-Um eine Instanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
-
+Registrieren einer Instanz in einem privaten Netzwerk:: Um eine Instanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
++
+--
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
-
-
++
 Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen verwenden, müssen Sie den Zugriff auf die folgenden Domänen zulassen, damit die Verwaltungsvorgänge funktionieren:
 
 * ``.microsoft.com``
 * ``.powershellgallery.com``
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
+
+
+--
 
 
 
