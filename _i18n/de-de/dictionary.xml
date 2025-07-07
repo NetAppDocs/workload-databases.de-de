@@ -357,7 +357,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open Source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">Datenbanken anzeigen</block>
-  <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">Der Host wird erweitert, und die Hostinstanzen werden angezeigt.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Wählen Sie *Datenbanken anzeigen*.</block>
@@ -955,7 +954,6 @@
   <block id="db8588c095bdb42680df1d8ae6e6c242" category="paragraph">Sie können die Instanz später erneut registrieren.</block>
   <block id="6e58f833a8c88963786858e4cd0820f1" category="list-text">Klicken Sie auf das Drei-Punkte-Menü der Instanz, um sich abzumelden.</block>
   <block id="a20e9b47d2ae2e8dcad4b38296aada53" category="list-text">Wählen Sie *Abmelden*.</block>
-  <block id="57b8b12d92efb891c61703846230423a" category="section-title">Unterstützung der Hostinstanzerkennung</block>
   <block id="7d02c7321e50b7c2fa346dd9edc083f2" category="paragraph">Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.</block>
   <block id="6923ba19fe8a091f76827ff8c86785de" category="summary">Workload Factory für Datenbanken ist ein End-to-End-Dienst zur Bereitstellung und Wartung von Datenbanken mit integrierten Best Practices zur Optimierung, automatischem Thin Cloning sowie Überwachungs- und Lösungsfunktionen.</block>
   <block id="bb3a81d6ea3e61933815d8c7984727a3" category="section-title">Was ist eine Workload Factory für Datenbanken?</block>
@@ -981,12 +979,9 @@
   <block id="eb39e8dfd54bf78043b2372b30f7b2b6" category="list-text">Klone: Enthält Optionen zum Aktualisieren und Löschen von Klonen (Sandboxen), die innerhalb oder außerhalb der Workload Factory erstellt wurden und älter als 60 Tage sind</block>
   <block id="05733d6679707441838e3ca92fcb1e85" category="inline-link-macro">AWS-Kontoanmeldeinformationen und Lese-/Schreibberechtigungen</block>
   <block id="e6ff59cff1eb616f7a9d6b770313807a" category="list-text">Sie müssen <block ref="6428f71963510d960d64cd03bb6513ae" category="inline-link-macro-rx"></block> um Ihre Datenbankkonfigurationen zu analysieren.</block>
-  <block id="bb4dc454356e65051d8e22516b60a260" category="inline-link-macro">Erfahren Sie, wie Sie eine Hostinstanz registrieren.</block>
-  <block id="606bc152b33b9976e88d57b374a1d46f" category="list-text">Um den Speicher einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz in der Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein. <block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
   <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.</block>
   <block id="55900adb296775523b32b30486b0de17" category="admonition">Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Lesen Sie die Empfehlung sorgfältig durch, bevor Sie sich für die Korrektur einer Konfiguration entscheiden.</block>
   <block id="da0f3dbe0b914fb78e47ff54702db3df" category="list-text">Wählen Sie *Probleme beheben* aus, um Konfigurationsprobleme für die Instanz anzuzeigen.</block>
-  <block id="a85bf70a610b181df621eea76d0068e4" category="list-text">Überprüfen Sie auf der Statusseite „Well-Architected“ für die Hostinstanz die Ergebnisse der Analyse.</block>
   <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">Sie können Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.</block>
   <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">Sie können auch einen Bericht mit den Ergebnissen herunterladen, indem Sie *PDF exportieren* auswählen.</block>
   <block id="f73028254f9c4297e3f60654068105e0" category="list-text">Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Zu den Empfehlungen gehören bewährte Methoden, potenzielle Fallstricke nicht optimierter Konfigurationen und wichtige Überlegungen. Überprüfen Sie die Empfehlung sorgfältig.</block>
@@ -1008,8 +1003,6 @@
   <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.</block>
   <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">Analyseumfang</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">Analyseanforderungen</block>
-  <block id="389751c9d4b8ea76783de1b291cac92f" category="paragraph">Für eine vollständige Analyse der Datenbankumgebung müssen Hostinstanzen registriert und online sein.</block>
-  <block id="f22f9817b1d52aa896a88fe9442f70ef" category="paragraph"><block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">Implementieren Sie gut konzipierte Datenbankkonfigurationen</block>
   <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
   <block id="27cb094655bbfaa4d3b2c3b34d1c1557" category="summary">Beginnen Sie mit der Workload Factory für Datenbanken, um Infrastructure-as-Code-Snippets zu verwenden, Hosts zu entdecken, Ressourcen zu verwalten und mehr.</block>
@@ -1021,7 +1014,6 @@
   <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">Bereitstellen eines Hostservers</block>
   <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">eine Instanz registrieren</block>
   <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">Wenn Sie den Lese-/Schreibmodus verwenden möchten, müssen Sie <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> oder <block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block> um Ihre Hostressourcen zu verwalten und bevor Sie Benutzerdatenbanken hinzufügen.</block>
-  <block id="db04547f806a50b5e3c5bbceb867c6c9" category="paragraph">Wenn Sie Host-Instanzen mit FSx für ONTAP-Dateisystemspeicher in Ihrem Datenbankinventar registriert haben, können Sie <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> oder <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
   <block id="8373481dd509f9b495f59748db1aa76d" category="doc">Registrieren Sie Instanzen in der Workload Factory für Datenbanken</block>
   <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">Datenbanken können Instanzen nur mit FSx für ONTAP-Dateisystemspeicher registrieren.</block>
   <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">Über die Aufgabe</block>
@@ -1040,9 +1032,6 @@
   <block id="a037e794bf828053866493b8452ab9c7" category="paragraph">Die Anforderung zur Registrierung der Instanz wird gestartet. Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.</block>
   <block id="5dfcf5a53e6a3c94eb359647b453a807" category="summary">Um eine Übersicht über die Datenbankressourcen in der Workload Factory zu erhalten, zeigen Sie alle Datenbanken im Datenbankbestand an. Sie können auch Datenbanken pro einzelner registrierter Instanz anzeigen.</block>
   <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">Anzeigen von Datenbanken in der Workload Factory für Datenbanken</block>
-  <block id="0ab190804913b1145bf64c21befa3286" category="list-text">Hostinstanzen, die Datenbankressourcen enthalten, müssen über FSx für ONTAP-Dateisystemspeicher verfügen.</block>
-  <block id="682d1e77482e7088c166b62c34287660" category="inline-link-macro">Hostinstanzen registrieren</block>
-  <block id="13e6dec9f19066e3153eb07ec978ea2b" category="list-text">Hostinstanzen müssen in der Workload Factory registriert sein. Erfahren Sie, wie man <block ref="2dbc08dda5209ee806e4433f973c765a" category="inline-link-macro-rx"></block>.</block>
   <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">Anzeigen von Datenbanken für eine einzelne Instanz</block>
   <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">Datenbanken für alle Instanzen anzeigen</block>
   <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">Sie haben die Datenbankressourcen innerhalb der Workload Factory angezeigt.</block>
@@ -1074,19 +1063,10 @@
   <block id="c836d737c77c0dbce2c99a2b01c719fd" category="paragraph">Workload Factory bietet die folgenden Benachrichtigungen für Datenbanken:</block>
   <block id="33e3371223dba19c723617802e06af8d" category="list-text">Gut strukturierter Bericht</block>
   <block id="d415d128365eca1587931ed756de7819" category="list-text">Hostbereitstellung</block>
-  <block id="83f1d9ca1a0c4c2fc51a371c0d773f76" category="list-text">Darstellt</block>
   <block id="8306ce5f84163ec6839ec7518f30183a" category="section-title">Onboarding-Erweiterung für die Registrierung von Instanzen</block>
-  <block id="0a969bb4f7ed7e29d7225c0409a1750b" category="paragraph">Workload Factory für Datenbanken hat den Onboarding-Prozess für die Registrierung von Instanzen auf Amazon FSx für NetApp ONTAP-Speicher verbessert. Sie können jetzt Instanzen gleichzeitig zur Registrierung auswählen. Sobald eine Instanz registriert ist, können Sie Datenbank-Host-Ressourcen in der Workload Factory-Konsole erstellen und verwalten.</block>
   <block id="2e91c32877a8bf4a56c1853f92a414ba" category="section-title">Analyse und Fehlerbehebung für die Microsoft Multipath I/O-Timeout-Einstellung</block>
-  <block id="221618cb9e519d5c3dd0fcbb1e4f1205" category="paragraph">Der Well-Architected-Status für Ihre Datenbankhostinstanzen umfasst nun die Analyse und den Fix für die Microsoft Multipath I/O (MPIO)-Timeout-Einstellung. Die Einstellung des MPIO-Timeouts auf 60 Sekunden gewährleistet die FSx für ONTAP-Speicherkonnektivität und Stabilität bei Failovers. Sollte die MPIO-Einstellung nicht entsprechend eingestellt sein, stellt Workload Factory einen Fix bereit, um den MPIO-Timeout-Wert auf 60 Sekunden festzulegen.</block>
   <block id="a05724b342c36062e480732f660ae9d4" category="paragraph"><block ref="a05724b342c36062e480732f660ae9d4" category="inline-link-macro-rx"></block></block>
-  <block id="2bf19cd7fefccda37a9e51c8d6ae9ef1" category="section-title">Verbesserungen der Grafiken im Host-Inventar</block>
-  <block id="29a6225f1f6846093fcfd562090e8654" category="paragraph">Auf dem Host-Inventarbildschirm werden jetzt verschiedene Diagramme zur Ressourcenauslastung, wie Durchsatz und IOPS, mit Daten der letzten 7 Tage angezeigt. So können Sie die Leistung von SQL-Knoten über die Workload Factory-Konsole effizienter überwachen. Die von den SQL-Knoten erfassten Leistungsmetriken werden in Amazon CloudWatch gespeichert und können für Logs Insights oder die Integration mit anderen Analysediensten in Ihrer Umgebung verwendet werden.</block>
-  <block id="02212e54266ecdf641215b97bf4ab24e" category="paragraph">Auf den Registerkarten „Instanzen“ und „Datenbanken“ im Hostinventar haben wir die Beschreibung und Visualisierung für den Hostschutz verbessert.</block>
   <block id="4698c78219bd6bc2a4fb47e8f4149213" category="section-title">Unterstützung für Windows-Authentifizierung in der Workload Factory</block>
-  <block id="b3a0e7d1a5170a15143af7a7f86f02b8" category="paragraph">Jetzt unterstützt Workload Factory die SQL Server-Authentifizierung mithilfe von Windows-authentifizierten Benutzern, um Hostinstanzen zu registrieren und von Hostverwaltungsfunktionen zu profitieren.</block>
-  <block id="47668721b89b4afabeb23e27f6ac9b38" category="inline-link-macro">Registrieren Sie Hostinstanzen in der Workload Factory für Datenbanken</block>
-  <block id="4f178ea0296d3da0481606b8e3df7542" category="paragraph"><block ref="4f178ea0296d3da0481606b8e3df7542" category="inline-link-macro-rx"></block></block>
   <block id="f7b79998a8d6049aa7838e93bde48d38" category="paragraph">Während der Bereitstellung aktiviert Workload Factory CredSSP für die Anmeldeinformationsdelegierung an Skripts zur SQL-Bereitstellung. Wenn die CredSSP-Delegierung für alle Domänencomputer mit der Gruppenrichtlinie blockiert wird, schlägt die Bereitstellung fehl. Nach der Bereitstellung deaktiviert Workload Factory CredSSP.</block>
   <block id="b6705e62a5d2c7330d2d39782b5e5ea5" category="summary">Melden Sie die Registrierung einer Instanz ab, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten.</block>
   <block id="aa76a1c51b277c90780c0553dba1e6a6" category="doc">Abmelden einer Instanz in der Workload Factory</block>
@@ -1121,4 +1101,20 @@
   <block id="1e72ee2b188273bc05d5a58836ef28ea" category="list-text">*Windows-Authentifizierung*: Geben Sie den Windows-Benutzernamen und das Kennwort sowie den Benutzernamen und das Kennwort für das FSx for ONTAP-Dateisystem ein.</block>
   <block id="3325d27939065e1573633813a5123834" category="list-text">Bereiten Sie in Schritt 3 die Instanz vor, indem Sie sicherstellen, dass die Instanz die erforderlichen Voraussetzungen erfüllt. Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, klicken Sie auf *Weiter*, um die Instanz zu registrieren. Falls Sie Maßnahmen ergreifen müssen, führen Sie die folgenden Schritte aus.</block>
   <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">30 Juni 2025</block>
+  <block id="d2240cc857b28c2cc0c761811ebb0e4d" category="paragraph">Workload Factory für Datenbanken hat den Onboarding-Prozess für die Registrierung von Instanzen auf Amazon FSx für NetApp ONTAP-Speicher verbessert. Sie können jetzt Instanzen gleichzeitig zur Registrierung auswählen. Sobald eine Instanz registriert ist, können Sie Datenbankressourcen in der Workload Factory-Konsole erstellen und verwalten.</block>
+  <block id="55dedf6eed5a2ce8c260a3944723e099" category="paragraph">Der Well-Architected-Status für Ihre Datenbankinstanzen umfasst jetzt die Analyse und den Fix für die Timeout-Einstellung von Microsoft Multipath I/O (MPIO). Einstellung des MPIO-Timeouts auf 60 Sekunden gewährleistet die FSx für ONTAP-Speicherkonnektivität und Stabilität bei Failovers. Sollte die MPIO-Einstellung nicht entsprechend eingestellt sein, stellt Workload Factory einen Fix bereit, um den MPIO-Timeout-Wert auf 60 Sekunden festzulegen.</block>
+  <block id="0f6f8a7d2c62793903fd07b4a68f2192" category="section-title">Verbesserungen der Grafiken im Instanzinventar</block>
+  <block id="6bb06f6a313d1245a77bdcc02f151dcd" category="paragraph">Auf dem Bildschirm „Instanzinventar“ werden jetzt in verschiedenen Diagrammen zur Ressourcenauslastung, beispielsweise zu Durchsatz und IOPS, Daten der letzten 7 Tage angezeigt, sodass Sie die Leistung von SQL-Knoten von der Workload Factory-Konsole aus effizienter überwachen können. Die von den SQL-Knoten erfassten Leistungsmetriken werden in Amazon CloudWatch gespeichert und können für Logs Insights oder die Integration mit anderen Analysediensten in Ihrer Umgebung verwendet werden.</block>
+  <block id="8984f42ceef01f063ea7a1078e620318" category="paragraph">Auf den Registerkarten „Instanzen“ und „Datenbanken“ im Inventar haben wir die Beschreibung und Visualisierung zum Schutz verbessert.</block>
+  <block id="e6884d3b77d68ac903da5836a6c33345" category="paragraph">Jetzt unterstützt Workload Factory die SQL Server-Authentifizierung mithilfe von Windows-authentifizierten Benutzern, um Instanzen zu registrieren und von Verwaltungsfunktionen zu profitieren.</block>
+  <block id="b8419cf58039d1a67d2046abd157e28b" category="paragraph"><block ref="b8419cf58039d1a67d2046abd157e28b" category="inline-link-macro-rx"></block></block>
+  <block id="2e1bd7e9b2f7897e3fbd2f64db19746c" category="section-title">Unterstützung der Instanzerkennung</block>
+  <block id="e5872a50d5d45d5b9d394ddc65dfee1f" category="inline-link-macro">Erfahren Sie, wie Sie eine Instanz registrieren.</block>
+  <block id="09ea6435a2780f6e0f876796133da036" category="list-text">Um den Speicher einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz in der Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein. <block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
+  <block id="e6b1ed7d667d6b75280f0be1619fde20" category="list-text">Überprüfen Sie auf der Statusseite „Well-Architected“ für die Instanz die Ergebnisse der Analyse.</block>
+  <block id="a26f09029b7e444a21db17eb62e9d2d5" category="paragraph">Für eine vollständige Analyse der Datenbankumgebung müssen Instanzen registriert und online sein.</block>
+  <block id="4dede94da0834ecd430bec6189bab6cc" category="paragraph"><block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
+  <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">Wenn Sie Instanzen mit FSx für ONTAP-Dateisystemspeicher in Ihrem Datenbankinventar registriert haben, können Sie <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> oder <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
+  <block id="621bb50103e94b947974d2656fb451ec" category="list-text">Instanzen, die Datenbankressourcen enthalten, müssen über FSx für ONTAP-Dateisystemspeicher verfügen.</block>
+  <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">Instanzen müssen in der Workload Factory registriert werden. Erfahren Sie, wie man <block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>.</block>
 </blocks>

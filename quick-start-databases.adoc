@@ -36,6 +36,6 @@ Wenn Sie im _Nur-Lese-Modus_ oder _Lesen/Schreiben_ arbeiten, müssen Sie link:h
 Wenn Sie den Lese-/Schreibmodus verwenden möchten, müssen Sie link:create-database-server.html["Bereitstellen eines Hostservers"] oder link:register-instance.html["eine Instanz registrieren"] um Ihre Hostressourcen zu verwalten und bevor Sie Benutzerdatenbanken hinzufügen.
 
 .Wie es weiter geht
-Wenn Sie Host-Instanzen mit FSx für ONTAP-Dateisystemspeicher in Ihrem Datenbankinventar registriert haben, können Sie link:create-database.html["Erstellen Sie eine Benutzerdatenbank"] oder link:create-sandbox-clone.html["Klonen Sie Ihren Host, um eine Sandbox zu erstellen"] .
+Wenn Sie Instanzen mit FSx für ONTAP-Dateisystemspeicher in Ihrem Datenbankinventar registriert haben, können Sie link:create-database.html["Erstellen Sie eine Benutzerdatenbank"] oder link:create-sandbox-clone.html["Klonen Sie Ihren Host, um eine Sandbox zu erstellen"] .
 
 Wenn Sie Elastic Block Store oder FSX für Windows File Server-Hosts in Ihrem Datenbankbestand haben, können Sie link:explore-savings.html["Einsparungsrechner"].

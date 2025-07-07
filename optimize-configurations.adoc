@@ -35,7 +35,7 @@ Was analysiert wird:: Workload Factory analysiert den ordnungsgemäßen Architek
 
 .Bevor Sie beginnen
 * Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Lese-/Schreibberechtigungen"^] um Ihre Datenbankkonfigurationen zu analysieren.
-* Um den Speicher einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz in der Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein. link:register-instance.html["Erfahren Sie, wie Sie eine Hostinstanz registrieren."]
+* Um den Speicher einer Microsoft SQL Server-Instanz zu bewerten, muss die Instanz in der Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein. link:register-instance.html["Erfahren Sie, wie Sie eine Instanz registrieren."]
 * Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
 
 
@@ -47,7 +47,7 @@ NOTE: Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterb
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie auf der Registerkarte *Inventar* die Registerkarte *Instanzen* aus.
 . Wählen Sie *Probleme beheben* aus, um Konfigurationsprobleme für die Instanz anzuzeigen.
-. Überprüfen Sie auf der Statusseite „Well-Architected“ für die Hostinstanz die Ergebnisse der Analyse.
+. Überprüfen Sie auf der Statusseite „Well-Architected“ für die Instanz die Ergebnisse der Analyse.
 +
 Sie können Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.
 

@@ -14,8 +14,8 @@ summary: Um eine Übersicht über die Datenbankressourcen in der Workload Factor
 Um eine Übersicht über die Datenbankressourcen in der Workload Factory zu erhalten, zeigen Sie alle Datenbanken im Datenbankbestand an. Sie können auch Datenbanken pro einzelner registrierter Instanz anzeigen.
 
 .Bevor Sie beginnen
-* Hostinstanzen, die Datenbankressourcen enthalten, müssen über FSx für ONTAP-Dateisystemspeicher verfügen.
-* Hostinstanzen müssen in der Workload Factory registriert sein. Erfahren Sie, wie man link:register-instance.html["Hostinstanzen registrieren"].
+* Instanzen, die Datenbankressourcen enthalten, müssen über FSx für ONTAP-Dateisystemspeicher verfügen.
+* Instanzen müssen in der Workload Factory registriert werden. Erfahren Sie, wie man link:register-instance.html["eine Instanz registrieren"].
 
 
 .Schritte
@@ -28,7 +28,7 @@ Um eine Übersicht über die Datenbankressourcen in der Workload Factory zu erha
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.
 +
-Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+Der Host wird erweitert und die Instanzen werden angezeigt.
 
 . Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.
 . Wählen Sie *Datenbanken anzeigen*.
@@ -42,7 +42,7 @@ Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.
 +
-Der Host wird erweitert, und die Hostinstanzen werden angezeigt.
+Der Host wird erweitert und die Instanzen werden angezeigt.
 
 . Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.
 . Wählen Sie *Datenbanken anzeigen*.

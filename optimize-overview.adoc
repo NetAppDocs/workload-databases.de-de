@@ -48,9 +48,9 @@ Analyseumfang:: Je nachdem, welche Komponente bewertet wird, ist der Optimierung
 
 == Analyseanforderungen
 
-Für eine vollständige Analyse der Datenbankumgebung müssen Hostinstanzen registriert und online sein.
+Für eine vollständige Analyse der Datenbankumgebung müssen Instanzen registriert und online sein.
 
-link:register-instance.html["Erfahren Sie, wie Sie eine Hostinstanz registrieren."]
+link:register-instance.html["Erfahren Sie, wie Sie eine Instanz registrieren."]
 
 .Wie es weiter geht
 link:optimize-configurations.html["Implementieren Sie gut konzipierte Datenbankkonfigurationen"]

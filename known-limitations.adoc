@@ -15,7 +15,7 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
-== Unterstützung der Hostinstanzerkennung
+== Unterstützung der Instanzerkennung
 
 Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.
 

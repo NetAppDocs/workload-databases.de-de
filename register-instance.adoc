@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: register-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, manage host, view host, database host, database instance, manage, unregister 
 summary: Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Farm für Datenbanken. 
 ---
 = Registrieren Sie Instanzen in der Workload Factory für Datenbanken
