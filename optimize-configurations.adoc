@@ -11,10 +11,12 @@ summary: Workload Factory für Datenbanken scannt Microsoft SQL Server-Konfigura
 
 
 [role="lead"]
-Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und implementieren Sie Best Practices für Ihre Datenbankkonfigurationen mithilfe der Workload Factory. Sie können Probleme leicht erkennen und Maßnahmen ergreifen, um die Architektur von Konfigurationen zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und implementieren Sie Best Practices für Ihre Datenbankkonfigurationen mithilfe der Workload Factory. Sie können den Status der ordnungsgemäßen Architektur problemlos überprüfen, sich über Probleme mit Datenbankkonfigurationen informieren und Maßnahmen ergreifen, um Konfigurationen zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+
+link:optimize-overview.html["Erfahren Sie mehr über die Konfigurationsanalyse und den Status einer guten Architektur in der Workload Factory."]
 
 .Über diese Aufgabe
-Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihre Konfigurationen Best Practices entsprechen.
+Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert den ordnungsgemäßen Architekturstatus sowie Erkenntnisse und Empfehlungen mit Optionen zum automatischen Beheben von Konfigurationsproblemen, sodass Ihre Konfigurationen den Best Practices entsprechen.
 
 Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme zu überprüfen und diese Probleme über das Datenbankinventar in der Workload Factory-Konsole zu beheben.
 

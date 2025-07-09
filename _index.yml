@@ -18,6 +18,9 @@ indexpage:
       url: "/explore-savings.html"
     - title: Registrieren einer Instanz
       url: "/register-instance.html"
+    - title: Den Status Ihrer Instanzen im Hinblick auf die ordnungsgemäße Architektur
+        anzeigen
+      url: "/optimize-configurations.html"
     - title: Erstellen Sie einen Microsoft SQL Server
       url: "/create-database-server.html"
     - title: Erstellen Sie einen PostgreSQL-Server
