@@ -26,16 +26,22 @@ Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas
 Wählen Sie zwischen link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi _Basis_, _Nur-Lesen_ und _Lesen/Schreiben_"^].
 
 [role="quick-margin-para"]
-Wenn Sie im _BASIC_-Modus arbeiten, müssen Sie nicht weiter gehen. Sie können mit Datenbanken beginnen, um teilweise abgeschlossene Codebeispiele zu kopieren. Klicken Sie in der Kachel Datenbanken auf *Deploy Database Host*. link:create-database-server.html["Erfahren Sie, wie Sie einen Datenbankserver implementieren"].
+Wenn Sie im _Nur-Lese-Modus_ oder _Lesen/Schreiben_ arbeiten, müssen Sielink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie einem Konto manuell Anmeldeinformationen hinzu"^] Wählen Sie Workload-Funktionen wie Datenbanken und GenAI aus und erstellen Sie IAM-Richtlinien für die erforderlichen Berechtigungen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"]Ermitteln oder Bereitstellen von Ressourcen
+[role="quick-margin-para"]
+Mit Anmeldeinformationen und IAM-Richtlinien können Sie vorhandene Datenbankressourcen im Inventar erkennen oderlink:create-database-server.html["Bereitstellen eines Hostservers"] .  Das Inventar bietet eine einheitliche Schnittstelle zur Verwaltung von Ressourcen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]Entdecken Sie Möglichkeiten zur Kosteneinsparung
+[role="quick-margin-para"]
+Wenn Sie Datenbanken vor Ort oder auf AWS mit Speicher auf Amazon Elastic Block Store (EBS) oder FSx für Windows File Server ausführen, können Sielink:explore-savings.html["Verwenden Sie den Explore-Sparrechner"] um Kosten zu analysieren und Migrationen effektiv zu planen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]Implementieren Sie gut strukturierte Datenbankkonfigurationen
+[role="quick-margin-para"]
+Workload Factory for Databases analysiert regelmäßig Microsoft SQL Server-Bereitstellungen auf Amazon FSx for NetApp ONTAP -Speicher über das Well-Architected-Dashboard.  Um Probleme über das gut strukturierte Dashboard für Ihre Datenbankressourcen zu beheben, müssen Sie zunächstlink:register-instance.html["Instanzen registrieren"] .
 
 [role="quick-margin-para"]
-Wenn Sie im _Nur-Lese-Modus_ oder _Lesen/Schreiben_ arbeiten, müssen Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie einem Konto manuell Anmeldeinformationen hinzu"^] Dazu gehört die Auswahl von Workload-Funktionen wie Datenbanken und GenAI sowie die Erstellung der IAM-Richtlinien, um sicherzustellen, dass Sie über die richtigen Berechtigungen für den Betrieb im _Nur-Lese_- oder _Lese-/Schreib_-Modus verfügen.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] Stellen Sie einen Datenbankserver bereit
-[role="quick-margin-para"]
-Wenn Sie den Lese-/Schreibmodus verwenden möchten, müssen Sie link:create-database-server.html["Bereitstellen eines Hostservers"] oder link:register-instance.html["eine Instanz registrieren"] um Ihre Hostressourcen zu verwalten und bevor Sie Benutzerdatenbanken hinzufügen.
+Nach der Registrierung von Instanzen können Sie den Status der Well-Architected-Instanz einsehen und Maßnahmen ergreifen, umlink:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["Implementieren Sie gut strukturierte Datenbankkonfigurationen"] in der Workload-Fabrik.
 
 .Wie es weiter geht
 Wenn Sie Instanzen mit FSx für ONTAP-Dateisystemspeicher in Ihrem Datenbankinventar registriert haben, können Sie link:create-database.html["Erstellen Sie eine Benutzerdatenbank"] oder link:create-sandbox-clone.html["Klonen Sie Ihren Host, um eine Sandbox zu erstellen"] .
-
-Wenn Sie Elastic Block Store oder FSX für Windows File Server-Hosts in Ihrem Datenbankbestand haben, können Sie link:explore-savings.html["Einsparungsrechner"].

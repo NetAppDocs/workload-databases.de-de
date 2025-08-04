@@ -40,12 +40,6 @@ Einige Konfigurationen gelten möglicherweise nicht für Ihre Datenbankumgebunge
 
 
 
-=== Entfernung von Beurteilungsunterlagen vor Ort
-
-Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host untersucht haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus der BlueXP  Workload Factory zu entfernen.
-
-
-
 === Terminologie für Berechtigungen wurde aktualisiert
 
 In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.

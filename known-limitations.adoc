@@ -133,3 +133,9 @@ Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokale
 * Die Optimierungsbewertung kann nicht ermitteln, ob regionsübergreifende Replizierung (CRR) verwendet wird, wenn sich das Ziel-Filesystem FSX für ONTAP in einem anderen AWS-Konto befindet.
 * Workload Factory bewertet nur die CRR-Konfiguration des Quell-FSX für ONTAP-Dateisystem.
 
+
+
+
+== Datenbankhostauthentifizierung bei Explore-Einsparungen
+
+In einigen Fällen mit eingeschränkten Berechtigungen lädt die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten.

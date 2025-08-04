@@ -15,7 +15,7 @@ Um eine Übersicht über die Datenbankressourcen in der Workload Factory zu erha
 
 .Bevor Sie beginnen
 * Instanzen, die Datenbankressourcen enthalten, müssen über FSx für ONTAP-Dateisystemspeicher verfügen.
-* Instanzen müssen in der Workload Factory registriert werden. Erfahren Sie, wie man link:register-instance.html["eine Instanz registrieren"].
+* Sie müssen Instanzen in der Workload Factory registrieren, um Datenbanken anzuzeigen. Erfahren Sie, wie Sie link:register-instance.html["eine Instanz registrieren"] .
 
 
 .Schritte
@@ -26,13 +26,10 @@ Um eine Übersicht über die Datenbankressourcen in der Workload Factory zu erha
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.
-+
-Der Host wird erweitert und die Instanzen werden angezeigt.
+. Klicken Sie auf das Drei-Punkte-Menü der Instanz und wählen Sie dann *Datenbanken anzeigen*.
 
-. Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.
-. Wählen Sie *Datenbanken anzeigen*.
 
+Auf der Registerkarte „Datenbanken“ werden Datenbanken für die einzelne Instanz angezeigt.
 
 --
 .Datenbanken für alle Instanzen anzeigen
@@ -40,15 +37,11 @@ Der Host wird erweitert und die Instanzen werden angezeigt.
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Klicken Sie auf den Dropdown-Pfeil, um die Zeile des Hosts zu erweitern und seine Datenbanken anzuzeigen.
+. Wählen Sie die Registerkarte *Datenbanken*.
 +
-Der Host wird erweitert und die Instanzen werden angezeigt.
+Datenbanken werden für alle registrierten Instanzen angezeigt.
 
-. Klicken Sie auf das drei-Punkt-Menü der Instanz, die die anzuzeigenden Datenbanken enthält.
-. Wählen Sie *Datenbanken anzeigen*.
 
 
 --
 ====
-.Ergebnis
-Sie haben die Datenbankressourcen innerhalb der Workload Factory angezeigt.

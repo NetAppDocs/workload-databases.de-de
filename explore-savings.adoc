@@ -234,10 +234,14 @@ Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 Wenn die Workload-Farm EBS-Hosts erkennt, werden Sie auf die Registerkarte „Einsparungen“ umgeleitet. Wenn die Workload Factory keine EBS-Hosts erkennt, werden Sie zum Rechner umgeleitet zu <<Entdecken Sie Einsparungen durch Anpassung,Entdecken Sie Einsparungen durch Anpassung>>.
 
 . Klicken Sie auf der Registerkarte Einsparungen erkunden auf *Einsparungen erkunden* des Datenbankservers mithilfe von EBS Storage.
+. Authentifizieren Sie den Datenbankhost bei Bedarf mit SQL Server-Anmeldeinformationen, Windows-Anmeldeinformationen oder durch Hinzufügen fehlender SQL Server-Berechtigungen.
++
+Wenn die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten lädt, wählen Sie die Registerkarte *Inventar*, um die Daten neu zu laden, und wählen Sie dann erneut die Registerkarte *Ersparnisse erkunden*.
+
 . Geben Sie optional mit dem Einsparungsrechner die folgenden Details zu Klonen und Snapshots auf Ihrem EBS Storage an, um eine genauere Schätzung der Kosteneinsparungen zu erhalten.
 +
-.. *Snapshot-Frequenz*: Wählen Sie eine Snapshot-Frequenz aus dem Dropdown-Menü.
-.. *Clone Refresh Frequency*: Wählen Sie aus dem Dropdown-Menü die Häufigkeit, mit der die Clones aktualisiert werden.
+.. *Schnappschussfrequenz*: Wählen Sie eine Schnappschussfrequenz aus dem Menü.
+.. *Aktualisierungshäufigkeit von Klonen*: Wählen Sie aus dem Menü die Häufigkeit aus, mit der Klone aktualisiert werden.
 .. *Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der EBS-Konfiguration ein.
 .. *Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.
 
@@ -249,18 +253,22 @@ Wenn die Workload-Farm EBS-Hosts erkennt, werden Sie auf die Registerkarte „Ei
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Datenbanken“ aus dem Dropdown-Menü *Einsparungen erkunden* und dann *Microsoft SQL Server auf FSX für Windows* aus.
+. Wählen Sie in der Kachel „Datenbanken“ im Menü die Option „Einsparungen erkunden“ und dann „Microsoft SQL Server auf FSx für Windows“ aus.
 +
 Wenn die Workload Factory FSX für Windows-Hosts erkennt, werden Sie auf die Registerkarte „Einsparungen erkunden“ umgeleitet. Wenn die Workload Factory FSX for Windows Hosts nicht erkennt, werden Sie zum Rechner umgeleitet zu <<Entdecken Sie Einsparungen durch Anpassung,Entdecken Sie Einsparungen durch Anpassung>>.
 
-. Klicken Sie auf der Registerkarte Einsparungen erkunden auf *Einsparungen erkunden* des Datenbankservers mit FSX für Windows File Server-Speicher.
+. Wählen Sie auf der Registerkarte „Einsparungen erkunden“ die Option „Einsparungen erkunden“ des Datenbankhosts aus, der FSx für Windows File Server-Speicher verwendet.
+. Authentifizieren Sie den Datenbankhost bei Bedarf mit SQL Server-Anmeldeinformationen, Windows-Anmeldeinformationen oder durch Hinzufügen fehlender SQL Server-Berechtigungen.
++
+Wenn die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten lädt, wählen Sie die Registerkarte *Inventar*, um die Daten neu zu laden, und wählen Sie dann erneut die Registerkarte *Ersparnisse erkunden*.
+
 . Geben Sie optional im Einsparungsrechner die folgenden Details zu Klonen (Schattenkopien) und Snapshots in Ihrem FSX für Windows Storage an, um eine genauere Schätzung der Kosteneinsparungen zu erhalten.
 +
-.. *Snapshot-Frequenz*: Wählen Sie eine Snapshot-Frequenz aus dem Dropdown-Menü.
+.. *Schnappschussfrequenz*: Wählen Sie eine Schnappschussfrequenz aus dem Menü.
 +
 Wenn FSX für Windows Schattenkopien erkannt werden, ist der Standardwert *Daily*. Wenn Schattenkopien nicht erkannt werden, ist der Standardwert *Keine Snapshot-Frequenz*.
 
-.. *Clone Refresh Frequency*: Wählen Sie aus dem Dropdown-Menü die Häufigkeit, mit der die Clones aktualisiert werden.
+.. *Aktualisierungshäufigkeit von Klonen*: Wählen Sie aus dem Menü die Häufigkeit aus, mit der Klone aktualisiert werden.
 .. *Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der FSX für Windows-Konfiguration ein.
 .. *Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.
 
@@ -272,7 +280,7 @@ Wenn FSX für Windows Schattenkopien erkannt werden, ist der Standardwert *Daily
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Datenbanken“ aus dem Dropdown-Menü *Einsparungen erkunden* und dann *Microsoft SQL Server On-premises* aus.
+. Wählen Sie in der Kachel „Datenbanken“ im Menü die Option *Einsparungen erkunden* und dann *Microsoft SQL Server vor Ort* aus.
 . Laden Sie auf der Registerkarte SQL Server On-Premises das Skript herunter, um Ihre lokalen SQL Server-Umgebungen zu bewerten.
 +
 .. Laden Sie das Bewertungsskript herunter. Das Skript ist ein Datenerfassungs-Tool basierend auf PowerShell. Es sammelt Konfigurations- und Leistungsdaten von SQL Server und lädt diese anschließend an die BlueXP  Workload Factory hoch. Der Migrationsberater bewertet die Daten und Pläne für die FSX for ONTAP-Implementierung für Ihre SQL Server-Umgebung.
@@ -291,11 +299,11 @@ image:screenshot-upload-script-on-premises.png["Ein Screenshot der Registerkarte
 . Aktualisieren Sie für genauere Ergebnisse die Datenverarbeitungsinformationen sowie die Speicher- und Leistungsdetails.
 . Optional können Sie die folgenden Details zu Klonen (Schattenkopien) und Snapshots in Ihrer lokalen Datenbankumgebung bereitstellen und erhalten so eine genauere Schätzung der Kosteneinsparungen.
 +
-.. *Snapshot-Frequenz*: Wählen Sie eine Snapshot-Frequenz aus dem Dropdown-Menü.
+.. *Schnappschussfrequenz*: Wählen Sie eine Schnappschussfrequenz aus dem Menü.
 +
 Wenn FSX für Windows Schattenkopien erkannt werden, ist der Standardwert *Daily*. Wenn Schattenkopien nicht erkannt werden, ist der Standardwert *Keine Snapshot-Frequenz*.
 
-.. *Clone Refresh Frequency*: Wählen Sie aus dem Dropdown-Menü die Häufigkeit, mit der die Clones aktualisiert werden.
+.. *Aktualisierungshäufigkeit von Klonen*: Wählen Sie aus dem Menü die Häufigkeit aus, mit der Klone aktualisiert werden.
 .. *Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der On-Premises-Konfiguration ein.
 .. *Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.
 

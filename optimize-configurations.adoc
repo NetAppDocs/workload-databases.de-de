@@ -28,7 +28,7 @@ Was analysiert wird:: Workload Factory analysiert den ordnungsgemäßen Architek
 * Speicherkonfiguration: umfasst Kapazitätsverwaltung, Thin Provisioning, Tiering-Richtlinie, Snapshots, Microsoft Multipath I/O (MPIO)-Status und MPIO-Timeout-Einstellung
 * Computing: Umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadapter-Einstellungen wie Receive Side Scaling (RSS) und TCP Offloading
 * Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
-* Ausfallsicherheit: Einschließlich lokaler Snapshots, FSX für ONTAP-Backups und regionsübergreifender Replizierung (CRR)
+* Ausfallsicherheit: umfasst lokale Snapshots, FSx für ONTAP Backups, regionsübergreifende Replikation (CRR) und Microsoft SQL High Availability.
 * Klone: Enthält Optionen zum Aktualisieren und Löschen von Klonen (Sandboxen), die innerhalb oder außerhalb der Workload Factory erstellt wurden und älter als 60 Tage sind
 
 
