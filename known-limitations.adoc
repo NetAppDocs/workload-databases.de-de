@@ -139,3 +139,9 @@ Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokale
 == Datenbankhostauthentifizierung bei Explore-Einsparungen
 
 In einigen Fällen mit eingeschränkten Berechtigungen lädt die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten.
+
+
+
+== Integration mit BlueXP backup and recovery
+
+Nach dem Hinzufügen von Hosts zum Schutz zu BlueXP Backup and Recovery schlägt die Datenbankerkennung manchmal fehl.

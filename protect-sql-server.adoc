@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: protect-sql-server.html 
+keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
+summary: Schützen Sie Microsoft SQL Server-Instanzen und -Datenbanken. 
+---
+= Schützen Sie Microsoft SQL Server-Workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Schützen Sie Ihre Microsoft SQL Server-Anwendungsdaten mithilfe der BlueXP backup and recovery von der Workload Factory-Konsole.  Backups werden automatisch generiert und basierend auf den von Ihnen erstellten Richtlinien in einem Objektspeicher in Ihrem öffentlichen oder privaten Cloud-Konto gespeichert.
+
+
+
+== Über diese Aufgabe
+
+BlueXP backup and recovery nutzt die Datenreplikationstechnologie NetApp SnapMirror , um sicherzustellen, dass alle Backups vollständig synchronisiert sind, indem Snapshot-Kopien erstellt und an die Backup-Speicherorte übertragen werden.
+
+Einzelheiten zum Schutz mit BlueXP backup and recovery finden Sie imlink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Überblick über Microsoft SQL-Workloads mit BlueXP backup and recovery schützen"^] .
+
+
+
+== Bevor Sie beginnen
+
+Um mit dem Schutz von Microsoft SQL Server-Workloads mit BlueXP backup and recovery beginnen zu können, sind folgende Voraussetzungen erforderlich:
+
+* Ein BlueXP -Anschluss
++
+Siehelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Erfahren Sie, wie Sie einen BlueXP Connector konfigurieren"^] Undlink:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Standardanforderungen für BlueXP"^] .
+
++
+Für den Connector wird das Betriebssystem Ubuntu 22.04 LTS benötigt.
+
+* Eine Lizenz für BlueXP backup and recovery
++
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Einrichten der Lizenzierung für BlueXP backup and recovery"^]
+
+* Festlegen der Hostauflösung auf dem Connector
++
+Um Datenbanken zu erkennen, müssen Sie die Hostauflösung auf dem Connector festlegen.  Fügen Sie auf dem gehosteten Gerät die Zuordnung der IP-Adresse zum Hostnamen in der `/etc/hosts` Datei.
+
+
+
+
+
+== Schützen Sie Microsoft SQL Server-Instanzen und -Datenbanken
+
+Der Schutz von Microsoft SQL Server-Instanzen und -Datenbanken umfasst die Ressourcenerkennung, die Validierung der Voraussetzungen sowie die Konfiguration und Installation des Plug-ins für Microsoft SQL Server.  Das Plug-in ist eine hostseitige Komponente der NetApp -Software, mit der Sie Ihre Microsoft SQL Server-Workloads schützen können.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Filtern Sie den *Engine-Typ* nach *Microsoft SQL Server*.
+. Wählen Sie im Menü für die zu schützende Instanz *Schützen* aus.
+. Wählen Sie den *Connector* aus, bei dem die Arbeitslast registriert und geschützt werden soll.
+. Zur Vorbereitung auf den Datenschutz registriert Workload Factory Ihre SQL Server-Ressourcen automatisch in BlueXP backup and recovery, konfiguriert und installiert das Plug-in für Microsoft SQL Server und ermittelt Ressourcen, um die Voraussetzungen für den Schutz Ihrer SQL Server-Instanz zu erfüllen.  Wählen Sie *Start*, um den Vorgang zu beginnen.
+. Wenn die Voraussetzungen erfüllt sind, wählen Sie *Umleiten*, um zu BlueXP backup and recovery weitergeleitet zu werden.
+
+
+.Wie es weiter geht
+Erstellen Sie mit BlueXP backup and recovery eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken.
+
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html["Erfahren Sie, wie Sie eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken erstellen"^] .
+
+Weitere Informationen finden Sie imlink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["BlueXP backup and recovery"^] zur Verwaltung von Microsoft SQL Server-Workloads.
