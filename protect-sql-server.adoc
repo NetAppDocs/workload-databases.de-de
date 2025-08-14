@@ -11,11 +11,13 @@ summary: Schützen Sie Microsoft SQL Server-Instanzen und -Datenbanken.
 
 
 [role="lead"]
-Schützen Sie Ihre Microsoft SQL Server-Anwendungsdaten mithilfe der BlueXP backup and recovery von der Workload Factory-Konsole.  Backups werden automatisch generiert und basierend auf den von Ihnen erstellten Richtlinien in einem Objektspeicher in Ihrem öffentlichen oder privaten Cloud-Konto gespeichert.
+Schützen Sie Ihre Microsoft SQL Server-Anwendungsdaten mithilfe der BlueXP backup and recovery von der Workload Factory-Konsole. Mit dieser Integration können Sie die folgenden Schutzziele erreichen: Sichern Sie Workloads mit lokalen Snapshots auf dem lokalen primären Amazon FSx for NetApp ONTAP Speicher (FSx for ONTAP) und replizieren Sie Workloads auf den sekundären FSx for ONTAP -Speicher.
 
 
 
 == Über diese Aufgabe
+
+Workload Factory unterstützt Sie bei der Automatisierung des Prozesses zum Erkennen von Instanz- und Datenbankressourcen, beim Validieren von Voraussetzungen sowie beim Konfigurieren und Installieren des Plug-ins für Microsoft SQL Server. All dies ist Teil des Vorbereitungsprozesses zum Schutz Ihrer Microsoft SQL Server-Workloads mit BlueXP backup and recovery. Das Plug-in ist eine hostseitige Komponente der NetApp -Software, mit der Sie Ihre Microsoft SQL Server-Workloads schützen können.
 
 BlueXP backup and recovery nutzt die Datenreplikationstechnologie NetApp SnapMirror , um sicherzustellen, dass alle Backups vollständig synchronisiert sind, indem Snapshot-Kopien erstellt und an die Backup-Speicherorte übertragen werden.
 
@@ -46,9 +48,9 @@ Um Datenbanken zu erkennen, müssen Sie die Hostauflösung auf dem Connector fes
 
 
 
-== Schützen Sie Microsoft SQL Server-Instanzen und -Datenbanken
+== Bereiten Sie sich auf den Schutz mit BlueXP backup and recovery vor
 
-Der Schutz von Microsoft SQL Server-Instanzen und -Datenbanken umfasst die Ressourcenerkennung, die Validierung der Voraussetzungen sowie die Konfiguration und Installation des Plug-ins für Microsoft SQL Server.  Das Plug-in ist eine hostseitige Komponente der NetApp -Software, mit der Sie Ihre Microsoft SQL Server-Workloads schützen können.
+Schließen Sie den Vorbereitungsprozess ab, um Ihre Microsoft SQL Server-Ressourcen mit BlueXP backup and recovery zu schützen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
