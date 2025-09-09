@@ -1,31 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: deregister-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance 
-summary: Melden Sie die Registrierung einer Instanz ab, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten. 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
+summary: Heben Sie die Registrierung einer Ressource auf, wenn Sie keine Ressourcen mehr über die Workload Factory-Konsole bereitstellen oder überwachen möchten. 
 ---
-= Abmelden einer Instanz in der Workload Factory
+= Abmelden einer Ressource in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Melden Sie eine Instanz ab, wenn Sie keine Instanzressourcen mehr bereitstellen oder überwachen möchten. Durch die Abmeldung wird auch die von der Instanz belegte Speicherkapazität gelöscht.
+Melden Sie eine Ressource ab, beispielsweise eine Microsoft SQL Server-Instanz oder eine Oracle-Datenbank, wenn Sie keine Ressourcen mehr über die Workload Factory-Konsole bereitstellen oder überwachen möchten.  Durch die Abmeldung von Ressourcen wird auch die von der Instanz verwendete FSx for ONTAP Speicherkapazität entfernt.
 
-Sie können die Instanz später erneut registrieren.
+Sie können die Ressource erneut registrieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Klicken Sie auf den Dropdown-Pfeil, um die Zeile der Instanz zu erweitern, deren Registrierung Sie aufheben möchten.
-+
-Der Host wird erweitert und die Instanzen werden angezeigt.
+. Wählen Sie im Inventar den Engine-Typ aus: Microsoft SQL Server, Oracle oder PostgreSQL.
+. Suchen Sie die Ressource, deren Registrierung Sie aufheben möchten, wählen Sie das Drei-Punkte-Menü und dann *Abmelden*.
 
-. Klicken Sie auf das Drei-Punkte-Menü der Instanz, um sich abzumelden.
-. Wählen Sie *Abmelden*.
-
-
-.Ergebnis
-Die Instanz ist nun abgemeldet. Sie können die Instanz später erneut registrieren.

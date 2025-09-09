@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Erfahren Sie mehr über die Instanzverwaltung in der Workload Factory für Datenbanken. 
+summary: Erfahren Sie mehr über die Instanz- und Datenbankverwaltung in der Workload Factory für Datenbanken. 
 ---
-= Instanzverwaltung in der Workload Factory für Datenbanken
+= Ressourcenverwaltung in der Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Die Verwaltung registrierter Instanzen in der Workload Factory umfasst die Bereitstellung von Ressourcen für Ihre Instanzen, z. B. das Erstellen von Datenbanken und Datenbankklonen, sowie die Überwachung des Instanz- und Datenbankstatus, der Ressourcenauslastung, des Schutzes und der Speicherleistung. Darüber hinaus können Sie den Status Ihrer Datenbankkonfigurationen analysieren und Best Practices für die Konfiguration implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken. Die Instanzverwaltung ist nur für Instanzen mit FSx für ONTAP-Dateisystemspeicher verfügbar.
+Durch die Verwaltung von Ressourcen in der Workload Factory können Sie erweiterte Funktionen nutzen, darunter Datenbank- und Klonerstellung, Ressourcennutzung und -überwachung.  Darüber hinaus können Sie den ordnungsgemäßen Status Ihrer Datenbankkonfigurationen analysieren und bewährte Konfigurationsmethoden implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken.  Die Ressourcenverwaltung gilt nur für Microsoft SQL Server- und Oracle-Umgebungen, die auf FSx für ONTAP Dateisystemspeicher ausgeführt werden.
 
-Sie müssen link:register-instance.html["eine Instanz registrieren"] um eine der folgenden Verwaltungsaufgaben auszuführen.
+Sie müssenlink:register-instance.html["Ressourcen registrieren"] um eine der folgenden Verwaltungsaufgaben auszuführen.
 
 Zu den Managementaufgaben gehören:
 
+* Anzeigen von Datenbanken aus dem Inventar
 * link:create-database.html["Erstellen einer Datenbank"]
 * link:create-sandbox-clone.html["Erstellen eines Datenbankklons (Sandbox)"]
-* link:view-databases.html["Datenbanken anzeigen"]
 * link:optimize-configurations.html["Implementierung gut konzipierter Datenbankkonfigurationen"]
 

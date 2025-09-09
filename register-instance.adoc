@@ -1,49 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: register-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, manage host, view host, database host, database instance, manage, unregister 
-summary: Verwalten Sie Microsoft SQL Server-Instanzen in der BlueXP -Workload-Farm für Datenbanken. 
+keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
+summary: Registrieren Sie Ressourcen, damit Sie den Ressourcenstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können. 
 ---
-= Registrieren Sie Instanzen in der Workload Factory für Datenbanken
+= Registrieren von Ressourcen in der Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Registrieren Sie Instanzen, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.
+Registrieren Sie Instanzen für Microsoft SQL Server und Datenbanken für Oracle, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.
 
-Datenbanken können Instanzen nur mit FSx für ONTAP-Dateisystemspeicher registrieren.
+Die Registrierung ist nur für Datenbank-Engines möglich, die auf FSx für ONTAP Dateisystemspeicher ausgeführt werden.
 
 
 
 == Über die Aufgabe
 
-Das Registrieren einer Instanz umfasst zwei Schritte: die Authentifizierung der Instanz und die Vorbereitung der Instanz, indem sichergestellt wird, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz installiert sind.
+Das Registrieren einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst zwei Schritte: Authentifizierung und Vorbereitung.  Zur Vorbereitung gehört es, sicherzustellen, dass alle AWS-, NetApp und PowerShell-Module auf der Instanz installiert sind.
 
-Sie können Links mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.
-
-
-NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen. Abhängig von den in Workload Factory ausgewählten AWS-Kontoanmeldeinformationen werden möglicherweise PostgreSQL- und Oracle-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen nur auf Amazon Linux-Betriebssystemen und Oracle-Instanzen nur auf Red Hat Enterprise Linux.
-
-Registrieren einer Instanz in einem privaten Netzwerk:: Um eine Instanz in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind. Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
-+
---
-* `S3 Gateway/endpoint`
-* `ssm`
-* `ssmmessages`
-* `fsx`
-+
-Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen verwenden, müssen Sie den Zugriff auf die folgenden Domänen zulassen, damit die Verwaltungsvorgänge funktionieren:
-
-* ``.microsoft.com``
-* ``.powershellgallery.com``
-* ``.aws.amazon.com``
-* ``.amazonaws.com``
+Sie können sich mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.
 
 
---
-
+NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken.  Abhängig von den AWS-Kontoanmeldeinformationen, die Sie in der Workload Factory auswählen, werden möglicherweise PostgreSQL-Hosts im Inventar angezeigt.  Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
 
 
 
@@ -51,13 +32,30 @@ Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen 
 
 Beachten Sie Folgendes, bevor Sie eine Instanz registrieren:
 
-* Der Host für die Instanz muss auf der Registerkarte Inventar angezeigt werden. Damit Hosts im Inventar angezeigt werden, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
-* Bei Verwendung von Windows-Domänenbenutzeranmeldeinformationen zur Authentifizierung für SQL Server-Verwaltungsvorgänge aktiviert Workload Factory die CredSSP-Delegierung auf den SQL-Knoten. Wenn die CredSSP-Delegierung für alle Domänencomputer mit der Gruppenrichtlinie blockiert ist, funktioniert die Authentifizierung mit Windows-Benutzeranmeldeinformationen nicht.
+Der Host für die Instanz oder Datenbank muss auf der Registerkarte „Inventar“ angezeigt werden.  Damit Hosts im Inventar angezeigt werden,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
+
+
+
+=== Registrieren einer Instanz in einem privaten Netzwerk
+
+Um eine Instanz (SQL Server) oder Datenbank (Oracle) in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind.  Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
++
+Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen verwenden, müssen Sie den Zugriff auf die folgenden Domänen zulassen, damit die Verwaltungsvorgänge funktionieren:
+
+* ``.microsoft.com``(SQL Server)
+* ``.powershellgallery.com``(SQL Server)
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
 
 
 
 
-== Registrieren einer Instanz
+== Registrieren einer SQL Server-Instanz
 
 Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbereitung.
 
@@ -65,8 +63,9 @@ Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbere
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie auf der Registerkarte „Inventar“ die Registerkarte *Instanzen* aus.
-. Wählen Sie aus, ob Sie eine einzelne Instanz oder mehrere Instanzen registrieren möchten.
+. Wählen Sie *Microsoft SQL Server* als Engine-Typ.
+. Wählen Sie die Registerkarte *Instanzen*.
+. Wählen Sie aus, ob Sie eine einzelne oder mehrere Instanzen registrieren möchten.
 +
 .. Registrierung einer einzelnen Instanz: Navigieren Sie zu der zu verwaltenden Instanz und wählen Sie *Instanz registrieren*.
 .. Registrierung mehrerer Instanzen: Wählen Sie die Schaltfläche *Mehrere Instanzen registrieren*.
@@ -90,7 +89,7 @@ Für die Registrierung mehrerer Instanzen stehen zwei Optionen zur Verfügung. I
 +
 .. Falls fehlend, wählen Sie Workload Factory aus, um *fehlende AWS- und NetApp PowerShell-Module zu installieren*.
 .. Falls das fehlende Modul fehlt, wählen Sie die Workload Factory aus, um das fehlende PowerShell 7 zu installieren. Die Installation des fehlenden PowerShell-Moduls 7 erfordert einen Systemneustart.
-.. Überprüfen Sie die Liste der Voraussetzungen für die folgenden Funktionen. Eine Voraussetzung muss erfüllt sein, um die Instanz registrieren zu können.
+.. Überprüfen Sie die Liste der Voraussetzungen für die folgenden Funktionen.  Stellen Sie sicher, dass Sie alle Voraussetzungen pro Funktion erfüllen, um die Instanz zu registrieren.
 +
 *** *Überprüfen Sie gut strukturierte Probleme und Empfehlungen*
 *** *Beheben Sie gut konzipierte Probleme*
@@ -101,11 +100,74 @@ Zum Erfüllen der Voraussetzungen gehört die Aktualisierung Ihrer AWS IAM-Richt
 
 
 
-.. Erfüllen Sie mindestens eine fehlende Voraussetzung, um fortzufahren.
-.. Wenn eine oder mehrere Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Instanz *registrieren*.
+.. Wenn die Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Instanz *registrieren*.
 
 
 
 
 .Ergebnis
-Die Anforderung zur Registrierung der Instanz wird gestartet. Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.
+Die Instanzregistrierung wird eingeleitet.  Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.
+
+
+
+== Registrieren einer Oracle-Datenbank
+
+Das Registrieren einer Datenbank umfasst die Instanzauthentifizierung und -vorbereitung.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Wählen Sie auf der Registerkarte „Inventar“ *Oracle* als Datenbank-Engine aus.
+. Wählen Sie die Registerkarte *Datenbanken*.
+. Wählen Sie aus, ob Sie eine einzelne Datenbank oder mehrere Datenbanken registrieren möchten.
++
+.. Einzeldatenbankregistrierung: Navigieren Sie zur zu verwaltenden Datenbank und wählen Sie *Datenbank registrieren*.
+.. Registrierung mehrerer Datenbanken: Wählen Sie die Schaltfläche *Mehrere Datenbanken registrieren*.
++
+Für die Registrierung mehrerer Datenbanken stehen zwei Optionen zur Verfügung.  In beiden Fällen müssen die Datenbanken denselben Authentifizierungsstatus aufweisen (nicht authentifiziert oder authentifiziert).
+
++
+*** Nicht authentifizierte Datenbanken: Wählen Sie mehrere nicht authentifizierte Datenbanken zur Registrierung aus.  Diese Datenbanken müssen dieselben Authentifizierungsdaten und FSx for ONTAP Anmeldeinformationen verwenden.  Wählen Sie *Übernehmen* und dann *Weiter*.
+*** Authentifizierte Datenbanken: Wählen Sie mehrere authentifizierte Datenbanken zur Registrierung aus und wählen Sie dann *Weiter*.
+
+
+
+
+. Wählen Sie in Schritt 2 auf der Seite „Datenbanken registrieren“ den Datenbankauthentifizierungsmodus aus, geben Sie die folgenden Details ein und wählen Sie *Weiter*.  Wenn Datenbanken bereits authentifiziert sind, wählen Sie *Weiter*.
++
+** *Oracle-Benutzerauthentifizierung*: Geben Sie den Oracle-Benutzernamen und das Kennwort sowie den Benutzernamen und das Kennwort für das FSx for ONTAP -Dateisystem ein.
+** *Oracle ASM-Benutzerauthentifizierung*: Optional.  Wenn die Oracle-Datenbank Automatic Storage Management (ASM) verwendet, geben Sie den Benutzernamen und das Kennwort für Oracle ASM (Grid) ein.
+
+
+. Bereiten Sie in Schritt 3 die Datenbank vor, indem Sie sicherstellen, dass die Datenbank die erforderlichen Voraussetzungen erfüllt.  Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, wählen Sie *Weiter*, um die Datenbank zu registrieren.  Wenn Sie Maßnahmen ergreifen müssen, befolgen Sie diese Schritte.
++
+.. Überprüfen Sie die Liste der Voraussetzungen für die folgende Funktion.  Um die Datenbank zu registrieren, müssen alle Voraussetzungen für eine einzelne Funktion erfüllt sein.
++
+*** *Überprüfen Sie gut strukturierte Probleme und Empfehlungen*
+
+
+.. Erfüllen Sie die folgenden Voraussetzungen:
++
+*** *AWS IAM-Richtlinienberechtigungen*: Kopieren und aktualisieren Sie AWS-Berechtigungen in der AWS-Konsole.
+*** *Berechtigungen für das EC2 IAM-Instanzprofil*: Kopieren und aktualisieren Sie die Berechtigungen für das EC2 IAM-Instanzprofil auf der Amazon EC2-Instanz in der AWS-Konsole.
+*** *Bereitstellungsmodule*: Wählen Sie bei Bedarf die Installation abhängiger Module aus, darunter die AWS-Befehlszeilenschnittstelle (AWS CLI), jq (JSON-Prozessor für die Befehlszeile) und Python 3.12, falls Version 3.6 oder höher nicht bereits installiert ist.  Workload Factory installiert diese Module automatisch als Teil des Registrierungsprozesses.
+*** *Oracle-Benutzerberechtigungen*: Aktualisieren Sie bei Bedarf die Berechtigungen für den Oracle-Benutzer.
+
+
+.. Wenn die Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Datenbank *registrieren*.
+
+
+
+
+.Ergebnis
+Die Datenbankregistrierung wird gestartet.  Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.
+
+.Wie es weiter geht
+Nach der Ressourcenregistrierung können Sie die folgenden Aufgaben ausführen.
+
+* Datenbanken aus dem Inventar anzeigen
+* link:create-database.html["Erstellen Sie eine Datenbank"]
+* link:create-sandbox-clone.html["Erstellen Sie einen Datenbankklon (Sandbox)."]
+* link:optimize-configurations.html["Implementieren Sie gut konzipierte Datenbankkonfigurationen"]
+

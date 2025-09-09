@@ -39,12 +39,10 @@ sidebar:
         url: "/create-postgresql-server.html"
     - title: Verwalten von Instanzen
       entries:
-      - title: Instanzmanagement
+      - title: Ressourcenmanagement
         url: manage-instance.html
-      - title: Registrieren einer Instanz
+      - title: Ressourcen registrieren
         url: "/register-instance.html"
-      - title: Datenbanken anzeigen
-        url: "/view-databases.html"
       - title: Erstellen Sie eine Datenbank
         url: "/create-database.html"
       - title: Sandbox-Klon erstellen
@@ -65,6 +63,8 @@ sidebar:
         url: "/optimize-configurations.html"
       - title: Verschieben der Konfigurationsanalyse
         url: "/postpone-analysis.html"
+    - title: Fehlerprotokolle analysieren
+      url: "/analyze-error-logs.html"
     - title: Management von Klonen
       entries:
       - title: Integrität eines Sandbox-Klons prüfen
@@ -81,6 +81,8 @@ sidebar:
         url: "/split-clone.html"
       - title: Sandbox-Klon löschen
         url: "/delete-clone.html"
+    - title: Aufheben der Registrierung von Ressourcen
+      url: "/deregister-instance.html"
   - title: Wissen und Support
     entries:
     - title: Für den Support anmelden

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-overview.html 
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
-summary: Workload Factory für Datenbanken analysiert regelmäßig Microsoft SQL Server-Konfigurationen, um festzustellen, ob Probleme vorliegen. 
+summary: Workload Factory für Datenbanken analysiert regelmäßig Microsoft SQL Server- und Oracle-Konfigurationen, um festzustellen, ob Probleme vorliegen. 
 ---
 = Konfigurationsanalyse für Datenbankumgebungen in der Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Workload Factory für Datenbanken analysiert regelmäßig Microsoft SQL
 
 
 [role="lead"]
-Workload Factory für Datenbanken analysiert regelmäßig Datenbankkonfigurationen, um festzustellen, ob Probleme mit Microsoft SQL Server-Bereitstellungen auf Amazon FSx für NetApp ONTAP-Speicher vorliegen. Bei Problemen zeigt Ihnen Workload Factory die Ursachen und erklärt, was geändert werden muss, um sicherzustellen, dass Ihre Datenbankkonfigurationen maximale Leistung, Kosteneffizienz und Best Practices erreichen.
+Workload Factory für Datenbanken analysiert regelmäßig Datenbankkonfigurationen, um festzustellen, ob es Probleme mit Microsoft SQL Server- und Oracle-Bereitstellungen auf Amazon FSx for NetApp ONTAP Speicher gibt.  Wenn Probleme gefunden werden, zeigt Ihnen Workload Factory, um welche Probleme es sich handelt, und erklärt, was geändert werden muss, um sicherzustellen, dass Ihre Datenbankkonfigurationen Spitzenleistung, Kosteneffizienz und die Einhaltung bewährter Methoden erreichen.
 
 Die wichtigsten Funktionen:
 
@@ -29,10 +29,18 @@ Die wichtigsten Funktionen:
 
 In der Workload-Factory-Konsole auf Filesystem-Ebene wird der gut konzipierte Status für alle FSX for ONTAP-Dateisysteme aufgeführt. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut strukturiert“ kategorisiert. Wenn Sie den Status „gut strukturiert“ auswählen, werden Sie auf die Registerkarte „gut strukturiert“ im Dateisystem weitergeleitet, auf der Sie die gut konzipierte Punktzahl, die Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden können.
 
-Gut konzipierte Punktzahl:: Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
-Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
-+
---
+
+
+== Gut konzipierte Punktzahl
+
+Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
+
+
+
+== Konfigurationskategorien
+
+Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
+
 * _Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.
 * _Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.
 * _Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.
@@ -40,17 +48,19 @@ Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien o
 * _Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.
 
 
---
-Analyseumfang:: Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.
 
+
+== Analyseumfang
+
+Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.
 
 
 
 == Analyseanforderungen
 
-Für eine vollständige Analyse der Datenbankumgebung müssen Instanzen registriert und online sein.
+Für eine vollständige Analyse der Datenbankumgebung müssen die Ressourcen registriert und online sein.
 
-link:register-instance.html["Erfahren Sie, wie Sie eine Instanz registrieren."]
+link:register-instance.html["Erfahren Sie, wie Sie Ressourcen registrieren."]
 
 .Wie es weiter geht
 link:optimize-configurations.html["Implementieren Sie gut konzipierte Datenbankkonfigurationen"]

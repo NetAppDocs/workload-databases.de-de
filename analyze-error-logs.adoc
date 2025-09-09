@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: analyze-error-logs.html 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+summary: Analysieren Sie Fehlerprotokolle innerhalb der Workload Factory für Datenbanken. 
+---
+= Fehlerprotokolle in der Workload Factory analysieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwenden Sie den Smart Error Log Analyzer, um Microsoft SQL Server-Fehlerprotokolle automatisch zu interpretieren, sodass Sie Probleme schnell identifizieren und beheben können.  Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.
+
+.Über diese Aufgabe
+Durch die Analyse und Behebung von Fehlerprotokollen können Sie die Integrität und Leistung von SQL Server-Instanzen aufrechterhalten.  Die effektive Interpretation von SQL Server-Fehlerprotokollen erfordert sorgfältige Analyse und Fachwissen.  Manuelle Überwachung, Fehlererkennung und Ursachenanalyse sind zeitintensiv und fehleranfällig.  Diese Herausforderungen können die Problemlösung verzögern, Ausfallzeiten erhöhen und zu betrieblichen Ineffizienzen führen.  Der Smart Error Log Analyzer begegnet diesen Herausforderungen mit den folgenden wichtigen Vorteilen:
+
+* Intelligente Gruppierung: Konsolidiert Fehler auf intelligente Weise nach Eindeutigkeit, Schweregrad und Kategorie und vereinfacht den Fehlerbehebungsprozess für schnellere und effektivere Lösungen.
+* KI-gesteuerte Untersuchung: Nutzt KI zur proaktiven Fehleranalyse und liefert klare, umsetzbare Erkenntnisse zur schnelleren Problemidentifizierung, ohne dass umfassende Fachkenntnisse erforderlich sind.
+* Fehleranreicherung: Erweitert Fehlerprotokolle mit externen Referenzen und bietet so kontextuelle Klarheit, um das Verständnis und die Entscheidungsfindung zu verbessern.
+* Behebung anhand bewährter Methoden: Bietet maßgeschneiderte Behebungsempfehlungen für SQL Server-Workloads, die auf FSx für ONTAP ausgeführt werden, und ermöglicht Benutzern aller Kenntnisstufen, Probleme sicher zu lösen.
+
+
+Wenn Sie den Smart Error Log Analyzer verwenden, behalten Sie die volle Kontrolle über Ihre Umgebung und profitieren gleichzeitig von erweiterten KI-Analysen.
+
+Um den Smart Error Log Analyzer zu verwenden, müssen Sie Amazon Bedrock aktivieren, das von der Workload Factory verwendete Modell auswählen, einen privaten Endpunkt für die Verbindung mit Amazon Bedrock erstellen, Berechtigungen hinzufügen und eine Unternehmenslizenz erstellen.
+
+link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
+
+.Bevor Sie beginnen
+Um den Smart Error Log Analyzer verwenden zu können, müssen Sie die folgenden Voraussetzungen erfüllen:
+
+* Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrieren einer SQL Server-Instanz"^]in der Workload-Fabrik. *
+
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
+. Wählen Sie *SQL Server* als Datenbank-Engine.
+. Suchen Sie auf der Registerkarte „Instanzen“ die spezifische SQL Server-Instanz, die Sie analysieren möchten, und wählen Sie dann im Menü „Fehler untersuchen“ aus.
+. Erfüllen Sie auf der Registerkarte *Fehleruntersuchung* die folgenden Voraussetzungen, wie in der Konsole beschrieben:
++
+** Amazon Bedrock
+** Netzwerk: Privater Endpunkt für Amazon Bedrock
+** Berechtigungen für die EC2-Instance-Profilrolle
+** Mit Workload Database Management (wlmdb) verknüpfte Anmeldeinformationen
+
+
+. Wenn die Voraussetzungen erfüllt sind, wählen Sie *Jetzt untersuchen* aus, um mit dem Smart Error Log Analyzer Einblicke in Ihre SQL Server-Fehlerprotokolle zu erhalten.
++
+Nach dem Scan werden Fehler in der Konsole angezeigt und bieten einen umfassenden Überblick über die vom Smart Error Log Analyzer erkannten Probleme.
+
+. Verwenden Sie Filter, um die angezeigten Fehler anhand von Kriterien wie Schweregrad, Zeitrahmen und Fehlercode zu verfeinern.
+. Überprüfen Sie die detaillierten Fehlerinformationen, einschließlich der ursprünglichen Fehlermeldung, der KI-basierten Erklärung und der vorgeschlagenen Schritte zur Behebung der Fehler.
+

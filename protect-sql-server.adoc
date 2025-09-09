@@ -42,7 +42,6 @@ Um Datenbanken zu erkennen, müssen Sie die Hostauflösung auf dem Connector fes
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Einrichten der Lizenzierung für BlueXP backup and recovery"^]
-* Stellen Sie in der Workload Factory für Datenbanken sicher, dass Sie Instanzen mit Windows-Anmeldeinformationen registrieren.  Um Windows-Anmeldeinformationen bereitzustellen, wechseln Sie im Inventar zur Registerkarte „Instanzen“.  Identifizieren Sie die Instanz, wählen Sie *Instanzen verwalten* und dann *Instanz-Dashboard*.  Wählen Sie im Instanz-Dashboard das Drei-Punkte-Menü und dann *Microsoft SQL Server-Passwort aktualisieren*.  Aktualisieren Sie das Kennwort mithilfe der Windows-Authentifizierung.
 
 
 
@@ -57,7 +56,11 @@ Schließen Sie den Vorbereitungsprozess ab, um Ihre Microsoft SQL Server-Ressour
 . Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
 . Filtern Sie den *Engine-Typ* nach *Microsoft SQL Server*.
 . Wählen Sie im Menü für die zu schützende Instanz *Schützen* aus.
-. Wählen Sie den *Connector* aus, bei dem die Arbeitslast registriert und geschützt werden soll.
+. Geben Sie bei entsprechender Aufforderung die Windows-Anmeldeinformationen mit Administratorzugriff ein.
++
+Um BlueXP backup and recovery zum Schutz zu verwenden, müssen SQL Server-Instanzen mit Windows-Anmeldeinformationen in der Workload Factory registriert werden.
+
+. Wenn mehrere Connectors aktiv und verfügbar sind, wählen Sie den *Connector* aus, bei dem die Arbeitslast registriert und geschützt werden soll.
 . Zur Vorbereitung auf den Datenschutz registriert Workload Factory Ihre SQL Server-Ressourcen automatisch in BlueXP backup and recovery, konfiguriert und installiert das Plug-in für Microsoft SQL Server und ermittelt Ressourcen, um die Voraussetzungen für den Schutz Ihrer SQL Server-Instanz zu erfüllen.  Wählen Sie *Start*, um den Vorgang zu beginnen.
 . Nachdem Sie die Voraussetzungen erfüllt haben, wählen Sie *Umleiten*, um auf die BlueXP backup and recovery zuzugreifen.
 
