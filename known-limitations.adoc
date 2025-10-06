@@ -4,20 +4,20 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
 ---
-= Bekannte Einschränkungen für die BlueXP -Workload-Fabrik für Datenbanken
+= Bekannte Einschränkungen für NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von NetApp Workload Factory für Datenbanken nicht unterstützt werden oder nicht ordnungsgemäß damit zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
 
 
 
 == Unterstützung der Instanzerkennung
 
-Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.
+Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und von Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.
 
 
 
@@ -35,13 +35,13 @@ Die Bereitstellung mit einem benutzerdefinierten AMI setzt voraus, dass Installa
 * Wenn Sie eine andere Sammlung als die Sammlung im Image für die eigenständige Bereitstellung auswählen
 
 
-Im Rahmen der Bereitstellung installiert Workload Factory keine benutzerdefinierte AMI mit mehreren Microsoft SQL Server Instanzen. Nur die Standardinstanz von Microsoft SQL Server ist ausgewählt und als Teil der Bereitstellung konfiguriert.
+Im Rahmen der Bereitstellung installiert Workload Factory kein benutzerdefiniertes AMI mit mehreren Microsoft SQL Server-Instanzen.  Im Rahmen der Bereitstellung wird nur die Standardinstanz von Microsoft SQL Server ausgewählt und konfiguriert.
 
 
 
 == Führen Sie ein Rollback durch und versuchen Sie es erneut, wenn Bereitstellungen fehlgeschlagen sind
 
-Rollback und erneute Versuche für fehlgeschlagene Bereitstellungen werden in der Workload-Fabrik nicht unterstützt. Sie können ein Rollback durchführen oder einen fehlgeschlagenen Stack von der CloudFormation-Konsole in AWS erneut versuchen.
+Rollback und Wiederholungsversuch für fehlgeschlagene Bereitstellungen werden in Workload Factory nicht unterstützt.  Sie können einen fehlgeschlagenen Stapel über die CloudFormation-Konsole in AWS zurücksetzen oder erneut versuchen.
 
 
 
@@ -60,7 +60,7 @@ Sie müssen diese manuell bereinigen oder warten, bis die Domäne veraltete Eint
 
 == Always-On-Konfiguration von Verfügbarkeitsgruppen
 
-Die Verwaltung von Konfigurationen für „Always On“-Verfügbarkeitsgruppen wird in der Workload-Werkseinstellung nicht unterstützt.
+Die Verwaltung von Always On-Verfügbarkeitsgruppenkonfigurationen wird in Workload Factory nicht unterstützt.
 
 
 
@@ -84,7 +84,7 @@ Es können maximal 90 Sandbox-Klone von einem Datenbankserver erstellt werden.
 
 == Erkennung und Verwaltung von Microsoft SQL Server
 
-Die Microsoft SQL Server-Erkennung wird nicht gespeichert. Bei jedem Zugriff auf Datenbanken in der Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
+Die Microsoft SQL Server-Erkennung wird nicht gespeichert.  Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
 
 
 
@@ -118,7 +118,7 @@ Die Massenoptimierung für mehr als eine SQL Server-Instanz wird für die ONTAP-
 
 === Bewertung von Patches für das Betriebssystem zur Optimierung
 
-Die für Optimierungszwecke vorgestellte Bewertung von Betriebssystem-Patches darf in einem privaten Netzwerk nicht funktionieren. Die Bewertung basiert auf AWS Patch Manager. Informationen zum Patchen von Windows EC2-Instanzen in einem privaten Netzwerk finden Sie unter link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Der AWS Cloud Operations Blog „How to Patch Windows EC2 Instances in private Subnets using AWS Systems Manager“"^].
+Die zu Optimierungszwecken durchgeführte Patch-Bewertung des Betriebssystems funktioniert in einem privaten Netzwerk möglicherweise nicht.  Die Bewertung basiert auf AWS Patch Manager.  Informationen zum Patchen von Windows EC2-Instanzen in einem privaten Netzwerk finden Sie im AWS Cloud Operations Blog.link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["So patchen Sie Windows EC2-Instanzen in privaten Subnetzen mit AWS Systems Manager"^] .
 
 
 
@@ -131,17 +131,35 @@ Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokale
 == Regionsübergreifende Replizierungsbewertung
 
 * Die Optimierungsbewertung kann nicht ermitteln, ob regionsübergreifende Replizierung (CRR) verwendet wird, wenn sich das Ziel-Filesystem FSX für ONTAP in einem anderen AWS-Konto befindet.
-* Workload Factory bewertet nur die CRR-Konfiguration des Quell-FSX für ONTAP-Dateisystem.
+* Workload Factory bewertet nur die CRR-Konfiguration des Quell-FSx für ONTAP Dateisystems.
 
 
 
 
-== Datenbankhostauthentifizierung bei Explore-Einsparungen
+== Datenbank-Host-Authentifizierung beim Ermitteln von Einsparungen
 
 In einigen Fällen mit eingeschränkten Berechtigungen lädt die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten.
 
 
 
-== Integration mit BlueXP backup and recovery
+== Integration mit NetApp Backup und Recovery
 
-Nach dem Hinzufügen von Hosts zum Schutz zu BlueXP Backup and Recovery schlägt die Datenbankerkennung manchmal fehl.
+Nach dem Hinzufügen von Hosts zu NetApp Backup and Recovery zum Schutz schlägt die Datenbankerkennung manchmal fehl.
+
+
+
+== Regionale Unterstützung
+
+Die folgenden AWS Regionen werden nicht unterstützt:
+
+* China-Regionen
+* GovCloud (USA) Regionen
+* Geheime Cloud
+* Streng geheim
+
+
+
+
+== Registrieren von Oracle auf SUSE Linux Enterprise Server 12
+
+Beim Registrieren von Oracle Database auf SUSE Linux Enterprise Server 12 installiert Workload Factory keine Python-Abhängigkeiten.  Sie müssen die erforderliche Python-Version manuell konfigurieren.  Workload Factory erfordert mindestens Version 3.6; wir empfehlen jedoch Version 3.11.

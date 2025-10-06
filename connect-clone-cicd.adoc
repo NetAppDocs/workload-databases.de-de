@@ -11,7 +11,7 @@ summary: Verbinden Sie einen Sandbox-Klon mit einer CI/CD-Pipeline mit REST-API-
 
 
 [role="lead"]
-Verbindung eines Sandbox-Klons mit einer CI/CD-Pipeline (Continuous Integration and Continuous Delivery) mit REST-API-Code zur Verbesserung der Softwarebereitstellung durch Automatisierung in der BlueXP -Workload-Farm für Datenbanken
+Verbinden Sie einen Sandbox-Klon mit einer CI/CD-Pipeline (Continuous Integration und Continuous Delivery) mit REST-API-Code, um die Softwarebereitstellung durch Automatisierung in NetApp Workload Factory für Datenbanken zu verbessern.
 
 .Über diese Aufgabe
 Um eine neue Softwareversion automatisch für den Datenbankklon bereitzustellen, sollten Sie eine Verbindung zu einer CI/CD-Pipeline herstellen. Verwenden Sie den von diesem Vorgang bereitgestellten REST-API-Code, um die Verbindung herzustellen.
@@ -19,8 +19,8 @@ Um eine neue Softwareversion automatisch für den Datenbankklon bereitzustellen,
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
-. Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, um eine Verbindung zu CI/CD-Tools herzustellen.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, um eine Verbindung mit CI/CD-Tools herzustellen.
 . Wählen Sie *Verbindung zu CI/CD-Tools herstellen*.
 . Kopieren oder laden Sie im CI/CD-Dialogfeld den für die Verbindung mit CI/CD-Tools erforderlichen REST-API-Code herunter.
 . Klicken Sie Auf *Schließen*.

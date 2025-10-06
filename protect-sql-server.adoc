@@ -11,63 +11,64 @@ summary: Schützen Sie Microsoft SQL Server-Instanzen und -Datenbanken.
 
 
 [role="lead"]
-Schützen Sie Ihre Microsoft SQL Server-Anwendungsdaten mithilfe der BlueXP backup and recovery von der Workload Factory-Konsole. Mit dieser Integration können Sie die folgenden Schutzziele erreichen: Sichern Sie Workloads mit lokalen Snapshots auf dem lokalen primären Amazon FSx for NetApp ONTAP Speicher (FSx for ONTAP) und replizieren Sie Workloads auf den sekundären FSx for ONTAP -Speicher.
+Schützen Sie Ihre Microsoft SQL Server-Anwendungsdaten mit NetApp Backup and Recovery über die Workload Factory-Konsole. Mit dieser Integration können Sie die folgenden Schutzziele erreichen: Sichern Sie Workloads mit lokalen Snapshots auf dem lokalen primären Amazon FSx for NetApp ONTAP Speicher (FSx for ONTAP) und replizieren Sie Workloads auf den sekundären FSx for ONTAP -Speicher.
 
 
 
 == Über diese Aufgabe
 
-Workload Factory automatisiert das Erkennen von Ressourcen, das Validieren von Voraussetzungen sowie das Konfigurieren und Installieren des Plug-ins für Microsoft SQL Server, um Sie auf den Schutz Ihrer Workloads mit BlueXP backup and recovery vorzubereiten. Das Plug-in ist eine hostseitige Komponente der NetApp -Software, mit der Sie Ihre Microsoft SQL Server-Workloads schützen können.
+Workload Factory automatisiert das Erkennen von Ressourcen, das Validieren von Voraussetzungen sowie das Konfigurieren und Installieren des Plug-ins für Microsoft SQL Server, um Sie auf den Schutz Ihrer Workloads mit NetApp Backup and Recovery vorzubereiten. Das Plug-in ist eine hostseitige Komponente der NetApp -Software, mit der Sie Ihre Microsoft SQL Server-Workloads schützen können.
 
-BlueXP backup and recovery nutzt die Datenreplikationstechnologie NetApp SnapMirror , um sicherzustellen, dass alle Backups vollständig synchronisiert sind, indem Snapshot-Kopien erstellt und an die Backup-Speicherorte übertragen werden.
+NetApp Backup and Recovery nutzt die Datenreplikationstechnologie NetApp SnapMirror , um sicherzustellen, dass alle Backups vollständig synchronisiert sind, indem Snapshot-Kopien erstellt und an die Backup-Speicherorte übertragen werden.
 
-Einzelheiten zum Schutz mit BlueXP backup and recovery finden Sie imlink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Überblick über Microsoft SQL-Workloads mit BlueXP backup and recovery schützen"^] .
+Weitere Informationen zum Schutz mit Backup und Recovery finden Sie imlink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Überblick über den Schutz von Microsoft SQL-Workloads mit Backup und Recovery"^] .
 
 
 
 == Bevor Sie beginnen
 
-Die folgenden Anforderungen müssen erfüllt sein, um Microsoft SQL Server-Workloads mit BlueXP backup and recovery zu schützen.
+Die folgenden Anforderungen müssen erfüllt sein, um Microsoft SQL Server-Workloads mit Backup und Recovery zu schützen.
 
-* Stellen Sie sicher, dass Ihre Umgebunglink:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["die BlueXP backup and recovery SQL-Server-Anforderungen"^] .
-* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#in-bluexp["Erfüllen Sie die BlueXP Anforderungen"^]einschließlich der Einrichtung von BlueXP, IAM-Rollen und einem BlueXP Connector.
-+
-Wenn Sie über Organisationsadministratorzugriff auf das BlueXP -Konto verfügen, `backup and recovery super admin` Die Rolle wird automatisch zugewiesen, wenn Sie<<Bereiten Sie sich auf den Schutz mit BlueXP backup and recovery vor,Bereiten Sie sich auf den Schutz mit BlueXP backup and recovery vor>> .
+* Stellen Sie sicher, dass Ihre Umgebunglink:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["die Backup- und Recovery-SQL-Server-Anforderungen"^] .
+* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["Vollständige Anforderungen für die NetApp -Konsole"^]einschließlich Einrichten, Zuweisen von IAM-Rollen und Installieren eines Konsolenagenten.
 
-+
-** Legen Sie die Hostauflösung auf dem Connector fest
+
+Wenn Sie über Organisationsadministratorzugriff auf das NetApp -Konto verfügen, `backup and recovery super admin` Die Rolle wird automatisch zugewiesen, wenn Sie<<Bereiten Sie sich mit NetApp Backup and Recovery auf den Schutz vor,Bereiten Sie sich mit NetApp Backup and Recovery auf den Schutz vor>> .
+
+* Legen Sie die Hostauflösung auf dem Connector fest
 +
 Um Datenbanken zu erkennen, müssen Sie die Hostauflösung auf dem Connector festlegen.  Fügen Sie auf dem gehosteten Gerät die Zuordnung der IP-Adresse zum Hostnamen in der `/etc/hosts` Datei.
 
++
+** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["Einrichten der Lizenzierung für NetApp Backup and Recovery"^]
 
 
-* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Einrichten der Lizenzierung für BlueXP backup and recovery"^]
 
 
 
 
-== Bereiten Sie sich auf den Schutz mit BlueXP backup and recovery vor
+== Bereiten Sie sich mit NetApp Backup and Recovery auf den Schutz vor
 
-Schließen Sie den Vorbereitungsprozess ab, um Ihre Microsoft SQL Server-Ressourcen mit BlueXP backup and recovery zu schützen.
+Schließen Sie den Vorbereitungsprozess ab, um Ihre Microsoft SQL Server-Ressourcen mit NetApp Backup and Recovery zu schützen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Filtern Sie den *Engine-Typ* nach *Microsoft SQL Server*.
-. Wählen Sie im Menü für die zu schützende Instanz *Schützen* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
+. Suchen Sie die Instanz, die Sie schützen möchten, und wählen Sie dann *Schützen* aus dem Menü aus.
 . Geben Sie bei entsprechender Aufforderung die Windows-Anmeldeinformationen mit Administratorzugriff ein.
 +
-Um BlueXP backup and recovery zum Schutz zu verwenden, müssen SQL Server-Instanzen mit Windows-Anmeldeinformationen in der Workload Factory registriert werden.
+Um NetApp Backup and Recovery zum Schutz zu verwenden, müssen SQL Server-Instanzen mit Windows-Anmeldeinformationen in Workload Factory registriert werden.
 
-. Wenn mehrere Connectors aktiv und verfügbar sind, wählen Sie den *Connector* aus, bei dem die Arbeitslast registriert und geschützt werden soll.
-. Zur Vorbereitung auf den Datenschutz registriert Workload Factory Ihre SQL Server-Ressourcen automatisch in BlueXP backup and recovery, konfiguriert und installiert das Plug-in für Microsoft SQL Server und ermittelt Ressourcen, um die Voraussetzungen für den Schutz Ihrer SQL Server-Instanz zu erfüllen.  Wählen Sie *Start*, um den Vorgang zu beginnen.
-. Nachdem Sie die Voraussetzungen erfüllt haben, wählen Sie *Umleiten*, um auf die BlueXP backup and recovery zuzugreifen.
+. Wenn mehrere Konsolenagenten aktiv und verfügbar sind, wählen Sie den *Konsolenagenten* aus, bei dem die Arbeitslast registriert und geschützt werden soll.
+. Zur Vorbereitung auf den Datenschutz registriert Workload Factory Ihre SQL Server-Ressourcen automatisch in Backup and Recovery, konfiguriert und installiert das Plug-in für Microsoft SQL Server und ermittelt Ressourcen, um die Voraussetzungen für den Schutz Ihrer SQL Server-Instanz zu erfüllen. Wählen Sie *Start*, um den Vorgang zu beginnen.
+. Nachdem Sie die Voraussetzungen erfüllt haben, wählen Sie *Umleiten*, um auf Backup und Wiederherstellung zuzugreifen.
 
 
 .Wie es weiter geht
-Erstellen Sie mit BlueXP backup and recovery eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken.
+Erstellen Sie unter „Backup und Wiederherstellung“ eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken.
 
-link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html["Erfahren Sie, wie Sie eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken erstellen"^] .
+link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["Erfahren Sie, wie Sie eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken erstellen"^] .
 
-Weitere Informationen finden Sie imlink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["BlueXP backup and recovery"^] zur Verwaltung von Microsoft SQL Server-Workloads.
+Weitere Informationen finden Sie imlink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Dokumentation zu Sicherung und Wiederherstellung"^] zur Verwaltung von Microsoft SQL Server-Workloads.

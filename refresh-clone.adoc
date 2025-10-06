@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: refresh-clone.html 
 keywords: refresh clone, sync, update, database, Microsoft SQL 
-summary: Aktualisierung eines Sandbox-Klons in der BlueXP  Workload-Fabrik für Datenbanken. 
+summary: Aktualisieren Sie einen Datenbankklon in NetApp Workload Factory for Databases, sodass er der Quelldatenbank zum aktuellen oder einem früheren Zeitpunkt entspricht. 
 ---
-= Aktualisierung eines Sandbox-Klons in der BlueXP  Workload-Fabrik für Datenbanken
+= Aktualisieren eines Datenbankklons in NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aktualisieren Sie einen Datenbankklon in der BlueXP -Workload-Farm für Datenbanken, damit dieser zum aktuellen oder vorherigen Zeitpunkt der Quelldatenbank entspricht.
+Aktualisieren Sie einen Datenbankklon (Sandbox) in NetApp Workload Factory for Databases, sodass er der Quelldatenbank zum aktuellen oder einem früheren Zeitpunkt entspricht.
 
 .Über diese Aufgabe
 Durch das Aktualisieren eines Klons wird der Klon entweder in der Quelldatenbank zum aktuellen Zeitpunkt oder in einem Snapshot der Quelldatenbank aktualisiert, der zu einem früheren Zeitpunkt erstellt wurde. Alle am Sandbox-Klon vorgenommenen Änderungen werden gelöscht.
@@ -24,8 +24,8 @@ Um einen Datenbankklon aus einem Snapshot zu aktualisieren, muss die Quelldatenb
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
-. Klicken Sie auf der Registerkarte Sandboxes auf das drei-Punkt-Menü des Sandbox-Klons, den Sie aktualisieren möchten.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, den Sie aktualisieren möchten.
 . Wählen Sie * Aktualisieren*.
 . Wählen Sie im Dialogfeld Aktualisieren eine der folgenden Optionen aus:
 +

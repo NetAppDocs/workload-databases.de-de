@@ -4,21 +4,21 @@ permalink: deregister-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
 summary: Heben Sie die Registrierung einer Ressource auf, wenn Sie keine Ressourcen mehr über die Workload Factory-Konsole bereitstellen oder überwachen möchten. 
 ---
-= Abmelden einer Ressource in der Workload Factory
+= Abmelden einer Ressource in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Melden Sie eine Ressource ab, beispielsweise eine Microsoft SQL Server-Instanz oder eine Oracle-Datenbank, wenn Sie keine Ressourcen mehr über die Workload Factory-Konsole bereitstellen oder überwachen möchten.  Durch die Abmeldung von Ressourcen wird auch die von der Instanz verwendete FSx for ONTAP Speicherkapazität entfernt.
+Melden Sie eine Ressource ab, beispielsweise eine Microsoft SQL Server-Instanz oder eine Oracle-Datenbank, wenn Sie keine Ressourcen mehr über die NetApp Workload Factory-Konsole bereitstellen oder überwachen möchten. Durch die Abmeldung von Ressourcen wird auch die von der Instanz verwendete FSx for ONTAP Speicherkapazität entfernt.
 
 Sie können die Ressource erneut registrieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie im Inventar den Engine-Typ aus: Microsoft SQL Server, Oracle oder PostgreSQL.
-. Suchen Sie die Ressource, deren Registrierung Sie aufheben möchten, wählen Sie das Drei-Punkte-Menü und dann *Abmelden*.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar den Engine-Typ aus: *Microsoft SQL Server*, *Oracle* oder *PostgreSQL*.
+. Suchen Sie die Ressource, deren Registrierung Sie aufheben möchten, wählen Sie das Aktionsmenü und dann *Abmelden*.
 

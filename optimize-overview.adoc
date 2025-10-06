@@ -4,14 +4,14 @@ permalink: optimize-overview.html
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
 summary: Workload Factory für Datenbanken analysiert regelmäßig Microsoft SQL Server- und Oracle-Konfigurationen, um festzustellen, ob Probleme vorliegen. 
 ---
-= Konfigurationsanalyse für Datenbankumgebungen in der Workload Factory
+= Konfigurationsanalyse für Datenbankumgebungen in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory für Datenbanken analysiert regelmäßig Datenbankkonfigurationen, um festzustellen, ob es Probleme mit Microsoft SQL Server- und Oracle-Bereitstellungen auf Amazon FSx for NetApp ONTAP Speicher gibt.  Wenn Probleme gefunden werden, zeigt Ihnen Workload Factory, um welche Probleme es sich handelt, und erklärt, was geändert werden muss, um sicherzustellen, dass Ihre Datenbankkonfigurationen Spitzenleistung, Kosteneffizienz und die Einhaltung bewährter Methoden erreichen.
+Workload Factory for Databases analysiert regelmäßig Datenbankkonfigurationen, um festzustellen, ob es Probleme mit Microsoft SQL Server- und Oracle-Bereitstellungen auf Amazon FSx for NetApp ONTAP Speicher gibt.  Wenn Probleme gefunden werden, zeigt Ihnen Workload Factory, um welche Probleme es sich handelt, und erklärt, was geändert werden muss, um sicherzustellen, dass Ihre Datenbankkonfigurationen Spitzenleistung, Kosteneffizienz und die Einhaltung bewährter Methoden erreichen.
 
 Die wichtigsten Funktionen:
 
@@ -27,7 +27,7 @@ Die wichtigsten Funktionen:
 
 == Zustand der Architektur gut
 
-In der Workload-Factory-Konsole auf Filesystem-Ebene wird der gut konzipierte Status für alle FSX for ONTAP-Dateisysteme aufgeführt. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut strukturiert“ kategorisiert. Wenn Sie den Status „gut strukturiert“ auswählen, werden Sie auf die Registerkarte „gut strukturiert“ im Dateisystem weitergeleitet, auf der Sie die gut konzipierte Punktzahl, die Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden können.
+In der Workload Factory-Konsole wird auf Dateisystemebene der Status „Well-Architected“ für alle FSx for ONTAP -Dateisysteme aufgelistet. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut konzipiert“ kategorisiert. Wenn Sie den Status „Well-Architected“ auswählen, werden Sie zur Registerkarte „Well-Architected-Status“ im Dateisystem weitergeleitet, wo Sie die Well-Architected-Bewertung, Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden.
 
 
 

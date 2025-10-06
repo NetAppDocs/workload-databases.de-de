@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: register-instance.html 
 keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
-summary: Registrieren Sie Ressourcen, damit Sie den Ressourcenstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können. 
+summary: Registrieren Sie Ressourcen, damit Sie den Ressourcenstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in NetApp Workload Factory für Datenbanken überwachen können. 
 ---
-= Registrieren von Ressourcen in der Workload Factory für Datenbanken
+= Ressourcen in NetApp Workload Factory für Datenbanken registrieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Registrieren Sie Instanzen für Microsoft SQL Server und Datenbanken für Oracle, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in der Workload Factory für Datenbanken überwachen können.
+Registrieren Sie Instanzen für Microsoft SQL Server und Datenbanken für Oracle, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in NetApp Workload Factory für Datenbanken überwachen können.
 
 Die Registrierung ist nur für Datenbank-Engines möglich, die auf FSx für ONTAP Dateisystemspeicher ausgeführt werden.
 
@@ -24,7 +24,7 @@ Das Registrieren einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst zwei
 Sie können sich mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.
 
 
-NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken.  Abhängig von den AWS-Kontoanmeldeinformationen, die Sie in der Workload Factory auswählen, werden möglicherweise PostgreSQL-Hosts im Inventar angezeigt.  Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
+NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken.  Abhängig von den AWS-Kontoanmeldeinformationen, die Sie in Workload Factory auswählen, werden möglicherweise PostgreSQL-Hosts im Inventar angezeigt.  Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
 
 
 
@@ -32,7 +32,7 @@ NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Mic
 
 Beachten Sie Folgendes, bevor Sie eine Instanz registrieren:
 
-Der Host für die Instanz oder Datenbank muss auf der Registerkarte „Inventar“ angezeigt werden.  Damit Hosts im Inventar angezeigt werden,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
+Der Host für die Instanz oder Datenbank muss im Inventar erscheinen. Damit Hosts im Inventar angezeigt werden,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
 
 
 
@@ -62,8 +62,8 @@ Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbere
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie *Microsoft SQL Server* als Engine-Typ.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
 . Wählen Sie die Registerkarte *Instanzen*.
 . Wählen Sie aus, ob Sie eine einzelne oder mehrere Instanzen registrieren möchten.
 +
@@ -117,8 +117,8 @@ Das Registrieren einer Datenbank umfasst die Instanzauthentifizierung und -vorbe
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie auf der Registerkarte „Inventar“ *Oracle* als Datenbank-Engine aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Oracle* als Datenbank-Engine aus.
 . Wählen Sie die Registerkarte *Datenbanken*.
 . Wählen Sie aus, ob Sie eine einzelne Datenbank oder mehrere Datenbanken registrieren möchten.
 +

@@ -2,19 +2,22 @@
 sidebar: sidebar 
 permalink: analyze-error-logs.html 
 keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
-summary: Analysieren Sie Fehlerprotokolle innerhalb der Workload Factory für Datenbanken. 
+summary: Analysieren Sie Fehlerprotokolle in Workload Factory für Datenbanken. 
 ---
-= Fehlerprotokolle in der Workload Factory analysieren
+= Fehlerprotokolle in Workload Factory analysieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Verwenden Sie den Smart Error Log Analyzer, um Microsoft SQL Server-Fehlerprotokolle automatisch zu interpretieren, sodass Sie Probleme schnell identifizieren und beheben können.  Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.
+Verwenden Sie den intelligenten Fehlerprotokollanalysator, um Microsoft SQL Server-Fehlerprotokolle automatisch zu interpretieren, sodass Sie Probleme schnell identifizieren und beheben können. Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.
 
-.Über diese Aufgabe
-Durch die Analyse und Behebung von Fehlerprotokollen können Sie die Integrität und Leistung von SQL Server-Instanzen aufrechterhalten.  Die effektive Interpretation von SQL Server-Fehlerprotokollen erfordert sorgfältige Analyse und Fachwissen.  Manuelle Überwachung, Fehlererkennung und Ursachenanalyse sind zeitintensiv und fehleranfällig.  Diese Herausforderungen können die Problemlösung verzögern, Ausfallzeiten erhöhen und zu betrieblichen Ineffizienzen führen.  Der Smart Error Log Analyzer begegnet diesen Herausforderungen mit den folgenden wichtigen Vorteilen:
+
+
+== Über diese Aufgabe
+
+Durch die Analyse und Behebung von Fehlerprotokollen können Sie die Integrität und Leistung von SQL Server-Instanzen aufrechterhalten. Die effektive Interpretation von SQL Server-Fehlerprotokollen erfordert sorgfältige Analyse und Fachwissen. Manuelle Überwachung, Fehlererkennung und Ursachenanalyse sind zeitintensiv und fehleranfällig. Diese Herausforderungen können die Problemlösung verzögern, Ausfallzeiten erhöhen und zu betrieblichen Ineffizienzen führen. Der intelligente Fehlerprotokollanalysator begegnet diesen Herausforderungen mit den folgenden Hauptvorteilen:
 
 * Intelligente Gruppierung: Konsolidiert Fehler auf intelligente Weise nach Eindeutigkeit, Schweregrad und Kategorie und vereinfacht den Fehlerbehebungsprozess für schnellere und effektivere Lösungen.
 * KI-gesteuerte Untersuchung: Nutzt KI zur proaktiven Fehleranalyse und liefert klare, umsetzbare Erkenntnisse zur schnelleren Problemidentifizierung, ohne dass umfassende Fachkenntnisse erforderlich sind.
@@ -22,24 +25,72 @@ Durch die Analyse und Behebung von Fehlerprotokollen können Sie die Integrität
 * Behebung anhand bewährter Methoden: Bietet maßgeschneiderte Behebungsempfehlungen für SQL Server-Workloads, die auf FSx für ONTAP ausgeführt werden, und ermöglicht Benutzern aller Kenntnisstufen, Probleme sicher zu lösen.
 
 
-Wenn Sie den Smart Error Log Analyzer verwenden, behalten Sie die volle Kontrolle über Ihre Umgebung und profitieren gleichzeitig von erweiterten KI-Analysen.
+Wenn Sie den Fehlerprotokollanalysator verwenden, behalten Sie die volle Kontrolle über Ihre Umgebung und profitieren gleichzeitig von erweiterten KI-Analysen.
 
-Um den Smart Error Log Analyzer zu verwenden, müssen Sie Amazon Bedrock aktivieren, das von der Workload Factory verwendete Modell auswählen, einen privaten Endpunkt für die Verbindung mit Amazon Bedrock erstellen, Berechtigungen hinzufügen und eine Unternehmenslizenz erstellen.
+Um den Fehlerprotokollanalysator zu verwenden, müssen Sie Amazon Bedrock aktivieren, das von Workload Factory verwendete Modell auswählen, einen privaten Endpunkt für die Verbindung mit Amazon Bedrock erstellen, Berechtigungen hinzufügen und eine Unternehmenslizenz erstellen.
 
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
 
-.Bevor Sie beginnen
-Um den Smart Error Log Analyzer verwenden zu können, müssen Sie die folgenden Voraussetzungen erfüllen:
 
-* Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^]einen neuen Datenbank-Host in der Workload Factory erstellen.
-* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrieren einer SQL Server-Instanz"^]in der Workload-Fabrik. *
 
+=== Datenschutz und Sicherheit
+
+Die Funktion gewährleistet Datenschutz und -sicherheit durch die folgenden Maßnahmen:
+
+.Datensouveränität
+Protokolldaten und Aggregationen verbleiben in Ihrem AWS-Konto und werden über einen privaten VPC-Endpunkt (Amazon Bedrock) kommuniziert, wodurch sichergestellt wird, dass sie nicht im öffentlichen Internet preisgegeben werden.
+
+.Kein KI-Training
+Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet.  Amazon Bedrock verarbeitet Protokolle in Echtzeit, trainiert jedoch nicht anhand Ihrer Daten.  Die Ergebnisse werden nur zu Referenzzwecken in Ihrer Umgebung gespeichert.  Weitere Einzelheiten finden Sie imlink:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock-Datenschutzdokumentation"^] .
+
+
+
+== Bevor Sie beginnen
+
+Um den Fehlerprotokollanalysator verwenden zu können, müssen Sie die folgenden Voraussetzungen erfüllen:
+
+* Sie müssenlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^] um einen neuen Datenbankhost in Workload Factory zu erstellen.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrieren einer SQL Server-Instanz"^]in der Workload Factory.
+* Darüber hinaus müssen folgende Voraussetzungen erfüllt sein.  Sie werden im Rahmen der Schritte zur Analyse von Protokollfehlern aufgefordert, diese Voraussetzungen zu erfüllen.
++
+** *Amazon Bedrock-Aktivierung*
++
+Amazon Bedrock ist erforderlich, damit der auf dem SQL-Knoten von Workload Factory ausgeführte KI-Agent nahtlos eine Verbindung mit Bedrock herstellen und KI-basierte Erkenntnisse für die identifizierten Fehlerprotokolle abrufen kann.
+
+** *Netzwerk*
++
+Der Amazon Bedrock VPC-Endpunkt gewährleistet die private Kommunikation Ihres SQL-Knotens mit Amazon Bedrock-APIs und verhindert die öffentliche Internetpräsenz.  Stellen Sie sicher, dass der Amazon Bedrock VPC-Endpunkt mit dem Subnetz des SQL Server-Knotens verknüpft ist (Beispiel: vpce-050cb2f33a1380ffd).
+
+** *AWS IAM-Berechtigungen*
++
+Die folgenden Berechtigungen sind für die mit dem SQL-Knoten verknüpfte EC2-Instanzprofilrolle und für die mit Workload Factory verknüpften AWS-Anmeldeinformationen erforderlich.
+
++
+*** EC2-Instance-Profilrolle mit der Berechtigung „bedrock:InvokeModel“
++
+Diese Berechtigung ermöglicht es der EC2-Instanz auf dem entsprechenden SQL-Knoten, Bedrock-Modelle zur proaktiven Fehleruntersuchung und Behebung aufzurufen.  Dieses Profil gewährleistet außerdem einen sicheren KI-Zugriff für maßgeschneiderte Erkenntnisse.
+
+*** Mit Workload Factory verknüpfte AWS-Anmeldeinformationen: Berechtigungen „bedrock:GetFoundationModelAvailability“ und „bedrock:ListInferenceProfiles“
++
+Diese Berechtigungen überprüfen die Modellverfügbarkeit und -konfiguration in der Region des SQL-Knotens und gewährleisten eine zuverlässige, regionsspezifische Leistung.
+
+
+
+
+
+
+
+
+
+== Fehlerprotokolle analysieren
+
+Verwenden Sie die Workload Factory-Konsole, um SQL Server-Fehlerprotokolle zu analysieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie *SQL Server* als Datenbank-Engine.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* als Datenbank-Engine-Typ aus.
 . Suchen Sie auf der Registerkarte „Instanzen“ die spezifische SQL Server-Instanz, die Sie analysieren möchten, und wählen Sie dann im Menü „Fehler untersuchen“ aus.
 . Erfüllen Sie auf der Registerkarte *Fehleruntersuchung* die folgenden Voraussetzungen, wie in der Konsole beschrieben:
 +
@@ -49,7 +100,7 @@ Um den Smart Error Log Analyzer verwenden zu können, müssen Sie die folgenden 
 ** Mit Workload Database Management (wlmdb) verknüpfte Anmeldeinformationen
 
 
-. Wenn die Voraussetzungen erfüllt sind, wählen Sie *Jetzt untersuchen* aus, um mit dem Smart Error Log Analyzer Einblicke in Ihre SQL Server-Fehlerprotokolle zu erhalten.
+. Wenn die Voraussetzungen erfüllt sind, wählen Sie *Jetzt untersuchen* aus, um mit dem Fehlerprotokollanalysator Einblicke in Ihre SQL Server-Fehlerprotokolle zu erhalten.
 +
 Nach dem Scan werden Fehler in der Konsole angezeigt und bieten einen umfassenden Überblick über die vom Smart Error Log Analyzer erkannten Probleme.
 

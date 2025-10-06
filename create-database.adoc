@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: Erstellen einer Microsoft SQL-Datenbank mit BlueXP -Workload-Farm für Datenbanken 
+summary: Erstellen Sie eine Microsoft SQL-Datenbank mit NetApp Workload Factory für Datenbanken. 
 ---
-= Erstellen Sie eine Microsoft SQL-Datenbank in der BlueXP -Workload-Farm für Datenbanken
+= Erstellen Sie eine Microsoft SQL-Datenbank in NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Durch Erstellen einer neuen Microsoft SQL-Datenbank können Sie die Ressource innerhalb der BlueXP -Workload-Farm für Datenbanken verwalten.
+Durch das Erstellen einer neuen Microsoft SQL-Datenbank können Sie die Ressource innerhalb von NetApp Workload Factory for Databases verwalten.
 
 .Über diese Aufgabe
 Bei der Datenbankerstellung werden im Dateisystem FSX für ONTAP zwei neue Volumes erstellt, die aus unabhängigen LUNs bestehen, um Daten und Log-Dateien für die Datenbank zu hosten. Die Datenbankdateien in der neuen Datenbank verfügen über Thin Provisioning und verbrauchen nur wenige MBS der Gesamtgröße, die der neuen Datenbank zugewiesen ist.
@@ -26,15 +26,13 @@ NOTE: Microsoft SQL-Server mit SMB-Protokoll unterstützen nicht die Erstellung 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie eine neue Datenbank erstellen.
 
-Anmeldeinformationen und Berechtigungen:: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Nur-Lese- oder Lese-/Schreibmodus"^]eine neue Datenbank in der Workload Factory erstellen.
+* *Anmeldeinformationen und Berechtigungen*: Sie müssenlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Nur-Lese- oder Lese-/Schreibmodus"^] um eine neue Datenbank in der Workload Factory zu erstellen.
 +
---
 Alternativ können Sie mit der Codebox eine Vorlage kopieren, sodass Sie eine Datenbank außerhalb der Workload Factory mit REST API bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
 
---
-Windows Host:: Wenn Sie den _Quick Create_-Modus verwenden, müssen auf dem Microsoft SQL Server genügend Laufwerkbuchstaben verfügbar sein, um neue Laufwerke für die neue Datenbank zu erstellen.
-Microsoft SQL Server:: Sie benötigen einen verwalteten Microsoft SQL Server in der Workload-Fabrik, damit Datenbanken die neue Datenbank hosten können.
-AWS System Manager:: Stellen Sie sicher, dass die `NT Authority\SYSTEM user` Berechtigung auf dem Microsoft SQL-Host über AWS System Manager aktiviert ist.
+* *Windows-Host*: Wenn Sie den Modus „Schnell erstellen“ verwenden, müssen auf dem Microsoft SQL Server genügend Laufwerksbuchstaben verfügbar sein, um neue Laufwerke für die neue Datenbank zu erstellen.
+* *Microsoft SQL Server*: Sie müssen über einen verwalteten Microsoft SQL Server in der Workload Factory für Datenbanken verfügen, um die neue Datenbank zu hosten.
+* *AWS Systems Manager*: Stellen Sie sicher, dass `NT Authority\SYSTEM` Das Benutzerprivileg wird im Microsoft SQL-Host über AWS Systems Manager aktiviert.
 
 
 
@@ -50,9 +48,10 @@ Sie können die Bereitstellungsmodi „Schnell erstellen“ oder „Erweiterte E
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
-. Klicken Sie auf das Drei-Punkte-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* als Datenbank-Engine-Typ aus.
+. Wählen Sie einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
+. Klicken Sie auf das Aktionsmenü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
 . Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:
 +
 .. *Datenbankname*: Geben Sie den Namen der Datenbank ein.
@@ -83,9 +82,10 @@ Wenn Sie eine dieser Standardeinstellungen jetzt ändern möchten, ändern Sie a
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Inventar* aus.
-. Wählen Sie auf der Registerkarte Inventar einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
-. Klicken Sie auf das drei-Punkt-Menü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* als Datenbank-Engine-Typ aus.
+. Wählen Sie einen Datenbankserver mit einer verwalteten SQL-Serverinstanz aus, in dem die Datenbank erstellt werden soll.
+. Klicken Sie auf das Aktionsmenü der verwalteten Instanz und wählen Sie dann *Benutzerdatenbank erstellen*.
 . Wählen Sie *Benutzerdatenbank erstellen*.
 . Geben Sie auf der Seite Benutzerdatenbank erstellen unter Datenbankinformationen Folgendes an:
 +

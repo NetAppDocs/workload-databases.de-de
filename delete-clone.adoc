@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: delete-clone.html 
 keywords: delete, clone 
-summary: Löschen Sie einen Sandbox-Klon in den BlueXP -Workload-Fabriken, wenn Sie ihn nicht mehr benötigen. 
+summary: Löschen Sie einen Sandbox-Klon in NetApp Workload Factory für Datenbanken, wenn Sie ihn nicht mehr benötigen und Speicherkapazität freigeben möchten. 
 ---
-= Teilen Sie einen Sandbox-Klon von der Quelldatenbank auf
+= Löschen eines Datahase-Klons in NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Wenn Sie einen Sandbox-Klon in der BlueXP  Workload-Fabrik für Datenbanken löschen und keine Speicherkapazität mehr freigeben möchten, löschen Sie ihn.
+Löschen Sie einen Sandbox-Klon in NetApp Workload Factory für Datenbanken, wenn Sie ihn nicht mehr benötigen und Speicherkapazität freigeben möchten.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Klicken Sie in der Kachel Datenbanken auf *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
-. Klicken Sie auf das drei-Punkt-Menü des Sandbox-Klons, den Sie löschen möchten.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, den Sie löschen möchten.
 . Wählen Sie *Löschen*.
-. Klicken Sie im Dialogfeld Löschen auf *Löschen*.
+. Wählen Sie im Dialogfeld „Löschen“ die Option „Löschen“ aus, um den Löschvorgang zu bestätigen.
 

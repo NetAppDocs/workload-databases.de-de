@@ -2,43 +2,47 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der Workload Factory für Datenbanken. 
+summary: Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken in NetApp Workload Factory for Databases. 
 ---
-= Überwachen von Datenbankjobs in der Workload Factory
+= Überwachen von Datenbankjobs in Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken innerhalb der Workload Factory für Datenbanken.
+Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken in NetApp Workload Factory for Databases, um die Transparenz und Kontrolle über Datenbankvorgänge zu verbessern.
 
-.Über diese Aufgabe
+
+
+== Über diese Aufgabe
+
 Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.
 
 Die Jobüberwachung unterstützt je nach Job bis zu drei Überwachungsstufen. Beispielsweise verfolgt die Jobüberwachung bei der Erstellung neuer Datenbanken und Sandbox-Klone übergeordnete Jobs und untergeordnete Jobs.
 
-Ebenen der Jobüberwachung::
-+
---
+.Ebenen der Jobüberwachung
 * Ebene 1 (übergeordneter Job): Verfolgt den Job für die Hostbereitstellung.
 * Ebene 2 (Unterjob): Verfolgt die untergeordneten Jobs im Zusammenhang mit dem übergeordneten Job der Hostbereitstellung.
 * Stufe 3 (Task): Listet die Reihenfolge der Aktionen auf, die für jede Ressource durchgeführt werden.
 
 
---
-Aufgabenstatus:: Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _laufende_, _abgeschlossene_, _abgeschlossene mit Problemen_ und _fehlgeschlagene_ Jobs.
-Speicherung von Jobereignissen:: Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche gespeichert.
+.Aufgabenstatus
+Die Funktion zur Jobüberwachung verfolgt täglich, wöchentlich, zweiwöchentlich und monatlich _laufende_, _abgeschlossene_, _abgeschlossene mit Problemen_ und _fehlgeschlagene_ Jobs.
 
+.Speicherung von Jobereignissen
+Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche gespeichert.
 
 
 
 == Überwachen von Jobs
 
+Überwachen Sie Jobs, um den Fortschritt von Datenbankvorgängen zu verfolgen und bei auftretenden Fehlern eine Diagnose und Fehlerbehebung durchzuführen.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
-. Wählen Sie in Datenbanken die Registerkarte *Job Monitoring* aus.
-. Verwenden Sie auf der Registerkarte Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.
-. Klicken Sie auf das drei-Punkt-Menü des Jobs und klicken Sie auf *Gehe zu CloudFormation*, um das Jobprotokoll in der AWS CloudFormation Konsole anzuzeigen.
+. Wählen Sie im Menü „Datenbanken“ die Option „Jobüberwachung“ aus.
+. Verwenden Sie in der Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Stellenbericht herunterladen.
+. Wählen Sie optional das Aktionsmenü des Auftrags aus und klicken Sie auf *Zu CloudFormation wechseln*, um das Auftragsprotokoll in der AWS CloudFormation-Konsole anzuzeigen.
 

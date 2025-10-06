@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Erfahren Sie mehr über die Instanz- und Datenbankverwaltung in der Workload Factory für Datenbanken. 
+summary: Erfahren Sie mehr über die Instanz- und Datenbankverwaltung in NetApp Workload Factory für Datenbanken. 
 ---
-= Ressourcenverwaltung in der Workload Factory für Datenbanken
+= Ressourcenverwaltung in NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Durch die Verwaltung von Ressourcen in der Workload Factory können Sie erweiterte Funktionen nutzen, darunter Datenbank- und Klonerstellung, Ressourcennutzung und -überwachung.  Darüber hinaus können Sie den ordnungsgemäßen Status Ihrer Datenbankkonfigurationen analysieren und bewährte Konfigurationsmethoden implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken.  Die Ressourcenverwaltung gilt nur für Microsoft SQL Server- und Oracle-Umgebungen, die auf FSx für ONTAP Dateisystemspeicher ausgeführt werden.
+Durch die Verwaltung von Ressourcen in NetApp Workload Factory für Datenbanken können Sie erweiterte Funktionen nutzen, darunter Datenbank- und Klonerstellung, Ressourcennutzung und -überwachung. Darüber hinaus können Sie den ordnungsgemäßen Status Ihrer Datenbankkonfigurationen analysieren und bewährte Konfigurationsmethoden implementieren, um die Leistung zu verbessern und die Betriebskosten zu senken. Die Ressourcenverwaltung gilt nur für Microsoft SQL Server- und Oracle-Umgebungen, die auf FSx für ONTAP Dateisystemspeicher ausgeführt werden.
 
 Sie müssenlink:register-instance.html["Ressourcen registrieren"] um eine der folgenden Verwaltungsaufgaben auszuführen.
 
