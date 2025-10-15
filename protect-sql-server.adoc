@@ -21,7 +21,7 @@ Workload Factory automatisiert das Erkennen von Ressourcen, das Validieren von V
 
 NetApp Backup and Recovery nutzt die Datenreplikationstechnologie NetApp SnapMirror , um sicherzustellen, dass alle Backups vollständig synchronisiert sind, indem Snapshot-Kopien erstellt und an die Backup-Speicherorte übertragen werden.
 
-Weitere Informationen zum Schutz mit Backup und Recovery finden Sie imlink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Überblick über den Schutz von Microsoft SQL-Workloads mit Backup und Recovery"^] .
+Weitere Informationen zum Schutz mit Backup und Recovery finden Sie im link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Überblick über den Schutz von Microsoft SQL-Workloads mit Backup und Recovery"^].
 
 
 
@@ -29,8 +29,8 @@ Weitere Informationen zum Schutz mit Backup und Recovery finden Sie imlink:https
 
 Die folgenden Anforderungen müssen erfüllt sein, um Microsoft SQL Server-Workloads mit Backup und Recovery zu schützen.
 
-* Stellen Sie sicher, dass Ihre Umgebunglink:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["die Backup- und Recovery-SQL-Server-Anforderungen"^] .
-* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["Vollständige Anforderungen für die NetApp -Konsole"^]einschließlich Einrichten, Zuweisen von IAM-Rollen und Installieren eines Konsolenagenten.
+* Stellen Sie sicher, dass Ihre Umgebung link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["die Backup- und Recovery-SQL-Server-Anforderungen"^].
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["Vollständige Anforderungen für die NetApp -Konsole"^] einschließlich Einrichten, Zuweisen von IAM-Rollen und Installieren eines Konsolenagenten.
 
 
 Wenn Sie über Organisationsadministratorzugriff auf das NetApp -Konto verfügen, `backup and recovery super admin` Die Rolle wird automatisch zugewiesen, wenn Sie<<Bereiten Sie sich mit NetApp Backup and Recovery auf den Schutz vor,Bereiten Sie sich mit NetApp Backup and Recovery auf den Schutz vor>> .
@@ -40,7 +40,7 @@ Wenn Sie über Organisationsadministratorzugriff auf das NetApp -Konto verfügen
 Um Datenbanken zu erkennen, müssen Sie die Hostauflösung auf dem Connector festlegen.  Fügen Sie auf dem gehosteten Gerät die Zuordnung der IP-Adresse zum Hostnamen in der `/etc/hosts` Datei.
 
 +
-** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["Einrichten der Lizenzierung für NetApp Backup and Recovery"^]
+** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["Einrichten der Lizenzierung für NetApp Backup and Recovery"^]
 
 
 
@@ -69,6 +69,6 @@ Um NetApp Backup and Recovery zum Schutz zu verwenden, müssen SQL Server-Instan
 .Wie es weiter geht
 Erstellen Sie unter „Backup und Wiederherstellung“ eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken.
 
-link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["Erfahren Sie, wie Sie eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken erstellen"^] .
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Erfahren Sie, wie Sie eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken erstellen"^].
 
-Weitere Informationen finden Sie imlink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Dokumentation zu Sicherung und Wiederherstellung"^] zur Verwaltung von Microsoft SQL Server-Workloads.
+Weitere Informationen finden Sie im link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Dokumentation zu Sicherung und Wiederherstellung"^] zur Verwaltung von Microsoft SQL Server-Workloads.
