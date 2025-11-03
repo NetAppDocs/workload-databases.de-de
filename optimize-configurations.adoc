@@ -41,7 +41,7 @@ Für Microsoft SQL Server-Instanzen:
 
 Für Oracle-Datenbanken:
 
-* Speicherkonfiguration: umfasst Kapazitätsverwaltung, Thin Provisioning, Tiering-Richtlinie, Snapshots, Speichereffizienz und Betriebssystemkonfigurationen für Bereitstellungen mit iSCSI mit oder ohne Automatic Storage Management (ASM), einschließlich Microsoft Multipath I/O (MPIO)-Status und -Einstellungen
+* Speicherkonfiguration: umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Speichereffizienz und Betriebssystemkonfigurationen für Bereitstellungen mit NFS oder iSCSI mit oder ohne Automatic Storage Management (ASM) einschließlich Microsoft Multipath I/O (MPIO)-Status und -Einstellungen
 * Speicherlayout: umfasst die Platzierung von Redo-Protokollen, temporären Tablespaces, Datendateien, Archivprotokollen, Steuerdateien und Binärdateien sowie die LUN-Anzahl der ASM-Datenträgergruppen
 
 

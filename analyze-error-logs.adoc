@@ -104,6 +104,6 @@ Verwenden Sie die Workload Factory-Konsole, um SQL Server-Fehlerprotokolle zu an
 +
 Nach dem Scan werden Fehler in der Konsole angezeigt und bieten einen umfassenden Überblick über die vom Smart Error Log Analyzer erkannten Probleme.
 
-. Verwenden Sie Filter, um die angezeigten Fehler anhand von Kriterien wie Schweregrad, Zeitrahmen und Fehlercode zu verfeinern.
+. Verwenden Sie Filter, um die angezeigten Fehler anhand von Kriterien wie Schweregrad, Zeitrahmen und Fehlercode oder anhand von infrastrukturorientierten Tags wie Rechenleistung, Speicher, Netzwerk und Sicherheit einzugrenzen.
 . Überprüfen Sie die detaillierten Fehlerinformationen, einschließlich der ursprünglichen Fehlermeldung, der KI-basierten Erklärung und der vorgeschlagenen Schritte zur Behebung der Fehler.
 

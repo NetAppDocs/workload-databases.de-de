@@ -25,27 +25,13 @@ Die wichtigsten Funktionen:
 
 
 
-== Zustand der Architektur gut
+== Komponenten der Konfigurationsanalyse
 
-In der Workload Factory-Konsole wird auf Dateisystemebene der Status „Well-Architected“ für alle FSx for ONTAP -Dateisysteme aufgelistet. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut konzipiert“ kategorisiert. Wenn Sie den Status „Well-Architected“ auswählen, werden Sie zur Registerkarte „Well-Architected-Status“ im Dateisystem weitergeleitet, wo Sie die Well-Architected-Bewertung, Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden.
+Die Konfigurationsanalyse umfasst folgende Komponenten:
 
-
-
-== Gut konzipierte Punktzahl
-
-Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
-
-
-
-== Konfigurationskategorien
-
-Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
-
-* _Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.
-* _Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.
-* _Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.
-* _Kostenoptimierung_: Zielt darauf ab, einen geschäftlichen Nutzen zu erzielen und gleichzeitig Kosten zu minimieren.
-* _Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.
+Zustand der Architektur gut:: Der Status „gut architektonisch“ bezieht sich auf den allgemeinen Zustand Ihrer Datenbankkonfigurationen; Konfigurationen werden in die Kategorien „optimiert“, „nicht optimiert“ oder „überdimensioniert“ eingeteilt. Der Status einer gut strukturierten Konfiguration wird innerhalb einer Microsoft SQL Server-Instanz oder einer Oracle-Datenbank in der Workload Factory-Konsole referenziert.
+Gut konzipierte Punktzahl:: Die Punktzahl umfasst alle aktuell analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Wert von 25 % bedeutet, dass 25 % Ihrer Datenbankimplementierungen gut architektonisch gestaltet sind. Der Wert für die gute Architektur wird auf dem Bildschirm *Gute Architektur* und innerhalb einer Microsoft SQL Server-Instanz oder Oracle-Datenbank in der Workload Factory-Konsole angezeigt.
+Konfigurationskategorien:: Die Konfigurationen sind in folgende Kategorien unterteilt: Speicher, Rechenleistung, Anwendung, Ausfallsicherheit und Klonen. Jede Kategorie umfasst spezifische Konfigurationsbewertungen, die regelmäßig analysiert werden. Die Konfigurationskategorien werden sowohl vom Bildschirm *Well-architected* als auch innerhalb einer Microsoft SQL Server-Instanz oder einer Oracle-Datenbank in der Workload Factory-Konsole referenziert.
 
 
 
