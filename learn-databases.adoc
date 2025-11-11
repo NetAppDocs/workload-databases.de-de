@@ -144,9 +144,6 @@ Workload Factory unterstützt die folgenden Datenbank-Engines, Versionen, Betrie
 | Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Beliebig | FCI, Einzelinstanz 
 
 
-| Microsoft SQL Server | SQL Server 2016, 2019, 2022 | Beliebig | Always On-Verfügbarkeitsgruppen 
-
-
 | Orakel | 19c | RHEL, SuSe Linux | Standalone (Einzel-/Mehrere Mandanten) 
 
 
@@ -163,12 +160,6 @@ Workload Factory unterstützt die folgenden Datenbank-Engines, Versionen, Betrie
 
 
 | Orakel | 21c | RHEL, SuSe Linux | Standalone mit ASM (Single/Multi Tenant) 
-
-
-| Orakel | 19c | RHEL, SuSe Linux | Datenschützer 
-
-
-| Orakel | 21c | RHEL, SuSe Linux | Datenschützer 
 
 
 | PostgreSQL | PostgreSQL 15 | Amazon Linux 2023 AMI | HA, eigenständige Instanz 

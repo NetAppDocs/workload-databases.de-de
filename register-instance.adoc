@@ -32,7 +32,7 @@ NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Mic
 
 Beachten Sie Folgendes, bevor Sie eine Instanz registrieren:
 
-Der Host für die Instanz oder Datenbank muss im Inventar erscheinen. Damit Hosts im Inventar angezeigt werden,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Sie müssen AWS-Kontoanmeldeinformationen und Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ hinzufügen"^] .
+Der Host für die Instanz oder Datenbank muss im Inventar aufgeführt sein. Damit Hosts im Inventar angezeigt werden, müssen Sie Folgendes beachten: link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
 
 
 

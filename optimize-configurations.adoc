@@ -49,7 +49,7 @@ Für Oracle-Datenbanken:
 
 == Bevor Sie beginnen
 
-* Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Lese-/Schreibberechtigungen"^] um Ihre Datenbankkonfigurationen zu analysieren.
+* Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto.
 * Um den Speicher einer Microsoft SQL Server-Instanz oder Oracle-Datenbank zu bewerten, muss die Ressource in Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein.link:register-instance.html["Erfahren Sie, wie Sie Ressourcen registrieren."]
 * Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
 

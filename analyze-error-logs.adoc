@@ -49,7 +49,7 @@ Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. 
 
 Um den Fehlerprotokollanalysator verwenden zu können, müssen Sie die folgenden Voraussetzungen erfüllen:
 
-* Sie müssenlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Lese-/Schreibmodus"^] um einen neuen Datenbankhost in Workload Factory zu erstellen.
+* Du musst link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] Erstellen Sie in Ihrem AWS-Konto einen neuen Datenbankhost in Workload Factory.
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrieren einer SQL Server-Instanz"^]in der Workload Factory.
 * Darüber hinaus müssen folgende Voraussetzungen erfüllt sein.  Sie werden im Rahmen der Schritte zur Analyse von Protokollfehlern aufgefordert, diese Voraussetzungen zu erfüllen.
 +

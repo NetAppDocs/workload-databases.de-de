@@ -62,7 +62,7 @@ Es stehen zwei Rechner-Optionen zur Verfügung, um den Kostenvergleich zwischen 
 
 Einsparmöglichkeiten durch Anpassung: Sie stellen die Konfigurationseinstellungen für Microsoft SQL Server auf Amazon EC2 mit EBS oder FSX für Windows File Server bereit, einschließlich Region, Implementierungsmodell, SQL Server Edition, monatlicher Datenänderungsrate, Snapshot Häufigkeit und mehr.
 
-Erkunden Sie die Einsparungen für erkannte Hosts: Workload Factory stellt eine Verbindung zu Ihren vorhandenen Microsoft SQL-Servern her und überträgt die Details zum automatischen Vergleich in den Rechner.  Sie müssen _Nur-Lese_- oder _Lese-/Schreib_-Berechtigungen erteilen, um diese Rechneroption verwenden zu können. Sie können den Anwendungsfall ändern, alle anderen Details werden jedoch automatisch in der Berechnung ermittelt.
+Entdecken Sie die Einsparungen für erkannte Hosts: Workload Factory verbindet sich mit Ihren bestehenden Microsoft SQL-Servern und ruft die Details für den Rechner zum automatischen Vergleich ab. Um diese Rechneroption nutzen zu können, müssen Sie die Berechtigungen _view, planning, and analysis_ erteilen. Sie können den Anwendungsfall ändern, alle anderen Details werden jedoch automatisch in der Berechnung ermittelt.
 
 Darüber hinaus können Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Anmeldedaten hinzufügen"^]die Genauigkeit der Rechenanalyse verbessern. Wählen Sie *Einsparungen basierend auf vorhandenen Ressourcen berechnen*. Sie werden zur Seite Anmeldeinformationen hinzufügen weitergeleitet. Nachdem Sie Anmeldedaten hinzugefügt haben, wählen Sie die vorhandenen Ressourcen aus, um sie mit FSX for ONTAP zu vergleichen, und wählen Sie *Einsparungen erkunden* aus.
 
@@ -158,7 +158,7 @@ Workload Factory gibt die erkannten Hosteigenschaften von Elastic Block Store un
 .Bevor Sie beginnen
 Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Gewähren Sie _read-only_ oder _read/write_ Berechtigungen"^] Verwenden Sie Ihr AWS-Konto, um Elastic Block Store (EBS) und FSX for Windows-Systeme auf der Registerkarte „Einsparungen entdecken“ zu erkennen und die Einsparungsberechnung im Einsparungsrechner anzuzeigen.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse gewähren"^] in Ihrem AWS-Konto, um Elastic Block Store (EBS)- und FSx for Windows-Systeme unter der Registerkarte *Einsparungen entdecken* zu erkennen und die Einsparungsberechnung im Einsparungsrechner anzuzeigen.
 * Gehen Sie wie folgt vor, um Empfehlungen für Instanztypen zu erhalten und die Kostengenauigkeit zu verbessern:
 +
 .. Erteilen Sie Berechtigungen für Amazon CloudWatch und AWS Compute Optimizer.
@@ -326,6 +326,9 @@ Wenn Sie zu FSX for ONTAP wechseln möchten, um Kosteneinsparungen zu erzielen, 
 NOTE: Workload Factory unterstützt nicht das Speichern oder Erstellen mehrerer FSx für ONTAP Dateisysteme.
 
 .Bereitstellungsmethoden
-Im Lese-/Schreibmodus können Sie den neuen Microsoft SQL-Server auf AWS EC2 mit FSx für ONTAP direkt von Workload Factory aus bereitstellen.  Sie können den Inhalt auch aus dem Codebox-Fenster kopieren und die empfohlene Konfiguration mit einer der Codebox-Methoden bereitstellen.
+Mit der _Berechtigung zur Erstellung von Datenbankhosts_ können Sie den neuen Microsoft SQL Server auf AWS EC2 mithilfe von FSx für ONTAP direkt aus der Workload Factory bereitstellen. Sie können den Inhalt auch aus dem Codebox-Fenster kopieren und die empfohlene Konfiguration mithilfe einer der Codebox-Methoden bereitstellen.
 
-+ Im _Basismodus_ können Sie den Inhalt aus dem Codebox-Fenster kopieren und die empfohlene Konfiguration mit einer der Codebox-Methoden bereitstellen.
+Ohne Berechtigungen können Sie den Inhalt aus dem Codebox-Fenster kopieren und die empfohlene Konfiguration mithilfe einer der Codebox-Methoden bereitstellen.
+
+.Ähnliche Informationen
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Referenz zu den Berechtigungen der Workload Factory"^]

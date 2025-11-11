@@ -72,3 +72,20 @@ Erstellen Sie unter „Backup und Wiederherstellung“ eine Richtlinie zum Schut
 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Erfahren Sie, wie Sie eine Richtlinie zum Schutz Ihrer Microsoft SQL Server-Instanz und -Datenbanken erstellen"^].
 
 Weitere Informationen finden Sie im link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Dokumentation zu Sicherung und Wiederherstellung"^] zur Verwaltung von Microsoft SQL Server-Workloads.
+
+
+
+== Bearbeitungsschutz für Microsoft SQL Server-Ressourcen
+
+Sie können den Schutz für Microsoft SQL Server-Instanzen und -Datenbanken bearbeiten, die bereits in NetApp Backup and Recovery geschützt sind. Die Bearbeitungsfunktion für den Schutz ermöglicht es Ihnen, die Schutzrichtlinie oder den Zeitplan für Ihre geschützten SQL Server-Instanzen zu ändern.
+
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
+. Wählen Sie die Registerkarte *Datenbanken*.
+. Suchen Sie die Datenbank, deren Schutz Sie bearbeiten möchten, und wählen Sie dann im Menü *Schutz bearbeiten* aus.
++
+Sie werden zur Backup- und Wiederherstellungsfunktion in der NetApp Console weitergeleitet, wo Sie die Schutzrichtlinie oder den Zeitplan ändern können.
+
+

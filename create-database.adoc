@@ -18,7 +18,7 @@ Bei der Datenbankerstellung werden im Dateisystem FSX für ONTAP zwei neue Volum
 
 Wenn Sie den Speicher für die Datenbank trennen möchten, können Sie dies mit einem _Virtual Mount Point_ tun. Mit dem virtuellen Bereitstellungspunkt können Sie Datenbanken auf ein paar gemeinsame Laufwerke auf dem Host konsolidieren.
 
-Zum Erstellen einer Datenbank in der Workload Factory sind Berechtigungen für den Automatisierungsmodus erforderlich. Alternativ können Sie im Basismodus eine teilweise ausgefüllte Codevorlage kopieren oder herunterladen, um den Vorgang außerhalb der Workload Factory abzuschließen. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Informieren Sie sich über Betriebsmodi in der Workload-Fabrik"^] Um zu entscheiden, welchen Modus Sie verwenden möchten.
+Zum Erstellen einer Datenbank in Workload Factory werden die Berechtigungen _view, planning und analysis_ benötigt. Alternativ können Sie eine teilweise ausgefüllte Codevorlage kopieren oder herunterladen, um den Vorgang außerhalb der Workload Factory abzuschließen. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Erfahren Sie mehr über die Berechtigungen der Workload Factory."^] um zu entscheiden, welchen Modus Sie verwenden möchten.
 
 
 NOTE: Microsoft SQL-Server mit SMB-Protokoll unterstützen nicht die Erstellung einer Datenbank.
@@ -26,7 +26,7 @@ NOTE: Microsoft SQL-Server mit SMB-Protokoll unterstützen nicht die Erstellung 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie eine neue Datenbank erstellen.
 
-* *Anmeldeinformationen und Berechtigungen*: Sie müssenlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für den Nur-Lese- oder Lese-/Schreibmodus"^] um eine neue Datenbank in der Workload Factory zu erstellen.
+* *Anmeldeinformationen und Berechtigungen*: Sie benötigen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für _Anzeigen, Planen und Analysieren_"^] Um eine neue Datenbank in Workload Factory zu erstellen.
 +
 Alternativ können Sie mit der Codebox eine Vorlage kopieren, sodass Sie eine Datenbank außerhalb der Workload Factory mit REST API bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
 
@@ -39,7 +39,7 @@ Alternativ können Sie mit der Codebox eine Vorlage kopieren, sodass Sie eine Da
 
 == Erstellen Sie eine Datenbank
 
-Sie können die Bereitstellungsmodi „Schnell erstellen“ oder „Erweiterte Erstellung“ verwenden, um diese Aufgabe in der Workload Factory mit den Berechtigungen „Nur Lesen“ oder „Lesen/Schreiben“ abzuschließen.
+Sie können die Bereitstellungsmodi _Quick create_ oder _Advanced create_ verwenden, um diese Aufgabe in Workload Factory abzuschließen.
 
 [role="tabbed-block"]
 ====
