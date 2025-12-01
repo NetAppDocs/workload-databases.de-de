@@ -79,14 +79,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Erfa
 
 
 
-=== Betriebsmodi in Workload Factory
-
-Drei verschiedene Betriebsmodi – _Basic_, _Read-Only_ und _Read/Write_ – bieten flexible Optionen für die Bereitstellung innerhalb und außerhalb von Workload Factory. Profitieren Sie sofort von Zero-Trust im _Basis_-Modus mit Codeausschnitten zur Verwendung außerhalb von Workload Factory. Erhalten Sie inkrementelle Werte mit inkrementellem Vertrauen im _Nur-Lese-_ und _Lese-/Schreib-_Modus.
-
-Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi in Workload Factory"^] .
-
-
-
 == Tools zur Verwendung von NetApp Workload Factory
 
 Sie können NetApp Workload Factory mit den folgenden Tools verwenden:

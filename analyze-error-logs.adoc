@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: analyze-error-logs.html 
-keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, Oracle database error logs, smart analysis, Agentic AI 
 summary: Analysieren Sie Fehlerprotokolle in Workload Factory für Datenbanken. 
 ---
 = Fehlerprotokolle in Workload Factory analysieren
@@ -11,13 +11,13 @@ summary: Analysieren Sie Fehlerprotokolle in Workload Factory für Datenbanken.
 
 
 [role="lead"]
-Verwenden Sie den intelligenten Fehlerprotokollanalysator, um Microsoft SQL Server-Fehlerprotokolle automatisch zu interpretieren, sodass Sie Probleme schnell identifizieren und beheben können. Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.
+Nutzen Sie den intelligenten Fehlerprotokollanalysator, um Microsoft SQL Server- und Oracle-Datenbankfehlerprotokolle automatisch zu interpretieren und so Probleme schnell zu erkennen und zu beheben. Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.
 
 
 
 == Über diese Aufgabe
 
-Durch die Analyse und Behebung von Fehlerprotokollen können Sie die Integrität und Leistung von SQL Server-Instanzen aufrechterhalten. Die effektive Interpretation von SQL Server-Fehlerprotokollen erfordert sorgfältige Analyse und Fachwissen. Manuelle Überwachung, Fehlererkennung und Ursachenanalyse sind zeitintensiv und fehleranfällig. Diese Herausforderungen können die Problemlösung verzögern, Ausfallzeiten erhöhen und zu betrieblichen Ineffizienzen führen. Der intelligente Fehlerprotokollanalysator begegnet diesen Herausforderungen mit den folgenden Hauptvorteilen:
+Die Analyse und Behebung von Fehlerprotokollen trägt zur Aufrechterhaltung der Integrität und Leistungsfähigkeit von SQL Server-Instanzen und Oracle-Datenbanken bei.  Die effektive Interpretation von Fehlerprotokollen erfordert sorgfältige Analyse und Fachkenntnisse. Manuelle Überwachung, Fehlererkennung und Ursachenanalyse sind zeitintensiv und fehleranfällig. Diese Herausforderungen können die Problemlösung verzögern, Ausfallzeiten erhöhen und zu betrieblichen Ineffizienzen führen.  Der intelligente Fehlerprotokollanalysator begegnet diesen Herausforderungen mit folgenden wesentlichen Vorteilen:
 
 * Intelligente Gruppierung: Konsolidiert Fehler auf intelligente Weise nach Eindeutigkeit, Schweregrad und Kategorie und vereinfacht den Fehlerbehebungsprozess für schnellere und effektivere Lösungen.
 * KI-gesteuerte Untersuchung: Nutzt KI zur proaktiven Fehleranalyse und liefert klare, umsetzbare Erkenntnisse zur schnelleren Problemidentifizierung, ohne dass umfassende Fachkenntnisse erforderlich sind.
@@ -50,31 +50,35 @@ Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. 
 Um den Fehlerprotokollanalysator verwenden zu können, müssen Sie die folgenden Voraussetzungen erfüllen:
 
 * Du musst link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] Erstellen Sie in Ihrem AWS-Konto einen neuen Datenbankhost in Workload Factory.
-* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrieren einer SQL Server-Instanz"^]in der Workload Factory.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Ressourcen registrieren"^]in Workload Factory.
 * Darüber hinaus müssen folgende Voraussetzungen erfüllt sein.  Sie werden im Rahmen der Schritte zur Analyse von Protokollfehlern aufgefordert, diese Voraussetzungen zu erfüllen.
 +
 ** *Amazon Bedrock-Aktivierung*
 +
-Amazon Bedrock ist erforderlich, damit der auf dem SQL-Knoten von Workload Factory ausgeführte KI-Agent nahtlos eine Verbindung mit Bedrock herstellen und KI-basierte Erkenntnisse für die identifizierten Fehlerprotokolle abrufen kann.
+Amazon Bedrock ist erforderlich, damit der auf dem SQL Server- oder Oracle-Host von Workload Factory ausgeführte KI-Agent eine nahtlose Verbindung zu Bedrock herstellen und KI-basierte Erkenntnisse für die identifizierten Fehlerprotokolle abrufen kann.
 
 ** *Netzwerk*
 +
-Der Amazon Bedrock VPC-Endpunkt gewährleistet die private Kommunikation Ihres SQL-Knotens mit Amazon Bedrock-APIs und verhindert die öffentliche Internetpräsenz.  Stellen Sie sicher, dass der Amazon Bedrock VPC-Endpunkt mit dem Subnetz des SQL Server-Knotens verknüpft ist (Beispiel: vpce-050cb2f33a1380ffd).
+Der Amazon Bedrock VPC-Endpunkt gewährleistet die private Kommunikation Ihres SQL Server- oder Oracle-Hosts mit den Amazon Bedrock APIs und eliminiert die Gefährdung durch das öffentliche Internet.  Stellen Sie sicher, dass der Amazon Bedrock VPC-Endpunkt dem Subnetz des SQL Server- oder Oracle-Hosts zugeordnet ist (Beispiel: vpce-050cb2f33a1380ffd).
 
 ** *AWS IAM-Berechtigungen*
 +
-Die folgenden Berechtigungen sind für die mit dem SQL-Knoten verknüpfte EC2-Instanzprofilrolle und für die mit Workload Factory verknüpften AWS-Anmeldeinformationen erforderlich.
+Für die EC2-Instanzprofilrolle, die dem SQL Server- oder Oracle-Host zugeordnet ist, und für die AWS-Anmeldeinformationen, die mit Workload Factory verknüpft sind, werden die folgenden Berechtigungen benötigt.
 
 +
 *** EC2-Instance-Profilrolle mit der Berechtigung „bedrock:InvokeModel“
 +
-Diese Berechtigung ermöglicht es der EC2-Instanz auf dem entsprechenden SQL-Knoten, Bedrock-Modelle zur proaktiven Fehleruntersuchung und Behebung aufzurufen.  Dieses Profil gewährleistet außerdem einen sicheren KI-Zugriff für maßgeschneiderte Erkenntnisse.
+Diese Berechtigung ermöglicht es der EC2-Instanz auf dem entsprechenden SQL Server- oder Oracle-Host, Bedrock-Modelle für die proaktive Fehleranalyse und die Bereitstellung von Hinweisen zur Fehlerbehebung aufzurufen.  Dieses Profil gewährleistet zudem einen sicheren KI-Zugriff für maßgeschneiderte Erkenntnisse.
 
 *** Mit Workload Factory verknüpfte AWS-Anmeldeinformationen: Berechtigungen „bedrock:GetFoundationModelAvailability“ und „bedrock:ListInferenceProfiles“
 +
-Diese Berechtigungen überprüfen die Modellverfügbarkeit und -konfiguration in der Region des SQL-Knotens und gewährleisten eine zuverlässige, regionsspezifische Leistung.
+Diese Berechtigungen überprüfen die Verfügbarkeit und Konfiguration des Modells in der Region des SQL Server- oder Oracle-Hosts und gewährleisten eine zuverlässige, regionsspezifische Leistung.
 
 
+
+** *Oracle-Benutzerberechtigung*
++
+Die folgende Berechtigung gewährt Lesezugriff auf erweiterte Diagnosewarnungen und ermöglicht so die Extraktion von Fehler-/Trace-Details aus Protokollen zur KI-gestützten Mustererkennung und -behebung: `V$DIAG_ALERT_EXT` Die  Diese Berechtigung ist nur für Oracle-Datenbanken erforderlich.
 
 
 
@@ -90,8 +94,8 @@ Verwenden Sie die Workload Factory-Konsole, um SQL Server-Fehlerprotokolle zu an
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
-. Wählen Sie im Inventar *Microsoft SQL Server* als Datenbank-Engine-Typ aus.
-. Suchen Sie auf der Registerkarte „Instanzen“ die spezifische SQL Server-Instanz, die Sie analysieren möchten, und wählen Sie dann im Menü „Fehler untersuchen“ aus.
+. Wählen Sie im Inventar *Microsoft SQL Server* oder *Oracle* als Datenbank-Engine-Typ aus.
+. Suchen Sie auf der Registerkarte „Instanzen“ die gewünschte SQL Server-Instanz oder Oracle-Datenbank, die Sie analysieren möchten, und wählen Sie dann im Menü *Fehler untersuchen* aus.
 . Erfüllen Sie auf der Registerkarte *Fehleruntersuchung* die folgenden Voraussetzungen, wie in der Konsole beschrieben:
 +
 ** Amazon Bedrock
