@@ -1338,4 +1338,17 @@
   <block id="edb81fcd705508c0f4e0b66b31bfc44f" category="paragraph">Workload Factory konsolidiert mehrere SQL Server-Hosts zu einer einzigen FSx for ONTAP -Konfigurationsempfehlung, um Kosteneinsparungen zu optimieren, es sei denn, die ausgewählten EBS-Hosts überschreiten die Durchsatz-, Kapazitäts- oder IOPS-Grenzwerte für ein einzelnes FSx for ONTAP -Dateisystem.</block>
   <block id="7bc5d760eb2707645670155d907850e9" category="list-text">Speicherdimensionierung: beinhaltet die Zuweisung von Auslagerungsspeicher und den verfügbaren Platz im Dateisystem.</block>
   <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27. November 2025</block>
+  <block id="e75004bce0e2abb43e6673b8bd4bbd2f" category="doc">Verbesserungen der Active Directory-Integration</block>
+  <block id="4be7fbd19e77cc55e8637326f3cc569d" category="paragraph">Workload Factory for Databases enthält drei neue Active Directory (AD)-Felder, die bei der Bereitstellung von Microsoft SQL Server mit der Option *Erweiterte Erstellung* verwendet werden. Diese Erweiterungen ermöglichen es Ihnen, Active Directory-Beitrittspräferenzen festzulegen und ein verwaltetes Dienstkonto zu verwenden.</block>
+  <block id="2d652258eef11b26b58d2ac1040af4fb" category="paragraph">Die neuen AD-Felder sind:</block>
+  <block id="f069ee08ebc87aaad1c479cd4f54611c" category="list-text">Bevorzugter Domänencontroller</block>
+  <block id="5a90d56c7caec61381ba4316f0a43849" category="list-text">Bevorzugter Pfad der Organisationseinheit</block>
+  <block id="b535bc12ab7716de58cac2633cbe0ec8" category="list-text">Ziel-Active Directory-Gruppe</block>
+  <block id="f43a09fcb5f30e27a88e58e1804f13d0" category="inline-link-macro">Microsoft SQL Server bereitstellen</block>
+  <block id="8139c8013582edc0d0eba7cc713f8ffd" category="paragraph"><block ref="8139c8013582edc0d0eba7cc713f8ffd" category="inline-link-macro-rx"></block></block>
+  <block id="568883356bf64941250150c47d023c85" category="paragraph">Optional: Wählen Sie für das SQL Server-Dienstkonto die Option *Verwaltetes Dienstkonto verwenden*. Nutzen Sie diese Option, wenn Ihre Umgebung MSA (Managed Service Account) oder gMSA (Group Managed Service Account) verwendet, bei denen die Kennwortverwaltung von Active Directory übernommen wird.</block>
+  <block id="b3c4527b66cf49711e0f4c425a9fdbe1" category="list-text">*Bevorzugter Domänencontroller*: Optional können Sie den bevorzugten Domänencontroller eingeben, der für den Beitritt zu Active Directory verwendet werden soll.</block>
+  <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Bevorzugter Pfad zur Organisationseinheit*: Optional können Sie die bevorzugte Organisationseinheit (OU) im Active Directory eingeben, der beigetreten werden soll.</block>
+  <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Ziel-Active-Directory-Gruppe*: Optional können Sie die Ziel-Active-Directory-Gruppe angeben, der die Computer hinzugefügt werden sollen.</block>
+  <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18. Dezember 2025</block>
 </blocks>

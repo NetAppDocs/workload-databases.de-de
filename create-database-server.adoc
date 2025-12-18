@@ -285,6 +285,9 @@ NOTE: Wenn der ausgewählte Sortiersatz nicht installationskompatibel ist, empfe
 
 .. *Datenbankname*: Geben Sie den Namen des Datenbank-Clusters ein.
 .. *Datenbankanmeldeinformationen*: Geben Sie einen Benutzernamen und ein Passwort für ein neues Dienstkonto ein oder verwenden Sie vorhandene Dienstkontoanmeldeinformationen im Active Directory.
++
+Optional: Wählen Sie für das SQL Server-Dienstkonto die Option *Verwaltetes Dienstkonto verwenden*. Nutzen Sie diese Option, wenn Ihre Umgebung MSA (Managed Service Account) oder gMSA (Group Managed Service Account) verwendet, bei denen die Kennwortverwaltung von Active Directory übernommen wird.
+
 
 
 . Geben Sie unter *Connectivity* Folgendes an:
@@ -304,6 +307,9 @@ Bei von AWS gemanagten Active Directories wird die DNS-IP-Adresse(n) im Dropdown
 
 ... Geben Sie im Feld *Benutzername* den Benutzernamen für die Active Directory-Domäne ein.
 ... Geben Sie im Feld *Passwort* ein Passwort für die Active Directory-Domain ein.
+... *Bevorzugter Domänencontroller*: Optional können Sie den bevorzugten Domänencontroller eingeben, der für den Beitritt zu Active Directory verwendet werden soll.
+... *Bevorzugter Pfad zur Organisationseinheit*: Optional können Sie die bevorzugte Organisationseinheit (OU) im Active Directory eingeben, der beigetreten werden soll.
+... *Ziel-Active-Directory-Gruppe*: Optional können Sie die Ziel-Active-Directory-Gruppe angeben, der die Computer hinzugefügt werden sollen.
 
 
 
