@@ -1351,4 +1351,7 @@
   <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Bevorzugter Pfad zur Organisationseinheit*: Optional können Sie die bevorzugte Organisationseinheit (OU) im Active Directory eingeben, der beigetreten werden soll.</block>
   <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Ziel-Active-Directory-Gruppe*: Optional können Sie die Ziel-Active-Directory-Gruppe angeben, der die Computer hinzugefügt werden sollen.</block>
   <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18. Dezember 2025</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Integration des KI-Assistenten auf der Startseite</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Auf der Startseite der Workload Factory-Konsole ist der KI-Assistent „Ask me“ integriert, mit dem Sie Fragen zu Ihrer eigenen Speicherlandschaft stellen, personalisierte Einblicke direkt aus Ihrer Umgebung erhalten und auf frühere Konversationen zurückgreifen können. Sie können mit „Fragen Sie mich“ interagieren, um Ihre Workloads zu verstehen, Probleme zu beheben und mehr über Workload Factory zu erfahren – alles, ohne die Konsole zu verlassen.</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04. Januar 2026</block>
 </blocks>
