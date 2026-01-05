@@ -30,7 +30,7 @@ Alternativ können Sie die Codebox verwenden, um eine teilweise fertige Vorlage 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie in Datenbanken die Registerkarte *Sandboxes* aus.
 . Wählen Sie auf der Registerkarte Sandboxes die Option *Neue Sandbox erstellen* aus.
 . Geben Sie auf der Seite Neue Sandbox erstellen unter Datenbank-Quelle Folgendes an:

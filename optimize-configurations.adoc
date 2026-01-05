@@ -69,7 +69,7 @@ NOTE: Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechung
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im *Inventar* den Engine-Typ aus: Microsoft SQL Server oder Oracle.
 . Wählen Sie Ressourcen aus, die für bestimmte Konfigurationen repariert werden sollen.
 +
@@ -130,7 +130,7 @@ Verschieben, um eine Konfigurationsanalyse für 30 Tage zu stoppen. Nach 30 Tage
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar den Datenbank-Engine-Typ aus: *Microsoft SQL Server* oder *Oracle*.
 . Navigieren Sie zur SQL Server-Instanz oder Oracle-Datenbank mit der zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Gut konzipiert*.
@@ -148,7 +148,7 @@ Schließen, um eine Konfigurationsanalyse auf unbestimmte Zeit zu beenden. Sie k
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar den Datenbank-Engine-Typ aus: *Microsoft SQL Server* oder *Oracle*.
 . Navigieren Sie zur SQL Server-Instanz oder Oracle-Datenbank mit der zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Gut konzipiert*.
@@ -166,7 +166,7 @@ Aktivieren Sie eine verschobene oder abgeschobene Konfigurationsanalyse jederzei
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar den Datenbank-Engine-Typ aus: *Microsoft SQL Server* oder *Oracle*.
 . Navigieren Sie zur SQL Server-Instanz oder Oracle-Datenbank mit der zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Gut konzipiert*.

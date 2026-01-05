@@ -61,7 +61,7 @@ Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbere
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
 . Wählen Sie die Registerkarte *Instanzen*.
@@ -116,7 +116,7 @@ Das Registrieren einer Datenbank umfasst die Instanzauthentifizierung und -vorbe
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar *Oracle* als Datenbank-Engine aus.
 . Wählen Sie die Registerkarte *Datenbanken*.

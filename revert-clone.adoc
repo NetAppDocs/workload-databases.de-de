@@ -18,7 +18,7 @@ Wenn Sie eine Datenbank klonen, ist der Klon bei der Erstellung ein _Basis_-Klon
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
 . Wählen Sie in Sandboxen das Aktionsmenü des Datenbankklons aus, den Sie zurücksetzen möchten.
 . Wählen Sie * Neu-Baseline*.

@@ -17,7 +17,7 @@ Sie können die Ressource erneut registrieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar den Engine-Typ aus: *Microsoft SQL Server*, *Oracle* oder *PostgreSQL*.
 . Suchen Sie die Ressource, deren Registrierung Sie aufheben möchten, wählen Sie das Aktionsmenü und dann *Abmelden*.

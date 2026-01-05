@@ -41,7 +41,7 @@ Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche ge
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Jobüberwachung“ aus.
 . Verwenden Sie in der Jobüberwachung die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Stellenbericht herunterladen.
 . Wählen Sie optional das Aktionsmenü des Auftrags aus und klicken Sie auf *Zu CloudFormation wechseln*, um das Auftragsprotokoll in der AWS CloudFormation-Konsole anzuzeigen.

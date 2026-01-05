@@ -92,7 +92,7 @@ Verwenden Sie die Workload Factory-Konsole, um SQL Server-Fehlerprotokolle zu an
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar *Microsoft SQL Server* oder *Oracle* als Datenbank-Engine-Typ aus.
 . Suchen Sie auf der Registerkarte „Instanzen“ die gewünschte SQL Server-Instanz oder Oracle-Datenbank, die Sie analysieren möchten, und wählen Sie dann im Menü *Fehler untersuchen* aus.

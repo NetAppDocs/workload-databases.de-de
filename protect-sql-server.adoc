@@ -53,7 +53,7 @@ Schließen Sie den Vorbereitungsprozess ab, um Ihre Microsoft SQL Server-Ressour
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
 . Suchen Sie die Instanz, die Sie schützen möchten, und wählen Sie dann *Schützen* aus dem Menü aus.
@@ -80,7 +80,7 @@ Weitere Informationen finden Sie im link:https://docs.netapp.com/us-en/data-serv
 Sie können den Schutz für Microsoft SQL Server-Instanzen und -Datenbanken bearbeiten, die bereits in NetApp Backup and Recovery geschützt sind. Die Bearbeitungsfunktion für den Schutz ermöglicht es Ihnen, die Schutzrichtlinie oder den Zeitplan für Ihre geschützten SQL Server-Instanzen zu ändern.
 
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel Datenbanken *Gehe zu Datenbank-Inventar*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
 . Wählen Sie die Registerkarte *Datenbanken*.
