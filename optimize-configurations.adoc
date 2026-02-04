@@ -11,7 +11,7 @@ summary: NetApp Workload Factory für Datenbanken scannt Microsoft SQL Server-Ko
 
 
 [role="lead"]
-Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und implementieren Sie mit NetApp Workload Factory Best Practices für Ihre Datenbankkonfigurationen mit Microsoft SQL Server und Oracle. Sie können den Status der ordnungsgemäßen Architektur problemlos überprüfen, sich über Probleme mit Datenbankkonfigurationen informieren und Maßnahmen ergreifen, um Konfigurationen zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse, um mit NetApp Workload Factory Best Practices für Ihre Datenbankkonfigurationen mit Microsoft SQL Server und Oracle zu implementieren. Sie können den gut entwickelten Status einfach überprüfen, sich über Probleme mit Datenbankkonfigurationen informieren und Konfigurationen beheben, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
 
 Sie können die Analyse bestimmter Konfigurationen, die nicht auf Ihre Umgebung zutreffen, auch ablehnen, um unnötige Warnungen und ungenaue Optimierungsergebnisse zu vermeiden.
 
@@ -42,7 +42,7 @@ Für Microsoft SQL Server-Instanzen:
 Für Oracle-Datenbanken:
 
 * Speicherdimensionierung: beinhaltet die Zuweisung von Auslagerungsspeicher und den verfügbaren Platz im Dateisystem.
-* Speicherkonfiguration: umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinien, Snapshots, Speichereffizienz und Betriebssystemkonfigurationen für Bereitstellungen mit NFS oder iSCSI mit oder ohne Automatic Storage Management (ASM) einschließlich Microsoft Multipath I/O (MPIO)-Status und -Einstellungen
+* Speicherkonfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinie, Snapshots, Speichereffizienzen und Betriebssystemkonfigurationen für Bereitstellungen mit NFS oder iSCSI mit oder ohne Automatic Storage Management (ASM), einschließlich Microsoft Multipath I/O (MPIO) Status und Einstellungen sowie die folgenden dNFS-Einstellungen: dNFS-Aktivierung, dNFS konsistente IP-Auflösung, dNFS Konfigurationsdatei und dNFS `nosharecache`
 * Speicherlayout: umfasst die Platzierung von Redo-Protokollen, temporären Tablespaces, Datendateien, Archivprotokollen, Steuerdateien und Binärdateien sowie die LUN-Anzahl der ASM-Datenträgergruppen
 
 

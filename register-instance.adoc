@@ -13,24 +13,19 @@ summary: Registrieren Sie Ressourcen, damit Sie den Ressourcenstatus, die Ressou
 [role="lead"]
 Registrieren Sie Instanzen für Microsoft SQL Server und Datenbanken für Oracle, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in NetApp Workload Factory für Datenbanken überwachen können.
 
-Die Registrierung ist nur für Datenbank-Engines möglich, die auf FSx für ONTAP Dateisystemspeicher ausgeführt werden.
+Sie können Ihre Ressourcen nur registrieren, wenn sie auf FSx für ONTAP Dateisystemspeicher laufen.
 
 
 
 == Über die Aufgabe
 
-Das Registrieren einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst zwei Schritte: Authentifizierung und Vorbereitung.  Zur Vorbereitung gehört es, sicherzustellen, dass alle AWS-, NetApp und PowerShell-Module auf der Instanz installiert sind.
+Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst drei Schritte – Instanz- oder Datenbank-Authentifizierung, FSx for ONTAP Authentifizierung und Vorbereitung. Die Vorbereitung beinhaltet die Sicherstellung, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz oder Datenbank installiert sind und dass die Mindestanforderungen für Workload Factory for Databases-Funktionen wie link:analyze-error-logs.html["Fehlerprotokollanalyse"] oder link:optimize-configurations.html["Well-Architected Review"] erfüllt sind.
 
-Sie können sich mit SQL Server-Anmeldeinformationen oder mit Windows-Anmeldeinformationen authentifizieren.
-
-
-NOTE: Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken.  Abhängig von den AWS-Kontoanmeldeinformationen, die Sie in Workload Factory auswählen, werden möglicherweise PostgreSQL-Hosts im Inventar angezeigt.  Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
+Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken.  Abhängig von den AWS-Kontoanmeldeinformationen, die Sie in Workload Factory auswählen, werden möglicherweise PostgreSQL-Hosts im Inventar angezeigt.  Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
 
 
 
 == Bevor Sie beginnen
-
-Beachten Sie Folgendes, bevor Sie eine Instanz registrieren:
 
 Der Host für die Instanz oder Datenbank muss im Inventar aufgeführt sein. Damit Hosts im Inventar angezeigt werden, müssen Sie Folgendes beachten: link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
 
@@ -55,9 +50,11 @@ Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen 
 
 
 
-== Registrieren einer SQL Server-Instanz
+== Registrieren einer Microsoft SQL Server-Instanz
 
-Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbereitung.
+Die Registrierung einer Instanz umfasst drei Schritte: Instanz-Authentifizierung, FSx for ONTAP Authentifizierung und die Vorbereitung zur Erfüllung fehlender Voraussetzungen. Sie können eine oder mehrere Instanzen registrieren.
+
+Workload Factory unterstützt die Registrierung für Failover Cluster Instance (FCI) und Standalone-Bereitstellung für SQL Server.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -66,102 +63,92 @@ Das Registrieren einer Instanz umfasst die Instanzauthentifizierung und -vorbere
 . Wählen Sie im Inventar *Microsoft SQL Server* als Engine-Typ aus.
 . Wählen Sie die Registerkarte *Instanzen*.
 . Wählen Sie aus, ob Sie eine einzelne oder mehrere Instanzen registrieren möchten.
+. Um Instanzen zu authentifizieren (Schritt 1), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
 +
-.. Registrierung einer einzelnen Instanz: Navigieren Sie zu der zu verwaltenden Instanz und wählen Sie *Instanz registrieren*.
-.. Registrierung mehrerer Instanzen: Wählen Sie die Schaltfläche *Mehrere Instanzen registrieren*.
+** Wählen Sie *Die gleichen Anmeldeinformationen für alle Instanzen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+** Authentifizieren Sie SQL Server und Windows, indem Sie Benutzername und Passwort angeben.
 +
-Für die Registrierung mehrerer Instanzen stehen zwei Optionen zur Verfügung. In beiden Fällen müssen die Instanzen denselben Authentifizierungsstatus aufweisen (nicht authentifiziert oder authentifiziert).
+Wenn die Instanzen authentifiziert sind, wählen Sie *Weiter*.
+
+
+
+. Um FSx für ONTAP zu authentifizieren (Schritt 2), gehen Sie wie folgt vor:
++
+** Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+** Geben Sie den Benutzernamen und das Passwort für das FSx for ONTAP-Dateisystem ein und wählen Sie dann *Weiter*.
++
+Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
+
+
+
+. Zur Vorbereitung (Schritt 3) stellen Sie sicher, dass die Instanz(en) die Mindestanforderungen erfüllen.
++
+Um die Mindestanforderungen zu erfüllen, müssen auf der Instanz die AWS- und NetApp PowerShell-Module sowie die PowerShell 7-Module installiert sein, und Sie müssen die Voraussetzungen für mindestens eine der unter „Voraussetzungsprüfung“ aufgeführten Funktionen erfüllen. .. Überprüfen Sie die Voraussetzungen in der Ansicht *Voraussetzungsprüfung*.
 
 +
-*** Nicht authentifizierte Instanzen: Wählen Sie mehrere nicht authentifizierte Instanzen zur Registrierung aus. Diese Instanzen müssen dieselben Authentifizierungsdaten und FSx for ONTAP-Anmeldeinformationen verwenden. Wählen Sie *Übernehmen* und dann *Weiter*.
-*** Authentifizierte Instanzen: Wählen Sie mehrere authentifizierte Instanzen zur Registrierung aus und wählen Sie dann *Weiter*.
++ Sie müssen alle Voraussetzungen für eine einzelne Fähigkeit wie *Review well-architected issues and recommendations* erfüllen, um die Instanz zu registrieren.
 
-
-
-
-. Wählen Sie in Schritt 2 auf der Seite „Instanzen registrieren“ den Instanzauthentifizierungsmodus aus, geben Sie die folgenden Details ein und wählen Sie *Weiter*. Wenn Instanzen bereits authentifiziert sind, wählen Sie *Weiter*.
 +
-** *SQL Server-Authentifizierung*: Geben Sie den Benutzernamen und das Kennwort des SQL Servers sowie den Benutzernamen und das Kennwort des FSx for ONTAP-Dateisystems ein.
-** *Windows-Authentifizierung*: Geben Sie den Windows-Benutzernamen und das Kennwort sowie den Benutzernamen und das Kennwort für das FSx for ONTAP-Dateisystem ein.
-
-
-. Bereiten Sie in Schritt 3 die Instanz vor, indem Sie sicherstellen, dass die Instanz die erforderlichen Voraussetzungen erfüllt. Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, klicken Sie auf *Weiter*, um die Instanz zu registrieren. Falls Sie Maßnahmen ergreifen müssen, führen Sie die folgenden Schritte aus.
+.. Wählen Sie für jede Funktion *Setup details* aus, um mehr über die Voraussetzungen der jeweiligen Funktion zu erfahren, und folgen Sie den Anweisungen auf dem Bildschirm, um etwaige fehlende Voraussetzungen für eine Funktion zu erfüllen.
 +
-.. Falls fehlend, wählen Sie Workload Factory aus, um *fehlende AWS- und NetApp PowerShell-Module zu installieren*.
-.. Falls das fehlende Modul fehlt, wählen Sie die Workload Factory aus, um das fehlende PowerShell 7 zu installieren. Die Installation des fehlenden PowerShell-Moduls 7 erfordert einen Systemneustart.
-.. Überprüfen Sie die Liste der Voraussetzungen für die folgenden Funktionen.  Stellen Sie sicher, dass Sie alle Voraussetzungen pro Funktion erfüllen, um die Instanz zu registrieren.
-+
-*** *Überprüfen Sie gut strukturierte Probleme und Empfehlungen*
-*** *Beheben Sie gut konzipierte Probleme*
-*** *Datenbank erstellen*
-*** *Datenbankkopien erstellen (Sandbox)*
-+
-Zum Erfüllen der Voraussetzungen gehört die Aktualisierung Ihrer AWS IAM-Richtlinienberechtigungen, EC2 IAM-Instanzprofilberechtigungen, SQL Server-Berechtigungen und PowerShell-Module.
+Damit Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Instanzen funktioniert, müssen Sie alle Voraussetzungen erfüllen, die unter *Review well-architected issues and recommendations* und *Fix well-architected issues* capabilities aufgeführt sind.
 
 
 
-.. Wenn die Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Instanz *registrieren*.
-
-
+. Sobald alle Voraussetzungen erfüllt sind, *Registrieren* Sie die Instanz(en).
 
 
 .Ergebnis
-Die Instanzregistrierung wird eingeleitet.  Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.
+Die Instanzregistrierung wird gestartet. Wählen Sie die Registerkarte *Job monitoring*, um den Fortschritt zu verfolgen.
 
 
 
 == Registrieren einer Oracle-Datenbank
 
-Das Registrieren einer Datenbank umfasst die Instanzauthentifizierung und -vorbereitung.
+Die Registrierung einer Instanz umfasst drei Schritte – Datenbank-Authentifizierung, FSx for ONTAP-Authentifizierung und Vorbereitung zur Erfüllung fehlender Voraussetzungen. Sie können eine oder mehrere Datenbanken registrieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
-. Wählen Sie im Inventar *Oracle* als Datenbank-Engine aus.
+. Wählen Sie im Inventory *Oracle* als Engine-Typ aus.
 . Wählen Sie die Registerkarte *Datenbanken*.
 . Wählen Sie aus, ob Sie eine einzelne Datenbank oder mehrere Datenbanken registrieren möchten.
+. Um Datenbanken zu authentifizieren (Schritt 1), gehen Sie wie folgt vor:
 +
-.. Einzeldatenbankregistrierung: Navigieren Sie zur zu verwaltenden Datenbank und wählen Sie *Datenbank registrieren*.
-.. Registrierung mehrerer Datenbanken: Wählen Sie die Schaltfläche *Mehrere Datenbanken registrieren*.
+** Wählen Sie *Die gleichen Anmeldeinformationen für alle Instanzen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+** Authentifizieren Sie den Oracle-Benutzer und den Automatic Storage Management (ASM) Grid-Benutzer (falls zutreffend), indem Sie Benutzername und Passwort angeben.
 +
-Für die Registrierung mehrerer Datenbanken stehen zwei Optionen zur Verfügung.  In beiden Fällen müssen die Datenbanken denselben Authentifizierungsstatus aufweisen (nicht authentifiziert oder authentifiziert).
+Wenn die Datenbanken authentifiziert sind, wählen Sie *Next*.
 
+
+
+. Um FSx für ONTAP zu authentifizieren (Schritt 2), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
 +
-*** Nicht authentifizierte Datenbanken: Wählen Sie mehrere nicht authentifizierte Datenbanken zur Registrierung aus.  Diese Datenbanken müssen dieselben Authentifizierungsdaten und FSx for ONTAP Anmeldeinformationen verwenden.  Wählen Sie *Übernehmen* und dann *Weiter*.
-*** Authentifizierte Datenbanken: Wählen Sie mehrere authentifizierte Datenbanken zur Registrierung aus und wählen Sie dann *Weiter*.
-
-
-
-
-. Wählen Sie in Schritt 2 auf der Seite „Datenbanken registrieren“ den Datenbankauthentifizierungsmodus aus, geben Sie die folgenden Details ein und wählen Sie *Weiter*.  Wenn Datenbanken bereits authentifiziert sind, wählen Sie *Weiter*.
+** Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+** Geben Sie den Benutzernamen und das Passwort für das FSx for ONTAP-Dateisystem ein.
 +
-** *Oracle-Benutzerauthentifizierung*: Geben Sie den Oracle-Benutzernamen und das Kennwort sowie den Benutzernamen und das Kennwort für das FSx for ONTAP -Dateisystem ein.
-** *Oracle ASM-Benutzerauthentifizierung*: Optional.  Wenn die Oracle-Datenbank Automatic Storage Management (ASM) verwendet, geben Sie den Benutzernamen und das Kennwort für Oracle ASM (Grid) ein.
+Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
 
 
-. Bereiten Sie in Schritt 3 die Datenbank vor, indem Sie sicherstellen, dass die Datenbank die erforderlichen Voraussetzungen erfüllt.  Wenn alle erforderlichen Module installiert sind und die Voraussetzungen erfüllt sind, wählen Sie *Weiter*, um die Datenbank zu registrieren.  Wenn Sie Maßnahmen ergreifen müssen, befolgen Sie diese Schritte.
+
+. Zur Vorbereitung (Schritt 3) stellen Sie sicher, dass die Datenbank(en) die erforderlichen Voraussetzungen erfüllen. Sind alle erforderlichen Module installiert und die Voraussetzungen erfüllt, wählen Sie *Weiter*, um die Datenbank zu registrieren. Andernfalls folgen Sie diesen Schritten.
 +
-.. Überprüfen Sie die Liste der Voraussetzungen für die folgende Funktion.  Um die Datenbank zu registrieren, müssen alle Voraussetzungen für eine einzelne Funktion erfüllt sein.
+.. Überprüfen Sie die Voraussetzungen in der *Prerequisite check view*.
 +
-*** *Überprüfen Sie gut strukturierte Probleme und Empfehlungen*
+Sie müssen alle Voraussetzungen für eine einzelne Funktion wie *Review well-architected issues and recommendations* erfüllen, um die Datenbank zu registrieren.
 
-
-.. Erfüllen Sie die folgenden Voraussetzungen:
+.. Wählen Sie für jede Funktion *Setup details* aus, um mehr über die Voraussetzungen der jeweiligen Funktion zu erfahren, und folgen Sie den Anweisungen auf dem Bildschirm, um etwaige fehlende Voraussetzungen für eine Funktion zu erfüllen.
 +
-*** *AWS IAM-Richtlinienberechtigungen*: Kopieren und aktualisieren Sie AWS-Berechtigungen in der AWS-Konsole.
-*** *Berechtigungen für das EC2 IAM-Instanzprofil*: Kopieren und aktualisieren Sie die Berechtigungen für das EC2 IAM-Instanzprofil auf der Amazon EC2-Instanz in der AWS-Konsole.
-*** *Bereitstellungsmodule*: Wählen Sie bei Bedarf die Installation abhängiger Module aus, darunter die AWS-Befehlszeilenschnittstelle (AWS CLI), jq (JSON-Prozessor für die Befehlszeile) und Python 3.12, falls Version 3.6 oder höher nicht bereits installiert ist.  Workload Factory installiert diese Module automatisch als Teil des Registrierungsprozesses.
-*** *Oracle-Benutzerberechtigungen*: Aktualisieren Sie bei Bedarf die Berechtigungen für den Oracle-Benutzer.
+Damit Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Datenbanken funktioniert, müssen Sie alle Voraussetzungen erfüllen, die unter *Review well-architected issues and recommendations* und *Fix well-architected issues* aufgeführt sind.
 
 
-.. Wenn die Voraussetzungen erfüllt sind und die Prüfungen *bereit* sind, können Sie die Datenbank *registrieren*.
 
-
+. Wenn alle Voraussetzungen erfüllt sind, *Registrieren* Sie die Datenbank(en).
 
 
 .Ergebnis
-Die Datenbankregistrierung wird gestartet.  Wählen Sie die Registerkarte *Jobüberwachung*, um den Fortschritt zu verfolgen.
+Die Datenbankregistrierung wird gestartet. Wählen Sie die Registerkarte *Job monitoring*, um den Fortschritt zu verfolgen.
 
 .Wie es weiter geht
 Nach der Ressourcenregistrierung können Sie die folgenden Aufgaben ausführen.

@@ -45,12 +45,20 @@ Der Rechner bewertet das Implementierungsmodell und ob die Enterprise Edition er
 .Zugewiesene Ressourcen
 Der Rechner bewertet die Bedingungen der folgenden lizenzabhängigen zugewiesenen Ressourcen:
 
-+ * vCPUs der Zielinstanz: Die Instanz hat 48 oder weniger virtuelle CPUs.  * Speicherzuweisung: Die Instanz verfügt über 128 GB oder weniger Speicher.
+* Target Instance vCPUs: Die Instanz verfügt über 48 oder weniger virtuelle CPUs.
+* Speicherzuweisung: Die Instanz verfügt über 128GB oder weniger Arbeitsspeicher.
+
 
 .Nutzung von Enterprise-Funktionen
 Der Rechner überprüft, ob eine der folgenden Enterprise-Funktionen verwendet wird:
 
-+ * Enterprise-Funktionen auf Datenbankebene * Online-Indexvorgänge * Ressourcenkontrolle * Peer-to-Peer- oder Oracle-Replikation * R/Python-Erweiterungen * Speicheroptimierte TempDB
+* Enterprise-Funktionen auf Datenbankebene
+* Online-Indexoperationen
+* Resource Governor
+* Peer-to-Peer- oder Oracle-Replikation
+* R/Python-Erweiterungen
+* Speicheroptimierte TempDB
+
 
 Wenn die bewertete SQL Server-Instanz keine der oben genannten Enterprise-Funktionen verwendet und die Ressourcenbeschränkungen erfüllt, empfiehlt der Rechner, die Lizenz auf die Standard Edition herunterzustufen. Diese Empfehlung soll Ihnen helfen, Ihre SQL Server Lizenzierungskosten zu optimieren, ohne die Performance oder Funktionalität zu beeinträchtigen.
 
@@ -78,6 +86,7 @@ Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie aus Datenbanken *Einsparungen erkunden* und dann *Microsoft SQL Server on EBS*.
 . Geben Sie im Einsparungsrechner folgende Informationen an:
 +
@@ -112,6 +121,7 @@ Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
 . Wählen Sie aus Datenbanken *Einsparungen erkunden* und dann *Microsoft SQL Server on FSX for Windows*.
 . Geben Sie im Einsparungsrechner folgende Informationen an:
 +
@@ -219,7 +229,9 @@ Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Datenbanken“ im Menü die Option „Einsparungen erkunden“ und dann „Microsoft SQL Server auf FSx für Windows“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü Datenbanken *Explore savings* aus.
+. Wählen Sie in „Einsparungen entdecken“ die Registerkarte *SQL Server auf Elastic Block Store (EBS)* aus.
 +
 Wenn Workload Factory EBS-Hosts erkennt, werden Sie zur Registerkarte „Einsparungen erkunden“ weitergeleitet.  Wenn Workload Factory keine EBS-Hosts erkennt, werden Sie zum Rechner weitergeleitet, um<<Entdecken Sie Einsparungen durch Anpassung,Entdecken Sie Einsparungen durch Anpassung>> .
 
@@ -247,7 +259,9 @@ Workload Factory konsolidiert mehrere SQL Server-Hosts zu einer einzigen FSx for
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Datenbanken“ im Menü die Option „Einsparungen erkunden“ und dann „Microsoft SQL Server auf FSx für Windows“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü Datenbanken *Explore savings* aus.
+. Wählen Sie in „Explore savings“ die Registerkarte *SQL Server auf FSx für Windows* aus.
 +
 Wenn Workload Factory FSx für Windows-Hosts erkennt, werden Sie zur Registerkarte „Einsparungen erkunden“ weitergeleitet.  Wenn Workload Factory FSx für Windows-Hosts nicht erkennt, werden Sie zum Rechner weitergeleitet, um<<Entdecken Sie Einsparungen durch Anpassung,Entdecken Sie Einsparungen durch Anpassung>> .
 
@@ -274,10 +288,12 @@ Wenn FSX für Windows Schattenkopien erkannt werden, ist der Standardwert *Daily
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Datenbanken“ im Menü die Option *Einsparungen erkunden* und dann *Microsoft SQL Server vor Ort* aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü Datenbanken *Explore savings* aus.
+. Wählen Sie in Explore savings die Registerkarte *SQL Server on-premises* aus.
 . Laden Sie auf der Registerkarte SQL Server On-Premises das Skript herunter, um Ihre lokalen SQL Server-Umgebungen zu bewerten.
 +
-.. Laden Sie das Bewertungsskript herunter.  Das Skript ist ein auf PowerShell basierendes Datenerfassungstool.  Es sammelt SQL Server-Konfigurations- und Leistungsdaten und lädt sie anschließend in Workload Factory hoch.  Der Migrationsberater bewertet die Daten und plant die Bereitstellung von FSx für ONTAP für Ihre SQL Server-Umgebung.
+.. Laden Sie das Bewertungsskript herunter. Das Skript ist ein Datenerfassungstool, das auf PowerShell basiert. Es sammelt Konfigurations- und Leistungsdaten von SQL Server und lädt diese anschließend in Workload Factory hoch. Der Migrationsberater wertet die Daten aus und plant die FSx for ONTAP-Bereitstellung für Ihre SQL Server-Umgebung.
 +
 image:screenshot-download-script-on-premises.png["Ein Screenshot der Registerkarte „SQL Server On-Premises“ zeigt die Option zum Herunterladen des Bewertungsskripts."]
 
@@ -288,9 +304,8 @@ image:screenshot-upload-script-on-premises.png["Ein Screenshot der Registerkarte
 
 
 
-. Wählen Sie auf der Registerkarte SQL Server On-Premises *Einsparungen erkunden* aus, um eine Kostenanalyse des lokalen SQL Server-Hosts gegen FSX for ONTAP durchzuführen.
+. Wählen Sie auf der Registerkarte „SQL Server On-Premises“ bis zu fünf Datenbank-Hosts aus und klicken Sie anschließend auf *Einsparungen erkunden*, um eine Kostenanalyse der SQL Server On-Premises-Hosts im Vergleich zu FSx für ONTAP durchzuführen.
 . Wählen Sie im Einsparungsrechner die Region für den lokalen Host aus.
-. Aktualisieren Sie für genauere Ergebnisse die Datenverarbeitungsinformationen sowie die Speicher- und Leistungsdetails.
 . Optional können Sie die folgenden Details zu Klonen (Schattenkopien) und Snapshots in Ihrer lokalen Datenbankumgebung bereitstellen und erhalten so eine genauere Schätzung der Kosteneinsparungen.
 +
 .. *Schnappschussfrequenz*: Wählen Sie eine Schnappschussfrequenz aus dem Menü.
@@ -301,6 +316,10 @@ Wenn FSX für Windows Schattenkopien erkannt werden, ist der Standardwert *Daily
 .. *Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der On-Premises-Konfiguration ein.
 .. *Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.
 
+
+. Aktualisieren Sie für genauere Ergebnisse die Datenverarbeitungsinformationen sowie die Speicher- und Leistungsdetails.
++
+Workload Factory konsolidiert mehrere lokale SQL Server-Hosts zu einer einzigen FSx for ONTAP-Konfigurationsempfehlung, um Kosteneinsparungen zu optimieren, es sei denn, die ausgewählten lokalen Hosts überschreiten die Durchsatz-, Kapazitäts- oder IOPS-Grenzwerte für ein einzelnes FSx for ONTAP-Dateisystem.
 
 
 
