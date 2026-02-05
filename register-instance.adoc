@@ -65,8 +65,8 @@ Workload Factory unterstützt die Registrierung für Failover Cluster Instance (
 . Wählen Sie aus, ob Sie eine einzelne oder mehrere Instanzen registrieren möchten.
 . Um Instanzen zu authentifizieren (Schritt 1), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
 +
-** Wählen Sie *Die gleichen Anmeldeinformationen für alle Instanzen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-** Authentifizieren Sie SQL Server und Windows, indem Sie Benutzername und Passwort angeben.
+.. Wählen Sie *Die gleichen Anmeldeinformationen für alle Instanzen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+.. Authentifizieren Sie SQL Server und Windows, indem Sie Benutzername und Passwort angeben.
 +
 Wenn die Instanzen authentifiziert sind, wählen Sie *Weiter*.
 
@@ -74,8 +74,8 @@ Wenn die Instanzen authentifiziert sind, wählen Sie *Weiter*.
 
 . Um FSx für ONTAP zu authentifizieren (Schritt 2), gehen Sie wie folgt vor:
 +
-** Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-** Geben Sie den Benutzernamen und das Passwort für das FSx for ONTAP-Dateisystem ein und wählen Sie dann *Weiter*.
+.. Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+.. Geben Sie den Benutzernamen und das Passwort für das FSx for ONTAP-Dateisystem ein und wählen Sie dann *Weiter*.
 +
 Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
 
@@ -83,15 +83,16 @@ Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
 
 . Zur Vorbereitung (Schritt 3) stellen Sie sicher, dass die Instanz(en) die Mindestanforderungen erfüllen.
 +
-Um die Mindestanforderungen zu erfüllen, müssen auf der Instanz die AWS- und NetApp PowerShell-Module sowie die PowerShell 7-Module installiert sein, und Sie müssen die Voraussetzungen für mindestens eine der unter „Voraussetzungsprüfung“ aufgeführten Funktionen erfüllen. .. Überprüfen Sie die Voraussetzungen in der Ansicht *Voraussetzungsprüfung*.
+Um die Mindestanforderungen zu erfüllen, müssen auf der Instanz die AWS- und NetApp PowerShell-Module sowie die PowerShell 7-Module installiert sein, und Sie müssen die Voraussetzungen für mindestens eine der unter „Voraussetzungsprüfung“ aufgeführten Funktionen erfüllen.
 
 +
-+ Sie müssen alle Voraussetzungen für eine einzelne Fähigkeit wie *Review well-architected issues and recommendations* erfüllen, um die Instanz zu registrieren.
-
+.. Überprüfen Sie die Voraussetzungen in der *Prerequisite check view*.
 +
+Sie müssen alle Voraussetzungen für eine einzelne Fähigkeit wie *Review well-architected issues and recommendations* erfüllen, um die Instanz zu registrieren.
+
 .. Wählen Sie für jede Funktion *Setup details* aus, um mehr über die Voraussetzungen der jeweiligen Funktion zu erfahren, und folgen Sie den Anweisungen auf dem Bildschirm, um etwaige fehlende Voraussetzungen für eine Funktion zu erfüllen.
 +
-Damit Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Instanzen funktioniert, müssen Sie alle Voraussetzungen erfüllen, die unter *Review well-architected issues and recommendations* und *Fix well-architected issues* capabilities aufgeführt sind.
+Um Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Instanzen nutzen zu können, müssen Sie alle Voraussetzungen erfüllen, die unter *Überprüfung von Problemen und Empfehlungen in der Architektur* und *Behebung von Problemen in der Architektur* aufgeführt sind.
 
 
 
@@ -140,7 +141,7 @@ Sie müssen alle Voraussetzungen für eine einzelne Funktion wie *Review well-ar
 
 .. Wählen Sie für jede Funktion *Setup details* aus, um mehr über die Voraussetzungen der jeweiligen Funktion zu erfahren, und folgen Sie den Anweisungen auf dem Bildschirm, um etwaige fehlende Voraussetzungen für eine Funktion zu erfüllen.
 +
-Damit Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Datenbanken funktioniert, müssen Sie alle Voraussetzungen erfüllen, die unter *Review well-architected issues and recommendations* und *Fix well-architected issues* aufgeführt sind.
+Um Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Datenbanken nutzen zu können, müssen Sie alle Voraussetzungen erfüllen, die unter *Überprüfung von Problemen und Empfehlungen in der Architektur* und *Behebung von Problemen in der Architektur* aufgeführt sind.
 
 
 
