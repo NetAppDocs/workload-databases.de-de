@@ -1,12 +1,12 @@
-= Kostenanalyse und Migrationsplanung für On-Premises-Datenbankumgebungen
+= Kostenanalyse und Migrationsplanung für lokale SQL Server-Datenbankumgebungen
 :allow-uri-read: 
 
 
 
 
-=== Kostenanalyse und Migrationsplanung für On-Premises-Datenbankumgebungen
+=== Kostenanalyse und Migrationsplanung für lokale SQL Server-Datenbankumgebungen
 
-Die BlueXP  Workload Factory für Datenbanken erkennt, analysiert und unterstützt Sie jetzt bei der Planung einer On-Premises-Datenbankmigration zu Amazon FSX für NetApp ONTAP. Mit dem Einsparungsrechner können Sie die Kosten für die Ausführung Ihrer lokalen Datenbankumgebung in der Cloud einschätzen und Empfehlungen für die Migration Ihrer lokalen Datenbankumgebung in die Cloud prüfen.
+BlueXP Workload Factory für Datenbanken erkennt, analysiert und hilft Ihnen bei der Planung der SQL Server On-Premises-Datenbankmigration zu Amazon FSx für NetApp ONTAP. Sie können den Einsparungsrechner verwenden, um die Kosten für den Betrieb Ihrer SQL Server On-Premises-Datenbankumgebung in der Cloud zu schätzen und Empfehlungen für die Migration Ihrer On-Premises-Datenbankumgebung in die Cloud zu überprüfen.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Entdecken Sie Einsparungen bei lokalen Datenbankumgebungen"]
 

@@ -21,9 +21,11 @@ link:optimize-overview.html["Erfahren Sie mehr über die Konfigurationsanalyse u
 
 == Über diese Aufgabe
 
-Workload Factory analysiert täglich Datenbankkonfigurationen.  Die tägliche Analyse liefert den Status der ordnungsgemäßen Architektur sowie Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihre Konfigurationen den Best Practices entsprechen.
+Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert gut strukturierte Statusberichte, Erkenntnisse und Empfehlungen. Sie können Konfigurationsprobleme automatisch beheben, um Best Practices zu erfüllen.
 
-Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme zu überprüfen und diese Probleme über das Datenbankinventar in der Workload Factory-Konsole zu beheben.
+Sie können die Empfehlungen für Konfigurationsprobleme einsehen und diese Probleme über das Databases-Inventar innerhalb der Workload Factory-Konsole beheben.
+
+Für SQL Server-Ressourcen können Sie eine einmalige Bewertung durchführen, um Best Practices für Ihre Datenbankkonfigurationen zu überprüfen. Sie müssen keine Ressourcen registrieren oder Anmeldeinformationen speichern, um die einmalige Bewertung durchzuführen.
 
 .Was analysiert wird
 Workload Factory analysiert den ordnungsgemäßen Architekturstatus der folgenden Konfigurationen:
@@ -44,19 +46,44 @@ Für Oracle-Datenbanken:
 * Speicherdimensionierung: beinhaltet die Zuweisung von Auslagerungsspeicher und den verfügbaren Platz im Dateisystem.
 * Speicherkonfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinie, Snapshots, Speichereffizienzen und Betriebssystemkonfigurationen für Bereitstellungen mit NFS oder iSCSI mit oder ohne Automatic Storage Management (ASM), einschließlich Microsoft Multipath I/O (MPIO) Status und Einstellungen sowie die folgenden dNFS-Einstellungen: dNFS-Aktivierung, dNFS konsistente IP-Auflösung, dNFS Konfigurationsdatei und dNFS `nosharecache`
 * Speicherlayout: umfasst die Platzierung von Redo-Protokollen, temporären Tablespaces, Datendateien, Archivprotokollen, Steuerdateien und Binärdateien sowie die LUN-Anzahl der ASM-Datenträgergruppen
+* Compute: beinhaltet Betriebssystem-Patches
+
+
+Die Well-Architected-Analyse für Oracle benachrichtigt Sie, wenn eine Konfiguration von anderen abhängt, und listet Maßnahmen zur Optimierung verknüpfter Konfigurationen auf.
+
+
+
+== Führen Sie eine einmalige Bewertung der SQL Server Datenbankkonfigurationen durch
+
+Führen Sie eine einmalige Bewertung durch, um den Well-Architected-Status Ihrer Microsoft SQL Server-Instanzen zu ermitteln, ohne Anmeldeinformationen zu speichern oder Instanzen zu registrieren.
+
+Sie können das Skript beliebig oft ausführen und die Ergebnisse hochladen. Bei jedem Upload werden der Well-Architected-Status und die Erkenntnisse anhand der neuesten Ergebnisse aktualisiert.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Datenbanken* aus.
+. Wählen Sie im *Inventory* die Option *One-time assessment* > *Learn about assessment*. Lesen Sie die Informationen zur One-time assessment.
+. Wählen Sie *Download script*.
++
+.. Kopieren Sie das Skript auf Ihren Microsoft SQL Server host.
+.. Führen Sie das Skript in PowerShell aus. Ein Skript sammelt Metadaten von allen Instanzen.
+
+
+. Wählen Sie *Einmalige Bewertung* > *Hochladen*. Suchen Sie die Datei und laden Sie sie in die Workload Factory console hoch.
+. Sehen Sie sich die Empfehlung für jede Konfiguration an. Empfehlungen umfassen bewährte Vorgehensweisen und Probleme, die auftreten können, wenn Konfigurationen nicht optimiert sind.
 
 
 
 
-== Bevor Sie beginnen
+== Bevor Sie mit dem Beheben, Verwerfen und Reaktivieren von Konfigurationen beginnen
 
 * Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto.
-* Um den Speicher einer Microsoft SQL Server-Instanz oder Oracle-Datenbank zu bewerten, muss die Ressource in Workload Factory registriert sein und der Speichertyp muss FSx für ONTAP sein.link:register-instance.html["Erfahren Sie, wie Sie Ressourcen registrieren."]
-* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren. Für RSS- und MAXDOP-Einstellungen empfehlen wir, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen zu ermitteln, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
+* Die Ressource muss in Workload Factory registriert sein und der Speichertyp muss FSx for ONTAP sein. link:register-instance.html["Erfahren Sie, wie Sie Ressourcen registrieren."]
+* Prüfen Sie jede Empfehlung, bevor Sie eine Einstellung oder Konfiguration beheben. Testen Sie bei RSS und MAXDOP die empfohlenen Einstellungen, um die Leistung zu überprüfen, bevor Sie Ihre Produktionsumgebung ändern.
 
 
 
-NOTE: Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Lesen Sie die Empfehlung sorgfältig durch, bevor Sie sich für die Korrektur einer Konfiguration entscheiden.
+NOTE: Die Korrektur einer Konfiguration kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Stellen Sie sicher, dass Sie die Empfehlung sorgfältig prüfen, bevor Sie sich entscheiden, eine Konfiguration zu korrigieren.
 
 
 
@@ -69,7 +96,7 @@ NOTE: Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechung
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Datenbanken* aus.
 . Wählen Sie im *Inventar* den Engine-Typ aus: Microsoft SQL Server oder Oracle.
 . Wählen Sie Ressourcen aus, die für bestimmte Konfigurationen repariert werden sollen.
 +
@@ -83,7 +110,7 @@ NOTE: Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechung
 Sie können Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags filtern.
 
 +
-Sie können auch einen Bericht mit den Ergebnissen herunterladen, indem Sie *PDF exportieren* auswählen.
+Wählen Sie *Export PDF*, um einen Bericht mit den Ergebnissen herunterzuladen.
 
 . Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Zu den Empfehlungen gehören bewährte Methoden, potenzielle Fallstricke nicht optimierter Konfigurationen und wichtige Überlegungen. Überprüfen Sie die Empfehlung sorgfältig.
 . Wählen Sie „Konfigurationsprobleme anzeigen und beheben“ aus, wenn die Option verfügbar ist.
@@ -108,47 +135,13 @@ Workload Factory beginnt mit der Behebung des/der Problems/Probleme.  Wählen Si
 
 
 
-== Verschieben oder verwerfen Sie die Analyse von Datenbankkonfigurationen
+== Die Analyse von Datenbankkonfigurationen ablehnen
 
-Verschieben oder verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht für Ihre Datenbankumgebung gelten, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. Sie können eine verschobene oder zurückgeschobene Konfigurationsanalyse jederzeit wieder aktivieren.
-
-Die Anwendungsanforderungen für Datenbankkonfigurationen variieren.  Workload Factory bietet Ihnen zwei Optionen zum Überspringen der Analyse bestimmter Datenbankkonfigurationen, sodass Sie nur relevante Probleme überwachen und einen genauen Überblick über den Zustand relevanter Konfigurationen erhalten können.  Wenn eine bestimmte Konfigurationsanalyse verschoben oder verworfen wird, wird die Konfiguration nicht in die Gesamtpunktzahl der Optimierung einbezogen.
-
-Sie können die Konfigurationsanalyse auf Konfigurationsebene und auf der Ebene der SQL Server-Instanz oder der Oracle-Datenbank verschieben, ablehnen und erneut aktivieren.
-
-* *30 Tage verschieben*: Eine Verschiebung der Analyse wird die Analyse für 30 Tage beenden. Nach 30 Tagen wird die Analyse automatisch neu gestartet.
-* *Abweisen*: Das Ablehnen der Analyse verschiebt die Analyse auf unbestimmte Zeit. Sie können die Analyse bei Bedarf neu starten.
-
-
-Die folgenden Anweisungen beschreiben, wie Sie eine Analyse auf Konfigurationsebene verschieben, verwerfen oder reaktivieren.  Um die folgenden Aufgaben für bestimmte SQL Server-Instanzen oder Oracle-Datenbanken abzuschließen, beginnen Sie auf der Registerkarte *Dashboard*.
-
-[role="tabbed-block"]
-====
-.Verschieben
---
-Verschieben, um eine Konfigurationsanalyse für 30 Tage zu stoppen. Nach 30 Tagen wird die Analyse automatisch neu gestartet.
+Verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht auf Ihre Datenbankumgebung zutreffen, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. Sie können eine verworfene Konfigurationsanalyse jederzeit wieder aktivieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
-. Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
-. Wählen Sie im Inventar den Datenbank-Engine-Typ aus: *Microsoft SQL Server* oder *Oracle*.
-. Navigieren Sie zur SQL Server-Instanz oder Oracle-Datenbank mit der zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Gut konzipiert*.
-. Scrollen Sie auf der Well-Architected-Analyseseite nach unten zur zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Verwerfen* aus.
-. Wählen Sie im Konfigurationsdialogfeld „Verwerfen“ die Option „30 Tage verschieben“ und dann „Verwerfen“ aus.
-
-
-.Ergebnis
-Die Konfigurationsanalyse hält 30 Tage an.
-
---
-.Verwerfen
---
-Schließen, um eine Konfigurationsanalyse auf unbestimmte Zeit zu beenden. Sie können die Analyse bei Bedarf neu starten.
-
-.Schritte
-. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar den Datenbank-Engine-Typ aus: *Microsoft SQL Server* oder *Oracle*.
 . Navigieren Sie zur SQL Server-Instanz oder Oracle-Datenbank mit der zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Gut konzipiert*.
@@ -159,14 +152,17 @@ Schließen, um eine Konfigurationsanalyse auf unbestimmte Zeit zu beenden. Sie k
 .Ergebnis
 Die Konfigurationsanalyse wird beendet.
 
---
-.Reaktivieren
---
-Aktivieren Sie eine verschobene oder abgeschobene Konfigurationsanalyse jederzeit erneut.
+Sie können die Analyse jederzeit reaktivieren. Die Konfiguration wird nicht mehr in die Gesamtoptimierungsbewertung einbezogen.
+
+
+
+== Eine verworfene Konfigurationsanalyse reaktivieren
+
+Reaktivieren Sie eine verworfene Konfigurationsanalyse jederzeit. Sie können eine oder mehrere Konfigurationen reaktivieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Datenbanken* aus.
 . Wählen Sie im Menü „Datenbanken“ die Option „Inventar“ aus.
 . Wählen Sie im Inventar den Datenbank-Engine-Typ aus: *Microsoft SQL Server* oder *Oracle*.
 . Navigieren Sie zur SQL Server-Instanz oder Oracle-Datenbank mit der zu verschiebenden Konfiguration, wählen Sie das Aktionsmenü und dann *Gut konzipiert*.
@@ -175,7 +171,4 @@ Aktivieren Sie eine verschobene oder abgeschobene Konfigurationsanalyse jederzei
 
 
 .Ergebnis
-Die Konfigurationsanalyse wird reaktiviert und findet täglich im Vorwärtslauf statt.
-
---
-====
+Die Konfigurationsanalyse wird reaktiviert und läuft ab jetzt jeden Tag.

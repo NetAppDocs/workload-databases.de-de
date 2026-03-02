@@ -19,9 +19,9 @@ Sie können Ihre Ressourcen nur registrieren, wenn sie auf FSx für ONTAP Dateis
 
 == Über die Aufgabe
 
-Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst drei Schritte – Instanz- oder Datenbank-Authentifizierung, FSx for ONTAP Authentifizierung und Vorbereitung. Die Vorbereitung beinhaltet die Sicherstellung, dass alle AWS-, NetApp- und PowerShell-Module auf der Instanz oder Datenbank installiert sind und dass die Mindestanforderungen für Workload Factory for Databases-Funktionen wie link:analyze-error-logs.html["Fehlerprotokollanalyse"] oder link:optimize-configurations.html["Well-Architected Review"] erfüllt sind.
+Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst drei Schritte: Instanz- oder Datenbankauthentifizierung, FSx for ONTAP Authentifizierung und Vorbereitung. Zur Vorbereitung müssen AWS-, NetApp- und PowerShell-Module auf der Instanz oder Datenbank installiert werden und die Mindestanforderungen für Workload Factory for Databases-Funktionen wie link:analyze-error-logs.html["Fehlerprotokollanalyse"] oder link:optimize-configurations.html["Well-Architected Assessment"] erfüllt sein.
 
-Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken.  Abhängig von den AWS-Kontoanmeldeinformationen, die Sie in Workload Factory auswählen, werden möglicherweise PostgreSQL-Hosts im Inventar angezeigt.  Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
+Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken. Abhängig von den in Workload Factory ausgewählten AWS-Kontodaten werden PostgreSQL-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
 
 
 
@@ -33,14 +33,14 @@ Der Host für die Instanz oder Datenbank muss im Inventar aufgeführt sein. Dami
 
 === Registrieren einer Instanz in einem privaten Netzwerk
 
-Um eine Instanz (SQL Server) oder Datenbank (Oracle) in einem privaten Netzwerk ohne externe Konnektivität zu registrieren, müssen die folgenden Endpunkte in der VPC mit Zuordnung zu den Subnetzen verfügbar sein, in denen SQL-Server vorhanden sind.  Stellen Sie sicher, dass die Schnittstellenendpunkte Port 443 in der angeschlossenen Sicherheitsgruppe zulassen.
+Um eine Instanz oder Datenbank in einem privaten Netzwerk ohne externe Verbindung zu registrieren, stellen Sie die erforderlichen Endpunkte in der VPC bereit und ordnen Sie sie den entsprechenden Subnetzen zu. Erlauben Sie Port 443 in der Security Group für Interface-Endpunkte.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
 +
-Wenn Sie einen Proxyserver für alle ausgehenden Verbindungen von EC2-Instanzen verwenden, müssen Sie den Zugriff auf die folgenden Domänen zulassen, damit die Verwaltungsvorgänge funktionieren:
+Wenn Sie einen Proxyserver für ausgehende EC2-Verbindungen verwenden, erlauben Sie den Zugriff auf diese Domains für Managementvorgänge:
 
 * ``.microsoft.com``(SQL Server)
 * ``.powershellgallery.com``(SQL Server)
@@ -92,11 +92,11 @@ Sie müssen alle Voraussetzungen für eine einzelne Fähigkeit wie *Review well-
 
 .. Wählen Sie für jede Funktion *Setup details* aus, um mehr über die Voraussetzungen der jeweiligen Funktion zu erfahren, und folgen Sie den Anweisungen auf dem Bildschirm, um etwaige fehlende Voraussetzungen für eine Funktion zu erfüllen.
 +
-Um Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] für Ihre Instanzen nutzen zu können, müssen Sie alle Voraussetzungen erfüllen, die unter *Überprüfung von Problemen und Empfehlungen in der Architektur* und *Behebung von Problemen in der Architektur* aufgeführt sind.
+Um Workload Factory zu link:optimize-configurations.html["Gut konzipierte Probleme überprüfen und beheben"] aktivieren, erfüllen Sie alle Voraussetzungen unter *Überprüfung von gut strukturierten Problemen und Empfehlungen* und *Behebung von gut strukturierten Problemen*.
 
 
 
-. Sobald alle Voraussetzungen erfüllt sind, *Registrieren* Sie die Instanz(en).
+. Nachdem Sie alle Voraussetzungen erfüllt haben, *Register* Sie die Instanz(en).
 
 
 .Ergebnis
@@ -145,14 +145,14 @@ Um Workload Factory link:optimize-configurations.html["Gut konzipierte Probleme 
 
 
 
-. Wenn alle Voraussetzungen erfüllt sind, *Registrieren* Sie die Datenbank(en).
+. Nachdem Sie die Voraussetzungen erfüllt haben, *Register* Sie die Datenbank(en).
 
 
 .Ergebnis
 Die Datenbankregistrierung wird gestartet. Wählen Sie die Registerkarte *Job monitoring*, um den Fortschritt zu verfolgen.
 
 .Wie es weiter geht
-Nach der Ressourcenregistrierung können Sie die folgenden Aufgaben ausführen.
+Nach der Registrierung können Sie diese Aufgaben ausführen.
 
 * Datenbanken aus dem Inventar anzeigen
 * link:create-database.html["Erstellen Sie eine Datenbank"]
