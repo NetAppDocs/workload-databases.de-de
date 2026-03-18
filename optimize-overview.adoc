@@ -25,28 +25,238 @@ Die wichtigsten Funktionen:
 
 
 
-== Komponenten der Konfigurationsanalyse
+== So funktioniert es
 
-Die Konfigurationsanalyse umfasst folgende Komponenten:
+Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
 
-Zustand der Architektur gut:: Der Status „gut architektonisch“ bezieht sich auf den allgemeinen Zustand Ihrer Datenbankkonfigurationen; Konfigurationen werden in die Kategorien „optimiert“, „nicht optimiert“ oder „überdimensioniert“ eingeteilt. Der Status einer gut strukturierten Konfiguration wird innerhalb einer Microsoft SQL Server-Instanz oder einer Oracle-Datenbank in der Workload Factory-Konsole referenziert.
-Gut konzipierte Punktzahl:: Die Punktzahl umfasst alle aktuell analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Wert von 25 % bedeutet, dass 25 % Ihrer Datenbankimplementierungen gut architektonisch gestaltet sind. Der Wert für die gute Architektur wird auf dem Bildschirm *Gute Architektur* und innerhalb einer Microsoft SQL Server-Instanz oder Oracle-Datenbank in der Workload Factory-Konsole angezeigt.
-Konfigurationskategorien:: Die Konfigurationen sind in folgende Kategorien unterteilt: Speicher, Rechenleistung, Anwendung, Ausfallsicherheit und Klonen. Jede Kategorie umfasst spezifische Konfigurationsbewertungen, die regelmäßig analysiert werden. Die Konfigurationskategorien werden sowohl vom Bildschirm *Well-architected* als auch innerhalb einer Microsoft SQL Server-Instanz oder einer Oracle-Datenbank in der Workload Factory-Konsole referenziert.
+Nach Abschluss der täglichen Analyse werden die Konfigurationen im Well-architected Dashboard für die Bereitstellung als „optimiert“ oder „nicht optimiert“ angezeigt. Sie finden die Gesamtoptimierungspunktzahl, Konfigurationsprobleme nach Kategorie und eine Liste der Konfigurationsprobleme und Empfehlungen. Sie können die Empfehlungen zu den Konfigurationsproblemen überprüfen. Einige Probleme können automatisch von Workload Factory behoben werden, während andere eine manuelle Intervention erfordern. In diesem Fall stellt Workload Factory detaillierte Anweisungen bereit, um Ihnen bei der Umsetzung der empfohlenen Änderungen zu helfen.
 
-
+Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelten, ausblenden. Dadurch werden unnötige Warnmeldungen und ungenaue Optimierungsergebnisse vermieden. Wenn Sie eine bestimmte Konfigurationsanalyse ausblenden, berücksichtigt Workload Factory die Konfiguration nicht in der Gesamtoptimierungsbewertung.
 
 
-== Analyseumfang
 
-Je nachdem, welche Komponente bewertet wird, ist der Optimierungsumfang unterschiedlich. Die Storage-Optimierung findet beispielsweise auf der Ebene der SQL Instanzen statt, während die Computing-Optimierung auf Host-Ebene erfolgt.
+== Warum es wichtig ist
+
+Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.
 
 
 
 == Analyseanforderungen
 
-Für eine vollständige Analyse der Datenbankumgebung müssen die Ressourcen registriert und online sein.
+Für eine vollständige Analyse der Datenbankumgebung müssen Sie Folgendes tun:
 
-link:register-instance.html["Erfahren Sie, wie Sie Ressourcen registrieren."]
+* link:register-instance.html["Registrieren Sie Ihre Ressourcen"] und stellen Sie sicher, dass sie online sind.
+* Stellen Sie eine Verknüpfung her. Die Link-Konnektivität ermöglicht es Workload Factory, alle Datenbankbereitstellungskonfigurationen wie Storage-Layout und Ausfallsicherheit zu analysieren.
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen bestehenden Link verknüpfen oder einen neuen Link erstellen und verknüpfen"].
+
+* Gewähren Sie _view, planning, and analysis_-Berechtigungen in Ihrem AWS-Konto.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie einem AWS-Konto Berechtigungen erteilen"^]
+
+
+
+
+
+== Bewährte Verfahren und Empfehlungen für Datenbank-Workloads
+
+Workload Factory bietet eine Reihe von Best Practices und Empfehlungen für den Betrieb gut strukturierter Datenbank-Workloads. Die well-architected Analyse bewertet Microsoft SQL Server und Oracle Database Konfigurationen und Einstellungen in Bezug auf Speicherdimensionierung, Storage-Layout, Speicherkonfiguration, Rechenleistung, Anwendung (SQL Server) und Ausfallsicherheit.
+
+
+
+=== Microsoft SQL Server
+
+
+
+==== Speichergrößenbestimmung
+
+* *Speicherebene*
++
+Verwenden Sie die primäre SSD-Ebene für FSx for ONTAP-Volumes, um eine optimale Leistung sicherzustellen. Die Kapazitätspool-Ebene kann die Leistung verringern und die Latenz erhöhen. Die primäre SSD-Ebene ist für Hochleistungs-Workloads ausgelegt, während die Kapazitätspool-Ebene auf Kosteneffizienz optimiert ist und möglicherweise nicht die Leistungsanforderungen von SQL Server-Workloads erfüllt.
+
+* *Freier Speicherplatz im Dateisystem*
++
+Stellen Sie sicher, dass Ihr Dateisystem ausreichend Kapazität über die Gesamtgröße Ihres Volumes hinaus bietet. Zu wenig Spielraum führt zu Leistungsproblemen; zu viel verschwendet Speicher und erhöht die Kosten.
+
+* *Protokolllaufwerksgröße*
++
+Dimensionieren und überwachen Sie Ihr SQL Server-Protokolllaufwerk angemessen, um Transaktions-Rollbacks, Datenbankunverfügbarkeit, Datenbeschädigung und Leistungsprobleme aufgrund eines vollen Protokolllaufwerks zu vermeiden.
+
+* *TempDB-Laufwerksgröße*
++
+Größen Sie die TempDB angemessen und überwachen Sie sie, um optimale Leistung und Systemstabilität aufrechtzuerhalten. Unzureichender Speicherplatz in der TempDB kann zu verlangsamten Abfragen, Anwendungstimeouts und Systemabstürzen führen.
+
+
+
+
+
+==== Storage-Layout
+
+* *Platzierung von Datendateien (.mdf)* und *Platzierung von Protokolldateien (.ldf)*
++
+Platzieren Sie Daten- und Protokolldateien auf separaten Laufwerken, um die Leistung zu verbessern und unabhängige Sicherungs- und Wiederherstellungsvorgänge zu ermöglichen.
+
+* *TempDB-Platzierung*
++
+Platzieren Sie TempDB auf einem separaten Laufwerk, um E/A-Konflikte zu vermeiden und die Leistung und Stabilität von SQL Server zu verbessern. Andernfalls kann es zu E/A-Engpässen, langsameren Abfragen und Systeminstabilität kommen.
+
+
+
+
+
+==== Storage-Konfiguration
+
+* *ONTAP-Konfiguration*
++
+Aktivieren Sie Thin Provisioning, automatische Größenanpassung und Speicherplatzmanagement für FSx for ONTAP Volumes, um die Speichereffizienz und Kosteneffektivität zu optimieren. Konfigurieren Sie Tiering-Richtlinien, um ältere Snapshots in die Kapazitätsebene zu verschieben und gleichzeitig eine hohe Leistung für aktive Daten aufrechtzuerhalten. Stellen Sie bei LUNs sicher, dass der Betriebssystemtyp mit Ihrem Betriebssystem-Partitionierungsschema für eine korrekte E/A-Ausrichtung übereinstimmt, aktivieren Sie die Speicherplatzreservierung, um Schreibfehler zu verhindern, und aktivieren Sie die Speicherplatzzuweisung, um eine automatische Speicherplatzfreigabe und Hostbenachrichtigungen bei vollem Speicher zu ermöglichen.
+
+* *Betriebssystem*
++
+Aktivieren und konfigurieren Sie Microsoft Multipath I/O (MPIO) mit geeigneten Zeitüberschreitungs-Einstellungen, um hohe Verfügbarkeit und konsistente Datenzugriffskonsistenz für SQL Server Datenbanken auf EC2 mit FSx für ONTAP sicherzustellen. MPIO bietet redundante Pfade für erhöhte Ausfallsicherheit und Leistung während Failovers. Konfigurieren Sie die NTFS-Zuordnungseinheitsgröße angemessen für optimale Festplattennutzung und Leistung.
+
+
+
+
+
+==== Compute
+
+* *Compute-Rightsizing*
++
+Passen Sie die Dimensionierung Ihrer SQL Server EC2-Instance basierend auf den Workload-Anforderungen an, um Leistung und Kosteneffizienz auszugleichen. Wenn Ihre aktuelle Instance unterdimensioniert ist, kann ein Upgrade die CPU-, Speicher- und I/O-Kapazität verbessern. Wenn sie überdimensioniert ist, kann ein Downgrade die Leistung aufrechterhalten und gleichzeitig die Kosten senken.
+
+* *Betriebssystem-Patch*
++
+Wenden Sie die neuesten Betriebssystem-Patches an, um die Sicherheit und Systemzuverlässigkeit zu erhöhen.
+
+* *Netzwerkadaptereinstellungen*
++
+Konfigurieren Sie Receive Side Scaling (RSS), um die Netzwerkverarbeitung auf mehrere Prozessoren zu verteilen und die Netzwerkleistung zu verbessern. Testen Sie die Einstellungen, bevor Sie sie in der Produktion anwenden.
+
+* *MTU-Ausrichtung*
++
+Richten Sie die Maximum Transmission Unit (MTU)-Einstellungen der EC2-Instanzen an FSx for ONTAP aus, um Netzwerkfragmentierung zu verhindern und die SQL Server-Performance zu optimieren. Die Behebung von MTU-Fehlausrichtungen stellt eine konsistente MTU-Konfiguration auf allen Knoten und Netzwerkpfaden sicher.
+
+
+
+
+
+==== Anwendung (SQL Server)
+
+* *Lizenz*
++
+Die Bewertung und Empfehlung der SQL Server-Lizenz erfolgt auf Hostebene. Workload Factory stuft eine Lizenz als „nicht optimiert“ ein, wenn erkannt wird, dass Ihre Datenbankinfrastruktur keine der kommerziellen Softwarelizenzfunktionen nutzt, für die Sie bezahlen. Eine nicht optimierte Lizenz kann zu unnötigen Kosten führen. Überprüfen Sie Ihre SQL Server-Lizenznutzung, um sicherzustellen, dass Sie alle Funktionen nutzen, für die Sie bezahlen.
+
+* *Microsoft SQL Server-Patch*
++
+Wenden Sie die neuesten SQL Server-Patches an, um die Sicherheit zu erhöhen, sich vor Sicherheitslücken zu schützen und die Systemzuverlässigkeit zu verbessern.
+
+* *MAXDOP*
++
+Konfigurieren Sie MAXDOP, um die Abfrageleistung zu optimieren. Werte von 4, 8 oder 16 funktionieren in der Regel gut. Testen Sie Ihre Arbeitslast und überwachen Sie auf Parallelitäts-Wartetypen wie CXPACKET.
+
+
+
+
+
+==== Zuverlässigkeit
+
+* *Lokale Snapshots planen*
++
+Planen Sie regelmäßige Snapshots für zeitpunktgenaue Backups und eine schnelle Wiederherstellung nach versehentlichem Löschen, Datenbeschädigung und anderen Problemen.
+
+* *Backup-Konfiguration*
++
+Konfigurieren Sie FSx für ONTAP Backups oder AWS Backup, um die Anforderungen an Datenaufbewahrung und Compliance zu erfüllen. Vermeiden Sie redundante Backups.
+
+* *Regionenübergreifende Replikation*
++
+Aktivieren Sie die regionsübergreifende Replikation (CRR), um die Datenverfügbarkeit und die Notfallwiederherstellung zu verbessern. Nutzen Sie CRR, um sich vor regionalen Ausfällen zu schützen und die Geschäftskontinuität sicherzustellen.
+
+* *Microsoft SQL Server Hochverfügbarkeit*
++
+Stellen Sie sicher, dass die Hochverfügbarkeit für SQL Server eingerichtet ist, indem Sie überprüfen, dass der gesamte gemeinsam genutzte Speicher von allen Clusterknoten aus zugänglich ist, die Laufwerksbuchstaben auf allen Knoten gleich sind, um Konflikte während des Failovers zu vermeiden, das Quorum für die Clusterintegrität eingerichtet ist, Heartbeat-Schwellenwerte für Cloud-Umgebungen festgelegt sind und die SQL Server-Dienste für automatischen Start und Failover konfiguriert sind.
+
+* *Klon-Bereinigung*
++
+Überprüfen und entfernen Sie regelmäßig veraltete Klone, um die Speicherkosten zu senken. Alte und ungenutzte Klone verursachen hohe Kosten.
+
+
+
+
+
+=== Orakel
+
+
+
+==== Speichergrößenbestimmung
+
+* *Freier Speicherplatz im Dateisystem*
++
+Um die Speicherleistung zu optimieren und Leistungseinbußen zu vermeiden, sollte ausreichend Dateisystemkapazität bereitgestellt werden. Genügend Spielraum ermöglicht ein effizientes Speicherplatzmanagement und unterstützt das Wachstum der Datenbank.
+
+* *Swap-Speicher*
++
+Richten Sie den Auslagerungsspeicher entsprechend der Menge an RAM ein, damit das System den Speicherdruck bewältigen und Verlangsamungen oder Abstürze vermeiden kann.
+
+
+
+
+
+==== Storage-Layout
+
+* *Oracle-Binärplatzierung*
++
+Platzieren Sie Oracle-Binärdateien auf einem dedizierten Volume, um optimale Leistung und Stabilität zu gewährleisten, indem Sie E/A-Konflikte reduzieren. Diese Trennung vereinfacht Software-Updates und minimiert das Risiko versehentlicher Änderungen oder Datenbeschädigung.
+
+* *Speicherort der Datendateien*
++
+Platzieren Sie Datendateien auf einem dedizierten Volume oder mit Steuerdateien, um zufällige E/A-Vorgänge zu isolieren und die Leistung zu verbessern. Diese Trennung ermöglicht benutzerdefinierte Snapshot-Konfigurationen, Tiering-Richtlinien und Effizienzmechanismen zur Optimierung von Leistung und Kosten.
+
+* *Platzierung von Steuerdateien*
++
+Speichern Sie Kopien der Kontrolldateien auf verschiedenen Volumes oder Festplatten, um einen Single Point of Failure zu vermeiden und Redundanz hinzuzufügen. Platzieren Sie Kontrolldateien auf einem dedizierten Volume oder teilen Sie sie mit Wiederherstellungsprotokollen oder Datendateien, aber legen Sie sie nicht auf Volumes ab, die auf Objektspeicher ausgelagert sind, aufgrund der Leistungsanforderungen.
+
+* *Platzierung der Wiederherstellungsprotokolle*
++
+Platzieren Sie Wiederherstellungsprotokolle auf einem dedizierten Volume oder teilen Sie sie gegebenenfalls mit temporären Dateien oder Kontrolldateien, um schreibintensive E/A-Operationen zu isolieren und die Leistung zu verbessern. Speichern Sie jede Kopie des Wiederherstellungsprotokolls zur Redundanz auf einem separaten Volume. Platzieren Sie Wiederherstellungsprotokolle nicht auf Volume-Snapshots oder auf Volumes, die auf Objektspeicher ausgelagert sind, da sie häufig aktualisiert werden.
+
+* *Temp placement*
++
+Temporäre Dateien sollten auf einem dedizierten Volume gespeichert oder angemessen mit Redo- oder Kontrolldateien gemeinsam genutzt werden, um schreibintensive E/A-Operationen zu isolieren und die Leistung zu verbessern. Jede multiplexierte temporäre Kopie sollte aus Redundanzgründen auf einem separaten Volume liegen. Temporäre Dateien sollten aufgrund ihrer häufigen Aktualisierungsmuster nicht auf Volume-Snapshots oder auf Volumes, die in Objektspeicher ausgelagert sind, gespeichert werden.
+
+* *Archivplatzierung*
++
+Legen Sie Archivprotokolle auf einem dedizierten Volume ab, um die Leistung und die Wiederherstellungsprozesse zu verbessern, indem verhindert wird, dass hohe E/A-Anforderungen andere Datenbankoperationen beeinträchtigen.
+
+* *Nur-ASM-Konfigurationen: ASM-Daten-Festplattengruppe-LUNs, ASM-Protokoll-Festplattengruppe-LUNs und ASM-Archiv-Festplattengruppe-LUNs*
++
+Verteilen Sie LUNs auf Festplattengruppen für Daten, Wiederherstellungsprotokoll und Archivprotokoll des Automatic Storage Management (ASM), um optimale Leistung und Redundanz zu erzielen.
+
+
+
+
+
+==== Storage-Konfiguration
+
+* *ONTAP*
++
+Optimieren Sie die FSx for ONTAP-Konfiguration für Oracle-Datenbanken durch Aktivierung von Thin Provisioning, automatische Größenanpassung und Speicherplatzmanagement für Volumes. Konfigurieren Sie geeignete Snapshot-Richtlinien und Tiering-Strategien, um Leistung und Kosten auszubalancieren. Stellen Sie für LUNs die korrekte Ausrichtung des Betriebssystemtyps, Speicherplatzreservierung und die Einstellungen für die Speicherplatzzuweisung sicher, um Schreibfehler zu vermeiden und die automatische Speicherplatzrückgewinnung zu aktivieren.
+
+* *Betriebssystem*
++
+Konfigurieren Sie die Betriebssystemeinstellungen für eine optimale Oracle Datenbankleistung, einschließlich der Optimierung von Kernelparametern für Datenbank-Workloads und der entsprechenden Konfiguration von NFS- oder dNFS-Einstellungen für den Zugriff auf das Netzwerkdateisystem.
+
+
+
+
+
+==== Compute
+
+* *Betriebssystem-Patch*
++
+Installieren Sie regelmäßig Betriebssystem-Patches, um Sicherheit, Stabilität und Leistungsverbesserungen für Ihre Oracle Datenbankumgebung zu gewährleisten.
+
+
 
 .Wie es weiter geht
 link:optimize-configurations.html["Implementieren Sie gut konzipierte Datenbankkonfigurationen"]
