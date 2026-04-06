@@ -13,7 +13,7 @@ summary: NetApp Workload Factory für Datenbanken scannt Microsoft SQL Server-Ko
 [role="lead"]
 Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse, um mit NetApp Workload Factory Best Practices für Ihre Datenbankkonfigurationen mit Microsoft SQL Server und Oracle zu implementieren. Sie können den gut entwickelten Status einfach überprüfen, sich über Probleme mit Datenbankkonfigurationen informieren und Konfigurationen beheben, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
 
-Sie können die Analyse bestimmter Konfigurationen, die nicht auf Ihre Umgebung zutreffen, auch ablehnen, um unnötige Warnungen und ungenaue Optimierungsergebnisse zu vermeiden.
+Sie können auch die Analyse von Konfigurationen ausblenden, die nicht auf Ihre Umgebung zutreffen, um zusätzliche Warnmeldungen und ungenaue Ergebnisse zu vermeiden.
 
 link:optimize-overview.html["Erfahren Sie mehr über die Konfigurationsanalyse und den Status „Well-Architected“ in Workload Factory."]
 
@@ -23,9 +23,9 @@ link:optimize-overview.html["Erfahren Sie mehr über die Konfigurationsanalyse u
 
 Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert gut strukturierte Statusberichte, Erkenntnisse und Empfehlungen. Sie können Konfigurationsprobleme automatisch beheben, um Best Practices zu erfüllen.
 
-Sie können die Empfehlungen für Konfigurationsprobleme einsehen und diese Probleme über das Databases-Inventar innerhalb der Workload Factory-Konsole beheben.
+Sie können Probleme aus dem Datenbankinventar oder dem Well-architected-Dashboard innerhalb der Workload Factory-Konsole überprüfen und beheben.
 
-Für SQL Server-Ressourcen können Sie eine einmalige Bewertung durchführen, um Best Practices für Ihre Datenbankkonfigurationen zu überprüfen. Sie müssen keine Ressourcen registrieren oder Anmeldeinformationen speichern, um die einmalige Bewertung durchzuführen.
+Optional können Sie eine einmalige Bewertung durchführen, um die Best Practices für Ihre Datenbankkonfigurationen zu überprüfen, ohne Anmeldeinformationen zu speichern oder Ressourcen zu registrieren.
 
 .Was analysiert wird
 Workload Factory analysiert den ordnungsgemäßen Architekturstatus der folgenden Konfigurationen:
@@ -36,7 +36,7 @@ Für Microsoft SQL Server-Instanzen:
 * Speicherlayout: Beinhaltet die Platzierung von Benutzerdatendateien, die Platzierung von Protokolldateien und die Platzierung von tempdb
 * Speicherkonfiguration: umfasst Kapazitätsverwaltung, Thin Provisioning, Tiering-Richtlinie, Snapshots, Microsoft Multipath I/O (MPIO)-Status und MPIO-Timeout-Einstellung
 * Compute: umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadaptereinstellungen wie Receive Side Scaling (RSS), TCP-Offloading und MTU-Ausrichtung
-* Anwendungen: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
+* Anwendung: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
 * Ausfallsicherheit: umfasst lokale Snapshots, FSx für ONTAP Backups, regionsübergreifende Replikation (CRR) und Microsoft SQL High Availability.
 * Klone: Enthält Optionen zum Aktualisieren und Löschen von Klonen (Sandboxen), die innerhalb oder außerhalb der Workload Factory erstellt wurden und älter als 60 Tage sind
 
@@ -47,22 +47,29 @@ Für Oracle-Datenbanken:
 * Speicherkonfiguration: Umfasst Kapazitätsmanagement, Thin Provisioning, Tiering-Richtlinie, Snapshots, Speichereffizienzen und Betriebssystemkonfigurationen für Bereitstellungen mit NFS oder iSCSI mit oder ohne Automatic Storage Management (ASM), einschließlich Microsoft Multipath I/O (MPIO) Status und Einstellungen sowie die folgenden dNFS-Einstellungen: dNFS-Aktivierung, dNFS konsistente IP-Auflösung, dNFS Konfigurationsdatei und dNFS `nosharecache`
 * Speicherlayout: umfasst die Platzierung von Redo-Protokollen, temporären Tablespaces, Datendateien, Archivprotokollen, Steuerdateien und Binärdateien sowie die LUN-Anzahl der ASM-Datenträgergruppen
 * Compute: beinhaltet Betriebssystem-Patches
+* Anwendung: Enthält kritische Patch-Updates von Oracle
+* Ausfallsicherheit: umfasst regionsübergreifende Replikation (CRR) und applikationskonsistente Snapshots
 
 
 Die Well-Architected-Analyse für Oracle benachrichtigt Sie, wenn eine Konfiguration von anderen abhängt, und listet Maßnahmen zur Optimierung verknüpfter Konfigurationen auf.
 
 
 
-== Führen Sie eine einmalige Bewertung der SQL Server Datenbankkonfigurationen durch
+== Führen Sie eine einmalige Bewertung Ihrer Konfigurationen durch
 
-Führen Sie eine einmalige Bewertung durch, um den Well-Architected-Status Ihrer Microsoft SQL Server-Instanzen zu ermitteln, ohne Anmeldeinformationen zu speichern oder Instanzen zu registrieren.
+Führen Sie eine einmalige Bewertung durch, um den Well-Architected-Status Ihrer Microsoft SQL Server-Instanzen oder Oracle-Datenbanken zu ermitteln, ohne Anmeldeinformationen zu speichern oder Ressourcen zu registrieren.
 
-Sie können das Skript beliebig oft ausführen und die Ergebnisse hochladen. Bei jedem Upload werden der Well-Architected-Status und die Erkenntnisse anhand der neuesten Ergebnisse aktualisiert.
+Sie können das Skript ausführen und die Ergebnisse mehrmals hochladen. Workload Factory aktualisiert den Well-Architected-Status und die Erkenntnisse mit jedem Upload.
 
+[role="tabbed-block"]
+====
+.Microsoft SQL Server-Instanzen
+--
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Datenbanken* aus.
-. Wählen Sie im *Inventory* die Option *One-time assessment* > *Learn about assessment*. Lesen Sie die Informationen zur One-time assessment.
+. Wählen Sie im *Inventar* *SQL Server* als Engine-Typ aus.
+. Wählen Sie *Einmalige Bewertung* > *Mehr über die Bewertung erfahren*. Lesen Sie die Informationen zur einmaligen Bewertung.
 . Wählen Sie *Download script*.
 +
 .. Kopieren Sie das Skript auf Ihren Microsoft SQL Server host.
@@ -70,20 +77,39 @@ Sie können das Skript beliebig oft ausführen und die Ergebnisse hochladen. Bei
 
 
 . Wählen Sie *Einmalige Bewertung* > *Hochladen*. Suchen Sie die Datei und laden Sie sie in die Workload Factory console hoch.
-. Sehen Sie sich die Empfehlung für jede Konfiguration an. Empfehlungen umfassen bewährte Vorgehensweisen und Probleme, die auftreten können, wenn Konfigurationen nicht optimiert sind.
+. Sehen Sie sich die Empfehlungen für jede Konfiguration an. Workload Factory enthält Best Practices und weist in den Empfehlungen auf potenzielle Probleme hin, die bei nicht optimierten Konfigurationen auftreten können.
 
 
+--
+.Oracle-Datenbanken
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Datenbanken* aus.
+. Wählen Sie im *Inventar* als Engine-Typ *Oracle* aus.
+. Wählen Sie *Einmalige Bewertung* > *Mehr über die Bewertung erfahren*. Lesen Sie die Informationen zur einmaligen Bewertung.
+. Wählen Sie *Download script*.
++
+.. Kopieren Sie das Python-Skript auf Ihren Oracle-Datenbank-Host.
+.. Führen Sie das Skript in der entsprechenden Shell aus. Ein Skript sammelt Metadaten aus allen Datenbanken.
+
+
+. Wählen Sie *Einmalige Bewertung* > *Hochladen*. Suchen Sie die Datei und laden Sie sie in die Workload Factory console hoch.
+. Sehen Sie sich die Empfehlungen für jede Konfiguration an. Workload Factory enthält Best Practices und weist in den Empfehlungen auf potenzielle Probleme hin, die bei nicht optimierten Konfigurationen auftreten können.
+
+
+--
+====
 
 
 == Bevor Sie mit dem Beheben, Verwerfen und Reaktivieren von Konfigurationen beginnen
+
+Die folgenden Anforderungen sind für die kontinuierliche Überwachung Ihrer Datenbankumgebung und die automatische Behebung von Konfigurationsproblemen notwendig. Diese Anforderungen sind für die einmalige Bewertung nicht erforderlich.
 
 * Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto.
 * Die Ressource muss in Workload Factory registriert sein und der Speichertyp muss FSx for ONTAP sein. link:register-instance.html["Erfahren Sie, wie Sie Ressourcen registrieren."]
 * Prüfen Sie jede Empfehlung, bevor Sie eine Einstellung oder Konfiguration beheben. Testen Sie bei RSS und MAXDOP die empfohlenen Einstellungen, um die Leistung zu überprüfen, bevor Sie Ihre Produktionsumgebung ändern.
 
-
-
-NOTE: Die Korrektur einer Konfiguration kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Stellen Sie sicher, dass Sie die Empfehlung sorgfältig prüfen, bevor Sie sich entscheiden, eine Konfiguration zu korrigieren.
 
 
 
@@ -92,7 +118,7 @@ NOTE: Die Korrektur einer Konfiguration kann zu Ausfallzeiten von Instanzen oder
 Beheben Sie Konfigurationsprobleme für SQL Server- oder Oracle-Umgebungen, die auf FSx für ONTAP -Speicher ausgeführt werden.
 
 
-NOTE: Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechungen führen.  Lesen Sie die Empfehlung sorgfältig durch, bevor Sie sich für die Behebung eines Konfigurationsproblems entscheiden.
+NOTE: Die Korrektur einer Konfiguration kann zu Ausfallzeiten oder Serviceunterbrechungen führen. Stellen Sie sicher, dass Sie die Empfehlung sorgfältig prüfen, bevor Sie sich entscheiden, eine Konfiguration zu korrigieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -118,7 +144,7 @@ Wählen Sie *Export PDF*, um einen Bericht mit den Ergebnissen herunterzuladen.
 Die Standardeinstellung ist „*Alles auswählen*“, Sie können jedoch auch bestimmte Ressourcen zur Reparatur auswählen.
 
 +
-.. Lesen Sie für alle Konfigurationen außer der Klonbereinigung die Empfehlungsdetails, um zu erfahren, was passiert, wenn Sie sich für die Behebung des Problems entscheiden. Einige Korrekturvorgänge können zu Instanzausfallzeiten oder Dienstunterbrechungen führen.
+.. Prüfen Sie bei allen Konfigurationen außer der Klonbereinigung die Empfehlungdetails, um die Auswirkungen der Problembehebung zu ermitteln. Einige Maßnahmen zur Behebung können zu Ausfallzeiten oder Serviceunterbrechungen führen.
 .. Wählen Sie für die Klonbereinigung geklonte Datenbanken (Sandbox) zum Aktualisieren oder Löschen aus.
 +
 *** Durch das Aktualisieren eines Klons wird dieser mit seiner Quelldatenbank synchronisiert.  Die Aktualisierung ist nur für in Workload Factory erstellte Klone verfügbar.
@@ -150,7 +176,7 @@ Verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht auf Ihr
 
 
 .Ergebnis
-Die Konfigurationsanalyse wird beendet.
+Workload Factory stoppt die Konfigurationsanalyse.
 
 Sie können die Analyse jederzeit reaktivieren. Die Konfiguration wird nicht mehr in die Gesamtoptimierungsbewertung einbezogen.
 
@@ -171,4 +197,4 @@ Reaktivieren Sie eine verworfene Konfigurationsanalyse jederzeit. Sie können ei
 
 
 .Ergebnis
-Die Konfigurationsanalyse wird reaktiviert und läuft ab jetzt jeden Tag.
+Workload Factory reaktiviert die Konfigurationsanalyse und führt sie von nun an täglich aus.
