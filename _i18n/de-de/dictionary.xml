@@ -1125,7 +1125,6 @@
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">Wählen Sie *Schließen*.</block>
   <block id="0b640c5e49490eb540208568a359492b" category="summary">Erfahren Sie, was es Neues bei NetApp Workload Factory für Datenbanken gibt.</block>
   <block id="1c6922f994b9da3a35a8bb9b0644ab56" category="doc">Neuigkeiten bei NetApp Workload Factory für Datenbanken</block>
-  <block id="61c3763b08308c467fdf40bde3586f08" category="section-title">06. Oktober 2026</block>
   <block id="7197ea7b7a0d83f9800a417fd561bcea" category="sidebar">Stellen Sie Microsoft SQL Server-Konfigurationen bereit und verwalten Sie Datenbankumgebungen auf FSx für ONTAP Dateisystemspeicher in NetApp Workload Factory.</block>
   <block id="d83c92d6ba7b7ac809c4616f670db665" category="sidebar">Dokumentation zu NetApp Workload Factory für Datenbanken</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetApp Konsole</block>
@@ -1502,4 +1501,5 @@
   <block id="4e3fbfcdffe2becd73a5b796de048459" category="list-text">*Applikationskonsistente Snapshots*</block>
   <block id="0d0d1e59f6397f54691afa326ea6ef15" category="paragraph">Nutzen Sie applikationskonsistente Snapshots mit NetApp SnapCenter, um präzise und zuverlässige Momentaufnahmen Ihrer Volume-Daten zu einem bestimmten Zeitpunkt zu erstellen. So bleiben Ihre Anwendungen reibungslos am Laufen und Ihre Daten sicher. SnapCenter vereinfacht die Datensicherung und ermöglicht eine schnelle und korrekte Datenwiederherstellung, wodurch Ausfallzeiten reduziert und Ihre wichtigsten Workloads geschützt werden.</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">06. April 2026</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06. Oktober 2025</block>
 </blocks>
