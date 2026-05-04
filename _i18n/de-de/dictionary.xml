@@ -13,7 +13,6 @@
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">Klicken Sie im Dialogfeld Integritätsprüfung auf *Integritätsprüfung*.</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">Überprüfen Sie den Status der Integritätsprüfung in Sandboxes oder in der Jobüberwachung.</block>
   <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">Wenn die Integritätsprüfung fehlschlägt, empfehlen wir, den Sandbox-Klon nicht zu verwenden und einen neuen Sandbox-Klon zu erstellen.</block>
-  <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">Verbinden Sie einen Sandbox-Klon mit einer CI/CD-Pipeline mit REST-API-Code und verbessern Sie so die Softwarebereitstellung durch Automatisierung.</block>
   <block id="2af2cf99863645202599afd2708773e2" category="doc">Sandbox-Klon mit CI/CD-Tools verbinden</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">Um eine neue Softwareversion automatisch für den Datenbankklon bereitzustellen, sollten Sie eine Verbindung zu einer CI/CD-Pipeline herstellen. Verwenden Sie den von diesem Vorgang bereitgestellten REST-API-Code, um die Verbindung herzustellen.</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">Wählen Sie *Verbindung zu CI/CD-Tools herstellen*.</block>
@@ -761,7 +760,6 @@
   <block id="0f2833865dd9bd39be8189333dae1c4f" category="list-text">*Aktualisierungshäufigkeit von Klonen*: Wählen Sie aus dem Menü die Häufigkeit aus, mit der Klone aktualisiert werden.</block>
   <block id="ca1bcaaac2fa2065767d6cb9b43a5bf7" category="list-text">Wählen Sie auf der Registerkarte „Einsparungen erkunden“ die Option „Einsparungen erkunden“ des Datenbankhosts aus, der FSx für Windows File Server-Speicher verwendet.</block>
   <block id="546dcae8b2a33c531e585b76d51af0dd" category="paragraph">In einigen Fällen mit eingeschränkten Berechtigungen lädt die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten.</block>
-  <block id="012a999834d8188ec17b6ec67f4db97d" category="list-text">Ausfallsicherheit: umfasst lokale Snapshots, FSx für ONTAP Backups, regionsübergreifende Replikation (CRR) und Microsoft SQL High Availability.</block>
   <block id="1caf2514b723d82877e2b000e3ba5e3f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Ermitteln oder Bereitstellen von Ressourcen</block>
   <block id="714bf7245115e9e60e5f4ba3dc04e4f5" category="paragraph">Mit Anmeldeinformationen und IAM-Richtlinien können Sie vorhandene Datenbankressourcen im Inventar erkennen oder<block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> .  Das Inventar bietet eine einheitliche Schnittstelle zur Verwaltung von Ressourcen.</block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Vier</block>
@@ -942,7 +940,6 @@
   <block id="da04ea76e1caee6b818a505ce02fa93b" category="paragraph">Entdecken Sie die Einsparungen in NetApp Workload Factory für Datenbanken für Ihre Datenbank-Workloads, indem Sie die Kosten für die Verwendung von Microsoft SQL Server auf Amazon Elastic Block Store (EBS), FSx für Windows File Server und lokalem Speicher mit FSx für ONTAP -Speicher vergleichen.</block>
   <block id="e123e8395730b190f146babf1b2d52a4" category="inline-image-macro">Ein Screenshot der Kachel mit den potenziellen Einsparungen aus dem Datenbank-Dashboard in der Workload Factory-Konsole.  Die Kachel „Potenzielle Einsparungen“ zeigt die Anzahl aller Datenbank-Workloads, die Sie auf Elastic Block Store und FSx für Windows File Server haben, die potenziellen Kosteneinsparungen, den Einsparungsprozentsatz und die visuelle Darstellung im Balkendiagramm.</block>
   <block id="092e04ebb92f098a8d23a32d9a42e747" category="paragraph"><block ref="092e04ebb92f098a8d23a32d9a42e747" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e5af3e73361e966fe2adc79aadc34d57" category="paragraph">Workload Factory gibt die erkannten Hosteigenschaften von Elastic Block Store und FSx für Windows File Server ein, sodass Sie Einsparungen automatisch ermitteln können.</block>
   <block id="b9382a492febc168d96a9e8228ee319f" category="paragraph">Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host erkundet haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus Workload Factory zu entfernen.  Wählen Sie das Aktionsmenü des lokalen Microsoft SQL Server-Hosts und wählen Sie dann *Löschen*.</block>
   <block id="1dbb11b39a311ecc5e8a64d372008d84" category="admonition">Workload Factory unterstützt nicht das Speichern oder Erstellen mehrerer FSx für ONTAP Dateisysteme.</block>
   <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp bietet auf vielfältige Weise Support für Workload Factory und seine Cloud-Dienste. Umfangreiche kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, beispielsweise Knowledgebase-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung beinhaltet technischen Remote-Support per Web-Ticketing.</block>
@@ -1416,7 +1413,6 @@
   <block id="aeb19b16f26ffba9cda709a80fdd7572" category="paragraph">Wenden Sie die neuesten SQL Server-Patches an, um die Sicherheit zu erhöhen, sich vor Sicherheitslücken zu schützen und die Systemzuverlässigkeit zu verbessern.</block>
   <block id="4eddb0eeecb1e4ae314e258e08e465e3" category="list-text">*MAXDOP*</block>
   <block id="a87a9d28595a379a45146753041d53f3" category="paragraph">Konfigurieren Sie MAXDOP, um die Abfrageleistung zu optimieren. Werte von 4, 8 oder 16 funktionieren in der Regel gut. Testen Sie Ihre Arbeitslast und überwachen Sie auf Parallelitäts-Wartetypen wie CXPACKET.</block>
-  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">Zuverlässigkeit</block>
   <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*Lokale Snapshots planen*</block>
   <block id="2a18a15eebd0bb67a6bfebc30c94b035" category="paragraph">Planen Sie regelmäßige Snapshots für zeitpunktgenaue Backups und eine schnelle Wiederherstellung nach versehentlichem Löschen, Datenbeschädigung und anderen Problemen.</block>
   <block id="29e7ad88f894625110c66db9a5db3cae" category="list-text">*Backup-Konfiguration*</block>
@@ -1468,7 +1464,6 @@
   <block id="3a40f68be193f0f7bc0c01f622d3cc5f" category="paragraph">Optional können Sie eine einmalige Bewertung durchführen, um die Best Practices für Ihre Datenbankkonfigurationen zu überprüfen, ohne Anmeldeinformationen zu speichern oder Ressourcen zu registrieren.</block>
   <block id="e112d8634bd0280eb27ad63e9eeb9493" category="list-text">Anwendung: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen</block>
   <block id="f953bb98ceaddd49464d672fa425c300" category="list-text">Anwendung: Enthält kritische Patch-Updates von Oracle</block>
-  <block id="10e1b7780581fec77099c3ba816f3e14" category="list-text">Ausfallsicherheit: umfasst regionsübergreifende Replikation (CRR) und applikationskonsistente Snapshots</block>
   <block id="c20a2029d45b71b182aee84243212b9d" category="section-title">Führen Sie eine einmalige Bewertung Ihrer Konfigurationen durch</block>
   <block id="384e59575141746d138a94a55377c6e8" category="paragraph">Führen Sie eine einmalige Bewertung durch, um den Well-Architected-Status Ihrer Microsoft SQL Server-Instanzen oder Oracle-Datenbanken zu ermitteln, ohne Anmeldeinformationen zu speichern oder Ressourcen zu registrieren.</block>
   <block id="c091a4936cfa8cd2dad53f925bd5aee2" category="paragraph">Sie können das Skript ausführen und die Ergebnisse mehrmals hochladen. Workload Factory aktualisiert den Well-Architected-Status und die Erkenntnisse mit jedem Upload.</block>
@@ -1502,4 +1497,14 @@
   <block id="0d0d1e59f6397f54691afa326ea6ef15" category="paragraph">Nutzen Sie applikationskonsistente Snapshots mit NetApp SnapCenter, um präzise und zuverlässige Momentaufnahmen Ihrer Volume-Daten zu einem bestimmten Zeitpunkt zu erstellen. So bleiben Ihre Anwendungen reibungslos am Laufen und Ihre Daten sicher. SnapCenter vereinfacht die Datensicherung und ermöglicht eine schnelle und korrekte Datenwiederherstellung, wodurch Ausfallzeiten reduziert und Ihre wichtigsten Workloads geschützt werden.</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">06. April 2026</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06. Oktober 2025</block>
+  <block id="e41556fc62415ea0a9f5770be89f198d" category="summary">Verbinden Sie einen Sandbox-Klon mit einer CI- und CD-Pipeline über REST-API-Code, um die Softwarebereitstellung durch Automatisierung zu verbessern.</block>
+  <block id="7c82c4b76396ded628b47eba74c65565" category="paragraph">Workload Factory gibt die erkannten Host-Merkmale ein, damit Sie automatisch Einsparmöglichkeiten entdecken können.</block>
+  <block id="d3fcf12bb075f268d31cdb0724f5ce8c" category="section-title">Entdecken Sie Einsparungen für erkannte Microsoft SQL Server Hosts</block>
+  <block id="86a575769a61e2abed6c5895311f8530" category="section-title">Entdecken Sie die Einsparungen für erkannte Oracle-Hosts</block>
+  <block id="44f6dcaf4df7850e972b2333b05391b1" category="list-text">Wählen Sie unter „Einsparungen entdecken“ die Registerkarte *Oracle on Elastic Block Store (EBS)* aus.</block>
+  <block id="d2b291a665d715eddff69d121f8023e5" category="list-text">Falls erforderlich, authentifizieren Sie den Datenbank-Host mit Oracle-Anmeldeinformationen oder fügen Sie fehlende Oracle-Berechtigungen hinzu.</block>
+  <block id="e83aba812fc0f70eadb6faace95a02ef" category="paragraph">Workload Factory konsolidiert mehrere Oracle-Hosts zu einer einzigen FSx for ONTAP-Konfigurationsempfehlung, um Kosteneinsparungen zu optimieren, es sei denn, die ausgewählten EBS-Hosts überschreiten die Durchsatz-, Kapazitäts- oder IOPS-Grenzwerte für ein einzelnes FSx for ONTAP-Dateisystem.</block>
+  <block id="2a1f70a024ddcf60632c72e3981ec1bd" category="paragraph">Nachdem Sie die Einsparmöglichkeiten für einen lokalen Oracle-Host geprüft haben, können Sie den Eintrag des lokalen Oracle-Hosts aus Workload Factory entfernen. Wählen Sie das Aktionsmenü des lokalen Oracle-Hosts und dann *Löschen*.</block>
+  <block id="59b293a0a31a179071c10aecd46b5de5" category="list-text">Ausfallsicherheit: umfasst lokale Snapshots, Backup-Konfiguration, regionsübergreifende Replikation (CRR), Microsoft SQL High Availability und Klonbereinigung</block>
+  <block id="07081ec6223cf25eb33c5a000e4055a1" category="list-text">Ausfallsicherheit: umfasst regionsübergreifende Replikation (CRR), applikationskonsistente Snapshots, Backup-Konfiguration und Klonbereinigung</block>
 </blocks>

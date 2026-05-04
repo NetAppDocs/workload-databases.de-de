@@ -37,7 +37,7 @@ Für Microsoft SQL Server-Instanzen:
 * Speicherkonfiguration: umfasst Kapazitätsverwaltung, Thin Provisioning, Tiering-Richtlinie, Snapshots, Microsoft Multipath I/O (MPIO)-Status und MPIO-Timeout-Einstellung
 * Compute: umfasst Rightsizing, Betriebssystem-Patches und Netzwerkadaptereinstellungen wie Receive Side Scaling (RSS), TCP-Offloading und MTU-Ausrichtung
 * Anwendung: Enthält Microsoft SQL Server-Lizenzen, Microsoft SQL Server-Patch und MAXDOP-Einstellungen
-* Ausfallsicherheit: umfasst lokale Snapshots, FSx für ONTAP Backups, regionsübergreifende Replikation (CRR) und Microsoft SQL High Availability.
+* Ausfallsicherheit: umfasst lokale Snapshots, Backup-Konfiguration, regionsübergreifende Replikation (CRR), Microsoft SQL High Availability und Klonbereinigung
 * Klone: Enthält Optionen zum Aktualisieren und Löschen von Klonen (Sandboxen), die innerhalb oder außerhalb der Workload Factory erstellt wurden und älter als 60 Tage sind
 
 
@@ -48,7 +48,7 @@ Für Oracle-Datenbanken:
 * Speicherlayout: umfasst die Platzierung von Redo-Protokollen, temporären Tablespaces, Datendateien, Archivprotokollen, Steuerdateien und Binärdateien sowie die LUN-Anzahl der ASM-Datenträgergruppen
 * Compute: beinhaltet Betriebssystem-Patches
 * Anwendung: Enthält kritische Patch-Updates von Oracle
-* Ausfallsicherheit: umfasst regionsübergreifende Replikation (CRR) und applikationskonsistente Snapshots
+* Ausfallsicherheit: umfasst regionsübergreifende Replikation (CRR), applikationskonsistente Snapshots, Backup-Konfiguration und Klonbereinigung
 
 
 Die Well-Architected-Analyse für Oracle benachrichtigt Sie, wenn eine Konfiguration von anderen abhängt, und listet Maßnahmen zur Optimierung verknüpfter Konfigurationen auf.

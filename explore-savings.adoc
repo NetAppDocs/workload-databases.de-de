@@ -163,7 +163,7 @@ Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren
 
 === Untersuchen Sie die Einsparungen für erkannte Hosts
 
-Workload Factory gibt die erkannten Hosteigenschaften von Elastic Block Store und FSx für Windows File Server ein, sodass Sie Einsparungen automatisch ermitteln können.
+Workload Factory gibt die erkannten Host-Merkmale ein, damit Sie automatisch Einsparmöglichkeiten entdecken können.
 
 .Bevor Sie beginnen
 Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
@@ -220,6 +220,10 @@ Bevor Sie beginnen, müssen Sie die folgenden Voraussetzungen erfüllen:
 
 
 
+
+
+
+==== Entdecken Sie Einsparungen für erkannte Microsoft SQL Server Hosts
 
 Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 
@@ -318,6 +322,59 @@ Workload Factory konsolidiert mehrere lokale SQL Server-Hosts zu einer einzigen 
 
 
 
+.Entfernung des lokalen Hosts
+Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host erkundet haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus Workload Factory zu entfernen.  Wählen Sie das Aktionsmenü des lokalen Microsoft SQL Server-Hosts und wählen Sie dann *Löschen*.
+
+--
+====
+Nachdem Sie Details zur Konfiguration des Datenbank-Hosts angegeben haben, überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.
+
+Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen, indem Sie eine der folgenden Optionen auswählen:
+
+* *PDF exportieren*
+* *Per E-Mail senden*
+* *Die Berechnungen anzeigen*
+
+
+Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Bereitstellung von Microsoft SQL Server auf AQS EC2 mithilfe von FSX für ONTAP Filesystemen>>.
+
+
+
+==== Entdecken Sie die Einsparungen für erkannte Oracle-Hosts
+
+Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü Datenbanken *Explore savings* aus.
+. Wählen Sie unter „Einsparungen entdecken“ die Registerkarte *Oracle on Elastic Block Store (EBS)* aus.
++
+Wenn Workload Factory EBS-Hosts erkennt, werden Sie zur Registerkarte „Einsparmöglichkeiten erkunden“ weitergeleitet. Wenn keine EBS-Hosts erkannt werden, werden Sie zum Rechner weitergeleitet, um <<Entdecken Sie Einsparungen durch Anpassung,Entdecken Sie Einsparungen durch Anpassung>>.
+
+. Wählen Sie unter *Einsparungen entdecken* einen oder mehrere Datenbankhosts aus, die auf EBS laufen, und wählen Sie dann *Einsparungen entdecken*.
+. Falls erforderlich, authentifizieren Sie den Datenbank-Host mit Oracle-Anmeldeinformationen oder fügen Sie fehlende Oracle-Berechtigungen hinzu.
++
+Wenn die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten lädt, wählen Sie die Registerkarte *Inventar*, um die Daten neu zu laden, und wählen Sie dann erneut die Registerkarte *Ersparnisse erkunden*.
+
+. Im Savings calculator können Sie die folgenden Details zu Klonen und Snapshots in Ihrem EBS-Speicher angeben, um eine genauere Kosteneinsparungsschätzung zu erhalten.
++
+.. *Schnappschussfrequenz*: Wählen Sie eine Schnappschussfrequenz aus dem Menü.
+.. *Aktualisierungshäufigkeit von Klonen*: Wählen Sie aus dem Menü die Häufigkeit aus, mit der Klone aktualisiert werden.
+.. *Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der EBS-Konfiguration ein.
+.. *Monatliche Änderungsrate*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.
+.. *Hosts hinzufügen*: Optional können Sie bis zu fünf erkannte EBS-Hosts auswählen, die in die Einsparungsberechnung einbezogen werden sollen.
++
+Workload Factory konsolidiert mehrere Oracle-Hosts zu einer einzigen FSx for ONTAP-Konfigurationsempfehlung, um Kosteneinsparungen zu optimieren, es sei denn, die ausgewählten EBS-Hosts überschreiten die Durchsatz-, Kapazitäts- oder IOPS-Grenzwerte für ein einzelnes FSx for ONTAP-Dateisystem.
+
+
+
+
+
 --
 .Oracle Server vor Ort
 --
@@ -353,6 +410,9 @@ Workload Factory konsolidiert mehrere lokale Oracle-Datenbanken zu einer einzige
 
 
 
+.Entfernung des lokalen Hosts
+Nachdem Sie die Einsparmöglichkeiten für einen lokalen Oracle-Host geprüft haben, können Sie den Eintrag des lokalen Oracle-Hosts aus Workload Factory entfernen. Wählen Sie das Aktionsmenü des lokalen Oracle-Hosts und dann *Löschen*.
+
 --
 ====
 Nachdem Sie Details zur Konfiguration des Datenbank-Hosts angegeben haben, überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.
@@ -365,9 +425,6 @@ Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen,
 
 
 Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Bereitstellung von Microsoft SQL Server auf AQS EC2 mithilfe von FSX für ONTAP Filesystemen>>.
-
-.Entfernung des lokalen Hosts
-Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host erkundet haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus Workload Factory zu entfernen.  Wählen Sie das Aktionsmenü des lokalen Microsoft SQL Server-Hosts und wählen Sie dann *Löschen*.
 
 
 
