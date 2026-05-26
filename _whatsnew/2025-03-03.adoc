@@ -8,7 +8,7 @@
 
 Sie können jetzt eine HA-Konfiguration für PostgreSQL Server implementieren.
 
-link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html["Erstellen Sie einen PostgreSQL-Server"]
+link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Erstellen Sie einen PostgreSQL-Server"]
 
 
 
