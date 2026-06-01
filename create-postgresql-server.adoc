@@ -105,6 +105,9 @@ Subnetze sollten für hohe Verfügbarkeit nicht dieselbe Routentabelle verwenden
 +
 ... * Erstellen Sie ein neues FSX für ONTAP*: Geben Sie Benutzernamen und Passwort ein.
 +
+Für GovCloud-Konten geben Sie den AWS SSM Parameter-ARN-Wert für FSx for ONTAP-Anmeldeinformationen im folgenden Format ein: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format `/netapp/wlmdb/<anyname>`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
+
++
 Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
 
 ... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
@@ -187,15 +190,7 @@ Wählen Sie im Feld *Cluster-Konfiguration - Knoten 1* eine Verfügbarkeitszone 
 ... Wählen Sie im Feld *Cluster-Konfiguration - Knoten 2* die sekundäre Verfügbarkeitszone für die MAZ FSX for ONTAP-Konfiguration aus dem Dropdown-Menü *Verfügbarkeitszone* und ein Subnetz aus der sekundären Verfügbarkeitszone aus dem Dropdown-Menü *Subnetz* aus.
 
 
-.. *Sicherheitsgruppe*: Wählen Sie eine vorhandene Sicherheitsgruppe aus oder erstellen Sie eine neue Sicherheitsgruppe.
-+
-Während der Implementierung eines neuen Servers werden zwei Sicherheitsgruppen mit den SQL Nodes (EC2 Instanzen) verbunden.
-
-+
-... Eine Sicherheitsgruppe für Workloads wird erstellt, um die für PostgreSQL erforderlichen Ports und Protokolle zu ermöglichen.
-... Für ein neues FSX für ONTAP-Dateisystem wird eine neue Sicherheitsgruppe erstellt und an den SQL-Knoten angehängt. Für ein vorhandenes FSX for ONTAP-Dateisystem wird die ihm zugeordnete Sicherheitsgruppe automatisch zum PostgreSQL-Knoten hinzugefügt, der die Kommunikation mit dem Dateisystem ermöglicht.
-
-
+.. *Sicherheitsgruppe*: Es wird eine Arbeitslast-Sicherheitsgruppe erstellt, um die für PostgreSQL erforderlichen Ports und Protokolle zuzulassen. Zusätzlich können Sie eine oder mehrere Sicherheitsgruppen auswählen.
 
 
 . Geben Sie unter *Anwendungseinstellungen* Folgendes an:
@@ -204,6 +199,9 @@ Während der Implementierung eines neuen Servers werden zwei Sicherheitsgruppen 
 .. Wählen Sie die *PostgreSQL-Version* aus dem Dropdown-Menü aus.
 .. *Datenbankservername*: Geben Sie den Namen des Datenbank-Clusters ein.
 .. *Datenbankanmeldeinformationen*: Geben Sie einen Benutzernamen und ein Passwort für ein neues Dienstkonto ein oder verwenden Sie vorhandene Dienstkontoanmeldeinformationen im Active Directory.
++
+Für GovCloud-Konten geben Sie den AWS SSM Parameter-ARN-Wert für die Anmeldeinformationen im folgenden Format ein: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format `/netapp/wlmdb/<anyname>`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
+
 
 
 . Wählen Sie unter *Connectivity* ein Schlüsselpaar aus, um eine sichere Verbindung zu Ihrer Instanz herzustellen.
@@ -214,7 +212,10 @@ Während der Implementierung eines neuen Servers werden zwei Sicherheitsgruppen 
 +
 ... * Erstellen Sie ein neues FSX für ONTAP*: Geben Sie Benutzernamen und Passwort ein.
 +
-Ein neues FSX für ONTAP-Dateisystem kann 30 Minuten oder mehr der Installationszeit hinzufügen.
++ Für GovCloud-Konten geben Sie den AWS SSM Parameter-ARN-Wert für die FSx for ONTAP-Anmeldeinformationen im folgenden Format ein: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format `/netapp/wlmdb/<anyname>`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
+
++
++ Ein neues FSx für ONTAP-Dateisystem kann die Installationszeit um 30 Minuten oder mehr verlängern.
 
 ... *Wählen Sie ein vorhandenes FSX für ONTAP*: Wählen Sie FSX für ONTAP-Namen aus dem Dropdown-Menü und geben Sie einen Benutzernamen und ein Passwort für das Dateisystem ein.
 +
@@ -245,7 +246,7 @@ Die benutzerdefinierten FSX for ONTAP-Schlüssel werden basierend auf der Servic
 Von AWS gemanagte Schlüssel werden nach Servicetauglichkeit gefiltert.
 
 .. *Tags*: Optional können Sie bis zu 40 Tags hinzufügen.
-.. *Simple Notification Service*: Optional können Sie den Simple Notification Service (SNS) für diese Konfiguration aktivieren, indem Sie ein SNS-Thema für Microsoft SQL Server aus dem Dropdown-Menü auswählen.
+.. *Simple Notification Service*: Optional können Sie den Simple Notification Service (SNS) für diese Konfiguration aktivieren, indem Sie im Dropdown-Menü ein SNS-Thema für PostgreSQL auswählen.
 +
 ... Aktivieren Sie den Simple Notification Service.
 ... Wählen Sie im Dropdown-Menü ein ARN aus.

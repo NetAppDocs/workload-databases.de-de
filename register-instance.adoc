@@ -23,6 +23,8 @@ Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst dre
 
 Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken. Abhängig von den in Workload Factory ausgewählten AWS-Kontodaten werden PostgreSQL-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
 
+AWS GovCloud (US) Nutzer müssen AWS Secrets Manager verwenden, um FSx for ONTAP Anmeldeinformationen zu authentifizieren. Für alle anderen Nutzer müssen Sie FSx for ONTAP mit Dateisystem-Anmeldeinformationen authentifizieren.
+
 
 
 == Bevor Sie beginnen
@@ -72,10 +74,13 @@ Wenn die Instanzen authentifiziert sind, wählen Sie *Weiter*.
 
 
 
-. Um FSx für ONTAP zu authentifizieren (Schritt 2), gehen Sie wie folgt vor:
+. Um FSx für ONTAP zu authentifizieren (Schritt 2), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
 +
 .. Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-.. Geben Sie den Benutzernamen und das Passwort für das FSx for ONTAP-Dateisystem ein und wählen Sie dann *Weiter*.
+.. Geben Sie entweder den AWS SSM Parameter ARN mit den FSx for ONTAP-Anmeldeinformationen für GovCloud-Konten oder den FSx for ONTAP-Dateisystembenutzernamen und das Passwort für alle anderen Konten ein und wählen Sie dann *Weiter*.
++
+Für GovCloud-Konten wird der AWS SSM Parameter-ARN-Wert im Parameter Store unter Parameterdetails in der AWS Management Console im folgenden Format bereitgestellt: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format `/netapp/wlmdb/<fsx_filesystemID>`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
+
 +
 Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
 
@@ -115,10 +120,10 @@ Die Registrierung einer Instanz umfasst drei Schritte – Datenbank-Authentifizi
 . Wählen Sie im Inventory *Oracle* als Engine-Typ aus.
 . Wählen Sie die Registerkarte *Datenbanken*.
 . Wählen Sie aus, ob Sie eine einzelne Datenbank oder mehrere Datenbanken registrieren möchten.
-. Um Datenbanken zu authentifizieren (Schritt 1), gehen Sie wie folgt vor:
+. Um Datenbanken zu authentifizieren (Schritt 1), gehen Sie wie folgt vor und wählen Sie dann *Weiter*:
 +
-** Wählen Sie *Die gleichen Anmeldeinformationen für alle Instanzen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-** Authentifizieren Sie den Oracle-Benutzer und den Automatic Storage Management (ASM) Grid-Benutzer (falls zutreffend), indem Sie Benutzername und Passwort angeben.
+.. Wählen Sie *Die gleichen Anmeldeinformationen für alle Instanzen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+.. Authentifizieren Sie den Oracle-Benutzer und den Automatic Storage Management (ASM) Grid-Benutzer (falls zutreffend), indem Sie Benutzername und Passwort angeben.
 +
 Wenn die Datenbanken authentifiziert sind, wählen Sie *Next*.
 
@@ -126,8 +131,12 @@ Wenn die Datenbanken authentifiziert sind, wählen Sie *Next*.
 
 . Um FSx für ONTAP zu authentifizieren (Schritt 2), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
 +
-** Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-** Geben Sie den Benutzernamen und das Passwort für das FSx for ONTAP-Dateisystem ein.
+.. Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
+.. Geben Sie entweder den AWS SSM Parameter ARN mit den FSx for ONTAP-Anmeldeinformationen für GovCloud-Konten oder den FSx for ONTAP-Dateisystembenutzernamen und das Passwort für alle anderen Konten ein und wählen Sie dann *Weiter*.
++
+Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format  `/netapp/wlmdb/<fsx_filesystemID>`. Geben Sie den Wert für die AWS SSM-Parameter-ARN im folgenden Format ein:
+`{fsx:{"username":"fsxadmin","password":"pass"}}`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
+
 +
 Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
 

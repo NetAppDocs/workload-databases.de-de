@@ -78,6 +78,12 @@ Darüber hinaus können Sie link:https://docs.netapp.com/us-en/workload-setup-ad
 
 === Entdecken Sie Einsparungen durch Anpassung
 
+Passen Sie die Felder im Rechner an, um eine möglichst genaue Einsparungsschätzung zu erhalten.
+
+
+
+==== Individuelle Einsparungen für Microsoft SQL Server-Hosts
+
 Befolgen Sie die Schritte unter der Registerkarte für Ihren Speichertyp.
 
 [role="tabbed-block"]
@@ -157,7 +163,54 @@ Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen,
 * *Die Berechnungen anzeigen*
 
 
-Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Bereitstellung von Microsoft SQL Server auf AQS EC2 mithilfe von FSX für ONTAP Filesystemen>>.
+Um zu FSx für ONTAP zu wechseln, folgen Sie den Anweisungen unter <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Microsoft SQL Server auf AWS EC2 mit FSx für ONTAP-Dateisysteme bereitstellen>>.
+
+
+
+==== Einsparungen für Oracle-Hosts auf EBS anpassen
+
+Passen Sie die Felder im Rechner an, um die genaueste Kosteneinsparungsschätzung für Ihre Oracle-Hosts zu erhalten, die auf Amazon Elastic Block Store (EBS) laufen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie unter Datenbanken *Einsparungen erkunden* und dann *Oracle on EBS*.
+. Geben Sie im Einsparungsrechner folgende Informationen an:
++
+.. *Region*: Wählen Sie eine Region aus dem Dropdown-Menü aus.
+.. *Bereitstellungsmodell*: Wählen Sie ein Bereitstellungsmodell aus dem Dropdown-Menü.
+.. *Oracle edition*: Wählen Sie die Oracle edition aus dem Dropdown-Menü aus.
+.. *Monatliche Datenänderungsrate (%)*: Geben Sie den Prozentsatz ein, der sich Clone- und Snapshot-Daten im Durchschnitt pro Monat ändert.
+.. *Snapshot-Frequenz*: Wählen Sie eine Snapshot-Frequenz aus dem Dropdown-Menü.
+.. *Anzahl geklonter Kopien*: Geben Sie die Anzahl geklonter Kopien in der EBS-Konfiguration ein.
+.. *Monatliche Oracle BYOL-Kosten ($)*: Optional können Sie die monatlichen Oracle BYOL-Kosten in Dollar eingeben.
+.. Stellen Sie im Rahmen der EC2-Spezifikationen Folgendes bereit:
++
+*** *Maschinenbeschreibung*: Geben Sie optional einen Namen ein, um die Maschine zu beschreiben.
+*** *Instanztyp*: Wählen Sie den EC2 Instanztyp aus dem Dropdown-Menü aus.
+
+
+.. Geben Sie unter Volume-Typen die folgenden Details für mindestens einen Volume-Typ an. IOPS und Durchsatz gelten für bestimmte Festplattentypen-Volumes.
++
+*** *Anzahl der Volumen*
+*** *Speichermenge pro Volumen (gib)*
+*** *Bereitgestellte IOPS pro Volume*
+*** *Durchsatz MB/s*
+
+
+.. Wenn Sie das Bereitstellungsmodell „Always On“ ausgewählt haben, geben Sie Einzelheiten zu *sekundären EC2-Spezifikationen* und *Volume-Typen* an.
+
+
+
+
+Nachdem Sie Details zur Konfiguration des Datenbank-Hosts angegeben haben, überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.
+
+Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen, indem Sie eine der folgenden Optionen auswählen:
+
+* *PDF exportieren*
+* *Per E-Mail senden*
+* *Die Berechnungen anzeigen*
+
 
 
 
@@ -336,7 +389,7 @@ Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen,
 * *Die Berechnungen anzeigen*
 
 
-Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Bereitstellung von Microsoft SQL Server auf AQS EC2 mithilfe von FSX für ONTAP Filesystemen>>.
+Um zu FSx für ONTAP zu wechseln, folgen Sie den Anweisungen unter <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Microsoft SQL Server auf AWS EC2 mit FSx für ONTAP-Dateisysteme bereitstellen>>.
 
 
 
@@ -423,8 +476,6 @@ Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen,
 * *Per E-Mail senden*
 * *Die Berechnungen anzeigen*
 
-
-Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren Sie Microsoft SQL Server auf AWS EC2 und verwenden Sie FSX für ONTAP,Bereitstellung von Microsoft SQL Server auf AQS EC2 mithilfe von FSX für ONTAP Filesystemen>>.
 
 
 
