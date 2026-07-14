@@ -4,12 +4,14 @@
 
 
 
+[[postgresql-and-oracle-detection]]
 === PostgreSQL- und Oracle-Erkennung
 
 Sie können jetzt die Instanzen, die PostgreSQL-Serverdatenbanken und Oracle-Datenbankbereitstellungen in Ihrem AWS-Konto ausführen, in der Workload Factory-Konsole ermitteln. Erkannte Instanzen werden im Datenbankinventar angezeigt.
 
 
 
+[[updated-optimization-terminology]]
 === Aktualisierte Terminologie „Optimierung“
 
 Workload Factory wurde früher als „Optimierung“ bezeichnet und verwendet jetzt „Well-Architected Issues“ und „Well-Architected Status“, um die Analyse von Datenbankkonfigurationen zu beschreiben, und „Fix“, um Abhilfemaßnahmen für Möglichkeiten zur Verbesserung von Datenbankkonfigurationen zu beschreiben, um Best-Practice-Empfehlungen zu erfüllen.
@@ -18,6 +20,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html["Ko
 
 
 
+[[improved-onboarding-for-instances]]
 === Verbessertes Onboarding für Instanzen
 
 Anstelle der Begriffe „unerkannt“, „unverwaltet“ oder „verwaltet“ für die Instanzverwaltung verwendet Workload Factory jetzt „Registrieren“ für das Onboarding von Instanzen. Der neue Registrierungsprozess umfasst die Authentifizierung und Vorbereitung von Instanzen, sodass Sie Ressourcen in Ihren Datenbankkonfigurationen in der Workload Factory-Konsole erstellen, überwachen, analysieren und reparieren können. Der Vorbereitungsschritt im Registrierungsprozess zeigt an, ob Ihre Instanzen für die Verwaltung bereit sind.

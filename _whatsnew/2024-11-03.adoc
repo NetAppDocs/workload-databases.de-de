@@ -4,6 +4,7 @@
 
 
 
+[[continuously-optimize-your-microsoft-sql-server-workloads-with-databases]]
 === Optimieren Sie Ihre Microsoft SQL Server Workloads kontinuierlich mithilfe von Datenbanken
 
 Die BlueXP  Workload-Farm ermöglicht fortlaufende Optimierung und Einhaltung von Best Practices für die Storage-Komponenten Ihrer Microsoft SQL Server-Workloads in Amazon FSX für NetApp ONTAP. Diese Funktion scannt Ihren Microsoft SQL Server-Bestand offline und bietet Ihnen einen umfassenden Bericht mit Einblicken, Möglichkeiten und Empfehlungen, mit denen Sie optimale Performance, Kosteneffizienz und Compliance erzielen.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[terraform-support]]
 === Terraform-Unterstützung
 
 Sie können jetzt Terraform aus der Codebox verwenden, um Microsoft SQL Server bereitzustellen.

@@ -19,6 +19,7 @@ link:optimize-overview.html["Erfahren Sie mehr über die Konfigurationsanalyse u
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Workload Factory analysiert täglich Datenbankkonfigurationen. Die tägliche Analyse liefert gut strukturierte Statusberichte, Erkenntnisse und Empfehlungen. Sie können Konfigurationsprobleme automatisch beheben, um Best Practices zu erfüllen.
@@ -55,6 +56,7 @@ Die Well-Architected-Analyse für Oracle benachrichtigt Sie, wenn eine Konfigura
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == Führen Sie eine einmalige Bewertung Ihrer Konfigurationen durch
 
 Führen Sie eine einmalige Bewertung durch, um den Well-Architected-Status Ihrer Microsoft SQL Server-Instanzen oder Oracle-Datenbanken zu ermitteln, ohne Anmeldeinformationen zu speichern oder Ressourcen zu registrieren.
@@ -102,6 +104,7 @@ Sie können das Skript ausführen und die Ergebnisse mehrmals hochladen. Workloa
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Bevor Sie mit dem Beheben, Verwerfen und Reaktivieren von Konfigurationen beginnen
 
 Die folgenden Anforderungen sind für die kontinuierliche Überwachung Ihrer Datenbankumgebung und die automatische Behebung von Konfigurationsproblemen notwendig. Diese Anforderungen sind für die einmalige Bewertung nicht erforderlich.
@@ -113,6 +116,7 @@ Die folgenden Anforderungen sind für die kontinuierliche Überwachung Ihrer Dat
 
 
 
+[[fix-a-configuration-issue]]
 == Beheben eines Konfigurationsproblems
 
 Beheben Sie Konfigurationsprobleme für SQL Server- oder Oracle-Umgebungen, die auf FSx für ONTAP -Speicher ausgeführt werden.
@@ -161,6 +165,7 @@ Workload Factory beginnt mit der Behebung des/der Problems/Probleme.  Wählen Si
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == Die Analyse von Datenbankkonfigurationen ablehnen
 
 Verwerfen Sie die Analyse bestimmter Datenbankkonfigurationen, die nicht auf Ihre Datenbankumgebung zutreffen, um unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. Sie können eine verworfene Konfigurationsanalyse jederzeit wieder aktivieren.
@@ -182,6 +187,7 @@ Sie können die Analyse jederzeit reaktivieren. Die Konfiguration wird nicht meh
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Eine verworfene Konfigurationsanalyse reaktivieren
 
 Reaktivieren Sie eine verworfene Konfigurationsanalyse jederzeit. Sie können eine oder mehrere Konfigurationen reaktivieren.

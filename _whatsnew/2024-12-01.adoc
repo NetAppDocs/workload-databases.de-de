@@ -4,6 +4,7 @@
 
 
 
+[[continuous-optimization-adds-compute-remediation-and-assessment]]
 === Kontinuierliche Optimierung ergänzt die Behebung und Bewertung von Compute-Ressourcen
 
 Datenbanken bieten jetzt Einblicke und Empfehlungen, um Compute-Ressourcen für Microsoft SQL Server Instanzen zu optimieren. Wir messen die CPU-Auslastung und nutzen den AWS Compute Optimizer Service, um Instanztypen der optimalen Größe zu empfehlen und Sie über verfügbare Betriebssystem-Patches zu informieren. Wenn Sie Compute-Ressourcen optimieren, können Sie fundierte Entscheidungen zu Instanztypen treffen, was zu Kosteneinsparungen und einer effizienten Ressourcenauslastung führt.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[postgresql-support]]
 === PostgreSQL-Unterstützung
 
 Sie können jetzt eigenständige PostgreSQL-Server-Implementierungen in Datenbanken implementieren und verwalten.

@@ -15,6 +15,7 @@ Nutzen Sie den intelligenten Fehlerprotokollanalysator, um Microsoft SQL Server-
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Die Analyse und Behebung von Fehlerprotokollen trägt zur Aufrechterhaltung der Integrität und Leistungsfähigkeit von SQL Server-Instanzen und Oracle-Datenbanken bei.  Die effektive Interpretation von Fehlerprotokollen erfordert sorgfältige Analyse und Fachkenntnisse. Manuelle Überwachung, Fehlererkennung und Ursachenanalyse sind zeitintensiv und fehleranfällig. Diese Herausforderungen können die Problemlösung verzögern, Ausfallzeiten erhöhen und zu betrieblichen Ineffizienzen führen.  Der intelligente Fehlerprotokollanalysator begegnet diesen Herausforderungen mit folgenden wesentlichen Vorteilen:
@@ -33,6 +34,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
 
 
 
+[[data-privacy-and-security]]
 === Datenschutz und Sicherheit
 
 Die Funktion gewährleistet Datenschutz und -sicherheit durch die folgenden Maßnahmen:
@@ -45,6 +47,7 @@ Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. 
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Um den Fehlerprotokollanalysator verwenden zu können, müssen Sie die folgenden Voraussetzungen erfüllen:
@@ -86,6 +89,7 @@ Die folgende Berechtigung gewährt Lesezugriff auf erweiterte Diagnosewarnungen 
 
 
 
+[[analyze-error-logs]]
 == Fehlerprotokolle analysieren
 
 Verwenden Sie die Workload Factory-Konsole, um SQL Server-Fehlerprotokolle zu analysieren.

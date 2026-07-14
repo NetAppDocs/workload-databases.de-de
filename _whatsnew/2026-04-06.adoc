@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Gut konzipierte Analyse für Oracle
 
 Die gut durchdachte Analyse umfasst die folgenden neuen Konfigurationen für Oracle:
@@ -17,6 +18,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[one-time-assessment-for-oracle]]
 === Einmalige Bewertung für Oracle
 
 Workload Factory bietet jetzt eine einmalige Analyse Ihrer Oracle Datenbank-Bereitstellungen – wann immer Sie diese benötigen: bei Neuinstallationen, nach Migrationen, bei der Fehlerbehebung und mehr. Sie erhalten Empfehlungen zur Optimierung Ihrer Bereitstellungskonfigurationen und zur Einhaltung von Best Practices. Dies ist Ihre Gelegenheit, die well-architected Funktion zu nutzen, ohne sich vollständig auf den Einrichtungsprozess festlegen zu müssen. Sie können Ihre Datenbanken analysieren, ohne Anmeldeinformationen in Workload Factory zu speichern, Datenbankressourcen zu registrieren oder externe Verbindungen einzurichten.
@@ -25,6 +27,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-cost-savings-for-several-oracle-databases]]
 === Verbesserte Kosteneinsparungen für mehrere Oracle-Datenbanken
 
 Wir haben die Kostenanalyse für Oracle optimiert, um eine konsolidierte Speicherlösung für mehrere lokale Oracle-Datenbanken auf einem FSx for ONTAP-Dateisystem bereitzustellen. Diese Konsolidierung optimiert die Speicherkosten, indem die Anzahl der für mehrere Datenbanken benötigten Dateisysteme reduziert wird, was zu höheren Kosteneinsparungen führt.

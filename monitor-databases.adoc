@@ -15,6 +15,7 @@ Verfolgen Sie Datenbankjobs und überwachen Sie Datenbanken in NetApp Workload F
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Datenbanken ermöglichen die Jobüberwachung, sodass Sie den Auftragsfortschritt verfolgen und Fehler diagnostizieren und beheben können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.
@@ -35,6 +36,7 @@ Ereignisse zur Jobüberwachung werden 30 Tage lang in der Benutzeroberfläche ge
 
 
 
+[[monitor-jobs]]
 == Überwachen von Jobs
 
 Überwachen Sie Jobs, um den Fortschritt von Datenbankvorgängen zu verfolgen und bei auftretenden Fehlern eine Diagnose und Fehlerbehebung durchzuführen.

@@ -4,6 +4,7 @@
 
 
 
+[[active-directory-integration-enhancements]]
 === Verbesserungen der Active Directory-Integration
 
 Workload Factory for Databases enthält drei neue Active Directory (AD)-Felder, die bei der Bereitstellung von Microsoft SQL Server mit der Option *Erweiterte Erstellung* verwendet werden. Diese Erweiterungen ermöglichen es Ihnen, Active Directory-Beitrittspräferenzen festzulegen und ein verwaltetes Dienstkonto zu verwenden.

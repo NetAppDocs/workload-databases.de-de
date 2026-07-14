@@ -4,6 +4,7 @@
 
 
 
+[[dashboard-enhancements]]
 === Dashboard-Verbesserungen
 
 * Kunden- und regionsübergreifende Ansichten sind verfügbar, wenn Sie in der BlueXP  Workload Factory-Konsole zwischen den Registerkarten navigieren. Die neuen Ansichten verbessern das Ressourcenmanagement, die Überwachung und die Optimierung.
@@ -12,18 +13,21 @@
 
 
 
+[[ad-hoc-scan-available-for-database-configurations]]
 === Ad-hoc-Scans für Datenbankkonfigurationen verfügbar
 
 Die BlueXP -Workload-Fabrik für Datenbanken scannt gemanagte Microsoft SQL Server-Instanzen automatisch mit FSX für ONTAP Storage auf potenzielle Konfigurationsprobleme. Zusätzlich zum täglichen Scan können Sie jetzt jederzeit scannen.
 
 
 
+[[removal-of-on-premises-assessment-records]]
 === Entfernung von Beurteilungsunterlagen vor Ort
 
 Nachdem Sie die Einsparungen für einen lokalen Microsoft SQL Server-Host untersucht haben, haben Sie die Möglichkeit, den lokalen Host-Datensatz aus der BlueXP  Workload Factory zu entfernen.
 
 
 
+[[optimization-enhancements]]
 === Optimierungsverbesserungen
 
 
@@ -40,6 +44,7 @@ Einige Konfigurationen gelten möglicherweise nicht für Ihre Datenbankumgebunge
 
 
 
+[[updated-permissions-terminology]]
 === Terminologie für Berechtigungen wurde aktualisiert
 
 In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.

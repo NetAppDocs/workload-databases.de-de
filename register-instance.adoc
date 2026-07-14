@@ -17,6 +17,7 @@ Sie können Ihre Ressourcen nur registrieren, wenn sie auf FSx für ONTAP Dateis
 
 
 
+[[about-the-task]]
 == Über die Aufgabe
 
 Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst drei Schritte: Instanz- oder Datenbankauthentifizierung, FSx for ONTAP Authentifizierung und Vorbereitung. Zur Vorbereitung müssen AWS-, NetApp- und PowerShell-Module auf der Instanz oder Datenbank installiert werden und die Mindestanforderungen für Workload Factory for Databases-Funktionen wie link:analyze-error-logs.html["Fehlerprotokollanalyse"] oder link:optimize-configurations.html["Well-Architected Assessment"] erfüllt sein.
@@ -27,12 +28,14 @@ AWS GovCloud (US) Nutzer müssen AWS Secrets Manager verwenden, um FSx for ONTAP
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Der Host für die Instanz oder Datenbank muss im Inventar aufgeführt sein. Damit Hosts im Inventar angezeigt werden, müssen Sie Folgendes beachten: link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
 
 
 
+[[registering-an-instance-in-a-private-network]]
 === Registrieren einer Instanz in einem privaten Netzwerk
 
 Um eine Instanz oder Datenbank in einem privaten Netzwerk ohne externe Verbindung zu registrieren, stellen Sie die erforderlichen Endpunkte in der VPC bereit und ordnen Sie sie den entsprechenden Subnetzen zu. Erlauben Sie Port 443 in der Security Group für Interface-Endpunkte.
@@ -52,6 +55,7 @@ Wenn Sie einen Proxyserver für ausgehende EC2-Verbindungen verwenden, erlauben 
 
 
 
+[[register-a-microsoft-sql-server-instance]]
 == Registrieren einer Microsoft SQL Server-Instanz
 
 Die Registrierung einer Instanz umfasst drei Schritte: Instanz-Authentifizierung, FSx for ONTAP Authentifizierung und die Vorbereitung zur Erfüllung fehlender Voraussetzungen. Sie können eine oder mehrere Instanzen registrieren.
@@ -109,6 +113,7 @@ Die Instanzregistrierung wird gestartet. Wählen Sie die Registerkarte *Job moni
 
 
 
+[[register-an-oracle-database]]
 == Registrieren einer Oracle-Datenbank
 
 Die Registrierung einer Instanz umfasst drei Schritte – Datenbank-Authentifizierung, FSx for ONTAP-Authentifizierung und Vorbereitung zur Erfüllung fehlender Voraussetzungen. Sie können eine oder mehrere Datenbanken registrieren.

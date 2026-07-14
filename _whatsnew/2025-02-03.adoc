@@ -4,6 +4,7 @@
 
 
 
+[[sql-server-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === Kostenanalyse und Migrationsplanung für lokale SQL Server-Datenbankumgebungen
 
 BlueXP Workload Factory für Datenbanken erkennt, analysiert und hilft Ihnen bei der Planung der SQL Server On-Premises-Datenbankmigration zu Amazon FSx für NetApp ONTAP. Sie können den Einsparungsrechner verwenden, um die Kosten für den Betrieb Ihrer SQL Server On-Premises-Datenbankumgebung in der Cloud zu schätzen und Empfehlungen für die Migration Ihrer On-Premises-Datenbankumgebung in die Cloud zu überprüfen.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Entd
 
 
 
+[[new-optimization-assessments-for-databases]]
 === Neue Optimierungsbewertungen für Datenbanken
 
 Die folgenden Bewertungen sind jetzt in der BlueXP -Workload-Fabrik für Datenbanken verfügbar. Der Schwerpunkt dieser Bewertungen liegt auf der Erkennung und dem Schutz vor potenziellen Sicherheitslücken sowie der Erkennung und Beseitigung von Performance-Engpässen.

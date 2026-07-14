@@ -4,6 +4,7 @@
 
 
 
+[[savings-calculator-enhancements]]
 === Verbesserungen des Einsparungsrechners
 
 * Beschreibungen der Kostenvoranschlafe

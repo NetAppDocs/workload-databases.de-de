@@ -4,6 +4,7 @@
 
 
 
+[[optimization-enhancements]]
 === Optimierungsverbesserungen
 
 Bei der Optimierung Ihrer Datenbankumgebungen stehen neue Optimierungsbewertungen, Korrekturmaßnahmen und die Anzeige mehrerer Ressourcen zur Verfügung.
@@ -42,12 +43,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-inventory-view]]
 === Verbesserte Bestandansicht
 
 Die Registerkarte „Inventar“ in der Arbeitslastwerkkonsole wurde so optimiert, dass sie nur SQL-Server enthält, die auf Amazon FSX für NetApp ONTAP ausgeführt werden. Auf der Registerkarte „Einsparungen“ finden Sie jetzt SQL-Server vor Ort, die auf Amazon Elastic Block Store und Amazon FSX für Windows File Server ausgeführt werden.
 
 
 
+[[quick-create-available-for-postgresql-server-deployment]]
 === Schnelles Erstellen für PostgreSQL-Serverimplementierung verfügbar
 
 Sie können diese schnelle Bereitstellungsoption verwenden, um einen PostgreSQL-Server mit HA-Konfiguration und integrierten Best Practices zu erstellen.

@@ -15,18 +15,21 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
+[[instance-detection-support]]
 == Unterstützung der Instanzerkennung
 
 Workload Factory unterstützt die Erkennung von PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden, und von Oracle-Instanzen, die nur auf Red Hat Enterprise Linux ausgeführt werden.
 
 
 
+[[ami-image-version-support]]
 == Unterstützung für AMI-Bildversionen
 
 Für jede SQL-Version werden nur bis zu vier aktuelle Versionen oder Revisionen von AMI-Images angezeigt. Wir lassen die Installation von einem AMI-Image, das älter als die letzten vier Versionen ist, nicht zu.
 
 
 
+[[custom-ami]]
 == Benutzerdefinierte AMI
 
 Die Bereitstellung mit einem benutzerdefinierten AMI setzt voraus, dass Installationsmedien im Image vorhanden sind. Dies ist für die FCI-Konfiguration aus folgenden Gründen erforderlich:
@@ -39,12 +42,14 @@ Im Rahmen der Bereitstellung installiert Workload Factory kein benutzerdefiniert
 
 
 
+[[roll-back-and-retry-for-failed-deployments]]
 == Führen Sie ein Rollback durch und versuchen Sie es erneut, wenn Bereitstellungen fehlgeschlagen sind
 
 Rollback und Wiederholungsversuch für fehlgeschlagene Bereitstellungen werden in Workload Factory nicht unterstützt.  Sie können einen fehlgeschlagenen Stapel über die CloudFormation-Konsole in AWS zurücksetzen oder erneut versuchen.
 
 
 
+[[active-directory-and-dns-resource-rollback]]
 == Rollback von Active Directory- und DNS-Ressourcen
 
 Die folgenden DNS-Ressourcen werden beim Rollback eines Tests oder einer fehlgeschlagenen Bereitstellung von der CloudFormation-Konsole in AWS nicht aus Active Directory und DNS entfernt:
@@ -58,76 +63,89 @@ Sie müssen diese manuell bereinigen oder warten, bis die Domäne veraltete Eint
 
 
 
+[[always-on-availability-groups-configuration-support]]
 == Always-On-Konfiguration von Verfügbarkeitsgruppen
 
 Die Verwaltung von Always On-Verfügbarkeitsgruppenkonfigurationen wird in Workload Factory nicht unterstützt.
 
 
 
+[[custom-encryption-keys]]
 == Benutzerdefinierte Verschlüsselung
 
 Benutzerdefinierte Verschlüsselungsschlüssel für FSX for ONTAP werden gemäß der Service-Anwendbarkeit nicht aufgeführt. Sie müssen den entsprechenden Schlüssel auswählen. Managed Keys in AWS werden nach der Anwendbarkeit des Services gefiltert.
 
 
 
+[[cloudformation-template]]
 == CloudFormation-Vorlage
 
 Eine heruntergeladene oder kopierte, von der Codebox generierte CloudFormation-Vorlage (YAML-Datei) hat eine begrenzte Aufbewahrungsfrist von sieben Tagen.
 
 
 
+[[sandbox-support]]
 == Sandbox-Support
 
 Es können maximal 90 Sandbox-Klone von einem Datenbankserver erstellt werden.
 
 
 
+[[microsoft-sql-server-detection-and-management]]
 == Erkennung und Verwaltung von Microsoft SQL Server
 
 Die Microsoft SQL Server-Erkennung wird nicht gespeichert.  Bei jedem Zugriff auf Datenbanken in Workload Factory wird die Microsoft SQL Server-Erkennung erneut ausgeführt, um SQL-Installationen in der Region zu identifizieren.
 
 
 
+[[explore-savings]]
 == Einsparungen entdecken
 
 Auf der Registerkarte Inventar werden die geschätzten Kosten für jede Microsoft SQL-Instanz auf der Ebene des FSX für ONTAP-Dateisystems und nicht für Volumes, die die SQL-Instanz hosten, berechnet.
 
 
 
+[[multiple-fsx-for-ontap-file-systems]]
 == Mehrere FSX für ONTAP-Dateisysteme
 
 Workload Factory unterstützt nicht das Erstellen oder Speichern von Konfigurationen für Microsoft SQL Server mit mehreren FSX für ONTAP-Dateisystemen. Es wird nur eine Bereitstellung von FSX for ONTAP-Dateisystemkonfigurationen unterstützt.
 
 
 
+[[optimization-limitations]]
 == Optimierungsbeschränkungen
 
 
 
+[[compute-rightsizing-optimization]]
 === Optimierung für die Größenanpassung von Compute
 
 Wenn Sie auf bestimmte Instanztypen wechseln, wird die Netzwerkkonfiguration möglicherweise zurückgesetzt, was dann während der Optimierung zu einem Ausfall der Knotenverbindung und einem Jobausfall führen kann. Möglicherweise sind manuelle Eingriffe erforderlich, um die DNS-Einstellung und iSCSI-Sitzungen zu überprüfen und zu aktualisieren. Weitere Informationen zu EC2-Größenbeschränkungen finden Sie unterlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elastic Compute Cloud Dokumentation"^].
 
 
 
+[[ontap-and-os-configuration-optimization]]
 === Optimierung der ONTAP- und Betriebssystemkonfiguration
 
 Die Massenoptimierung für mehr als eine SQL Server-Instanz wird für die ONTAP-Konfiguration und die Betriebssystemkonfiguration nicht unterstützt.
 
 
 
+[[operating-system-patch-assessment-for-optimization]]
 === Bewertung von Patches für das Betriebssystem zur Optimierung
 
 Die zu Optimierungszwecken durchgeführte Patch-Bewertung des Betriebssystems funktioniert in einem privaten Netzwerk möglicherweise nicht.  Die Bewertung basiert auf AWS Patch Manager.  Informationen zum Patchen von Windows EC2-Instanzen in einem privaten Netzwerk finden Sie im AWS Cloud Operations Blog.link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["So patchen Sie Windows EC2-Instanzen in privaten Subnetzen mit AWS Systems Manager"^] .
 
 
 
+[[on-premises-savings-calculation]]
 == Lokale Einsparungsberechnung
 
 Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokalen Storage mit Microsoft SQL Server werden nicht berücksichtigt.
 
 
 
+[[cross-region-replication-assessment]]
 == Regionsübergreifende Replizierungsbewertung
 
 * Die Optimierungsbewertung kann nicht ermitteln, ob regionsübergreifende Replizierung (CRR) verwendet wird, wenn sich das Ziel-Filesystem FSX für ONTAP in einem anderen AWS-Konto befindet.
@@ -136,30 +154,33 @@ Kosten- und prozentuale Einsparungen Berechnungen der Volume-Größe für lokale
 
 
 
+[[database-host-authentication-when-exploring-savings]]
 == Datenbank-Host-Authentifizierung beim Ermitteln von Einsparungen
 
 In einigen Fällen mit eingeschränkten Berechtigungen lädt die Seite „Ersparnisse erkunden“ nach erfolgreicher Authentifizierung keine Daten.
 
 
 
+[[integration-with-netapp-backup-and-recovery]]
 == Integration mit NetApp Backup und Recovery
 
 Nach dem Hinzufügen von Hosts zu NetApp Backup and Recovery zum Schutz schlägt die Datenbankerkennung manchmal fehl.
 
 
 
+[[region-support]]
 == Regionale Unterstützung
 
 Die folgenden AWS Regionen werden nicht unterstützt:
 
 * China-Regionen
-* GovCloud (USA) Regionen
 * Geheime Cloud
 * Streng geheim
 
 
 
 
+[[registering-oracle-on-suse-linux-enterprise-server-12]]
 == Registrieren von Oracle auf SUSE Linux Enterprise Server 12
 
 Beim Registrieren von Oracle Database auf SUSE Linux Enterprise Server 12 installiert Workload Factory keine Python-Abhängigkeiten.  Sie müssen die erforderliche Python-Version manuell konfigurieren.  Workload Factory erfordert mindestens Version 3.6; wir empfehlen jedoch Version 3.11.

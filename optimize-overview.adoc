@@ -25,6 +25,7 @@ Die wichtigsten Funktionen:
 
 
 
+[[how-it-works]]
 == So funktioniert es
 
 Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
@@ -35,12 +36,14 @@ Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelt
 
 
 
+[[why-it-matters]]
 == Warum es wichtig ist
 
 Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.
 
 
 
+[[options-for-analyzing-your-database-environment]]
 == Optionen zur Analyse Ihrer Datenbankumgebung
 
 Workload Factory bietet folgende Optionen zur Analyse Ihrer Datenbankumgebung:
@@ -51,6 +54,7 @@ Workload Factory bietet folgende Optionen zur Analyse Ihrer Datenbankumgebung:
 
 
 
+[[analysis-requirements]]
 == Analyseanforderungen
 
 Für die einmalige Bewertung müssen Sie die Anmeldeinformationen für die Microsoft SQL Server-Instanzen oder die Oracle-Datenbank, die Sie analysieren möchten, nur einmal angeben.
@@ -70,12 +74,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Er
 
 
 
+[[best-practices-and-recommendations-for-database-workloads]]
 == Bewährte Verfahren und Empfehlungen für Datenbank-Workloads
 
 Workload Factory bietet eine Reihe von Best Practices und Empfehlungen für den Betrieb gut strukturierter Datenbank-Workloads. Die well-architected Analyse bewertet Microsoft SQL Server und Oracle Database Konfigurationen und Einstellungen in Bezug auf Speicherdimensionierung, Storage-Layout, Speicherkonfiguration, Rechenleistung, Anwendung (SQL Server) und Ausfallsicherheit.
 
 
 
+[[microsoft-sql-server]]
 === Microsoft SQL Server
 
 
@@ -196,6 +202,7 @@ Stellen Sie sicher, dass die Hochverfügbarkeit für SQL Server eingerichtet ist
 
 
 
+[[oracle]]
 === Orakel
 
 
