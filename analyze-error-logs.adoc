@@ -33,6 +33,9 @@ Um den Fehlerprotokollanalysator zu verwenden, müssen Sie Amazon Bedrock aktivi
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
 
 
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt und die KI-Analyse kann nicht genutzt werden. Wenden Sie sich an Ihren Administrator oder link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Informationen zur KI-Administration"^].
+
+
 
 [[data-privacy-and-security]]
 === Datenschutz und Sicherheit

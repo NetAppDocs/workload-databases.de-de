@@ -24,9 +24,9 @@ Zum Erstellen einer Datenbank in Workload Factory werden die Berechtigungen _vie
 NOTE: Microsoft SQL-Server mit SMB-Protokoll unterstützen nicht die Erstellung einer Datenbank.
 
 .Bevor Sie beginnen
-Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie eine neue Datenbank erstellen.
+Folgende Voraussetzungen sind zu erfüllen, bevor eine neue Datenbank erstellt wird.
 
-* *Anmeldeinformationen und Berechtigungen*: Sie benötigen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für _Anzeigen, Planen und Analysieren_"^] Um eine neue Datenbank in Workload Factory zu erstellen.
+* *Anmeldeinformationen und Berechtigungen*: Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Kontoanmeldeinformationen und Berechtigungen für _Operationen und Behebungen_"^] besitzen, um eine neue Datenbank in Workload Factory zu erstellen.
 +
 Alternativ können Sie mit der Codebox eine Vorlage kopieren, sodass Sie eine Datenbank außerhalb der Workload Factory mit REST API bereitstellen können. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Erfahren Sie mehr über die Codebox-Automatisierung"^].
 

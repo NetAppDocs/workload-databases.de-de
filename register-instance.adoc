@@ -11,7 +11,7 @@ summary: Registrieren Sie Ressourcen, damit Sie den Ressourcenstatus, die Ressou
 
 
 [role="lead"]
-Registrieren Sie Instanzen für Microsoft SQL Server und Datenbanken für Oracle, damit Sie den Instanz- und Datenbankstatus, die Ressourcennutzung, den Schutz und die Speicherleistung in NetApp Workload Factory für Datenbanken überwachen können.
+Instanzen für Microsoft SQL Server und Datenbanken für Oracle registrieren, sodass Ressourcen verwaltet, Datenbanken und Sandbox-Klone erstellt, Fehlerprotokollanalysen durchgeführt und Konfigurationen in NetApp Workload Factory for Databases optimiert werden können.
 
 Sie können Ihre Ressourcen nur registrieren, wenn sie auf FSx für ONTAP Dateisystemspeicher laufen.
 
@@ -20,18 +20,20 @@ Sie können Ihre Ressourcen nur registrieren, wenn sie auf FSx für ONTAP Dateis
 [[about-the-task]]
 == Über die Aufgabe
 
-Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst drei Schritte: Instanz- oder Datenbankauthentifizierung, FSx for ONTAP Authentifizierung und Vorbereitung. Zur Vorbereitung müssen AWS-, NetApp- und PowerShell-Module auf der Instanz oder Datenbank installiert werden und die Mindestanforderungen für Workload Factory for Databases-Funktionen wie link:analyze-error-logs.html["Fehlerprotokollanalyse"] oder link:optimize-configurations.html["Well-Architected Assessment"] erfüllt sein.
+Die Registrierung einer Instanz (SQL Server) oder Datenbank (Oracle) umfasst zwei Schritte: Instanz- oder Datenbank-Authentifizierung und Vorbereitung. Authentifizierung ist der Prozess der Überprüfung der Anmeldeinformationen für die Instanz oder Datenbank. Die Vorbereitung umfasst die Installation von AWS-, NetApp- und PowerShell-Modulen auf der Instanz oder Datenbank, um die Mindestanforderungen für Workload Factory for Databases-Funktionen wie link:create-database.html["Erstellen einer Datenbank"], link:create-sandbox-clone.html["Erstellen einer Sandbox"], link:analyze-error-logs.html["Fehlerprotokollanalyse"] oder link:optimize-configurations.html["die Well-Architected Bewertung"] zu erfüllen.
 
 Workload Factory unterstützt nur die Registrierung und Verwaltung von Microsoft SQL Server-Instanzen und Oracle-Datenbanken. Abhängig von den in Workload Factory ausgewählten AWS-Kontodaten werden PostgreSQL-Hosts im Inventar angezeigt. Derzeit unterstützt Workload Factory nicht registrierte PostgreSQL-Instanzen, die nur auf Amazon Linux-Betriebssystemen ausgeführt werden.
-
-AWS GovCloud (US) Nutzer müssen AWS Secrets Manager verwenden, um FSx for ONTAP Anmeldeinformationen zu authentifizieren. Für alle anderen Nutzer müssen Sie FSx for ONTAP mit Dateisystem-Anmeldeinformationen authentifizieren.
 
 
 
 [[before-you-begin]]
 == Bevor Sie beginnen
 
-Der Host für die Instanz oder Datenbank muss im Inventar aufgeführt sein. Damit Hosts im Inventar angezeigt werden, müssen Sie Folgendes beachten: link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
+Folgendes ist erforderlich, bevor Sie eine Instanz oder Datenbank registrieren:
+
+* Stellen Sie sicher, dass die Hosts der Ressourcen, die Sie registrieren möchten, im Inventar angezeigt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für _Operationen und Remediation_ gewähren"^] in Ihrem AWS-Konto.
+* Stellen Sie eine Verknüpfung mit dem FSx for ONTAP Dateisystem her, das die Ressourcen hostet, die Sie registrieren möchten. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Informationen dazu, wie ein bestehender Link verknüpft oder ein neuer Link erstellt und verknüpft werden kann."^] Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
+
 
 
 
@@ -58,7 +60,7 @@ Wenn Sie einen Proxyserver für ausgehende EC2-Verbindungen verwenden, erlauben 
 [[register-a-microsoft-sql-server-instance]]
 == Registrieren einer Microsoft SQL Server-Instanz
 
-Die Registrierung einer Instanz umfasst drei Schritte: Instanz-Authentifizierung, FSx for ONTAP Authentifizierung und die Vorbereitung zur Erfüllung fehlender Voraussetzungen. Sie können eine oder mehrere Instanzen registrieren.
+Die Registrierung einer Instanz umfasst zwei Schritte: Authentifizierung und Vorbereitung. Es ist möglich, eine einzelne Instanz oder mehrere Instanzen zu registrieren.
 
 Workload Factory unterstützt die Registrierung für Failover Cluster Instance (FCI) und Standalone-Bereitstellung für SQL Server.
 
@@ -78,19 +80,7 @@ Wenn die Instanzen authentifiziert sind, wählen Sie *Weiter*.
 
 
 
-. Um FSx für ONTAP zu authentifizieren (Schritt 2), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
-+
-.. Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-.. Geben Sie entweder den AWS SSM Parameter ARN mit den FSx for ONTAP-Anmeldeinformationen für GovCloud-Konten oder den FSx for ONTAP-Dateisystembenutzernamen und das Passwort für alle anderen Konten ein und wählen Sie dann *Weiter*.
-+
-Für GovCloud-Konten wird der AWS SSM Parameter-ARN-Wert im Parameter Store unter Parameterdetails in der AWS Management Console im folgenden Format bereitgestellt: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format `/netapp/wlmdb/<fsx_filesystemID>`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
-
-+
-Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
-
-
-
-. Zur Vorbereitung (Schritt 3) stellen Sie sicher, dass die Instanz(en) die Mindestanforderungen erfüllen.
+. Zur Vorbereitung (Schritt 2) stellen Sie sicher, dass die Instanz(en) die Mindestanforderungen erfüllen.
 +
 Um die Mindestanforderungen zu erfüllen, müssen auf der Instanz die AWS- und NetApp PowerShell-Module sowie die PowerShell 7-Module installiert sein, und Sie müssen die Voraussetzungen für mindestens eine der unter „Voraussetzungsprüfung“ aufgeführten Funktionen erfüllen.
 
@@ -116,7 +106,7 @@ Die Instanzregistrierung wird gestartet. Wählen Sie die Registerkarte *Job moni
 [[register-an-oracle-database]]
 == Registrieren einer Oracle-Datenbank
 
-Die Registrierung einer Instanz umfasst drei Schritte – Datenbank-Authentifizierung, FSx for ONTAP-Authentifizierung und Vorbereitung zur Erfüllung fehlender Voraussetzungen. Sie können eine oder mehrere Datenbanken registrieren.
+Die Registrierung einer Instanz umfasst zwei Schritte: Datenbank Authentifizierung und Vorbereitung. Es ist möglich, eine einzelne Instanz oder mehrere Datenbanken zu registrieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -134,20 +124,7 @@ Wenn die Datenbanken authentifiziert sind, wählen Sie *Next*.
 
 
 
-. Um FSx für ONTAP zu authentifizieren (Schritt 2), führen Sie die folgenden Schritte aus und wählen Sie dann *Weiter*:
-+
-.. Wählen Sie *Die gleichen Anmeldeinformationen für alle Ressourcen verwenden* oder *Anmeldeinformationen manuell verwalten* aus.
-.. Geben Sie entweder den AWS SSM Parameter ARN mit den FSx for ONTAP-Anmeldeinformationen für GovCloud-Konten oder den FSx for ONTAP-Dateisystembenutzernamen und das Passwort für alle anderen Konten ein und wählen Sie dann *Weiter*.
-+
-Der AWS SSM-Parametertyp muss „Secure String“ sein, mit dem Namen im Format  `/netapp/wlmdb/<fsx_filesystemID>`. Geben Sie den Wert für die AWS SSM-Parameter-ARN im folgenden Format ein:
-`{fsx:{"username":"fsxadmin","password":"pass"}}`. Weitere Informationen zum Abrufen von SSM-Parametern finden Sie unter link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud-Dokumentation"^].
-
-+
-Wenn das FSx for ONTAP-Dateisystem authentifiziert ist, wählen Sie *Next*.
-
-
-
-. Zur Vorbereitung (Schritt 3) stellen Sie sicher, dass die Datenbank(en) die erforderlichen Voraussetzungen erfüllen. Sind alle erforderlichen Module installiert und die Voraussetzungen erfüllt, wählen Sie *Weiter*, um die Datenbank zu registrieren. Andernfalls folgen Sie diesen Schritten.
+. Zur Vorbereitung (Schritt 2) stellen Sie sicher, dass die Datenbank(en) die erforderlichen Voraussetzungen erfüllen. Sind alle erforderlichen Module installiert und die Voraussetzungen erfüllt, wählen Sie *Weiter*, um die Datenbank zu registrieren. Andernfalls folgen Sie diesen Schritten.
 +
 .. Überprüfen Sie die Voraussetzungen in der *Prerequisite check view*.
 +
@@ -171,5 +148,5 @@ Nach der Registrierung können Sie diese Aufgaben ausführen.
 * Datenbanken aus dem Inventar anzeigen
 * link:create-database.html["Erstellen Sie eine Datenbank"]
 * link:create-sandbox-clone.html["Erstellen Sie einen Datenbankklon (Sandbox)."]
-* link:optimize-configurations.html["Implementieren Sie gut konzipierte Datenbankkonfigurationen"]
+* link:optimize-configurations.html["Umfassende, gut durchdachte Bewertung von Datenbankkonfigurationen"]
 
