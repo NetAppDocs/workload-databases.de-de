@@ -4,7 +4,7 @@ permalink: split-clone.html
 keywords: split, clone, source, new database 
 summary: Teilen Sie einen Datenbankklon aus der Quelldatenbank auf, um eine neue Datenbank in NetApp Workload Factory für Datenbanken zu erstellen. 
 ---
-= Einen Datenbankklon von der Quelldatenbank trennen
+= Aufteilen eines Datenbank-Klons in NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

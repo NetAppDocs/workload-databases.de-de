@@ -4,7 +4,7 @@ permalink: connect-clone-cicd.html
 keywords: connect ci and cd pipeline, clone 
 summary: Verbinden Sie einen Sandbox-Klon mit einer CI- und CD-Pipeline über REST-API-Code, um die Softwarebereitstellung durch Automatisierung zu verbessern. 
 ---
-= Sandbox-Klon mit CI/CD-Tools verbinden
+= Einen Sandbox-Klon mit CI/CD in NetApp Workload Factory für Datenbanken verbinden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

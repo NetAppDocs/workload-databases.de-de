@@ -4,7 +4,7 @@ permalink: deregister-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
 summary: Heben Sie die Registrierung einer Ressource auf, wenn Sie keine Ressourcen mehr über die Workload Factory-Konsole bereitstellen oder überwachen möchten. 
 ---
-= Abmelden einer Ressource in NetApp Workload Factory
+= Eine Ressource in NetApp Workload Factory für Datenbanken abmelden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

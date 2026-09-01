@@ -4,7 +4,7 @@ permalink: delete-clone.html
 keywords: delete, clone 
 summary: Löschen Sie einen Sandbox-Klon in NetApp Workload Factory für Datenbanken, wenn Sie ihn nicht mehr benötigen und Speicherkapazität freigeben möchten. 
 ---
-= Löschen eines Datahase-Klons in NetApp Workload Factory für Datenbanken
+= Löschen eines Datenbank-Klons in NetApp Workload Factory für Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
