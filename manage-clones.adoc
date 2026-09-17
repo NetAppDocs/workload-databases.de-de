@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: manage-clones.html 
+keywords: manage clones, manage sandboxes, manage sandbox clones, check clone integrity, check data integrity, connect to CICD, delete clone 
+summary: Sandbox-Klone können in der NetApp Workload Factory for Databases verwaltet werden, damit Entwicklungs- und Testumgebungen zuverlässig und kostengünstig bleiben. 
+---
+= Datenbank-Klone in der NetApp Workload Factory für Datenbanken verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sandbox-Klone lassen sich in der NetApp Workload Factory for Databases verwalten, sodass Entwicklungs- und Testumgebungen zuverlässig und kostengünstig bleiben. Die Integrität der Daten eines Klons kann überprüft, ein Klon mit der CI/CD-Pipeline verbunden werden, um die Softwarebereitstellung zu automatisieren, oder ein Klon kann aktualisiert, zurückgesetzt oder aufgeteilt werden, um ihn an aktuelle Entwicklungsanforderungen anzupassen. Wird ein Klon nicht mehr benötigt, kann er gelöscht werden, um Speicherplatz freizugeben.
+
+
+
+[[check-sandbox-data-integrity]]
+== Integrität der Sandbox-Daten überprüfen
+
+Führen Sie eine Integritätsprüfung durch, um festzustellen, ob die Sandbox-Klondaten in NetApp Workload Factory für Datenbanken intakt oder beschädigt sind.
+
+.Über diese Aufgabe
+Wenn Sie einen Sandbox-Klon von einer Quelldatenbank erstellen, während diese beschäftigt ist, sind die Daten des Klons möglicherweise nicht mit dem neuesten Snapshot der Quelldatenbank synchronisiert. Dieser Vorgang überprüft die Integrität aller Objekte im Sandbox-Klon und stellt fest, ob die Sandbox-Klondaten aktuell sind.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, für den Sie die Integrität überprüfen möchten.
+. Wählen Sie *Integritätsprüfung ausführen*.
+. Klicken Sie im Dialogfeld Integritätsprüfung auf *Integritätsprüfung*.
+. Überprüfen Sie den Status der Integritätsprüfung in Sandboxes oder in der Jobüberwachung.
+
+
+Wenn die Integritätsprüfung fehlschlägt, empfehlen wir, den Sandbox-Klon nicht zu verwenden und einen neuen Sandbox-Klon zu erstellen.
+
+
+
+[[connect-a-sandbox-clone-to-cicd]]
+== Einen Sandbox-Klon mit CI/CD verbinden
+
+Verbinden Sie einen Sandbox-Klon mit einer CI/CD-Pipeline (Continuous Integration und Continuous Delivery) mit REST-API-Code, um die Softwarebereitstellung durch Automatisierung in NetApp Workload Factory für Datenbanken zu verbessern.
+
+.Über diese Aufgabe
+Um eine neue Softwareversion automatisch für den Datenbankklon bereitzustellen, sollten Sie eine Verbindung zu einer CI/CD-Pipeline herstellen. Verwenden Sie den von diesem Vorgang bereitgestellten REST-API-Code, um die Verbindung herzustellen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, um eine Verbindung mit CI/CD-Tools herzustellen.
+. Wählen Sie *Verbindung zu CI/CD-Tools herstellen*.
+. Kopieren oder laden Sie im CI/CD-Dialogfeld den für die Verbindung mit CI/CD-Tools erforderlichen REST-API-Code herunter.
+. Klicken Sie Auf *Schließen*.
+
+
+
+
+[[delete-a-database-clone]]
+== Löschen eines Datenbankklons
+
+Löschen Sie einen Sandbox-Klon in NetApp Workload Factory für Datenbanken, wenn Sie ihn nicht mehr benötigen und Speicherkapazität freigeben möchten.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, den Sie löschen möchten.
+. Wählen Sie *Löschen*.
+. Wählen Sie im Dialogfeld „Löschen“ die Option „Löschen“ aus, um den Löschvorgang zu bestätigen.
+
+
+
+
+[[refresh-a-database-clone]]
+== Aktualisieren eines Datenbankklons
+
+Aktualisieren Sie einen Datenbankklon (Sandbox) in NetApp Workload Factory for Databases, sodass er der Quelldatenbank zum aktuellen oder einem früheren Zeitpunkt entspricht.
+
+.Über diese Aufgabe
+Durch das Aktualisieren eines Klons wird der Klon entweder in der Quelldatenbank zum aktuellen Zeitpunkt oder in einem Snapshot der Quelldatenbank aktualisiert, der zu einem früheren Zeitpunkt erstellt wurde. Alle am Sandbox-Klon vorgenommenen Änderungen werden gelöscht.
+
+.Bevor Sie beginnen
+Eine Aktualisierung ist nur möglich, wenn die Quelldatenbank aktiv ist.
+
+Um einen Datenbankklon aus einem Snapshot zu aktualisieren, muss die Quelldatenbank mindestens einen Snapshot für den Vorgang haben.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, den Sie aktualisieren möchten.
+. Wählen Sie * Aktualisieren*.
+. Wählen Sie im Dialogfeld Aktualisieren eine der folgenden Optionen aus:
++
+.. *Auf aktuelle Zeit aktualisieren*
+.. * Aktualisieren Sie auf Point-in-Time*
++
+Wählen Sie für diese Option den Datenbank-Snapshot aus dem Dropdown-Menü aus, auf den Sie aktualisieren möchten.
+
+
+
+. Klicken Sie Auf *Aktualisieren*.
+
+
+
+
+[[revert-a-database-clone]]
+== Einen Datenbankklon zurücksetzen
+
+Setzen Sie einen Datenbankklon (Sandbox) auf seine ursprüngliche Version zum Zeitpunkt der Erstellung in NetApp Workload Factory für Datenbanken zurück.
+
+Wenn Sie eine Datenbank klonen, ist der Klon bei der Erstellung ein _Basis_-Klon.  Die Daten in der geklonten Datenbank sind dieselben wie in der Quelldatenbank zum Zeitpunkt der Erstellung.  Da sich die Daten in einem Datenbankklon im Laufe der Zeit ändern, möchten Sie die Daten möglicherweise auf den Ausgangswert zurücksetzen, der zum Zeitpunkt der Erstellung des Klons galt.  Dieser Vorgang wird als „Neuerstellen der Basislinie eines Klons“ bezeichnet.  Durch die Neuausrichtung eines Klons statt der Erstellung eines neuen Klons wird Speicherplatz gespart. Allerdings werden dabei alle am Datenbankklon vorgenommenen Änderungen gelöscht.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Datenbankklons aus, den Sie zurücksetzen möchten.
+. Wählen Sie * Neu-Baseline*.
+. Wählen Sie im Dialogfeld „Basislinie neu erstellen“ die Option „Basislinie neu erstellen“ aus.
+
+
+
+
+[[split-a-database-clone]]
+== Aufteilen eines Datenbankklons
+
+In NetApp Workload Factory für Datenbanken wird durch die Trennung eines Datenbankklons von seiner Quelldatenbank eine neue Datenbank erstellt, die eine bestimmte Menge an Speicherkapazität verbraucht.  Der Klon wird gelöscht, wenn die Aufteilung abgeschlossen ist und die neue Datenbank im Inventar angezeigt wird.
+
+.Bevor Sie beginnen
+Berücksichtigen Sie, wie viel Storage-Kapazität für die neue Datenbank benötigt wird. Falls erforderlich, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["Erhöhen Sie die Kapazität des Filesystems"^] für das FSX für ONTAP-Dateisystem, bevor Sie beginnen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Datenbankklons aus, den Sie aufteilen möchten.
+. Wählen Sie *Split*.
+. Wählen Sie im Dialogfeld „Teilen“ die Option „Teilen“ aus.
+
+
+
+
+[[view-a-clones-connection-information]]
+== Verbindungsinformationen eines Klons anzeigen
+
+Zeigen Sie die Verbindungsinformationen eines Datenbankklons in NetApp Workload Factory für Datenbanken an und kopieren Sie sie.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Datenbanken* aus.
+. Wählen Sie im Menü „Datenbanken“ die Option „Sandboxen“ aus.
+. Wählen Sie in Sandboxen das Aktionsmenü des Sandbox-Klons aus, um dessen Verbindungsinformationen anzuzeigen.
+. Wählen Sie *Verbindungsinformationen anzeigen*.
+. Kopieren Sie im Dialogfeld Verbindungsinformationen anzeigen die Verbindungsinformationen, falls erforderlich.
+. Wählen Sie *Schließen*.
+

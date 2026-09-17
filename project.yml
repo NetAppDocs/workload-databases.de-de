@@ -27,60 +27,44 @@ sidebar:
       url: "/learn-databases.html"
     - title: Schnellstart
       url: "/quick-start-databases.html"
-  - title: Verwenden Sie Datenbank-Workloads
+  - title: Workload Factory für Datenbank-Workloads nutzen
     entries:
     - title: Einsparungen entdecken
       url: "/explore-savings.html"
-    - title: Erstellen Sie einen neuen Datenbankserver
+    - title: Datenbankressourcen erstellen
       entries:
       - title: Erstellen Sie Microsoft SQL Server
         url: "/create-database-server.html"
       - title: PostgreSQL-Server erstellen
         url: "/create-postgresql-server.html"
+      - title: Erstellen Sie eine Datenbank
+        url: "/create-database.html"
+      - title: Sandbox-Klon erstellen
+        url: "/create-sandbox-clone.html"
     - title: Ressourcen verwalten
       entries:
       - title: Ressourcenmanagement
         url: "/manage-instance.html"
       - title: Ressourcen registrieren
         url: "/register-instance.html"
-      - title: Erstellen Sie eine Datenbank
-        url: "/create-database.html"
-      - title: Sandbox-Klon erstellen
-        url: "/create-sandbox-clone.html"
-    - title: Mit Codebox automatisieren
-      url: "/automate-codebox.html"
-    - title: Schützen Sie Microsoft SQL Server-Workloads
-      url: "/protect-sql-server.html"
-  - title: Administration und Überwachung
+      - title: Management von Klonen
+        url: "/manage-clones.html"
+      - title: Aufheben der Registrierung von Ressourcen
+        url: "/deregister-instance.html"
+  - title: Datenbankressourcen schützen, überwachen und optimieren
     entries:
-    - title: Überwachen von Datenbankjobs
-      url: "/monitor-databases.html"
+    - title: Fehlerprotokolle analysieren
+      url: "/analyze-error-logs.html"
     - title: Implementieren von Best Practices für die Konfiguration
       entries:
       - title: Konfigurationsanalyse für Datenbanken
         url: "/optimize-overview.html"
       - title: Implementieren Sie gut konzipierte Datenbankkonfigurationen
         url: "/optimize-configurations.html"
-    - title: Fehlerprotokolle analysieren
-      url: "/analyze-error-logs.html"
-    - title: Management von Klonen
-      entries:
-      - title: Integrität eines Sandbox-Klons prüfen
-        url: "/check-clone-integrity.html"
-      - title: Zurücksetzen eines Sandbox-Klons
-        url: "/revert-clone.html"
-      - title: Aktualisierung eines Sandbox-Klons
-        url: "/refresh-clone.html"
-      - title: Stellen Sie eine Verbindung zur CI/CD-Pipeline her
-        url: "/connect-clone-cicd.html"
-      - title: Informationen zur Klonverbindung anzeigen
-        url: "/view-clone-connection.html"
-      - title: Sandbox-Klon teilen
-        url: "/split-clone.html"
-      - title: Sandbox-Klon löschen
-        url: "/delete-clone.html"
-    - title: Aufheben der Registrierung von Ressourcen
-      url: "/deregister-instance.html"
+    - title: Überwachen von Datenbankjobs
+      url: "/monitor-databases.html"
+    - title: Schützen Sie Microsoft SQL Server-Workloads
+      url: "/protect-sql-server.html"
   - title: Wissen und Support
     entries:
     - title: Für den Support anmelden

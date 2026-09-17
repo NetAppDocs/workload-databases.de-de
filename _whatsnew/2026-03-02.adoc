@@ -22,7 +22,7 @@ Nach der Registrierung Ihrer AOAG-Instanzen und Data Guard Datenbanken können S
 
 Workload Factory for Databases unterstützt auch die Well-Architected-Analyse für Microsoft SQL Server-Instanzen mit dem AOAG-Bereitstellungsmodell. Sie können die Konfigurationen Ihrer SQL Server-Instanzen in einer Verfügbarkeitsgruppe analysieren und Empfehlungen zur Optimierung Ihrer Bereitstellungskonfigurationen und zur Einhaltung bewährter Verfahren erhalten. Registrieren Sie Ihre AOAG-Instanzen, um diese Funktion zu aktivieren.
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["Ressourcen in Workload Factory for Databases registrieren"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Ressourcen in Workload Factory for Databases registrieren"]
 
 
 
