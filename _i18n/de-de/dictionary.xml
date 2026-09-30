@@ -1668,14 +1668,6 @@
   <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">Aufteilen eines Datenbank-Klons in NetApp Workload Factory für Datenbanken</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30. August 2026</block>
   <block id="b5ed82020518e1a667b7f42bf1da1877" category="paragraph"><block ref="b5ed82020518e1a667b7f42bf1da1877" category="inline-link-macro-rx"></block></block>
-  <block id="b3ae445fa637203f0dc17550b5c4a56c" category="doc">Im Well-Architected Dashboard enthaltene Datenbankkonfigurationen</block>
-  <block id="a04fc413f106e041524732d895e4258e" category="paragraph">Das übersichtliche Dashboard enthält nun Empfehlungen für Ihre Datenbankkonfigurationen, mit denen Sie Ihre Einrichtung anhand bewährter Verfahren bewerten und optimieren können. Die ersten Konfigurationen umfassen:</block>
-  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">Kaltdaten-Tiering</block>
-  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Snapshot-Richtlinie</block>
-  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">SSD Kapazitätsreserve</block>
-  <block id="4dcac8e07a1246e665077c1572955236" category="paragraph">Das Dashboard „Well-architected“ befindet sich im Hauptmenü der Workload Factory Konsole unter *Well-architected*.</block>
-  <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Gut strukturierte Menüoption in der NetApp Workload Factory Konsole</block>
-  <block id="353cc99df6b21e74c805e74bdab4b8aa" category="paragraph"><block ref="353cc99df6b21e74c805e74bdab4b8aa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraform Provider*: Mit Terraform können Infrastruktur-Workflows erstellt und verwaltet werden, die in der Workload Factory Konsole generiert wurden.</block>
   <block id="8ffaca7bd1131475769b15e5950997fd" category="summary">Sandbox-Klone können in der NetApp Workload Factory for Databases verwaltet werden, damit Entwicklungs- und Testumgebungen zuverlässig und kostengünstig bleiben.</block>
   <block id="b4f39381f48079f073b43be17aadcceb" category="doc">Datenbank-Klone in der NetApp Workload Factory für Datenbanken verwalten</block>
@@ -1691,4 +1683,6 @@
   <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">Workload Factory für Datenbank-Workloads nutzen</block>
   <block id="573be33921395db38cda47a4830a127e" category="sidebar">Datenbankressourcen erstellen</block>
   <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">Datenbankressourcen schützen, überwachen und optimieren</block>
+  <block id="753d621a767f80f69e64e577e1856e54" category="doc">Unterstützung für mehrere Dateisysteme pro einzelner Instanz</block>
+  <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">Workload Factory für Datenbanken unterstützt mehrere Dateisysteme pro einzelner Microsoft SQL Server Instanz. In einer SQL Server Instanz können mehrere Dateisysteme registriert und ein Konfigurationsproblem für mehrere Dateisysteme gleichzeitig behoben werden.</block>
 </blocks>
