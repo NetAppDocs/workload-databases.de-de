@@ -138,6 +138,9 @@ Sie können Workload Factory mit den folgenden Datenbank-Engines, Versionen, Bet
 | Microsoft SQL Server | SQL Server 2022 | Windows Server 2022 | FCI, Standalone 
 
 
+| Microsoft SQL Server | SQL Server 2025 | Windows Server 2025 | FCI, Standalone 
+
+
 | Microsoft SQL Server | SQL Server 2017 | Beliebig | FCI, Standalone 
 
 
